@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>GSAP 時間軸動畫 Demo</title>
+<link rel="stylesheet" href="demo.css">
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+<style>
+  body { background: radial-gradient(circle at 30% 20%, #241f4a, #0b0b10 70%); }
+  .scene { position: fixed; inset: 0; display: grid; place-items: center; padding: 56px 16px 72px; }
+  .card { position: relative; width: min(520px, 100%); aspect-ratio: 16 / 10; border-radius: 22px; overflow: hidden;
+          background: linear-gradient(135deg, #5b4cf0, #c03fbf); box-shadow: 0 30px 80px rgba(91, 76, 240, .45); }
+  .blob { position: absolute; border-radius: 50%; filter: blur(2px); }
+  .b1 { width: 46%; aspect-ratio: 1; background: #feca57; right: -10%; top: -18%; }
+  .b2 { width: 30%; aspect-ratio: 1; background: #5ee7df; left: -8%; bottom: -12%; }
+  .b3 { width: 14%; aspect-ratio: 1; background: #ff6b9d; right: 22%; bottom: 14%; }
+  .copy { position: absolute; left: 7%; top: 50%; transform: translateY(-50%); color: #fff; }
+  .tag { display: inline-block; font-size: 12px; font-weight: 700; letter-spacing: .12em; background: rgba(255,255,255,.2); padding: 3px 10px; border-radius: 999px; }
+  .headline { font-size: clamp(26px, 6vw, 46px); font-weight: 900; line-height: 1.1; margin: 10px 0 8px; }
+  .headline span { display: inline-block; }
+  .sub { font-size: clamp(12px, 2.4vw, 15px); opacity: .9; }
+  .cta { display: inline-block; margin-top: 14px; padding: 8px 18px; border-radius: 999px; background: #fff; color: #5b4cf0; font-weight: 800; font-size: 14px; }
+</style>
+</head>
+<body>
+<div class="hint">🎬 這是一條「時間軸」：可播放、倒轉、拖曳進度條逐格檢查</div>
+<div class="scene">
+  <div class="card" id="card">
+    <div class="blob b1"></div><div class="blob b2"></div><div class="blob b3"></div>
+    <div class="copy">
+      <div class="tag">NEW LAUNCH</div>
+      <div class="headline" id="headline">全新上市</div>
+      <div class="sub">每一個元素都依序登場，像在剪輯影片</div>
+      <div class="cta">立即預購 →</div>
+    </div>
+  </div>
+</div>
+<div class="controls">
+  <button id="play">▶ 播放</button>
+  <button id="reverse">⏪ 倒轉</button>
+  <button id="restart">↺ 重播</button>
+  <label>進度 <input id="scrub" type="range" min="0" max="1" step="0.001" value="0"></label>
+  <label>速度 <input id="speed" type="range" min="0.25" max="2" step="0.25" value="1"></label>
+</div>
+<script>
+// GSAP：專業動畫業界標準。核心概念是「時間軸 Timeline」——把多段動畫排成像影片剪輯一樣的順序
+const h = document.getElementById('headline');
+h.innerHTML = [...h.textContent].map(c => `<span>${c}</span>`).join(''); // 把每個字拆開，才能逐字動畫
+
+const tl = gsap.timeline({ paused: true, defaults: { ease: 'power3.out' } });
+tl.from('#card', { scale: 0.6, rotate: -8, opacity: 0, duration: 0.9, ease: 'back.out(1.6)' })
+  .from('.b1', { scale: 0, duration: 0.8, ease: 'elastic.out(1, 0.5)' }, '-=0.4')
+  .from('.b2', { x: -120, opacity: 0, duration: 0.6 }, '<0.1')
+  .from('.b3', { y: 80, scale: 0, duration: 0.6, ease: 'back.out(3)' }, '<0.1')
+  .from('.tag', { y: -20, opacity: 0, duration: 0.4 }, '-=0.3')
+  .from('#headline span', { y: 60, rotateX: -90, opacity: 0, duration: 0.6, stagger: 0.08 }, '-=0.1')
+  .from('.sub', { opacity: 0, x: -20, duration: 0.5 }, '-=0.2')
+  .from('.cta', { scale: 0, duration: 0.5, ease: 'back.out(2.5)' }, '-=0.2')
+  .to('.b1', { rotate: 30, x: -20, y: 10, duration: 2, ease: 'sine.inOut', yoyo: true, repeat: 1 }, '-=0.3');
+
+const scrub = document.getElementById('scrub');
+tl.eventCallback('onUpdate', () => { scrub.value = tl.progress(); });
+document.getElementById('play').onclick = () => tl.play();
+document.getElementById('reverse').onclick = () => tl.reverse();
+document.getElementById('restart').onclick = () => tl.restart();
+scrub.oninput = () => { tl.pause(); tl.progress(+scrub.value); };
+document.getElementById('speed').oninput = e => tl.timeScale(+e.target.value);
+
+if (matchMedia('(prefers-reduced-motion: reduce)').matches) tl.progress(1);
+else tl.play();
+</script>
+</body>
+</html>

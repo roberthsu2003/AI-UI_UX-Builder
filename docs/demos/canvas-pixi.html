@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>PixiJS 大量粒子 Demo</title>
+<link rel="stylesheet" href="demo.css">
+<script src="https://cdn.jsdelivr.net/npm/pixi.js@7.4.2/dist/pixi.min.js"></script>
+</head>
+<body>
+<div class="hint" id="hint">🖱️ 滑鼠靠近會推開粒子 ・ 點一下爆炸</div>
+<div class="controls">
+  <button id="more">＋ 再加 2000 顆</button>
+  <label>數量 <strong id="count">0</strong></label>
+  <label>FPS <strong id="fps">0</strong></label>
+</div>
+<script>
+// PixiJS：用 GPU（WebGL）一次畫出上萬個 2D 物件，仍然維持流暢
+const app = new PIXI.Application({ resizeTo: window, backgroundColor: 0x0b0b10, antialias: true, autoDensity: true, resolution: Math.min(2, devicePixelRatio) });
+document.body.appendChild(app.view);
+
+// 先畫一個發光圓點，轉成貼圖（Texture）重複使用
+const g = new PIXI.Graphics();
+g.beginFill(0xffffff, 0.25).drawCircle(8, 8, 8).endFill();
+g.beginFill(0xffffff, 1).drawCircle(8, 8, 3.5).endFill();
+const tex = app.renderer.generateTexture(g);
+
+const container = new PIXI.ParticleContainer(50000, { position: true, tint: true, scale: true });
+app.stage.addChild(container);
+const colors = [0x8b7fff, 0x5ee7df, 0xff6b9d, 0xfeca57, 0x48dbfb];
+const dots = [];
+const mouse = { x: -9999, y: -9999 };
+
+function add(n) {
+  for (let i = 0; i < n; i++) {
+    const s = new PIXI.Sprite(tex);
+    s.anchor.set(0.5);
+    s.x = Math.random() * app.screen.width;
+    s.y = Math.random() * app.screen.height;
+    s.tint = colors[i % colors.length];
+    s.scale.set(0.5 + Math.random() * 0.8);
+    s.vx = (Math.random() - 0.5) * 1.5;
+    s.vy = (Math.random() - 0.5) * 1.5;
+    container.addChild(s);
+    dots.push(s);
+  }
+  document.getElementById('count').textContent = dots.length.toLocaleString();
+}
+add(3000);
+
+app.stage.eventMode = 'static';
+app.stage.hitArea = app.screen;
+app.stage.on('pointermove', e => { mouse.x = e.global.x; mouse.y = e.global.y; });
+app.stage.on('pointerleave', () => { mouse.x = mouse.y = -9999; });
+app.stage.on('pointerdown', e => {
+  for (const d of dots) {
+    const dx = d.x - e.global.x, dy = d.y - e.global.y;
+    const dist = Math.hypot(dx, dy) || 1;
+    const f = Math.max(0, 300 - dist) / 300 * 14;
+    d.vx += dx / dist * f; d.vy += dy / dist * f;
+  }
+});
+document.getElementById('more').onclick = () => add(2000);
+
+const fpsEl = document.getElementById('fps');
+let acc = 0;
+app.ticker.add(delta => {
+  const w = app.screen.width, h = app.screen.height;
+  for (const d of dots) {
+    const dx = d.x - mouse.x, dy = d.y - mouse.y;
+    const dist2 = dx * dx + dy * dy;
+    if (dist2 < 14400) { const dist = Math.sqrt(dist2) || 1; d.vx += dx / dist * 0.6; d.vy += dy / dist * 0.6; }
+    d.vx *= 0.98; d.vy *= 0.98;
+    d.vx += (Math.random() - 0.5) * 0.06; d.vy += (Math.random() - 0.5) * 0.06;
+    d.x += d.vx * delta; d.y += d.vy * delta;
+    if (d.x < 0) d.x += w; else if (d.x > w) d.x -= w;
+    if (d.y < 0) d.y += h; else if (d.y > h) d.y -= h;
+  }
+  if ((acc += 1) % 20 === 0) fpsEl.textContent = Math.round(app.ticker.FPS);
+});
+</script>
+</body>
+</html>

@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Fabric.js 可編輯畫布 Demo</title>
+<link rel="stylesheet" href="demo.css">
+<script src="https://cdn.jsdelivr.net/npm/fabric@5.3.0/dist/fabric.min.js"></script>
+<style>
+  body { background: #1a1a22; }
+  .stage { display: grid; place-items: center; }
+  .controls button { color: #1b1b1f; background: rgba(255,255,255,.9); border-color: #dcd9cf; box-shadow: 0 2px 8px rgba(0,0,0,.08); }
+  .controls button:hover { background: #fff; border-color: #5b4cf0; }
+</style>
+</head>
+<body>
+<div class="hint">✋ 拖曳、縮放、旋轉圖形 ・ 雙擊文字可編輯</div>
+<div class="stage"><canvas id="c"></canvas></div>
+<div class="controls">
+  <button id="addRect">＋ 方塊</button>
+  <button id="addCircle">＋ 圓形</button>
+  <button id="addText">＋ 文字</button>
+  <button id="del">🗑 刪除選取</button>
+  <button id="png">⬇ 匯出 PNG</button>
+</div>
+<script>
+// Fabric.js：讓 Canvas 上的每個圖形都能被選取、拖曳、縮放，像一個迷你設計工具
+const canvas = new fabric.Canvas('c', { backgroundColor: '#fafaf7', preserveObjectStacking: true });
+fabric.Object.prototype.set({ cornerColor: '#5b4cf0', cornerStyle: 'circle', borderColor: '#5b4cf0', transparentCorners: false, cornerSize: 11 });
+
+function fit() {
+  canvas.setDimensions({ width: innerWidth, height: innerHeight });
+  canvas.requestRenderAll();
+}
+fit();
+addEventListener('resize', fit);
+
+const colors = ['#ff6b6b', '#feca57', '#48dbfb', '#8b7fff', '#1dd1a1'];
+const rnd = n => Math.random() * n;
+const cx = () => canvas.width / 2 - 60 + rnd(120), cy = () => canvas.height / 2 - 80 + rnd(120);
+
+// 預設放一張「活動海報」草稿
+canvas.add(new fabric.Rect({ left: 40, top: 60, width: 200, height: 120, rx: 18, ry: 18, fill: '#8b7fff', angle: -6 }));
+canvas.add(new fabric.Circle({ left: canvas.width - 220, top: 80, radius: 70, fill: '#feca57' }));
+canvas.add(new fabric.Triangle({ left: canvas.width / 2, top: canvas.height - 260, width: 140, height: 120, fill: '#48dbfb', angle: 12 }));
+canvas.add(new fabric.IText('夏日音樂祭\nSUMMER FEST', { left: 70, top: canvas.height / 2 - 30, fontSize: 38, fontWeight: 800, fill: '#1b1b1f', fontFamily: 'Noto Sans TC, sans-serif', lineHeight: 1.1 }));
+
+document.getElementById('addRect').onclick = () => {
+  const r = new fabric.Rect({ left: cx(), top: cy(), width: 120, height: 90, rx: 12, ry: 12, fill: colors[Math.floor(rnd(5))] });
+  canvas.add(r).setActiveObject(r);
+};
+document.getElementById('addCircle').onclick = () => {
+  const c = new fabric.Circle({ left: cx(), top: cy(), radius: 50, fill: colors[Math.floor(rnd(5))] });
+  canvas.add(c).setActiveObject(c);
+};
+document.getElementById('addText').onclick = () => {
+  const t = new fabric.IText('雙擊編輯文字', { left: cx(), top: cy(), fontSize: 28, fill: '#1b1b1f', fontFamily: 'Noto Sans TC, sans-serif' });
+  canvas.add(t).setActiveObject(t);
+};
+document.getElementById('del').onclick = () => {
+  canvas.getActiveObjects().forEach(o => canvas.remove(o));
+  canvas.discardActiveObject().requestRenderAll();
+};
+document.getElementById('png').onclick = () => {
+  const a = document.createElement('a');
+  a.href = canvas.toDataURL({ format: 'png' });
+  a.download = 'fabric-design.png';
+  a.click();
+};
+</script>
+</body>
+</html>

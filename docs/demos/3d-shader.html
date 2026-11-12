@@ -1,0 +1,105 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>WebGL Shader 液態背景 Demo</title>
+<link rel="stylesheet" href="demo.css">
+<script type="importmap">
+{ "imports": { "three": "https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.module.js" } }
+</script>
+<style>
+  .title { position: fixed; inset: 0; display: grid; place-items: center; pointer-events: none; z-index: 2; text-align: center; }
+  .title h1 { margin: 0; font-size: clamp(28px, 7vw, 64px); letter-spacing: .04em; color: #fff; mix-blend-mode: overlay; }
+  .title p { margin: 6px 0 0; color: rgba(255,255,255,.85); font-size: clamp(13px, 2vw, 16px); }
+</style>
+</head>
+<body>
+<div class="hint">🖱️ 移動滑鼠攪動液體 ・ 下方切換主題色</div>
+<div class="title"><div><h1>LIQUID COFFEE</h1><p>用 Shader 即時運算的液態背景</p></div></div>
+<div class="controls" id="themes"></div>
+<script type="module">
+// Shader（著色器）：直接在 GPU 上逐像素計算顏色，可做出液態、光暈、扭曲等效果
+// 這就是許多得獎網站「會流動的背景」的原理
+import * as THREE from 'three';
+
+const renderer = new THREE.WebGLRenderer({ antialias: false });
+renderer.setPixelRatio(Math.min(1.5, devicePixelRatio));
+renderer.setSize(innerWidth, innerHeight);
+document.body.appendChild(renderer.domElement);
+const scene = new THREE.Scene();
+const camera = new THREE.OrthographicCamera(-1, 1, 1, -1, 0, 1);
+
+const uniforms = {
+  uTime: { value: 0 },
+  uRes: { value: new THREE.Vector2(innerWidth, innerHeight) },
+  uMouse: { value: new THREE.Vector2(0.5, 0.5) },
+  uC1: { value: new THREE.Color('#2b1a12') },
+  uC2: { value: new THREE.Color('#a0623a') },
+  uC3: { value: new THREE.Color('#f2d2a9') },
+};
+
+const material = new THREE.ShaderMaterial({
+  uniforms,
+  vertexShader: `varying vec2 vUv; void main(){ vUv = uv; gl_Position = vec4(position, 1.0); }`,
+  fragmentShader: `
+    precision highp float;
+    varying vec2 vUv;
+    uniform float uTime; uniform vec2 uRes; uniform vec2 uMouse;
+    uniform vec3 uC1; uniform vec3 uC2; uniform vec3 uC3;
+    // 簡易雜訊函式
+    vec2 hash(vec2 p){ p = vec2(dot(p,vec2(127.1,311.7)), dot(p,vec2(269.5,183.3))); return -1.0 + 2.0*fract(sin(p)*43758.5453); }
+    float noise(vec2 p){
+      vec2 i = floor(p), f = fract(p); vec2 u = f*f*(3.0-2.0*f);
+      return mix(mix(dot(hash(i), f), dot(hash(i+vec2(1,0)), f-vec2(1,0)), u.x),
+                 mix(dot(hash(i+vec2(0,1)), f-vec2(0,1)), dot(hash(i+vec2(1,1)), f-vec2(1,1)), u.x), u.y);
+    }
+    float fbm(vec2 p){ float v = 0.0, a = 0.5; for(int i=0;i<5;i++){ v += a*noise(p); p *= 2.0; a *= 0.5; } return v; }
+    void main(){
+      vec2 uv = vUv; vec2 p = uv * vec2(uRes.x/uRes.y, 1.0) * 2.0;
+      float t = uTime * 0.12;
+      vec2 m = uMouse * vec2(uRes.x/uRes.y, 1.0) * 2.0;
+      float d = distance(p, m);
+      p += (p - m) * 0.25 * exp(-d * 2.5) * sin(d * 10.0 - uTime * 3.0); // 滑鼠漣漪
+      vec2 q = vec2(fbm(p + t), fbm(p + vec2(5.2, 1.3) - t));
+      vec2 r = vec2(fbm(p + 3.0*q + vec2(1.7, 9.2) + t*1.3), fbm(p + 3.0*q + vec2(8.3, 2.8) - t));
+      float f = fbm(p + 3.0*r);
+      vec3 col = mix(uC1, uC2, clamp(f*2.2 + 0.5, 0.0, 1.0));
+      col = mix(col, uC3, clamp(length(q) * 1.4, 0.0, 1.0) * 0.8);
+      col += pow(max(0.0, f), 3.0) * 0.6;          // 高光
+      col *= 0.85 + 0.15 * smoothstep(1.4, 0.2, length(uv - 0.5) * 2.0); // 暗角
+      gl_FragColor = vec4(col, 1.0);
+    }`,
+});
+scene.add(new THREE.Mesh(new THREE.PlaneGeometry(2, 2), material));
+
+const themes = {
+  '☕ 咖啡拿鐵': ['#2b1a12', '#a0623a', '#f2d2a9'],
+  '🌌 極光': ['#071a2b', '#1f9d74', '#8b7fff'],
+  '🍑 蜜桃': ['#3a0f2a', '#ff6b6b', '#ffd6a5'],
+  '🌊 深海': ['#020817', '#2f80ed', '#5ee7df'],
+};
+const box = document.getElementById('themes');
+for (const [name, c] of Object.entries(themes)) {
+  const b = document.createElement('button');
+  b.textContent = name;
+  b.onclick = () => { uniforms.uC1.value.set(c[0]); uniforms.uC2.value.set(c[1]); uniforms.uC3.value.set(c[2]); };
+  box.appendChild(b);
+}
+
+const mouseTarget = new THREE.Vector2(0.5, 0.5);
+addEventListener('pointermove', e => mouseTarget.set(e.clientX / innerWidth, 1 - e.clientY / innerHeight));
+const speed = matchMedia('(prefers-reduced-motion: reduce)').matches ? 0.15 : 1;
+const clock = new THREE.Clock();
+renderer.setAnimationLoop(() => {
+  uniforms.uTime.value = clock.getElapsedTime() * speed;
+  uniforms.uMouse.value.lerp(mouseTarget, 0.06);
+  renderer.render(scene, camera);
+});
+addEventListener('resize', () => {
+  renderer.setSize(innerWidth, innerHeight);
+  uniforms.uRes.value.set(innerWidth, innerHeight);
+});
+</script>
+</body>
+</html>

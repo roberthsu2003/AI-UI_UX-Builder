@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>D3.js 網站架構力導向圖 Demo</title>
+<link rel="stylesheet" href="demo.css">
+<script src="https://cdn.jsdelivr.net/npm/d3@7.9.0/dist/d3.min.js"></script>
+<style>
+  svg { position: fixed; inset: 0; width: 100%; height: 100%; }
+  .node circle { stroke: #0b0b10; stroke-width: 2; cursor: grab; transition: opacity .2s; }
+  .node text { fill: #ececf1; font-size: 12px; pointer-events: none; transition: opacity .2s; paint-order: stroke; stroke: #0b0b10; stroke-width: 3px; }
+  .link { stroke: #4a4a5a; stroke-width: 1.5; transition: opacity .2s, stroke .2s; }
+  .dim { opacity: .15; }
+  .hot { stroke: #8b7fff; stroke-width: 2.5; }
+</style>
+</head>
+<body>
+<div class="hint">✋ 拖曳節點 ・ 滑鼠移到節點上會高亮它的上下層頁面</div>
+<svg id="svg"></svg>
+<div class="controls">
+  <button id="shuffle">🔀 重新排列</button>
+  <label>連結長度 <input id="dist" type="range" min="30" max="140" value="70"></label>
+</div>
+<script>
+// D3.js：資料視覺化的瑞士刀。可以把任何資料「綁定」到 SVG 圖形上，做出客製化圖表
+// 這裡用「力導向圖」畫出一個網站的頁面架構（Sitemap）
+const tree = { name: '首頁', children: [
+  { name: '關於我們', children: [{ name: '品牌故事' }, { name: '團隊' }, { name: '徵才' }] },
+  { name: '商品', children: [{ name: '新品' }, { name: '熱銷' }, { name: '分類', children: [{ name: '咖啡豆' }, { name: '器材' }, { name: '禮盒' }] }] },
+  { name: '活動', children: [{ name: '最新消息' }, { name: '講座報名' }] },
+  { name: '會員中心', children: [{ name: '登入' }, { name: '訂單查詢' }, { name: '收藏' }] },
+  { name: '客服', children: [{ name: 'FAQ' }, { name: '聯絡表單' }] },
+] };
+
+const root = d3.hierarchy(tree);
+const nodes = root.descendants();
+const links = root.links();
+const color = d3.scaleOrdinal().domain([0, 1, 2, 3]).range(['#feca57', '#8b7fff', '#5ee7df', '#ff6b9d']);
+const radius = d => [22, 14, 9, 7][d.depth];
+
+const svg = d3.select('#svg');
+const g = svg.append('g');
+svg.call(d3.zoom().scaleExtent([0.4, 3]).on('zoom', e => g.attr('transform', e.transform)));
+
+const link = g.append('g').selectAll('line').data(links).join('line').attr('class', 'link');
+const node = g.append('g').selectAll('g').data(nodes).join('g').attr('class', 'node')
+  .call(d3.drag()
+    .on('start', (e, d) => { if (!e.active) sim.alphaTarget(0.3).restart(); d.fx = d.x; d.fy = d.y; })
+    .on('drag', (e, d) => { d.fx = e.x; d.fy = e.y; })
+    .on('end', (e, d) => { if (!e.active) sim.alphaTarget(0); d.fx = d.fy = null; }));
+node.append('circle').attr('r', radius).attr('fill', d => color(d.depth));
+node.append('text').text(d => d.data.name).attr('x', d => radius(d) + 4).attr('dy', '0.35em');
+
+// 滑鼠移入：高亮該頁面的「祖先路徑 + 子頁面」，就像麵包屑
+node.on('mouseenter', (e, d) => {
+  const keep = new Set([...d.ancestors(), ...d.descendants()]);
+  node.classed('dim', n => !keep.has(n));
+  link.classed('dim', l => !(keep.has(l.source) && keep.has(l.target)))
+      .classed('hot', l => keep.has(l.source) && keep.has(l.target));
+}).on('mouseleave', () => { node.classed('dim', false); link.classed('dim', false).classed('hot', false); });
+
+const sim = d3.forceSimulation(nodes)
+  .force('link', d3.forceLink(links).distance(70).strength(0.9))
+  .force('charge', d3.forceManyBody().strength(-260))
+  .force('collide', d3.forceCollide(d => radius(d) + 6))
+  .on('tick', () => {
+    link.attr('x1', d => d.source.x).attr('y1', d => d.source.y).attr('x2', d => d.target.x).attr('y2', d => d.target.y);
+    node.attr('transform', d => `translate(${d.x},${d.y})`);
+  });
+
+function center() {
+  sim.force('center', d3.forceCenter(innerWidth / 2, innerHeight / 2)).alpha(0.6).restart();
+}
+center();
+addEventListener('resize', center);
+document.getElementById('shuffle').onclick = () => {
+  nodes.forEach(n => { n.x = Math.random() * innerWidth; n.y = Math.random() * innerHeight; });
+  sim.alpha(1).restart();
+};
+document.getElementById('dist').oninput = e => { sim.force('link').distance(+e.target.value); sim.alpha(0.7).restart(); };
+</script>
+</body>
+</html>

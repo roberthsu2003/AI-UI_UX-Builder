@@ -1,0 +1,29 @@
+/* 所有 demo 共用的基本樣式：深色舞台 + 操作提示 */
+*, *::before, *::after { box-sizing: border-box; }
+html, body { margin: 0; height: 100%; }
+body {
+  background: #0b0b10;
+  color: #ececf1;
+  font-family: "Noto Sans TC", "PingFang TC", "Microsoft JhengHei", system-ui, sans-serif;
+  overflow: hidden;
+}
+.stage { position: fixed; inset: 0; }
+.stage canvas { display: block; }
+.hint {
+  position: fixed; left: 12px; top: 12px; z-index: 5;
+  font-size: 13px; line-height: 1.4; padding: 6px 12px; border-radius: 999px;
+  background: rgba(0, 0, 0, .55); color: #fff; backdrop-filter: blur(6px);
+  pointer-events: none;
+}
+.controls {
+  position: fixed; left: 12px; right: 12px; bottom: 12px; z-index: 5;
+  display: flex; flex-wrap: wrap; gap: 8px; align-items: center;
+}
+.controls button, .controls label {
+  font: inherit; font-size: 13px; color: #fff; background: rgba(255, 255, 255, .12);
+  border: 1px solid rgba(255, 255, 255, .2); border-radius: 999px; padding: 6px 14px; cursor: pointer;
+  backdrop-filter: blur(6px);
+}
+.controls label { display: inline-flex; align-items: center; gap: 8px; cursor: default; }
+.controls button:hover { background: rgba(255, 255, 255, .22); }
+.controls input[type="range"] { width: 110px; accent-color: #8b7fff; }

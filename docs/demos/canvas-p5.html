@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>p5.js 生成藝術 Demo</title>
+<link rel="stylesheet" href="demo.css">
+<script src="https://cdn.jsdelivr.net/npm/p5@1.9.4/lib/p5.min.js"></script>
+</head>
+<body>
+<div class="hint">🖱️ 移動滑鼠攪動線條 ・ 點一下換配色</div>
+<div class="stage" id="stage"></div>
+<script>
+// p5.js：用「流場（Flow Field）」讓上千個粒子沿著噪聲方向流動，畫出生成藝術
+const palettes = [
+  ['#ff6b6b', '#feca57', '#48dbfb', '#ff9ff3'],
+  ['#8b7fff', '#5ee7df', '#b490ca', '#fdfbfb'],
+  ['#f9d423', '#ff4e50', '#fc913a', '#ede574'],
+  ['#43e97b', '#38f9d7', '#a8edea', '#fed6e3'],
+];
+let particles = [];
+let palette = 0;
+const reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+function setup() {
+  const c = createCanvas(windowWidth, windowHeight);
+  c.parent('stage');
+  pixelDensity(Math.min(2, window.devicePixelRatio));
+  background(11, 11, 16);
+  const count = Math.round((width * height) / 900);
+  for (let i = 0; i < count; i++) particles.push(newParticle());
+  if (reduce) frameRate(10);
+}
+
+function newParticle() {
+  return { x: random(width), y: random(height), px: 0, py: 0, c: random(palettes[palette]), life: random(80, 260) };
+}
+
+function draw() {
+  noStroke();
+  fill(11, 11, 16, 14); // 半透明背景，留下拖尾
+  rect(0, 0, width, height);
+  const t = frameCount * 0.002;
+  for (const p of particles) {
+    p.px = p.x; p.py = p.y;
+    let a = noise(p.x * 0.0025, p.y * 0.0025, t) * TWO_PI * 2;
+    const dx = mouseX - p.x, dy = mouseY - p.y;
+    const d = Math.hypot(dx, dy);
+    if (d < 160) a += (1 - d / 160) * 2.4; // 滑鼠附近產生漩渦
+    p.x += cos(a) * 1.6;
+    p.y += sin(a) * 1.6;
+    stroke(p.c);
+    strokeWeight(1.2);
+    line(p.px, p.py, p.x, p.y);
+    if (--p.life < 0 || p.x < 0 || p.x > width || p.y < 0 || p.y > height) Object.assign(p, newParticle());
+  }
+}
+
+function mousePressed() {
+  palette = (palette + 1) % palettes.length;
+  for (const p of particles) p.c = random(palettes[palette]);
+}
+
+function windowResized() {
+  resizeCanvas(windowWidth, windowHeight);
+  background(11, 11, 16);
+}
+</script>
+</body>
+</html>

@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Anime.js 交錯動畫 Demo</title>
+<link rel="stylesheet" href="demo.css">
+<script src="https://cdn.jsdelivr.net/npm/animejs@3.2.2/lib/anime.min.js"></script>
+<style>
+  .wrap { position: fixed; inset: 0; display: grid; place-items: center; padding: 48px 16px 64px; }
+  .grid { display: grid; gap: 6px; }
+  .cell { width: var(--s); height: var(--s); border-radius: 30%; background: #8b7fff; cursor: pointer; }
+</style>
+</head>
+<body>
+<div class="hint">👆 點任一個方塊：動畫會從那一格向外擴散（Stagger 交錯效果）</div>
+<div class="wrap"><div class="grid" id="grid"></div></div>
+<div class="controls">
+  <button data-mode="wave">🌊 波紋</button>
+  <button data-mode="spin">🌀 旋轉</button>
+  <button data-mode="color">🎨 變色</button>
+  <button id="auto">⏯ 自動播放</button>
+</div>
+<script>
+// Anime.js：輕量的動畫函式庫，特別擅長「交錯動畫（stagger）」——一群元素依距離、順序依次動起來
+const cols = 14, rows = 9;
+const grid = document.getElementById('grid');
+function size() {
+  const s = Math.floor(Math.min((innerWidth - 32) / cols, (innerHeight - 140) / rows)) - 6;
+  grid.style.setProperty('--s', Math.max(10, s) + 'px');
+  grid.style.gridTemplateColumns = `repeat(${cols}, var(--s))`;
+}
+size(); addEventListener('resize', size);
+for (let i = 0; i < cols * rows; i++) {
+  const d = document.createElement('div');
+  d.className = 'cell';
+  d.onclick = () => play(i);
+  grid.appendChild(d);
+}
+
+let mode = 'wave';
+const colors = ['#8b7fff', '#ff6b9d', '#5ee7df', '#feca57', '#48dbfb'];
+let ci = 0;
+function play(from) {
+  const st = anime.stagger(55, { grid: [cols, rows], from });
+  if (mode === 'wave') {
+    anime({ targets: '.cell', keyframes: [{ scale: 0.25, translateY: -12, duration: 260 }, { scale: 1, translateY: 0, duration: 600 }], delay: st, easing: 'easeOutElastic(1, .6)' });
+  } else if (mode === 'spin') {
+    anime({ targets: '.cell', rotate: '+=180', borderRadius: ['30%', '50%', '30%'], delay: st, duration: 900, easing: 'easeInOutQuad' });
+  } else {
+    ci = (ci + 1) % colors.length;
+    anime({ targets: '.cell', backgroundColor: colors[ci], scale: [{ value: 1.25, duration: 200 }, { value: 1, duration: 500 }], delay: st, easing: 'easeOutQuad' });
+  }
+}
+document.querySelectorAll('[data-mode]').forEach(b => b.onclick = () => { mode = b.dataset.mode; play(Math.floor(cols * rows / 2)); });
+
+let timer = null;
+function auto(on) {
+  clearInterval(timer);
+  timer = on ? setInterval(() => play(Math.floor(Math.random() * cols * rows)), 2200) : null;
+}
+document.getElementById('auto').onclick = () => auto(!timer);
+if (!matchMedia('(prefers-reduced-motion: reduce)').matches) { auto(true); play(Math.floor(cols * rows / 2)); }
+</script>
+</body>
+</html>

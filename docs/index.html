@@ -1,0 +1,102 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>AI 賦能的 UI/UX</title>
+<meta name="description" content="AI 賦能的 UI/UX 課程：網站評估、網站架構觀念、DESIGN.md、原型網頁、Claude Skill 與前端動態框架圖鑑。">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;600;700;900&family=Space+Grotesk:wght@600;700&family=JetBrains+Mono&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+<header class="site-header">
+  <div class="container">
+    <a class="brand" href="./" aria-current="page"><span class="brand-mark" aria-hidden="true"></span>AI 賦能的 UI/UX</a>
+    <nav class="nav" aria-label="主要導覽">
+      <a href="#units" class="hide-sm">課程單元</a>
+      <a href="frameworks.html">框架圖鑑</a>
+      <a href="https://github.com/roberthsu2003/UI_UX_Prototype" target="_blank" rel="noopener" class="hide-sm">GitHub ↗</a>
+      <button class="icon-btn" id="theme-toggle" type="button">🌙</button>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <section class="hero">
+    <canvas id="hero-canvas" aria-hidden="true"></canvas>
+    <div class="container">
+      <div class="hero-inner">
+        <span class="eyebrow">這個背景就是一段 Canvas 2D 動畫</span>
+        <h1>用 AI 做網頁原型，<br>也要懂得「動態」的語言</h1>
+        <p class="lead">從評估既有網站、理解網站架構、撰寫 DESIGN.md，到讓 AI 生成可互動的提案原型。新單元帶你認識 Canvas、3D、動畫與資料視覺化框架——知道名字，才能叫 AI 做出來。</p>
+        <div class="hero-actions">
+          <a class="btn btn-primary btn-hero" href="frameworks.html">探索前端動態框架 →</a>
+          <a class="btn btn-hero" href="#units">查看課程單元</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="section-head">
+        <h2>四大類動態框架</h2>
+        <p>每一類都有 3 個代表框架，附即時 demo 與可直接複製的 Prompt。</p>
+      </div>
+      <div class="cat-strip">
+        <a class="cat-tile canvas" href="frameworks.html#canvas"><strong>Canvas 2D</strong><span>p5.js ・ PixiJS ・ Fabric.js</span></a>
+        <a class="cat-tile three" href="frameworks.html#3d"><strong>3D / WebGL</strong><span>Three.js ・ Babylon.js ・ Shader</span></a>
+        <a class="cat-tile motion" href="frameworks.html#motion"><strong>動畫 / 動態影片感</strong><span>GSAP ・ Anime.js ・ Lottie</span></a>
+        <a class="cat-tile data" href="frameworks.html#data"><strong>資料視覺化 &amp; 捲動</strong><span>D3.js ・ Chart.js ・ ScrollTrigger</span></a>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="units" style="padding-top:0">
+    <div class="container">
+      <div class="section-head">
+        <h2>課程單元</h2>
+        <p>點擊卡片會開啟 GitHub 上的教學文件。</p>
+      </div>
+      <div class="grid">
+        <a class="unit-card" href="https://github.com/roberthsu2003/UI_UX_Prototype/tree/main/如何評估現有的網站" target="_blank" rel="noopener">
+          <span class="num">UNIT 01</span><h3>如何評估現有的網站</h3>
+          <p>用多模態 AI 與 Gemini in Chrome 檢查 UI/UX、無障礙、SEO 與資訊安全。</p><span class="go">閱讀 ↗</span>
+        </a>
+        <a class="unit-card" href="https://github.com/roberthsu2003/UI_UX_Prototype/tree/main/網站架構觀念" target="_blank" rel="noopener">
+          <span class="num">UNIT 02</span><h3>網站架構觀念</h3>
+          <p>立體構造、佈局模式、導覽列、一致性、無縫式介面與設計細節。</p><span class="go">閱讀 ↗</span>
+        </a>
+        <a class="unit-card" href="https://github.com/roberthsu2003/UI_UX_Prototype/tree/main/建立自己的DESIGN_md" target="_blank" rel="noopener">
+          <span class="num">UNIT 03</span><h3>建立自己的 DESIGN.md</h3>
+          <p>把視覺決策固化成 AI 看得懂的設計規範，讓多頁原型風格一致。</p><span class="go">閱讀 ↗</span>
+        </a>
+        <a class="unit-card" href="https://github.com/roberthsu2003/UI_UX_Prototype/tree/main/建立提案用的原型網頁" target="_blank" rel="noopener">
+          <span class="num">UNIT 04</span><h3>建立提案用的原型網頁</h3>
+          <p>整合 Google Stitch、Claude Design 與 Figma 的 AI 協作流程。</p><span class="go">閱讀 ↗</span>
+        </a>
+        <a class="unit-card" href="https://github.com/roberthsu2003/UI_UX_Prototype/tree/main/Claude網頁設計Skill實戰指南" target="_blank" rel="noopener">
+          <span class="num">UNIT 05</span><h3>Claude 網頁設計 Skill 實戰</h3>
+          <p>8 款熱門 Skill 實測、安裝排雷與觸發技巧。</p><span class="go">閱讀 ↗</span>
+        </a>
+        <a class="unit-card featured" href="frameworks.html">
+          <span class="badge-new">NEW</span>
+          <span class="num">UNIT 06</span><h3>前端動態框架圖鑑</h3>
+          <p>Canvas 2D、3D、動畫與資料視覺化框架，12 個即時 demo + Prompt 範本。</p><span class="go">開始探索 →</span>
+        </a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="container">
+    <span>AI 賦能的 UI/UX 課程</span>
+    <a href="https://github.com/roberthsu2003/UI_UX_Prototype" target="_blank" rel="noopener">github.com/roberthsu2003/UI_UX_Prototype ↗</a>
+  </div>
+</footer>
+<script src="assets/js/main.js"></script>
+</body>
+</html>

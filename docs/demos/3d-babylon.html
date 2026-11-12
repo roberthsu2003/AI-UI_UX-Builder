@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Babylon.js 3D 互動場景 Demo</title>
+<link rel="stylesheet" href="demo.css">
+<script src="https://cdn.jsdelivr.net/npm/babylonjs@6.49.0/babylon.js"></script>
+<style> #c { width: 100%; height: 100%; display: block; touch-action: none; outline: none; } </style>
+</head>
+<body>
+<div class="hint">🖱️ 拖曳旋轉視角 ・ 點擊方塊讓它跳起來並換色</div>
+<div class="stage"><canvas id="c"></canvas></div>
+<script>
+// Babylon.js：功能完整的 3D 遊戲引擎，內建碰撞、發光、點選等功能，適合互動展間、3D 遊戲化活動
+const canvas = document.getElementById('c');
+const engine = new BABYLON.Engine(canvas, true, { preserveDrawingBuffer: false, stencil: true });
+
+const scene = new BABYLON.Scene(engine);
+scene.clearColor = new BABYLON.Color4(0.06, 0.06, 0.09, 1);
+
+const camera = new BABYLON.ArcRotateCamera('cam', -Math.PI / 4, Math.PI / 3.2, 16, BABYLON.Vector3.Zero(), scene);
+camera.attachControl(canvas, true);
+camera.lowerRadiusLimit = 8; camera.upperRadiusLimit = 28;
+camera.wheelPrecision = 30;
+
+new BABYLON.HemisphericLight('h', new BABYLON.Vector3(0, 1, 0), scene).intensity = 0.6;
+const sun = new BABYLON.DirectionalLight('d', new BABYLON.Vector3(-1, -2, -1), scene);
+sun.position = new BABYLON.Vector3(10, 20, 10);
+sun.intensity = 0.9;
+const shadows = new BABYLON.ShadowGenerator(1024, sun);
+shadows.useBlurExponentialShadowMap = true;
+
+const ground = BABYLON.MeshBuilder.CreateGround('g', { width: 30, height: 30 }, scene);
+const gm = new BABYLON.StandardMaterial('gm', scene);
+gm.diffuseColor = new BABYLON.Color3(0.13, 0.13, 0.18);
+gm.specularColor = BABYLON.Color3.Black();
+ground.material = gm;
+ground.receiveShadows = true;
+
+// 內建「發光層」：讓物件邊緣有霓虹光暈
+const glow = new BABYLON.GlowLayer('glow', scene);
+glow.intensity = 0.6;
+
+const palette = ['#8b7fff', '#ff6b9d', '#5ee7df', '#feca57', '#48dbfb'].map(h => BABYLON.Color3.FromHexString(h));
+const boxes = [];
+const N = 5;
+for (let x = 0; x < N; x++) {
+  for (let z = 0; z < N; z++) {
+    const b = BABYLON.MeshBuilder.CreateBox('b' + x + z, { size: 1.4 }, scene);
+    b.position.set((x - (N - 1) / 2) * 2.2, 0.7, (z - (N - 1) / 2) * 2.2);
+    const m = new BABYLON.PBRMaterial('m' + x + z, scene);
+    m.albedoColor = palette[(x + z) % palette.length];
+    m.metallic = 0.1; m.roughness = 0.4;
+    m.emissiveColor = BABYLON.Color3.Black();
+    b.material = m;
+    b.baseY = 0.7;
+    shadows.addShadowCaster(b);
+    boxes.push(b);
+  }
+}
+
+// 點擊（Picking）：Babylon 內建判斷滑鼠點到哪個 3D 物件
+scene.onPointerDown = (evt, pick) => {
+  if (!pick.hit || !boxes.includes(pick.pickedMesh)) return;
+  const b = pick.pickedMesh;
+  const c = palette[Math.floor(Math.random() * palette.length)];
+  b.material.albedoColor = c;
+  b.material.emissiveColor = c.scale(0.8);
+  const bounce = new BABYLON.BounceEase(2, 3);
+  bounce.setEasingMode(BABYLON.EasingFunction.EASINGMODE_EASEOUT);
+  BABYLON.Animation.CreateAndStartAnimation('jump', b, 'position.y', 60, 40, 4, b.baseY, BABYLON.Animation.ANIMATIONLOOPMODE_CONSTANT, bounce);
+  BABYLON.Animation.CreateAndStartAnimation('spin', b, 'rotation.y', 60, 40, b.rotation.y, b.rotation.y + Math.PI, 0);
+  setTimeout(() => { b.material.emissiveColor = BABYLON.Color3.Black(); }, 900);
+};
+
+const reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
+let t = 0;
+scene.onBeforeRenderObservable.add(() => {
+  if (!reduce) camera.alpha += 0.0015;
+  t += engine.getDeltaTime() / 1000;
+  boxes.forEach((b, i) => { b.scaling.y = 1 + Math.sin(t * 2 + i * 0.5) * 0.08; });
+});
+
+engine.runRenderLoop(() => scene.render());
+addEventListener('resize', () => engine.resize());
+</script>
+</body>
+</html>

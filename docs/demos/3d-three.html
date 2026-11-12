@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Three.js 產品 3D 展示 Demo</title>
+<link rel="stylesheet" href="demo.css">
+<script type="importmap">
+{ "imports": {
+  "three": "https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.module.js",
+  "three/addons/": "https://cdn.jsdelivr.net/npm/three@0.160.0/examples/jsm/"
+} }
+</script>
+</head>
+<body>
+<div class="hint">🖱️ 拖曳旋轉 ・ 滾輪縮放 ・ 下方切換產品顏色</div>
+<div class="controls" id="swatches"></div>
+<script type="module">
+// Three.js：最普及的網頁 3D 函式庫，常用於產品 360° 展示、互動主視覺
+import * as THREE from 'three';
+import { OrbitControls } from 'three/addons/controls/OrbitControls.js';
+import { RoomEnvironment } from 'three/addons/environments/RoomEnvironment.js';
+
+const renderer = new THREE.WebGLRenderer({ antialias: true });
+renderer.setPixelRatio(Math.min(2, devicePixelRatio));
+renderer.setSize(innerWidth, innerHeight);
+renderer.shadowMap.enabled = true;
+renderer.toneMapping = THREE.ACESFilmicToneMapping;
+document.body.appendChild(renderer.domElement);
+
+const scene = new THREE.Scene();
+scene.background = new THREE.Color(0x15151c);
+const pmrem = new THREE.PMREMGenerator(renderer);
+scene.environment = pmrem.fromScene(new RoomEnvironment(), 0.04).texture;
+
+const camera = new THREE.PerspectiveCamera(40, innerWidth / innerHeight, 0.1, 100);
+camera.position.set(3.2, 2.2, 4.2);
+
+const controls = new OrbitControls(camera, renderer.domElement);
+controls.enableDamping = true;
+controls.target.set(0, 0.9, 0);
+controls.minDistance = 2.5;
+controls.maxDistance = 9;
+controls.autoRotate = !matchMedia('(prefers-reduced-motion: reduce)').matches;
+controls.autoRotateSpeed = 1.2;
+
+// 用「旋轉車床（Lathe）」畫出保溫瓶外型：只要給一條側面輪廓線
+const profile = [[0, 0], [0.42, 0], [0.5, 0.06], [0.52, 0.2], [0.52, 1.35], [0.47, 1.5], [0.36, 1.62], [0.34, 1.7]]
+  .map(([x, y]) => new THREE.Vector2(x, y));
+const bodyMat = new THREE.MeshPhysicalMaterial({ color: 0x8b7fff, metalness: 0.2, roughness: 0.35, clearcoat: 1, clearcoatRoughness: 0.15 });
+const body = new THREE.Mesh(new THREE.LatheGeometry(profile, 96), bodyMat);
+body.castShadow = true;
+
+const capMat = new THREE.MeshStandardMaterial({ color: 0xdddddd, metalness: 0.9, roughness: 0.25 });
+const cap = new THREE.Mesh(new THREE.CylinderGeometry(0.36, 0.36, 0.32, 64), capMat);
+cap.position.y = 1.86; cap.castShadow = true;
+const ring = new THREE.Mesh(new THREE.TorusGeometry(0.36, 0.025, 16, 64), capMat);
+ring.rotation.x = Math.PI / 2; ring.position.y = 1.71;
+
+const product = new THREE.Group();
+product.add(body, cap, ring);
+scene.add(product);
+
+// 地板與陰影
+const floor = new THREE.Mesh(new THREE.CircleGeometry(4, 64), new THREE.ShadowMaterial({ opacity: 0.35 }));
+floor.rotation.x = -Math.PI / 2; floor.receiveShadow = true;
+scene.add(floor);
+const light = new THREE.DirectionalLight(0xffffff, 2.2);
+light.position.set(3, 6, 2); light.castShadow = true;
+light.shadow.mapSize.set(1024, 1024);
+scene.add(light, new THREE.AmbientLight(0xffffff, 0.3));
+
+// 顏色切換：設計師最常要的「產品配色預覽」
+const options = { '星空紫': 0x8b7fff, '珊瑚紅': 0xff6b6b, '薄荷綠': 0x1dd1a1, '霧黑': 0x2b2b33, '奶油白': 0xf3eee3 };
+const target = new THREE.Color(bodyMat.color);
+const wrap = document.getElementById('swatches');
+for (const [name, hex] of Object.entries(options)) {
+  const b = document.createElement('button');
+  b.innerHTML = `<span style="display:inline-block;width:10px;height:10px;border-radius:50%;background:#${hex.toString(16).padStart(6, '0')};margin-right:6px"></span>${name}`;
+  b.onclick = () => target.set(hex);
+  wrap.appendChild(b);
+}
+
+const clock = new THREE.Clock();
+renderer.setAnimationLoop(() => {
+  const t = clock.getElapsedTime();
+  product.position.y = Math.sin(t * 1.5) * 0.04;
+  bodyMat.color.lerp(target, 0.08);
+  controls.update();
+  renderer.render(scene, camera);
+});
+
+addEventListener('resize', () => {
+  camera.aspect = innerWidth / innerHeight;
+  camera.updateProjectionMatrix();
+  renderer.setSize(innerWidth, innerHeight);
+});
+</script>
+</body>
+</html>

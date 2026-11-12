@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Lottie 動畫播放 Demo</title>
+<link rel="stylesheet" href="demo.css">
+<script src="https://cdn.jsdelivr.net/npm/lottie-web@5.12.2/build/player/lottie.min.js"></script>
+<style>
+  body { background: #f4f1ea; color: #1b1b1f; }
+  #anim { position: fixed; inset: 40px 0 64px; }
+  .controls button, .controls label { color: #1b1b1f; background: rgba(0,0,0,.06); border-color: rgba(0,0,0,.12); }
+  .controls button:hover { background: rgba(0,0,0,.12); }
+</style>
+</head>
+<body>
+<div class="hint">🎞️ 設計師在 After Effects 做的動畫，匯出成 JSON 後由 Lottie 在網頁播放</div>
+<div id="anim"></div>
+<div class="controls">
+  <button id="toggle">⏸ 暫停</button>
+  <label>逐格 <input id="frame" type="range" min="0" max="59" step="1" value="0"></label>
+  <label>速度 <input id="speed" type="range" min="0.25" max="2" step="0.25" value="1"></label>
+  <label>影格 <strong id="fno">0</strong> / 60</label>
+</div>
+<script>
+// Lottie 動畫本質上是一份 JSON 檔（向量圖形 + 關鍵影格）。
+// 這裡為了讓範例獨立可用，直接用程式組出一份小型 Lottie JSON；實務上通常從 After Effects（Bodymovin 外掛）或 LottieFiles 下載。
+const ease = { i: { x: [0.5], y: [1] }, o: { x: [0.5], y: [0] } };
+const fall = { i: { x: [0.9], y: [1] }, o: { x: [0.55], y: [0] } };   // 掉落：越來越快
+const rise = { i: { x: [0.45], y: [1] }, o: { x: [0.1], y: [0] } };   // 彈起：越來越慢
+const anim = (frames) => ({ a: 1, k: frames.map(([t, s, e = ease], i) => i < frames.length - 1 ? { t, s, ...e } : { t, s }) });
+const fixed = (k) => ({ a: 0, k });
+const rgba = (hex) => [...hex.match(/\w\w/g).map(h => parseInt(h, 16) / 255), 1];
+const tr = () => ({ ty: 'tr', p: fixed([0, 0]), a: fixed([0, 0]), s: fixed([100, 100]), r: fixed(0), o: fixed(100) });
+const layer = (ind, nm, ks, shapes) => ({ ddd: 0, ind, ty: 4, nm, sr: 1, ao: 0, ip: 0, op: 60, st: 0, bm: 0,
+  ks: Object.assign({ o: fixed(100), r: fixed(0), p: fixed([200, 150, 0]), a: fixed([0, 0, 0]), s: fixed([100, 100, 100]) }, ks), shapes });
+
+const animationData = {
+  v: '5.7.4', fr: 30, ip: 0, op: 60, w: 400, h: 300, nm: 'bounce', ddd: 0, assets: [],
+  layers: [
+    // 1. 彈跳球（含擠壓與伸展：動畫十二法則）
+    layer(1, 'ball', {
+      p: anim([[0, [200, 70, 0], fall], [30, [200, 205, 0], rise], [60, [200, 70, 0]]]),
+      s: anim([[0, [95, 105, 100]], [26, [90, 112, 100]], [30, [130, 72, 100]], [35, [92, 110, 100]], [44, [100, 100, 100]], [60, [95, 105, 100]]]),
+    }, [{ ty: 'gr', nm: 'g', it: [
+      { ty: 'el', nm: 'e', p: fixed([0, 0]), s: fixed([64, 64]) },
+      { ty: 'fl', nm: 'f', c: fixed(rgba('5b4cf0')), o: fixed(100), r: 1 },
+      tr()] }]),
+    // 2. 落地時擴散的圓環
+    layer(2, 'ring', {
+      p: fixed([200, 236, 0]),
+      o: anim([[0, [0]], [29, [0]], [30, [100]], [52, [0]], [60, [0]]]),
+      s: anim([[0, [20, 8, 100]], [30, [20, 8, 100]], [52, [190, 60, 100]], [60, [190, 60, 100]]]),
+    }, [{ ty: 'gr', nm: 'g', it: [
+      { ty: 'el', nm: 'e', p: fixed([0, 0]), s: fixed([100, 100]) },
+      { ty: 'st', nm: 's', c: fixed(rgba('ff6b9d')), o: fixed(100), w: fixed(4), lc: 2, lj: 2 },
+      tr()] }]),
+    // 3. 影子（球越近越大越深）
+    layer(3, 'shadow', {
+      p: fixed([200, 240, 0]),
+      o: anim([[0, [15]], [30, [45]], [60, [15]]]),
+      s: anim([[0, [45, 45, 100]], [30, [105, 105, 100]], [60, [45, 45, 100]]]),
+    }, [{ ty: 'gr', nm: 'g', it: [
+      { ty: 'el', nm: 'e', p: fixed([0, 0]), s: fixed([90, 18]) },
+      { ty: 'fl', nm: 'f', c: fixed(rgba('1b1b1f')), o: fixed(100), r: 1 },
+      tr()] }]),
+    // 4. 背景旋轉的圓角方塊
+    layer(4, 'bg', {
+      p: fixed([200, 150, 0]),
+      r: anim([[0, [0]], [60, [90]]].map(([t, s]) => [t, s, { i: { x: [1], y: [1] }, o: { x: [0], y: [0] } }])),
+      o: fixed(35),
+    }, [{ ty: 'gr', nm: 'g', it: [
+      { ty: 'rc', nm: 'r', p: fixed([0, 0]), s: fixed([230, 230]), r: fixed(40) },
+      { ty: 'fl', nm: 'f', c: fixed(rgba('feca57')), o: fixed(100), r: 1 },
+      tr()] }]),
+  ],
+};
+
+const player = lottie.loadAnimation({ container: document.getElementById('anim'), renderer: 'svg', loop: true, autoplay: true, animationData });
+const reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
+if (reduce) player.goToAndStop(30, true);
+
+const toggle = document.getElementById('toggle');
+const frame = document.getElementById('frame');
+const fno = document.getElementById('fno');
+toggle.textContent = player.isPaused ? '▶ 播放' : '⏸ 暫停';
+toggle.onclick = () => {
+  player.isPaused ? player.play() : player.pause();
+  toggle.textContent = player.isPaused ? '▶ 播放' : '⏸ 暫停';
+};
+frame.oninput = () => { player.goToAndStop(+frame.value, true); toggle.textContent = '▶ 播放'; fno.textContent = frame.value; };
+document.getElementById('speed').oninput = e => player.setSpeed(+e.target.value);
+player.addEventListener('enterFrame', () => { const f = Math.floor(player.currentFrame); frame.value = f; fno.textContent = f; });
+</script>
+</body>
+</html>

@@ -32,6 +32,16 @@
 > * **兩輪實測對決與推薦**：收錄 WebGL 液態咖啡／一鏡到底（免費版推薦 `UI UX Pro Max`）與開放式活動頁（付費版推薦 `Claude Design Pro`）的評比結果與完整 Prompt。
 > * **最佳實踐**：解析為什麼 Skill 不是裝越多越好（額度消耗與省略機制），以及如何透過 `/` 斜線指令確保正確觸發。
 
+## [前端動態框架圖鑑：叫得出名字，AI 才做得出來 >>](./前端動態框架圖鑑)
+> 網頁上的粒子、3D、流動背景與捲動動畫，背後幾乎都有專門的 JavaScript 框架。本單元用設計師聽得懂的語言整理四大類框架，每個框架都附 **[線上即時 demo](https://roberthsu2003.github.io/UI_UX_Prototype/frameworks.html)** 與可直接複製的 Prompt 範本，內容包含：
+> * **Canvas 2D 與 3D / WebGL**：p5.js 生成藝術、PixiJS 大量粒子、Fabric.js 可編輯畫布，以及 Three.js 產品展示、Babylon.js 互動場景、Shader 液態背景。
+> * **動畫與動態影片感**：GSAP 時間軸、Anime.js 交錯動畫、Lottie 播放 AE 動畫，並延伸認識 Rive 互動動畫與 Remotion 程式化影片。
+> * **資料視覺化與捲動互動**：D3.js 網站架構圖、Chart.js 儀表板，以及 GSAP ScrollTrigger + Lenis 的捲動敘事手法。
+
+---
+
+🌐 **課程網站**：[https://roberthsu2003.github.io/UI_UX_Prototype/](https://roberthsu2003.github.io/UI_UX_Prototype/)（原始碼位於 [`docs/`](./docs) 資料夾）
+
 
 
 
