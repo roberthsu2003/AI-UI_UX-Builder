@@ -66,6 +66,8 @@
        ↓
 [3. 建立自己的 DESIGN.md] 把所有視覺決策固化成 AI 看得懂的規格書  ◀── 本單元
        ↓
+[Figma × MCP] 把 DESIGN.md 建成 Figma 設計系統，人工定稿後再轉成網頁（../Figma與MCP整合）
+       ↓
 [4. 原型實作 / Skill] 搭配 Google Stitch、Claude Design 或 UI UX Pro Max 快速生成多頁一致的原型
 ```
 
