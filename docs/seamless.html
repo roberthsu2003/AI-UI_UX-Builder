@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>無縫式介面圖鑑</title>
+<meta name="description" content="網站架構觀念：無縫式介面的 9 種模式——覆蓋式、嵌入式、滑動式、增量捲動、增量翻頁、增量平移、輪播與無縫式步驟，每一種都有可直接操作的 demo。">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;600;700;900&family=Noto+Serif+TC:wght@700&family=Space+Grotesk:wght@600;700&family=JetBrains+Mono&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/style.css">
+<style>
+  /* 介面 demo 需要較高的舞台（彈窗、手機框） */
+  .fw-demo { aspect-ratio: auto; height: 480px; background: #FAF8F5; }
+  @media (max-width: 860px) { .fw-demo { height: 460px; } }
+  .fw-title .no { font-family: var(--font-mono); color: var(--text-muted); font-size: 15px; }
+  .fw-tag { background: #8B5E3C; }
+  .jump { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 18px; }
+  .jump .chip { text-decoration: none; }
+  .jump .chip:hover { color: var(--text); }
+  details summary { cursor: pointer; font-size: 14px; color: var(--text-muted); font-weight: 600; }
+  details .prompt-box { margin-top: 8px; }
+  .compare { display: grid; gap: 12px; grid-template-columns: repeat(auto-fit, minmax(min(100%, 260px), 1fr)); margin-top: 22px; }
+  .compare div { background: var(--bg-elev); border: 1px solid var(--border); border-radius: var(--radius-sm); padding: 14px 16px; font-size: 15px; }
+  .compare b { display: block; margin-bottom: 4px; }
+</style>
+</head>
+<body>
+<header class="site-header">
+  <div class="container">
+    <a class="brand" href="./"><span class="brand-mark" aria-hidden="true"></span>AI 賦能的 UI/UX</a>
+    <nav class="nav" aria-label="主要導覽">
+      <a href="./" class="hide-sm">首頁</a>
+      <a href="seamless.html" aria-current="page">無縫介面</a>
+      <a href="frameworks.html">框架圖鑑</a>
+      <button class="icon-btn" id="theme-toggle" type="button">🌙</button>
+    </nav>
+  </div>
+</header>
+
+<main class="container">
+  <div class="page-head">
+    <span class="eyebrow">網站架構觀念 ・ SEAMLESS INTERFACE</span>
+    <h1>無縫式介面圖鑑</h1>
+    <p>「無縫式介面」是指<strong>畫面不切換、不中斷</strong>，在單一畫面中完成操作的介面。局部更新比整頁重新載入更自然，使用者也更清楚「我做了什麼、得到什麼回應」。下面 9 種模式都可以<strong>直接動手操作</strong>，請邊玩邊注意「👀 操作時觀察」的重點。</p>
+    <div class="compare">
+      <div><b>❌ 傳統換頁</b>每個動作都重新載入整頁：畫面閃白、捲動位置遺失、要重新找到剛才的位置。</div>
+      <div><b>✅ 無縫式介面</b>只更新受影響的部分：視線不中斷、操作與回應的關係一目了然。</div>
+    </div>
+    <nav class="jump" id="jump" aria-label="快速跳轉"></nav>
+    <p style="margin-top:14px"><a href="https://github.com/roberthsu2003/UI_UX_Prototype/blob/main/網站架構觀念/無縫式介面/README.md" target="_blank" rel="noopener">📖 閱讀完整觀念文件 ↗</a></p>
+  </div>
+
+  <div class="fw-list" id="pattern-list"></div>
+</main>
+
+<footer class="site-footer">
+  <div class="container">
+    <span>AI 賦能的 UI/UX 課程 ・ 無縫式介面圖鑑</span>
+    <a href="https://github.com/roberthsu2003/UI_UX_Prototype/tree/main/網站架構觀念" target="_blank" rel="noopener">網站架構觀念單元 ↗</a>
+  </div>
+</footer>
+<script src="assets/js/main.js"></script>
+<script src="assets/js/seamless.js"></script>
+</body>
+</html>

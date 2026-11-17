@@ -1,0 +1,150 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>無縫式步驟 Seamless Step</title>
+<link rel="stylesheet" href="ui.css">
+<style>
+  .hero { margin: 0 0 12px; border-radius: 16px; aspect-ratio: 3 / 1; display: grid; place-items: center; font-size: 48px; }
+  h1 { font-family: "Noto Serif TC", serif; font-size: 21px; margin: 0 0 4px; }
+  .backdrop { position: absolute; inset: 0; z-index: 20; background: rgba(30, 27, 24, .45); opacity: 0; pointer-events: none; transition: opacity .25s; }
+  .backdrop.on { opacity: 1; pointer-events: auto; }
+  .dialog {
+    position: absolute; z-index: 21; left: 50%; top: 50%; width: min(440px, calc(100% - 24px)); max-height: calc(100% - 24px);
+    transform: translate(-50%, -46%) scale(.95); opacity: 0; pointer-events: none; transition: opacity .25s, transform .3s var(--ease);
+    background: var(--surface); border-radius: 16px; box-shadow: var(--shadow-lg); display: flex; flex-direction: column; overflow: hidden;
+  }
+  .dialog.on { opacity: 1; transform: translate(-50%, -50%); pointer-events: auto; }
+  .dialog header { display: flex; align-items: center; padding: 12px 8px 0 18px; font-weight: 700; }
+  .dialog header .sp { flex: 1; }
+  .stepper { display: flex; gap: 6px; padding: 10px 18px 0; }
+  .stepper div { flex: 1; font-size: 12px; color: var(--muted); }
+  .stepper div::before { content: ""; display: block; height: 4px; border-radius: 4px; background: var(--hairline); margin-bottom: 4px; transition: background .4s; }
+  .stepper div.done::before, .stepper div.cur::before { background: var(--primary); }
+  .stepper div.cur { color: var(--ink); font-weight: 600; }
+  .stage { position: relative; flex: 1; min-height: 250px; overflow: hidden; }
+  .step { position: absolute; inset: 0; padding: 14px 18px; overflow: auto; transition: transform .4s var(--ease), opacity .4s; }
+  .step.r { transform: translateX(50%); opacity: 0; pointer-events: none; }
+  .step.l { transform: translateX(-50%); opacity: 0; pointer-events: none; }
+  .classic .step { transition: none; }
+  .field { display: grid; gap: 4px; margin-bottom: 12px; font-size: 13px; font-weight: 600; }
+  .field input, .field select { font: inherit; font-weight: 400; min-height: 42px; padding: 8px 12px; border: 1px solid var(--hairline); border-radius: 8px; background: var(--canvas); }
+  .field input:focus, .field select:focus { outline: 2px solid var(--accent); border-color: transparent; }
+  .field.err input { border-color: #b9382c; }
+  .field small { color: #b9382c; font-weight: 400; min-height: 1em; }
+  .chips { display: flex; flex-wrap: wrap; gap: 6px; }
+  .chips button { min-height: 38px; padding: 0 14px; border-radius: 999px; border: 1px solid var(--hairline); background: var(--canvas); color: var(--ink); }
+  .chips button[aria-pressed="true"] { background: var(--primary); border-color: var(--primary); color: #fff; }
+  .sum { background: var(--surface-alt); border-radius: 8px; padding: 10px 14px; }
+  .sum div { display: flex; justify-content: space-between; padding: 3px 0; font-size: 14px; }
+  .actions { display: flex; gap: 8px; padding: 12px 18px 16px; border-top: 1px solid var(--hairline); }
+  .actions .btn { flex: 1; }
+  .ok { text-align: center; padding-top: 24px; }
+  .ok .big { font-size: 48px; animation: pop .5s var(--ease); }
+  @keyframes pop { from { transform: scale(.3); opacity: 0; } }
+  .reload { position: absolute; inset: 0; z-index: 40; background: #fff; display: none; place-items: center; color: #999; font-size: 13px; }
+  .reload.on { display: grid; }
+  .spin { width: 28px; height: 28px; border: 3px solid #ddd; border-top-color: #999; border-radius: 50%; animation: s .8s linear infinite; margin: 0 auto 8px; }
+  @keyframes s { to { transform: rotate(360deg); } }
+</style>
+</head>
+<body>
+<div class="hint">👆 按「立即預約」走完 3 個步驟，再切換模式比較感受
+  <span class="sp"></span>
+  <span class="seg" role="group" aria-label="流程方式">
+    <button data-m="seamless" aria-pressed="true">無縫式步驟</button>
+    <button data-m="classic" aria-pressed="false">傳統：每步換頁</button>
+  </span>
+</div>
+<div class="app">
+  <div class="scroll">
+    <div class="topbar"><span class="logo">木日咖啡</span></div>
+    <div class="wrap">
+      <div class="hero t2">🪑</div>
+      <h1>老宅二樓 ・ 包場預約</h1>
+      <p class="muted" style="margin-top:0">適合讀書會、生日聚會與小型講座，最多 12 人。</p>
+      <button class="btn" id="open">立即預約</button>
+    </div>
+  </div>
+  <div class="backdrop" id="backdrop"></div>
+  <div class="dialog" id="dlg" role="dialog" aria-modal="true" aria-labelledby="dlg-t">
+    <header><span id="dlg-t">包場預約</span><span class="sp"></span><button class="icon-btn" id="x" aria-label="關閉">✕</button></header>
+    <div class="stepper" id="stepper"><div>1 日期人數</div><div>2 聯絡資料</div><div>3 確認</div></div>
+    <div class="stage" id="stage">
+      <section class="step">
+        <div class="field">日期<input type="date" id="date"></div>
+        <div class="field">時段<div class="chips" id="slot"><button aria-pressed="true">上午</button><button aria-pressed="false">下午</button><button aria-pressed="false">晚上</button></div></div>
+        <div class="field">人數<select id="ppl"><option>4 人</option><option selected>6 人</option><option>8 人</option><option>12 人</option></select></div>
+      </section>
+      <section class="step r">
+        <div class="field" id="f-name">姓名<input id="name" autocomplete="name" placeholder="王小明"><small></small></div>
+        <div class="field" id="f-tel">手機<input id="tel" inputmode="tel" placeholder="0912345678"><small></small></div>
+      </section>
+      <section class="step r">
+        <p style="margin-top:0">請確認預約內容：</p>
+        <div class="sum" id="sum"></div>
+      </section>
+      <section class="step r ok">
+        <div class="big">🎉</div><h3>預約完成！</h3><p class="muted">確認簡訊已送出。整個流程都沒有離開這一頁。</p>
+      </section>
+    </div>
+    <div class="actions" id="actions"><button class="btn ghost" id="prev">上一步</button><button class="btn" id="next">下一步</button></div>
+  </div>
+  <div class="reload" id="reload"><div><div class="spin"></div>載入下一頁中…</div></div>
+  <div class="note" id="note"></div>
+</div>
+<script>
+const $ = id => document.getElementById(id);
+const steps = [...document.querySelectorAll('.step')], marks = [...$('stepper').children];
+let cur = 0, mode = 'seamless', t0 = 0;
+$('date').valueAsDate = new Date(Date.now() + 7 * 864e5);
+const note = $('note');
+function say(t) { note.textContent = t; note.classList.add('show'); clearTimeout(say.h); say.h = setTimeout(() => note.classList.remove('show'), 3200); }
+
+function render() {
+  steps.forEach((s, i) => s.className = 'step' + (i === cur ? '' : i < cur ? ' l' : ' r') + (i === 3 ? ' ok' : ''));
+  marks.forEach((m, i) => m.className = i < cur ? 'done' : i === cur ? 'cur' : '');
+  $('prev').style.visibility = cur > 0 && cur < 3 ? 'visible' : 'hidden';
+  $('next').textContent = cur === 2 ? '確認送出' : cur === 3 ? '完成' : '下一步';
+  if (cur === 2) $('sum').innerHTML = [['日期', $('date').value], ['時段', $('slot').querySelector('[aria-pressed="true"]').textContent], ['人數', $('ppl').value], ['姓名', $('name').value], ['手機', $('tel').value]].map(([k, v]) => `<div><span class="muted">${k}</span><b>${v}</b></div>`).join('');
+}
+function valid() {
+  if (cur !== 1) return true;
+  const chk = (id, ok, msg) => { const f = $('f-' + id); f.classList.toggle('err', !ok); f.querySelector('small').textContent = ok ? '' : msg; return ok; };
+  const a = chk('name', $('name').value.trim().length > 0, '請填寫姓名');
+  const b = chk('tel', /^09\d{8}$/.test($('tel').value.trim()), '請輸入 09 開頭的 10 碼手機');
+  return a && b;
+}
+function go(n) {
+  if (mode === 'classic') {                       // 傳統：每一步都整頁重新載入
+    $('reload').classList.add('on');
+    setTimeout(() => { cur = n; render(); $('reload').classList.remove('on'); }, 900);
+  } else { cur = n; render(); }
+}
+$('next').onclick = () => {
+  if (cur === 3) return close();
+  if (!valid()) return;
+  const target = cur + 1;
+  go(target);
+  if (target === 3) setTimeout(() => say(`${mode === 'seamless' ? '無縫式' : '傳統換頁'}：從開始到完成共 ${((Date.now() - t0) / 1000).toFixed(1)} 秒`), mode === 'classic' ? 950 : 50);
+};
+$('prev').onclick = () => go(cur - 1);
+$('slot').onclick = e => { const b = e.target.closest('button'); if (!b) return; $('slot').querySelectorAll('button').forEach(x => x.setAttribute('aria-pressed', x === b)); };
+function open() {
+  cur = 0; t0 = Date.now(); render();
+  $('stage').classList.toggle('classic', mode === 'classic');
+  $('backdrop').classList.add('on'); $('dlg').classList.add('on');
+}
+function close() { $('backdrop').classList.remove('on'); $('dlg').classList.remove('on'); }
+$('open').onclick = open; $('x').onclick = close; $('backdrop').onclick = close;
+document.addEventListener('keydown', e => { if (e.key === 'Escape') close(); });
+document.querySelectorAll('[data-m]').forEach(b => b.onclick = () => {
+  mode = b.dataset.m; close();
+  document.querySelectorAll('[data-m]').forEach(x => x.setAttribute('aria-pressed', x === b));
+  say(mode === 'classic' ? '已切換為傳統換頁，再按一次「立即預約」' : '已切換為無縫式步驟');
+});
+render();
+</script>
+</body>
+</html>

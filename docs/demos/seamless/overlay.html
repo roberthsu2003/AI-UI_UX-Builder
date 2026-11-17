@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>覆蓋式介面 Overlay</title>
+<link rel="stylesheet" href="ui.css">
+<style>
+  .card { cursor: pointer; transition: transform .2s var(--ease), box-shadow .2s; }
+  .card:hover { transform: translateY(-3px); box-shadow: var(--shadow); }
+  .badge { min-width: 22px; height: 22px; padding: 0 6px; border-radius: 999px; background: var(--primary); color: #fff; font-size: 12px; font-weight: 700; display: inline-grid; place-items: center; }
+  .badge.bump { animation: bump .45s var(--ease); }
+  @keyframes bump { 40% { transform: scale(1.5); background: var(--accent); } }
+
+  .backdrop { position: absolute; inset: 0; z-index: 20; background: rgba(30, 27, 24, .45); opacity: 0; pointer-events: none; transition: opacity .25s; }
+  .backdrop.on { opacity: 1; pointer-events: auto; }
+  .sheet {
+    position: absolute; z-index: 21; background: var(--surface); box-shadow: var(--shadow-lg);
+    display: flex; flex-direction: column; overflow: hidden; pointer-events: none; opacity: 0;
+  }
+  /* Modal：從中央放大淡入 */
+  .sheet.modal { left: 50%; top: 50%; width: min(420px, calc(100% - 32px)); max-height: calc(100% - 32px); border-radius: 16px; transform: translate(-50%, -46%) scale(.94); transition: opacity .25s, transform .3s var(--ease); }
+  .sheet.modal.on { opacity: 1; transform: translate(-50%, -50%) scale(1); pointer-events: auto; }
+  /* Bottom sheet：從底部滑上 */
+  .sheet.bottom { left: 0; right: 0; bottom: 0; max-height: 80%; border-radius: 16px 16px 0 0; transform: translateY(100%); opacity: 1; transition: transform .35s var(--ease); }
+  .sheet.bottom.on { transform: translateY(0); pointer-events: auto; }
+  .sheet.bottom::before { content: ""; width: 40px; height: 4px; border-radius: 4px; background: var(--hairline); margin: 8px auto 0; }
+  .sheet .thumb { aspect-ratio: 16 / 9; font-size: 56px; }
+  .sheet .content { padding: 16px 20px 20px; overflow: auto; }
+  .sheet h2 { margin: 0 0 4px; font-family: "Noto Serif TC", serif; }
+  .sheet .row { display: flex; gap: 8px; margin-top: 16px; }
+  .sheet .row .btn { flex: 1; }
+  .close { position: absolute; right: 8px; top: 8px; background: rgba(255,255,255,.85); }
+</style>
+</head>
+<body>
+<div class="hint">👆 先捲到下面，點任一張商品卡片
+  <span class="sp"></span>
+  <span class="seg" role="group" aria-label="顯示方式">
+    <button data-v="modal" aria-pressed="true">中央彈窗</button>
+    <button data-v="bottom" aria-pressed="false">底部抽屜（手機常用）</button>
+  </span>
+</div>
+<div class="app">
+  <div class="scroll" id="page">
+    <div class="topbar"><span class="logo">木日咖啡</span><span class="sp"></span>🛒 <span class="badge" id="badge">0</span></div>
+    <div class="wrap">
+      <p class="muted" style="margin-top:0">本季菜單 ・ 共 12 項</p>
+      <div class="grid" id="grid"></div>
+    </div>
+  </div>
+  <div class="backdrop" id="backdrop"></div>
+  <div class="sheet modal" id="sheet" role="dialog" aria-modal="true" aria-labelledby="s-title">
+    <div class="thumb" id="s-thumb"></div>
+    <button class="icon-btn close" id="close" aria-label="關閉">✕</button>
+    <div class="content">
+      <h2 id="s-title"></h2>
+      <span class="price" id="s-price"></span>
+      <p class="muted" id="s-desc"></p>
+      <div class="row"><button class="btn ghost" id="cancel">繼續逛</button><button class="btn" id="add">加入購物車</button></div>
+    </div>
+  </div>
+  <div class="note" id="note"></div>
+</div>
+<script>
+const base = [['☕', '日曬拿鐵', 140, 't1'], ['🧋', '黑糖冰咖啡', 160, 't2'], ['🥐', '可頌', 70, 't3'], ['🍰', '巴斯克乳酪', 120, 't4'], ['🫖', '東方美人茶', 150, 't5'], ['🍪', '手工餅乾', 60, 't6']];
+const items = [...base, ...base.map(([e, n, p, t]) => [e, n + '（大）', p + 30, t])];
+const $ = id => document.getElementById(id);
+$('grid').innerHTML = items.map(([e, n, p, t], i) => `
+  <article class="card" tabindex="0" data-i="${i}"><div class="thumb ${t}">${e}</div>
+  <div class="body"><h3>${n}</h3><span class="price">NT$ ${p}</span></div></article>`).join('');
+
+let cur = null, count = 0, last = null;
+const note = $('note');
+function say(t) { note.textContent = t; note.classList.add('show'); clearTimeout(say.h); say.h = setTimeout(() => note.classList.remove('show'), 2600); }
+function open(i, from) {
+  cur = i; last = from;
+  const [e, n, p, t] = items[i];
+  $('s-thumb').className = 'thumb ' + t; $('s-thumb').textContent = e;
+  $('s-title').textContent = n; $('s-price').textContent = 'NT$ ' + p;
+  $('s-desc').textContent = '嚴選單一產區咖啡豆，每日現烘。這段說明直接寫在頁面中，或在打開時從背景取得。';
+  $('backdrop').classList.add('on'); $('sheet').classList.add('on');
+  setTimeout(() => $('add').focus(), 50);
+}
+function close() { $('backdrop').classList.remove('on'); $('sheet').classList.remove('on'); last && last.focus(); }
+$('grid').addEventListener('click', e => { const c = e.target.closest('.card'); if (c) open(+c.dataset.i, c); });
+$('grid').addEventListener('keydown', e => { const c = e.target.closest('.card'); if (c && (e.key === 'Enter' || e.key === ' ')) { e.preventDefault(); open(+c.dataset.i, c); } });
+$('backdrop').onclick = close; $('close').onclick = close; $('cancel').onclick = () => { close(); say('關掉後，背後的頁面與捲動位置完全沒變'); };
+document.addEventListener('keydown', e => { if (e.key === 'Escape') close(); });
+$('add').onclick = () => {
+  const b = $('badge'); b.textContent = ++count; b.classList.remove('bump'); void b.offsetWidth; b.classList.add('bump');
+  close(); say('已加入！注意購物車數字在背景頁面上直接更新');
+};
+document.querySelectorAll('[data-v]').forEach(b => b.onclick = () => {
+  document.querySelectorAll('[data-v]').forEach(x => x.setAttribute('aria-pressed', x === b));
+  $('sheet').className = 'sheet ' + b.dataset.v;
+});
+</script>
+</body>
+</html>

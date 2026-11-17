@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>全頁更新 vs 局部更新</title>
+<link rel="stylesheet" href="ui.css">
+<style>
+  .panes { position: absolute; inset: 0; display: grid; grid-template-columns: 1fr 1fr; gap: 1px; background: var(--hairline); }
+  @media (max-width: 560px) { .panes { grid-template-columns: 1fr; grid-template-rows: 1fr 1fr; } }
+  .pane { position: relative; background: var(--canvas); overflow: hidden; display: flex; flex-direction: column; }
+  .label { flex: 0 0 auto; padding: 6px 12px; font-size: 12px; font-weight: 700; letter-spacing: .03em; }
+  .old .label { background: #f5e1dc; color: #9b3a2a; }
+  .new .label { background: #dfeee5; color: #2c6b48; }
+  .pane .scroll { top: 30px; }
+  .badge { min-width: 22px; height: 22px; padding: 0 6px; border-radius: 999px; background: var(--primary); color: #fff; font-size: 12px; font-weight: 700; display: inline-grid; place-items: center; }
+  .badge.bump { animation: bump .45s var(--ease); }
+  @keyframes bump { 40% { transform: scale(1.5); background: var(--accent); } }
+  .cart { display: inline-flex; align-items: center; gap: 6px; font-size: 14px; }
+  .card .btn { width: 100%; min-height: 34px; margin-top: 8px; padding: 4px 8px; font-size: 13px; }
+  .card .btn.done { background: #2c6b48; border-color: #2c6b48; }
+  .reload { position: absolute; inset: 30px 0 0; background: #fff; display: none; place-items: center; z-index: 10; color: #999; font-size: 13px; }
+  .reload.on { display: grid; }
+  .spin { width: 28px; height: 28px; border: 3px solid #ddd; border-top-color: #999; border-radius: 50%; animation: s .8s linear infinite; margin: 0 auto 8px; }
+  @keyframes s { to { transform: rotate(360deg); } }
+</style>
+</head>
+<body>
+<div class="hint">👆 先往下捲，再按任一個「加入購物車」——比較兩邊發生了什麼事</div>
+<div class="app">
+  <div class="panes">
+    <section class="pane old" data-mode="old">
+      <div class="label">❌ 傳統：整頁重新載入</div>
+      <div class="scroll"></div>
+      <div class="reload"><div><div class="spin"></div>頁面重新載入中…</div></div>
+    </section>
+    <section class="pane new" data-mode="new">
+      <div class="label">✅ 無縫：只更新受影響的部分</div>
+      <div class="scroll"></div>
+    </section>
+  </div>
+  <div class="note" id="note"></div>
+</div>
+<script>
+const items = [['☕', '日曬拿鐵', 140, 't1'], ['🧋', '黑糖冰咖啡', 160, 't2'], ['🥐', '可頌', 70, 't3'], ['🍰', '巴斯克乳酪', 120, 't4'], ['🫖', '東方美人茶', 150, 't5'], ['🍪', '手工餅乾', 60, 't6']];
+const state = { old: 0, new: 0 };
+const note = document.getElementById('note');
+function say(t) { note.textContent = t; note.classList.add('show'); clearTimeout(say.h); say.h = setTimeout(() => note.classList.remove('show'), 2600); }
+
+function render(pane) {
+  const mode = pane.dataset.mode;
+  pane.querySelector('.scroll').innerHTML = `
+    <div class="topbar"><span class="logo">木日咖啡</span><span class="sp"></span>
+      <span class="cart">🛒 <span class="badge">${state[mode]}</span></span></div>
+    <div class="wrap"><div class="grid">${items.map(([e, n, p, t], i) => `
+      <article class="card"><div class="thumb ${t}">${e}</div><div class="body">
+        <h3>${n}</h3><span class="price">NT$ ${p}</span>
+        <button class="btn" data-i="${i}">加入購物車</button></div></article>`).join('')}
+    </div></div>`;
+}
+
+document.querySelectorAll('.pane').forEach(pane => {
+  render(pane);
+  pane.addEventListener('click', e => {
+    const b = e.target.closest('.btn'); if (!b) return;
+    const mode = pane.dataset.mode;
+    state[mode]++;
+    if (mode === 'old') {
+      const r = pane.querySelector('.reload');
+      r.classList.add('on');
+      setTimeout(() => { render(pane); pane.querySelector('.scroll').scrollTop = 0; r.classList.remove('on');
+        say('左邊：畫面閃白、捲動位置回到最上面，要重新找剛剛的商品'); }, 900);
+    } else {
+      const badge = pane.querySelector('.badge');
+      badge.textContent = state.new; badge.classList.remove('bump'); void badge.offsetWidth; badge.classList.add('bump');
+      b.textContent = '✓ 已加入'; b.classList.add('done');
+      setTimeout(() => { b.textContent = '加入購物車'; b.classList.remove('done'); }, 1200);
+      say('右邊：只有按鈕與購物車數字變化，你還停在原本的位置');
+    }
+  });
+});
+</script>
+</body>
+</html>

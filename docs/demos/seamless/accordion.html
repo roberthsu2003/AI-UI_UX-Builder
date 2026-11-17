@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>嵌入式介面 Accordion</title>
+<link rel="stylesheet" href="ui.css">
+<style>
+  .faq { border-top: 1px solid var(--hairline); }
+  .item { border-bottom: 1px solid var(--hairline); }
+  .q {
+    width: 100%; display: flex; align-items: center; gap: 12px; text-align: left;
+    padding: 16px 4px; min-height: 56px; border: 0; background: none; color: var(--ink); font-weight: 600; font-size: 15px;
+  }
+  .q:hover { color: var(--primary); }
+  .q .ico { margin-left: auto; flex: 0 0 auto; width: 28px; height: 28px; border-radius: 50%; display: grid; place-items: center; background: var(--surface-alt); transition: transform .3s var(--ease), background .2s; }
+  .item.open .q .ico { transform: rotate(45deg); background: var(--primary); color: #fff; }
+  /* 用 grid-template-rows 0fr → 1fr 做出平滑展開高度 */
+  .a { display: grid; grid-template-rows: 0fr; transition: grid-template-rows .35s var(--ease); }
+  .item.open .a { grid-template-rows: 1fr; }
+  .a > div { overflow: hidden; }
+  .a p { margin: 0 4px 16px; padding: 12px 14px; background: var(--surface); border: 1px solid var(--hairline); border-radius: 8px; color: var(--muted); }
+  h1 { font-family: "Noto Serif TC", serif; font-size: 22px; margin: 4px 0 4px; }
+</style>
+</head>
+<body>
+<div class="hint">👆 點問題展開答案，切換兩種模式比較差異
+  <span class="sp"></span>
+  <span class="seg" role="group" aria-label="展開模式">
+    <button data-m="single" aria-pressed="true">一次只開一個</button>
+    <button data-m="multi" aria-pressed="false">可同時展開多個</button>
+  </span>
+</div>
+<div class="app">
+  <div class="scroll">
+    <div class="topbar"><span class="logo">木日咖啡</span></div>
+    <div class="wrap">
+      <h1>常見問題</h1>
+      <p class="muted" style="margin-top:0">問題清單一次看完，想看細節再展開——不用跳到新頁面。</p>
+      <div class="faq" id="faq"></div>
+    </div>
+  </div>
+  <div class="note" id="note"></div>
+</div>
+<script>
+const qa = [
+  ['需要事先訂位嗎？', '平日不需要；週末與國定假日建議提前一天透過官網或電話訂位，保留 15 分鐘。'],
+  ['有提供插座與 Wi-Fi 嗎？', '靠窗吧台座位皆有插座，Wi-Fi 密碼印在發票背面。週末用餐限時 2 小時。'],
+  ['可以帶寵物嗎？', '歡迎！戶外庭院座位可攜帶寵物，室內請使用寵物推車或提籠。'],
+  ['咖啡豆可以外帶購買嗎？', '可以，店內提供 4 款自家烘焙豆，半磅 NT$ 380 起，也可代客研磨。'],
+  ['有素食或無麩質餐點嗎？', '每日甜點中至少有一款為蛋奶素，無麩質選項請於點餐時詢問店員。'],
+  ['停車方便嗎？', '店門口無停車位，步行 3 分鐘處有公有停車場，消費滿 300 元可折抵 1 小時。'],
+];
+const faq = document.getElementById('faq');
+faq.innerHTML = qa.map(([q, a], i) => `
+  <div class="item">
+    <button class="q" aria-expanded="false" aria-controls="a${i}" id="q${i}">${q}<span class="ico" aria-hidden="true">＋</span></button>
+    <div class="a" id="a${i}" role="region" aria-labelledby="q${i}"><div><p>${a}</p></div></div>
+  </div>`).join('');
+
+let mode = 'single';
+const note = document.getElementById('note');
+function say(t) { note.textContent = t; note.classList.add('show'); clearTimeout(say.h); say.h = setTimeout(() => note.classList.remove('show'), 2600); }
+function set(item, open) { item.classList.toggle('open', open); item.querySelector('.q').setAttribute('aria-expanded', open); }
+faq.addEventListener('click', e => {
+  const q = e.target.closest('.q'); if (!q) return;
+  const item = q.parentElement, willOpen = !item.classList.contains('open');
+  if (mode === 'single') faq.querySelectorAll('.item.open').forEach(x => x !== item && set(x, false));
+  set(item, willOpen);
+  const n = faq.querySelectorAll('.item.open').length;
+  if (mode === 'multi' && n >= 3) say(`同時開了 ${n} 個——方便比較，但頁面開始變長、變亂`);
+});
+document.querySelectorAll('[data-m]').forEach(b => b.onclick = () => {
+  mode = b.dataset.m;
+  document.querySelectorAll('[data-m]').forEach(x => x.setAttribute('aria-pressed', x === b));
+  faq.querySelectorAll('.item').forEach(x => set(x, false));
+  say(mode === 'single' ? '一次只開一個：頁面永遠保持整齊' : '可同時展開：適合需要對照多個答案的情境');
+});
+setTimeout(() => set(faq.querySelector('.item'), true), 400);
+</script>
+</body>
+</html>

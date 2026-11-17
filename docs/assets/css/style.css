@@ -206,3 +206,6 @@ img, svg, canvas, iframe { max-width: 100%; }
   html { scroll-behavior: auto; }
   *, *::before, *::after { transition: none !important; animation: none !important; }
 }
+
+/* 窄螢幕：只保留品牌圖示，讓導覽連結放得下 */
+@media (max-width: 420px) { .brand { font-size: 0; gap: 0; } }

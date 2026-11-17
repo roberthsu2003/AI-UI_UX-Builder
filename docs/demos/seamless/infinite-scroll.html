@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>增量捲動介面 Infinite Scroll</title>
+<link rel="stylesheet" href="ui.css">
+<style>
+  .list { display: grid; gap: 10px; }
+  .row { display: flex; gap: 12px; align-items: center; background: var(--surface); border: 1px solid var(--hairline); border-radius: 12px; padding: 10px; }
+  .row.new { animation: in .4s var(--ease); }
+  @keyframes in { from { opacity: 0; transform: translateY(10px); } }
+  .row .thumb { width: 56px; height: 56px; aspect-ratio: auto; border-radius: 8px; font-size: 26px; flex: 0 0 auto; }
+  .row h3 { margin: 0; font-size: 15px; }
+  .row p { margin: 0; font-size: 13px; color: var(--muted); }
+  .row .no { margin-left: auto; font-family: "JetBrains Mono", monospace; font-size: 12px; color: var(--muted); }
+  .sk .thumb { background: none; }
+  .sk .l1 { height: 14px; width: 120px; margin-bottom: 6px; } .sk .l2 { height: 12px; width: 180px; }
+  .more { text-align: center; padding: 16px 0 24px; color: var(--muted); font-size: 13px; }
+  .counter { position: absolute; left: 12px; bottom: 20px; z-index: 4; background: var(--ink); color: #fff; font-size: 12px; padding: 4px 10px; border-radius: 999px; font-family: "JetBrains Mono", monospace; }
+  .back { position: absolute; right: 12px; bottom: 12px; z-index: 4; box-shadow: var(--shadow); }
+</style>
+</head>
+<body>
+<div class="hint">👇 一直往下捲，內容會不斷接上來
+  <span class="sp"></span>
+  <span class="seg" role="group" aria-label="載入方式">
+    <button data-m="auto" aria-pressed="true">自動載入</button>
+    <button data-m="button" aria-pressed="false">「載入更多」按鈕</button>
+  </span>
+</div>
+<div class="app">
+  <div class="scroll" id="scroll">
+    <div class="topbar"><span class="logo">木日咖啡</span><span class="sp"></span><span class="muted" style="font-size:13px">顧客評論牆</span></div>
+    <div class="wrap">
+      <div class="list" id="list"></div>
+      <div class="more" id="more"></div>
+    </div>
+  </div>
+  <span class="counter" id="counter">已載入 0 筆</span>
+  <button class="btn back" id="back">↩ 點進評論再按「上一頁」</button>
+  <div class="note" id="note"></div>
+</div>
+<script>
+const emojis = ['☕', '🧋', '🥐', '🍰', '🫖', '🍪'], names = ['小美', '阿傑', 'Kelly', '王先生', '老陳', 'Mia', '小芸', 'Tony'];
+const texts = ['拿鐵很順口，空間好放鬆', '甜點不會太甜，推！', '週末人有點多，建議訂位', '老闆很親切，會再來', '窗邊座位光線超好', '豆子香氣很明顯'];
+const PAGE = 8, MAX = 64;
+let n = 0, loading = false, mode = 'auto';
+const $ = id => document.getElementById(id);
+const note = $('note');
+function say(t, ms = 3000) { note.textContent = t; note.classList.add('show'); clearTimeout(say.h); say.h = setTimeout(() => note.classList.remove('show'), ms); }
+
+function row(i) {
+  return `<div class="row new"><div class="thumb t${i % 6 + 1}">${emojis[i % 6]}</div>
+    <div><h3>${names[i % 8]} ★★★★${i % 3 ? '★' : '☆'}</h3><p>${texts[i % 6]}</p></div><span class="no">#${i + 1}</span></div>`;
+}
+const skel = Array.from({ length: 3 }, () => `<div class="row sk"><div class="thumb skeleton"></div><div><div class="skeleton l1"></div><div class="skeleton l2"></div></div></div>`).join('');
+
+function load() {
+  if (loading || n >= MAX) return;
+  loading = true;
+  $('more').innerHTML = skel;          // 先顯示骨架，讓使用者知道「正在載入」
+  setTimeout(() => {                   // 模擬從伺服器背景取得資料
+    let html = '';
+    for (let k = 0; k < PAGE && n < MAX; k++) html += row(n++);
+    $('list').insertAdjacentHTML('beforeend', html);
+    $('counter').textContent = `已載入 ${n} 筆`;
+    loading = false; footer();
+  }, 700);
+}
+function footer() {
+  if (n >= MAX) $('more').textContent = '— 已經到底了 —';
+  else if (mode === 'button') $('more').innerHTML = '<button class="btn ghost" id="loadBtn">載入更多</button>';
+  else { $('more').textContent = ''; maybeMore(); }
+}
+// 內容還不夠填滿畫面時，自動再載入一頁（IntersectionObserver 不會重複觸發）
+function maybeMore() {
+  const s = $('scroll').getBoundingClientRect(), m = $('more').getBoundingClientRect();
+  if (m.top < s.bottom + 120) requestAnimationFrame(load);
+}
+$('more').addEventListener('click', e => { if (e.target.id === 'loadBtn') load(); });
+new IntersectionObserver(es => { if (mode === 'auto' && es[0].isIntersecting) load(); }, { root: $('scroll'), rootMargin: '120px' }).observe($('more'));
+
+function reset() { $('list').innerHTML = ''; n = 0; $('scroll').scrollTop = 0; load(); }
+$('back').onclick = () => {
+  const was = n;
+  if (was <= PAGE) { say('先往下捲多載入幾頁，再試一次'); return; }
+  reset();
+  say(`剛才看到第 ${was} 筆，回來後只剩前 ${PAGE} 筆——要重新捲一次！`, 4000);
+};
+document.querySelectorAll('[data-m]').forEach(b => b.onclick = () => {
+  mode = b.dataset.m;
+  document.querySelectorAll('[data-m]').forEach(x => x.setAttribute('aria-pressed', x === b));
+  footer();
+});
+load();
+</script>
+</body>
+</html>

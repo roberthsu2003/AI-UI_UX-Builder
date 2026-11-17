@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>滑動式介面 Slide</title>
+<link rel="stylesheet" href="ui.css">
+<style>
+  .app { display: grid; place-items: center; background: var(--surface-alt); padding: 12px; }
+  .phone {
+    position: relative; width: min(340px, 100%); height: 100%; max-height: 640px;
+    background: var(--canvas); border: 8px solid var(--ink); border-radius: 32px; overflow: hidden; box-shadow: var(--shadow-lg);
+  }
+  .main { position: absolute; inset: 0; overflow: auto; background: var(--canvas); transition: transform .35s var(--ease); z-index: 1; }
+  .hero { margin: 12px; border-radius: 16px; aspect-ratio: 4 / 3; display: grid; place-items: center; font-size: 64px; }
+  .main .wrap { padding: 0 12px 16px; }
+  .main h2 { font-family: "Noto Serif TC", serif; margin: 4px 0; font-size: 19px; }
+  .panel { position: absolute; top: 0; bottom: 0; width: 78%; background: var(--surface); z-index: 2; transition: transform .35s var(--ease); display: flex; flex-direction: column; }
+  .panel.left { left: 0; transform: translateX(-100%); box-shadow: var(--shadow-lg); }
+  .panel.right { right: 0; transform: translateX(100%); box-shadow: var(--shadow-lg); }
+  .panel header { display: flex; align-items: center; height: 52px; padding: 0 8px 0 16px; border-bottom: 1px solid var(--hairline); font-weight: 700; }
+  .panel header .sp { flex: 1; }
+  .panel nav a { display: flex; align-items: center; min-height: 48px; padding: 0 16px; color: var(--ink); text-decoration: none; border-bottom: 1px solid var(--hairline); }
+  .panel nav a:hover { background: var(--surface-alt); }
+  .line { display: flex; justify-content: space-between; padding: 12px 16px; border-bottom: 1px solid var(--hairline); }
+  .panel .foot { margin-top: auto; padding: 16px; }
+  .panel .foot .btn { width: 100%; }
+  .shade { position: absolute; inset: 0; z-index: 1; background: rgba(30, 27, 24, .4); opacity: 0; pointer-events: none; transition: opacity .3s; }
+  /* 覆蓋模式 */
+  .phone.open-left .panel.left, .phone.open-right .panel.right { transform: translateX(0); }
+  .phone.open-left .shade, .phone.open-right .shade { opacity: 1; pointer-events: auto; z-index: 1; }
+  .phone.open-left .main, .phone.open-right .main { z-index: 0; }
+  /* 推移模式：主畫面一起被推開 */
+  .phone.push .panel { box-shadow: none; }
+  .phone.push.open-left .main { transform: translateX(78%); }
+  .phone.push.open-right .main { transform: translateX(-78%); }
+  .phone.push.open-left .shade { transform: translateX(78%); }
+  .phone.push.open-right .shade { transform: translateX(-78%); }
+  .shade { transition: opacity .3s, transform .35s var(--ease); }
+</style>
+</head>
+<body>
+<div class="hint">👆 點左上 ☰ 開選單、右上 🛒 開購物車
+  <span class="sp"></span>
+  <span class="seg" role="group" aria-label="滑動方式">
+    <button data-m="overlay" aria-pressed="true">覆蓋在畫面上</button>
+    <button data-m="push" aria-pressed="false">把畫面推開</button>
+  </span>
+</div>
+<div class="app">
+  <div class="phone" id="phone">
+    <div class="main">
+      <div class="topbar">
+        <button class="icon-btn" data-open="left" aria-label="開啟選單">☰</button>
+        <span class="logo">木日咖啡</span><span class="sp"></span>
+        <button class="icon-btn" data-open="right" aria-label="開啟購物車">🛒</button>
+      </div>
+      <div class="hero t2">☕</div>
+      <div class="wrap">
+        <h2>台南老宅裡的一杯好咖啡</h2>
+        <p class="muted">手機螢幕放不下側欄選單，所以把它「收」在畫面左右兩側，需要時再滑出來。</p>
+        <div class="grid" style="grid-template-columns:1fr 1fr">
+          <div class="card"><div class="thumb t1">🥐</div><div class="body"><h3>可頌</h3><span class="price">NT$ 70</span></div></div>
+          <div class="card"><div class="thumb t4">🍰</div><div class="body"><h3>乳酪蛋糕</h3><span class="price">NT$ 120</span></div></div>
+        </div>
+      </div>
+    </div>
+    <div class="shade" id="shade"></div>
+    <aside class="panel left" aria-label="主選單">
+      <header>選單<span class="sp"></span><button class="icon-btn" data-close aria-label="關閉">✕</button></header>
+      <nav><a href="#">🏠 首頁</a><a href="#">📋 菜單</a><a href="#">📖 品牌故事</a><a href="#">📍 門市資訊</a><a href="#">✉️ 聯絡我們</a></nav>
+    </aside>
+    <aside class="panel right" aria-label="購物車">
+      <header>購物車（2）<span class="sp"></span><button class="icon-btn" data-close aria-label="關閉">✕</button></header>
+      <div class="line"><span>☕ 日曬拿鐵</span><span class="price">NT$ 140</span></div>
+      <div class="line"><span>🥐 可頌</span><span class="price">NT$ 70</span></div>
+      <div class="foot"><button class="btn">結帳 NT$ 210</button></div>
+    </aside>
+  </div>
+</div>
+<script>
+const phone = document.getElementById('phone');
+const close = () => phone.classList.remove('open-left', 'open-right');
+document.querySelectorAll('[data-open]').forEach(b => b.onclick = () => { close(); phone.classList.add('open-' + b.dataset.open); });
+document.querySelectorAll('[data-close]').forEach(b => b.onclick = close);
+document.getElementById('shade').onclick = close;
+document.querySelectorAll('.panel nav a').forEach(a => a.onclick = e => { e.preventDefault(); close(); });
+document.addEventListener('keydown', e => { if (e.key === 'Escape') close(); });
+document.querySelectorAll('[data-m]').forEach(b => b.onclick = () => {
+  document.querySelectorAll('[data-m]').forEach(x => x.setAttribute('aria-pressed', x === b));
+  phone.classList.toggle('push', b.dataset.m === 'push');
+  close(); setTimeout(() => phone.classList.add('open-left'), 250);
+});
+</script>
+</body>
+</html>

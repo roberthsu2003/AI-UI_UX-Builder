@@ -79,6 +79,8 @@ Figma（人來做設計判斷：調版面、修層級、定稿）   ◀── UI
 [Figma × MCP] 規格 → Figma 設計系統 → 人工定稿 → 網頁原型   ◀── 本單元
        ↓
 [建立提案用的原型網頁] 與設計師、工程師溝通交付（Dev Mode）
+       ↓
+[部署 Landing Page] 用 React 實作定稿並部署到 GitHub Pages（../部署Landing_Page）
 ```
 
 ---

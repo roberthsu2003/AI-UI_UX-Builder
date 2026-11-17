@@ -1,0 +1,104 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>輪播式介面 Carousel</title>
+<link rel="stylesheet" href="ui.css">
+<style>
+  h2 { font-family: "Noto Serif TC", serif; font-size: 19px; margin: 8px 0 2px; }
+  .carousel { position: relative; }
+  .track {
+    display: flex; gap: 12px; overflow-x: auto; scroll-snap-type: x mandatory; scroll-behavior: smooth;
+    padding: 4px 16px 8px; margin: 0 -16px; scrollbar-width: none;
+  }
+  .track::-webkit-scrollbar { display: none; }
+  .slide { flex: 0 0 var(--w, 72%); scroll-snap-align: start; scroll-margin-left: 16px; }
+  .slide .thumb { aspect-ratio: 16 / 10; font-size: 52px; }
+  .arrow {
+    position: absolute; top: 38%; transform: translateY(-50%); z-index: 2; width: 40px; height: 40px; border-radius: 50%;
+    border: 1px solid var(--hairline); background: var(--surface); box-shadow: var(--shadow); color: var(--ink); font-size: 18px;
+    transition: opacity .2s;
+  }
+  .arrow.prev { left: -6px; } .arrow.next { right: -6px; }
+  .arrow:disabled { opacity: 0; pointer-events: none; }
+  .dots { display: flex; justify-content: center; gap: 6px; margin-top: 6px; }
+  .dots button { width: 8px; height: 8px; padding: 0; border: 0; border-radius: 999px; background: var(--hairline); transition: width .3s var(--ease), background .3s; }
+  .dots button[aria-current="true"] { width: 22px; background: var(--primary); }
+  .opts { display: flex; flex-wrap: wrap; gap: 6px 14px; font-size: 13px; color: var(--muted); margin: 6px 0 4px; }
+  .opts label { display: inline-flex; gap: 6px; align-items: center; cursor: pointer; }
+  .hide-dots .dots, .hide-arrows .arrow { display: none; }
+</style>
+</head>
+<body>
+<div class="hint">👆 左右滑動 / 拖曳卡片、點箭頭或圓點——用下方選項關掉提示，看看還認得出能滑嗎？</div>
+<div class="app">
+  <div class="scroll">
+    <div class="topbar"><span class="logo">木日咖啡</span></div>
+    <div class="wrap">
+      <div class="opts">
+        <label><input type="checkbox" id="peek" checked> 露出下一張（截斷提示）</label>
+        <label><input type="checkbox" id="arrows" checked> 左右箭頭</label>
+        <label><input type="checkbox" id="dotsOpt" checked> 圓點指示器</label>
+        <label><input type="checkbox" id="loop"> 到底後循環</label>
+      </div>
+      <h2>本季新品</h2>
+      <div class="carousel" id="c">
+        <button class="arrow prev" aria-label="上一張">‹</button>
+        <div class="track" id="track"></div>
+        <button class="arrow next" aria-label="下一張">›</button>
+        <div class="dots" id="dots"></div>
+      </div>
+      <h2 style="margin-top:20px">為什麼是水平方向？</h2>
+      <p class="muted" style="margin-top:0">輪播用「左右」的空間放更多內容，頁面本身的「上下」長度不變——同一頁可以放好幾排輪播，結構仍然清楚。但它比較適合圖片，長篇文字仍然適合垂直閱讀。</p>
+    </div>
+  </div>
+  <div class="note" id="note"></div>
+</div>
+<script>
+const data = [['☕', '日曬拿鐵', 't1'], ['🧋', '黑糖冰咖啡', 't2'], ['🥐', '奶油可頌', 't3'], ['🍰', '巴斯克乳酪', 't4'], ['🫖', '東方美人', 't5'], ['🍪', '燕麥餅乾', 't6']];
+const $ = id => document.getElementById(id);
+const track = $('track'), c = $('c');
+track.innerHTML = data.map(([e, n, t], i) => `<article class="slide card" aria-label="${i + 1} / ${data.length}"><div class="thumb ${t}">${e}</div><div class="body"><h3>${n}</h3><p>期間限定 ・ ${i + 1} / ${data.length}</p></div></article>`).join('');
+$('dots').innerHTML = data.map((_, i) => `<button aria-label="第 ${i + 1} 張"></button>`).join('');
+const slides = [...track.children], dots = [...$('dots').children];
+const note = $('note');
+function say(t) { note.textContent = t; note.classList.add('show'); clearTimeout(say.h); say.h = setTimeout(() => note.classList.remove('show'), 2600); }
+
+const idx = () => Math.round(track.scrollLeft / (slides[0].offsetWidth + 12));
+function to(i) {
+  const loop = $('loop').checked, last = data.length - 1;
+  if (i > last) { if (!loop) return say('已經是最後一張了'); i = 0; }
+  if (i < 0) { if (!loop) return; i = last; }
+  track.scrollTo({ left: slides[i].offsetLeft - slides[0].offsetLeft });
+}
+function sync() {
+  const i = idx(), atEnd = track.scrollLeft + track.clientWidth >= track.scrollWidth - 4;
+  const cur = atEnd ? data.length - 1 : Math.min(i, data.length - 1);
+  dots.forEach((d, k) => d.setAttribute('aria-current', k === cur));
+  const loop = $('loop').checked;
+  c.querySelector('.prev').disabled = !loop && track.scrollLeft < 4;
+  c.querySelector('.next').disabled = !loop && atEnd;
+}
+c.querySelector('.prev').onclick = () => to(idx() - 1);
+c.querySelector('.next').onclick = () => {
+  const atEnd = track.scrollLeft + track.clientWidth >= track.scrollWidth - 4;
+  to(atEnd ? data.length : idx() + 1);
+};
+dots.forEach((d, i) => d.onclick = () => to(i));
+track.addEventListener('scroll', () => requestAnimationFrame(sync));
+
+// 滑鼠拖曳（觸控裝置原生就能滑）
+let drag = null;
+track.addEventListener('pointerdown', e => { if (e.pointerType !== 'mouse') return; drag = { x: e.clientX, s: track.scrollLeft }; track.style.scrollSnapType = 'none'; track.style.scrollBehavior = 'auto'; });
+addEventListener('pointermove', e => { if (drag) track.scrollLeft = drag.s - (e.clientX - drag.x); });
+addEventListener('pointerup', () => { if (!drag) return; drag = null; track.style.scrollSnapType = ''; track.style.scrollBehavior = ''; to(idx()); });
+
+$('peek').onchange = e => { track.style.setProperty('--w', e.target.checked ? '72%' : '100%'); say(e.target.checked ? '露出下一張的一角，暗示「還有更多」' : '剛好一張一頁：沒有箭頭和圓點時，很難發現可以滑'); sync(); };
+$('arrows').onchange = e => c.classList.toggle('hide-arrows', !e.target.checked);
+$('dotsOpt').onchange = e => c.classList.toggle('hide-dots', !e.target.checked);
+$('loop').onchange = e => { say(e.target.checked ? '循環：最後一張的下一張回到第一張' : '不循環：到底後箭頭消失，明確告訴使用者已經看完'); sync(); };
+sync();
+</script>
+</body>
+</html>

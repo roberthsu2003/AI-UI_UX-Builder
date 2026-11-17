@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>增量平移介面 Panning</title>
+<link rel="stylesheet" href="ui.css">
+<style>
+  .map { position: absolute; inset: 0; overflow: hidden; background: #e8e2d8; cursor: grab; touch-action: none; user-select: none; }
+  .map.drag { cursor: grabbing; }
+  .world { position: absolute; left: 0; top: 0; transform-origin: 0 0; }
+  .tile { position: absolute; width: 300px; height: 300px; transition: opacity .5s; }
+  .tile.loading { background: repeating-linear-gradient(45deg, #ddd6cb 0 10px, #e5dfd5 10px 20px); }
+  .tile.loading > * { opacity: 0; }
+  .tile > * { transition: opacity .5s; }
+  .tile .ground { position: absolute; inset: 0;
+    background:
+      linear-gradient(#fff 0 0) 0 140px / 100% 20px no-repeat,
+      linear-gradient(#fff 0 0) 140px 0 / 20px 100% no-repeat,
+      linear-gradient(#f4efe7 0 0) 0 0 / 100% 100%; }
+  .tile .park { position: absolute; left: 20px; top: 20px; width: 100px; height: 100px; border-radius: 12px; background: #cfe0c3; }
+  .tile .block { position: absolute; border-radius: 6px; background: #e3dccf; }
+  .tile .lbl { position: absolute; left: 6px; bottom: 4px; font: 11px "JetBrains Mono", monospace; color: #b1a898; }
+  .pin { position: absolute; transform: translate(-50%, -100%); font-size: 28px; cursor: pointer; filter: drop-shadow(0 3px 4px rgba(0,0,0,.25)); border: 0; background: none; padding: 0; }
+  .pin:hover { transform: translate(-50%, -100%) scale(1.15); }
+  .tools { position: absolute; right: 12px; top: 12px; z-index: 5; display: flex; flex-direction: column; background: var(--surface); border-radius: 8px; box-shadow: var(--shadow); overflow: hidden; }
+  .tools .icon-btn { border-radius: 0; }
+  .tools .icon-btn + .icon-btn { border-top: 1px solid var(--hairline); }
+  .stat { position: absolute; left: 12px; top: 12px; z-index: 5; background: var(--ink); color: #fff; font: 12px "JetBrains Mono", monospace; padding: 4px 10px; border-radius: 999px; }
+  .info { position: absolute; left: 12px; right: 12px; bottom: 12px; z-index: 6; max-width: 320px; background: var(--surface); border-radius: 12px; box-shadow: var(--shadow-lg); padding: 12px 14px; transform: translateY(140%); transition: transform .35s var(--ease); }
+  .info.on { transform: none; }
+  .info h3 { margin: 0; } .info p { margin: 2px 0 0; color: var(--muted); font-size: 13px; }
+</style>
+</head>
+<body>
+<div class="hint">✋ 拖曳地圖往任何方向移動、滾輪或右上按鈕縮放——注意新區域是「移到才載入」</div>
+<div class="app">
+  <div class="map" id="map"><div class="world" id="world"></div></div>
+  <div class="tools"><button class="icon-btn" id="zin" aria-label="放大">＋</button><button class="icon-btn" id="zout" aria-label="縮小">－</button><button class="icon-btn" id="home" aria-label="回到中心">⌖</button></div>
+  <span class="stat" id="stat"></span>
+  <div class="info" id="info"><h3 id="i-t"></h3><p id="i-d"></p></div>
+</div>
+<script>
+const COLS = 10, ROWS = 8, T = 300;
+const $ = id => document.getElementById(id);
+const map = $('map'), world = $('world');
+world.style.width = COLS * T + 'px'; world.style.height = ROWS * T + 'px';
+const rnd = (s => () => (s = (s * 9301 + 49297) % 233280) / 233280)(7);
+const stores = ['台南本店', '赤崁分店', '安平門市', '神農街快閃', '府中站', '海安路店', '孔廟旁小站', '藍晒圖店', '正興街店', '永康店'];
+let si = 0;
+const tiles = [];
+for (let r = 0; r < ROWS; r++) for (let c = 0; c < COLS; c++) {
+  const t = document.createElement('div');
+  t.className = 'tile loading';
+  t.style.left = c * T + 'px'; t.style.top = r * T + 'px';
+  let inner = '<div class="ground"></div>';
+  if (rnd() < .35) inner += '<div class="park"></div>';
+  for (let k = 0; k < 3; k++) inner += `<div class="block" style="left:${170 + rnd() * 90 | 0}px;top:${10 + k * 42 + rnd() * 10 | 0}px;width:${40 + rnd() * 60 | 0}px;height:34px"></div>`;
+  inner += `<span class="lbl">(${c},${r})</span>`;
+  if (rnd() < .14 && si < stores.length) inner += `<button class="pin" style="left:${60 + rnd() * 180 | 0}px;top:${190 + rnd() * 90 | 0}px" data-n="${stores[si++]}" aria-label="門市">📍</button>`;
+  t.innerHTML = inner;
+  world.appendChild(t); tiles.push({ el: t, c, r, loaded: false, pending: false });
+}
+
+let x = 0, y = 0, z = 1, loadedCount = 0;
+function apply() {
+  world.style.transform = `translate(${x}px, ${y}px) scale(${z})`;
+  requestAnimationFrame(loadVisible);
+}
+function loadVisible() {
+  const w = map.clientWidth, h = map.clientHeight;
+  for (const t of tiles) {
+    if (t.loaded || t.pending) continue;
+    const L = x + t.c * T * z, Tp = y + t.r * T * z, S = T * z;
+    if (L + S > -50 && L < w + 50 && Tp + S > -50 && Tp < h + 50) {
+      t.pending = true;                                 // 模擬：進入畫面才向伺服器要這一格的資料
+      setTimeout(() => { t.el.classList.remove('loading'); t.loaded = true; loadedCount++; stat(); }, 250 + Math.random() * 500);
+    }
+  }
+}
+function stat() { $('stat').textContent = `已載入 ${loadedCount} / ${tiles.length} 格 ・ ${Math.round(z * 100)}%`; }
+function center() { z = .6; x = (map.clientWidth - COLS * T * z) / 2; y = (map.clientHeight - ROWS * T * z) / 2; apply(); }
+function zoom(f, cx = map.clientWidth / 2, cy = map.clientHeight / 2) {
+  const nz = Math.min(2, Math.max(.35, z * f));
+  x = cx - (cx - x) * nz / z; y = cy - (cy - y) * nz / z; z = nz; apply(); stat();
+}
+
+let drag = null;
+map.addEventListener('pointerdown', e => { if (e.target.closest('.pin')) return; drag = { sx: e.clientX - x, sy: e.clientY - y, moved: false }; map.setPointerCapture(e.pointerId); map.classList.add('drag'); });
+map.addEventListener('pointermove', e => { if (!drag) return; x = e.clientX - drag.sx; y = e.clientY - drag.sy; drag.moved = true; apply(); });
+map.addEventListener('pointerup', () => { drag = null; map.classList.remove('drag'); });
+map.addEventListener('wheel', e => { e.preventDefault(); const r = map.getBoundingClientRect(); zoom(e.deltaY < 0 ? 1.15 : 1 / 1.15, e.clientX - r.left, e.clientY - r.top); }, { passive: false });
+map.addEventListener('click', e => {
+  const p = e.target.closest('.pin');
+  if (p) { $('i-t').textContent = '☕ 木日咖啡 ' + p.dataset.n; $('i-d').textContent = '營業時間 09:00–18:00 ・ 點地圖空白處關閉'; $('info').classList.add('on'); }
+  else $('info').classList.remove('on');
+});
+$('zin').onclick = () => zoom(1.25); $('zout').onclick = () => zoom(.8); $('home').onclick = center;
+addEventListener('resize', () => requestAnimationFrame(loadVisible));
+center(); stat();
+</script>
+</body>
+</html>

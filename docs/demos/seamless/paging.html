@@ -1,0 +1,102 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>增量翻頁介面 Incremental Paging</title>
+<link rel="stylesheet" href="ui.css">
+<style>
+  .browser { position: absolute; inset: 0; display: flex; flex-direction: column; }
+  .chrome { flex: 0 0 auto; display: flex; align-items: center; gap: 6px; padding: 6px 10px; background: #e9e5df; border-bottom: 1px solid var(--hairline); }
+  .chrome .icon-btn { width: 32px; height: 32px; font-size: 16px; }
+  .url { flex: 1; min-width: 0; background: #fff; border-radius: 999px; padding: 5px 14px; font-family: "JetBrains Mono", monospace; font-size: 12px; color: var(--muted); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+  .url b { color: var(--primary); transition: background .3s; border-radius: 4px; }
+  .url b.flash { background: #f6dcc6; }
+  .viewport { position: relative; flex: 1; overflow: hidden; }
+  .page { position: absolute; inset: 0; overflow: auto; transition: transform .45s var(--ease), opacity .45s; }
+  .page.enter-r { transform: translateX(60%); opacity: 0; }
+  .page.enter-l { transform: translateX(-60%); opacity: 0; }
+  .page.exit-l { transform: translateX(-60%); opacity: 0; }
+  .page.exit-r { transform: translateX(60%); opacity: 0; }
+  .pager { display: flex; justify-content: center; gap: 6px; padding: 8px 0 20px; flex-wrap: wrap; }
+  .pager button { min-width: 40px; height: 40px; border-radius: 8px; border: 1px solid var(--hairline); background: var(--surface); color: var(--ink); }
+  .pager button[aria-current="page"] { background: var(--primary); border-color: var(--primary); color: #fff; font-weight: 700; }
+  .pager button:disabled { opacity: .4; cursor: not-allowed; }
+  .left-site { position: absolute; inset: 0; z-index: 5; background: #fff; display: none; place-items: center; text-align: center; padding: 24px; }
+  .left-site.on { display: grid; }
+</style>
+</head>
+<body>
+<div class="hint">👆 翻到第 3、4 頁後按瀏覽器的「←」，比較兩種模式
+  <span class="sp"></span>
+  <span class="seg" role="group" aria-label="網址">
+    <button data-m="url" aria-pressed="true">翻頁時更新網址</button>
+    <button data-m="nourl" aria-pressed="false">網址不變</button>
+  </span>
+</div>
+<div class="app">
+  <div class="browser">
+    <div class="chrome">
+      <button class="icon-btn" id="back" aria-label="上一頁">←</button>
+      <div class="url" id="url"></div>
+    </div>
+    <div class="viewport" id="vp"></div>
+  </div>
+  <div class="left-site" id="left">
+    <div><div style="font-size:48px">🔍</div><h3>你離開了木日咖啡</h3>
+      <p class="muted">因為翻頁時網址沒有改變，瀏覽器的「上一頁」直接回到了搜尋結果。</p>
+      <button class="btn" id="return">回到咖啡店網站</button></div>
+  </div>
+  <div class="note" id="note"></div>
+</div>
+<script>
+const emojis = ['☕', '🧋', '🥐', '🍰', '🫖', '🍪'], TOTAL = 5, PER = 6;
+const $ = id => document.getElementById(id);
+let page = 1, mode = 'url', stack = [1];
+const note = $('note');
+function say(t) { note.textContent = t; note.classList.add('show'); clearTimeout(say.h); say.h = setTimeout(() => note.classList.remove('show'), 2800); }
+
+function html(p) {
+  const cards = Array.from({ length: PER }, (_, k) => {
+    const i = (p - 1) * PER + k;
+    return `<article class="card"><div class="thumb t${i % 6 + 1}">${emojis[i % 6]}</div><div class="body"><h3>商品 ${i + 1}</h3><span class="price">NT$ ${60 + (i * 37) % 120}</span></div></article>`;
+  }).join('');
+  const nums = Array.from({ length: TOTAL }, (_, k) => `<button data-p="${k + 1}" ${k + 1 === p ? 'aria-current="page"' : ''}>${k + 1}</button>`).join('');
+  return `<div class="topbar"><span class="logo">木日咖啡</span><span class="sp"></span><span class="muted" style="font-size:13px">線上商店 ・ 第 ${p} / ${TOTAL} 頁</span></div>
+    <div class="wrap"><div class="grid">${cards}</div></div>
+    <div class="pager"><button data-p="${p - 1}" ${p === 1 ? 'disabled' : ''} aria-label="上一頁">‹</button>${nums}<button data-p="${p + 1}" ${p === TOTAL ? 'disabled' : ''} aria-label="下一頁">›</button></div>`;
+}
+function setUrl(p) {
+  $('url').innerHTML = mode === 'url' ? `mujih-coffee.tw/shop<b>?page=${p}</b>` : 'mujih-coffee.tw/shop';
+  const b = $('url').querySelector('b'); if (b) { b.classList.add('flash'); setTimeout(() => b.classList.remove('flash'), 400); }
+}
+function go(p, push = true) {
+  if (p < 1 || p > TOTAL || p === page) return;
+  const dir = p > page ? 'r' : 'l';
+  const old = $('vp').querySelector('.page');
+  const nu = document.createElement('div');
+  nu.className = 'page enter-' + dir; nu.innerHTML = html(p);
+  $('vp').appendChild(nu);
+  requestAnimationFrame(() => requestAnimationFrame(() => {
+    nu.className = 'page';
+    if (old) { old.className = 'page exit-' + (dir === 'r' ? 'l' : 'r'); setTimeout(() => old.remove(), 450); }
+  }));
+  page = p;
+  if (push && mode === 'url') stack.push(p);
+  setUrl(p);
+}
+$('vp').addEventListener('click', e => { const b = e.target.closest('[data-p]'); if (b && !b.disabled) go(+b.dataset.p); });
+$('back').onclick = () => {
+  if (mode === 'url' && stack.length > 1) { stack.pop(); go(stack[stack.length - 1], false); say('網址有記錄頁碼，所以「上一頁」回到上一個頁碼'); }
+  else $('left').classList.add('on');
+};
+$('return').onclick = () => { $('left').classList.remove('on'); $('vp').innerHTML = ''; page = 0; stack = [1]; go(1, false); say('回來後又從第 1 頁開始了'); };
+document.querySelectorAll('[data-m]').forEach(b => b.onclick = () => {
+  mode = b.dataset.m; stack = [page];
+  document.querySelectorAll('[data-m]').forEach(x => x.setAttribute('aria-pressed', x === b));
+  setUrl(page);
+});
+page = 0; go(1, false);
+</script>
+</body>
+</html>

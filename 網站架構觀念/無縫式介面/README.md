@@ -1,5 +1,12 @@
 ## 無縫式介面
+
+> [!TIP]
+> **🎮 互動圖鑑**：本章 9 種介面都有可以直接操作的 demo，邊讀邊玩更容易理解 👉 **[無縫式介面圖鑑](https://roberthsu2003.github.io/UI_UX_Prototype/seamless.html)**
+>
+> 每個 demo 上方都有切換按鈕（例如「傳統換頁 vs 無縫」「一次只開一個 vs 可同時展開」），請實際操作並比較差異。
 ## 1. 什麼是不切換畫面的介面? 
+
+> 🎮 **互動 demo**：[全頁更新 vs 局部更新 對照](https://roberthsu2003.github.io/UI_UX_Prototype/seamless.html#compare)
 ### 更自然更直覺地操作
 所謂「無縫式介面」 (seamless interface )
 是指畫面不會切換，也不會中途被截斷，以「單
@@ -30,6 +37,8 @@ Ajax 提供的服務出現之前，這種無縫式介面就
 更多可能性。
 
 ## 2. 覆蓋式介面
+
+> 🎮 **互動 demo**：[中央彈窗 / 底部抽屜](https://roberthsu2003.github.io/UI_UX_Prototype/seamless.html#overlay)
 用途多多的簡易彈出式介面
 所謂的「覆蓋式介面」
 （overlay）是指不進
@@ -53,6 +62,8 @@ Ajax 提供的服務出現之前，這種無縫式介面就
 
   
 ## 3. 嵌入式介面
+
+> 🎮 **互動 demo**：[FAQ 手風琴](https://roberthsu2003.github.io/UI_UX_Prototype/seamless.html#accordion)
 能精簡顯示空間的折疊功能
 能讓原杰隱藏的資訊突然佔據局部頁面空間
 的就是「嵌人式介面」(inlay）了。由於這種
@@ -77,6 +88,8 @@ Ajax 提供的服務出現之前，這種無縫式介面就
 
   
 ## 4. 滑動式介面
+
+> 🎮 **互動 demo**：[手機側邊選單：覆蓋 / 推開](https://roberthsu2003.github.io/UI_UX_Prototype/seamless.html#slide)
 
 可從螢幕左右展開的選單區塊
 「滑動式介面」（slide）是：
@@ -103,6 +116,8 @@ Ajax 提供的服務出現之前，這種無縫式介面就
 
   
 ## 5. 增量捲動介面  
+
+> 🎮 **互動 demo**：[評論牆無限捲動與「上一頁」問題](https://roberthsu2003.github.io/UI_UX_Prototype/seamless.html#infinite-scroll)
 
 無分段式連續顯示內容
 所謂的「增量捲動介面」(incremental
@@ -135,6 +150,8 @@ URL的控制有關（一般來說，增量捲動介面不
 
 ## 6. 增量翻頁介面  
 
+> 🎮 **互動 demo**：[無縫分頁與網址同步](https://roberthsu2003.github.io/UI_UX_Prototype/seamless.html#paging)
+
 不會發生畫面切換的翻頁瀏質
 「增量翻頁介面」(incremental paging)是
 一種利用翻頁瀏質的方式，不斷顯示內容的介
@@ -161,6 +178,8 @@ URL的控制有關（一般來說，增量捲動介面不
 用程式。
 
 ## 7. 增量平移介面
+
+> 🎮 **互動 demo**：[可拖曳的門市地圖](https://roberthsu2003.github.io/UI_UX_Prototype/seamless.html#panning)
 在螢幕之內上下左右捲動畫面
 「增量平移介面」 (incremental panning )
 就是指可以將畫面上下左右拖曳的介面，由於
@@ -178,6 +197,8 @@ Google Maps 就是最具代表性的例子。基本
 魅力的介面。
 
 ## 8. 輪播式介面
+
+> 🎮 **互動 demo**：[商品輪播與滑動提示](https://roberthsu2003.github.io/UI_UX_Prototype/seamless.html#carousel)
 節省空間的水平捲動功能
 所謂「輪播式介面」（carousel）是指水平捲
 動內容或翻頁，以視覺效果顯示內容的介面，
@@ -207,6 +228,8 @@ Google Maps 就是最具代表性的例子。基本
 
   
 ## 9. 無縫式步驟
+
+> 🎮 **互動 demo**：[包場預約三步驟](https://roberthsu2003.github.io/UI_UX_Prototype/seamless.html#steps)
 
 輕快的連續流程
 所謂「無縫式步驟」 (seamless step）是指

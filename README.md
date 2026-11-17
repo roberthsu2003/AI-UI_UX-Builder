@@ -44,6 +44,12 @@
 > * **動畫與動態影片感**：GSAP 時間軸、Anime.js 交錯動畫、Lottie 播放 AE 動畫，並延伸認識 Rive 互動動畫與 Remotion 程式化影片。
 > * **資料視覺化與捲動互動**：D3.js 網站架構圖、Chart.js 儀表板，以及 GSAP ScrollTrigger + Lenis 的捲動敘事手法。
 
+## [部署 Landing Page：從本機執行到 GitHub Pages 上線 >>](./部署Landing_Page)
+> 課程的最後一哩路：把 `DESIGN.md` 與 Figma 定稿變成任何人都能打開的真實網址。本單元以 **React + Vite** 建立活動頁面，全程 Vibe Coding，內容包含：
+> * **本機開發**：建立 React 專案、看懂專案結構、`dev` / `build` / `preview` 三個指令，以及 Figma 元件與 Variants 如何對應到 React 元件與 props。
+> * **設計轉程式**：`DESIGN.md` → CSS 變數、Figma MCP 讀稿拆成元件、資料與畫面分離（用陣列產生卡片）。
+> * **自動部署**：建立 GitHub Repo、設定 Vite `base`、撰寫 GitHub Actions 工作流程，達成「push 就是發布」，並附白畫面與 build 失敗的除錯練習。
+
 ---
 
 🌐 **課程網站**：[https://roberthsu2003.github.io/UI_UX_Prototype/](https://roberthsu2003.github.io/UI_UX_Prototype/)（原始碼位於 [`docs/`](./docs) 資料夾）
