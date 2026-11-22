@@ -60,7 +60,7 @@ claude        # 或用 Cursor / Antigravity 開啟 my-design-lab 資料夾
    - 5. Layout Principles（版面佈局與間距原則）
    - 6. Depth & Elevation（陰影與層次規則）
    - 7. Do's and Don'ts（為了避免風格跑偏，請列出 5 條設計護欄）
-   - 8. Responsive Behavior（響應式行為）
+   - 8. Responsive Behavior（回應式行為）
    - 9. Agent Prompt Guide（給 AI 生成頁面時的執行備忘）
 
 若原網站有明顯的視覺缺點（例如對比度不足、顏色過於雜亂），請在「2. Color Palette」或「7. Do's and Don'ts」中主動提出修正與收斂建議，而非照單全收。
@@ -265,7 +265,7 @@ AI 幾乎一定會在某些地方「自由發揮」。這時**不要只叫 AI �
 - [ ] **色碼都有語意角色嗎？**（是不是只列了一堆顏色，卻沒寫哪個是背景、哪個是主按鈕、哪個是細邊框？）
 - [ ] **有寫「不要做什麼（Don'ts）」嗎？**（是否明確禁止了不適合本專案的漸層、過多陰影或突兀色按鈕？）
 - [ ] **用同一份 `DESIGN.md` 生成兩個不同頁面，看起來像同一個網站嗎？**（測試：分別生成「首頁」與「FAQ／聯絡我們頁面」，檢查 Header、Footer、按鈕與色調是否一致）
-- [ ] **手機版（375px 寬度）不會破版或文字溢出嗎？**（特別檢查第 8 章響應式規則是否有效約束 AI）
+- [ ] **手機版（375px 寬度）不會破版或文字溢出嗎？**（特別檢查第 8 章回應式規則是否有效約束 AI）
 
 > [!TIP]
 > **怎麼看 375px 手機版？** 在 Chrome 按 `F12`（Mac：`Cmd + Option + I`）→ 點左上角的手機圖示（Toggle device toolbar）→ 選擇 iPhone SE 或手動輸入寬度 `375`。

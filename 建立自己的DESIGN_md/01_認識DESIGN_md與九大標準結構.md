@@ -91,7 +91,7 @@ spacing:
 ### 3. Typography Rules（字體與排版層級）
 * **目的**：建立清晰的視覺閱讀動線與文字層級（Visual Hierarchy）。
 * **該寫什麼**：
-  * 標題字體（Display）、內文字體（Body）、等寬數字／代碼字體（Mono）。
+  * 標題字體（Display）、內文字體（Body）、等寬數字／程式碼字體（Mono）。
   * 各級標題（`H1` Hero、`H2` Section、`H3` Card Title、Body、Caption）的字級大小（px/rem）、行高（Line-height）、字重（Font-weight）與字距（Letter-spacing）。
 
 ### 4. Component Stylings（核心元件樣式）
@@ -116,7 +116,7 @@ spacing:
   * **Do's（務必遵守）**：例如「所有照片統一使用溫暖自然光調並保持一致圓角」、「導覽列在全站所有頁面維持固定位置與項目順序」。
   * **Don'ts（絕對禁止）**：例如「禁止使用 Tailwind 預設紫藍色漸層」、「禁止在正文中使用純黑 `#000000` 配純白 `#FFFFFF` 的刺眼高對比」、「禁止將重要 CTA 按鈕做成與整體暖色調衝突的亮藍色」。
 
-### 8. Responsive Behavior（響應式斷點與手機版規則）
+### 8. Responsive Behavior（回應式斷點與手機版規則）
 * **目的**：確保電腦版與手機版切換時結構不走樣。
 * **該寫什麼**：主要斷點（Mobile `< 768px`、Tablet `768px–1024px`、Desktop `> 1024px`）、多欄格線在手機版如何收合（例如 3 欄改為 1 欄垂直堆疊）、手機版觸控按鈕最小高度（建議至少 `44px`）以及導覽列如何轉為漢堡選單或抽屜。
 
@@ -186,7 +186,7 @@ typography:
 4. **只寫 `Inter`，沒有繁體中文字體** → 中文會回退成系統預設字體。
 5. **氛圍只寫「現代、簡約、好看」** → 太模糊，AI 會回到公版風格。
 6. **按鈕「漂亮一點、一點陰影」沒有數值**，也缺少 Hover / Disabled 狀態。
-7. **缺少第 5～9 章**，尤其沒有 Do's and Don'ts 與響應式規則。
+7. **缺少第 5～9 章**，尤其沒有 Do's and Don'ts 與回應式規則。
 
 </details>
 

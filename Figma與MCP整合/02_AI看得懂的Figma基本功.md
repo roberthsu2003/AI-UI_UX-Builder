@@ -133,7 +133,7 @@ Frame 427                        Card/Product
 
 ## 📱 練習 2-6：Constraints 與 RWD — 拉一拉就知道會不會破版（5 分鐘）
 
-**觀念**：Figma 不是瀏覽器，但可以用「拉伸 Frame」模擬不同螢幕寬度，提早發現 `DESIGN.md` 第 8 章的響應式問題。
+**觀念**：Figma 不是瀏覽器，但可以用「拉伸 Frame」模擬不同螢幕寬度，提早發現 `DESIGN.md` 第 8 章的回應式問題。
 
 **動手做：**
 1. 把卡片中的 `Content` 與 `Button` 寬度設為 **Fill container**。

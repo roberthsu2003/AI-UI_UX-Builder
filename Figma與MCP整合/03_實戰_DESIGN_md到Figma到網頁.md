@@ -85,7 +85,7 @@ claude        # 或用 Cursor / VS Code 開啟資料夾
 規則：
 - 只能使用 Components 頁面中的元件 instance 與既有 Variables
 - 所有區塊使用 Auto Layout，區塊上下間距使用 spacing/section
-- 遵守 @DESIGN.md 第 5 章（版面）、第 7 章（Do's and Don'ts）、第 8 章（響應式）
+- 遵守 @DESIGN.md 第 5 章（版面）、第 7 章（Do's and Don'ts）、第 8 章（回應式）
 - 文案請用符合我專案主題的真實中文，不要用 Lorem ipsum
 ```
 

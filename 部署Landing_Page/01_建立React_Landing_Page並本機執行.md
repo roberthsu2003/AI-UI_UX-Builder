@@ -137,7 +137,7 @@ App.jsx
 1. 元件放在 src/components/，每個區塊一個檔案：Header、Hero、ProductList、ProductCard、Story、Footer、Button
 2. Button 元件用 props 對應 Figma 的 Variants：variant="primary" | "secondary"、disabled
 3. 樣式使用一般 CSS（每個元件一個 .css 檔），顏色、圓角、間距一律使用 src/index.css 的 CSS 變數，不要使用 Tailwind
-4. 響應式斷點依照 @DESIGN.md 第 8 章
+4. 回應式斷點依照 @DESIGN.md 第 8 章
 5. 圖片先用灰色佔位區塊，並在程式碼中加上註解標示圖片尺寸
 完成後請在 App.jsx 依序組合，並列出 Figma 中無法 1:1 還原的地方。
 ```
