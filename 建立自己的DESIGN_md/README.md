@@ -1,5 +1,7 @@
 # 建立自己的 `DESIGN.md`：打造 AI 看得懂的設計規範 📐
 
+> 📅 **最後更新：2026-11**　｜　本單元涉及的工具介面、方案與額度變動快，若畫面與講義不符，請以官方文件為準。
+
 在前面章節中，我們學過如何在 [網站架構觀念](../網站架構觀念/README.md) 中維持全站 [一致性](../網站架構觀念/一致性/README.md) 與 [標準化元件](../網站架構觀念/設計的講究之處/README.md)，也看過在 [Claude Skill 實測](../Claude網頁設計Skill實戰指南/README.md) 中，若 AI 沒有明確的視覺規範，很容易產出「前後色調跳痛、風格斷裂」或千篇一律的公版頁面。
 
 **`DESIGN.md`**（由 **Google Stitch** 率先推廣並開源，並透過 [VoltAgent/awesome-design-md](https://github.com/VoltAgent/awesome-design-md) 等社群專案普及）正是為了解決這個問題而生的標準格式——它用一份人類與 AI 都讀得懂的純文字 Markdown 文件，作為專案視覺設計的**單一事實來源（Single Source of Truth）**。
@@ -64,11 +66,15 @@
        ↓
 [2. 網站架構觀念] 決定版型佈局、導覽結構、色彩判別與一致性原則
        ↓
-[3. 建立自己的 DESIGN.md] 把所有視覺決策固化成 AI 看得懂的規格書  ◀── 本單元
+[3. 定義使用者與需求] Persona、任務流程與線框圖
        ↓
-[Figma × MCP] 把 DESIGN.md 建成 Figma 設計系統，人工定稿後再轉成網頁（../Figma與MCP整合）
+[4. 原型網頁] + [5. Skill] 用 Stitch、Claude Design、UI UX Pro Max 探索視覺方向
        ↓
-[4. 原型實作 / Skill] 搭配 Google Stitch、Claude Design 或 UI UX Pro Max 快速生成多頁一致的原型
+[6. 建立自己的 DESIGN.md] 把選定的視覺決策固化成 AI 看得懂的規格書  ◀── 本單元
+       ↓
+[7. Figma × MCP] 把 DESIGN.md 建成 Figma 設計系統，人工定稿後再轉成網頁
+       ↓
+[8. 易用性測試] 依測試結果回頭修改 DESIGN.md（Changelog）
 ```
 
 ---

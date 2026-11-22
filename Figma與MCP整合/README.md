@@ -1,5 +1,7 @@
 # Figma × MCP：讓 AI 讀懂、也能動手畫你的設計稿 🎨🤖
 
+> 📅 **最後更新：2026-11**　｜　本單元涉及的工具介面、方案與額度變動快，若畫面與講義不符，請以官方文件為準。
+
 在 [建立自己的 `DESIGN.md`](../建立自己的DESIGN_md/README.md) 單元中，我們用**文字**定義了設計規範；但 UI/UX 工作真正的主戰場仍然是 **Figma**——版面要用眼睛調、元件要用手擺、細節要靠設計判斷。
 
 本單元介紹如何透過 **MCP（Model Context Protocol）** 把 Figma 接上 AI（Claude Code / Cursor / VS Code），讓工作流變成：
@@ -72,15 +74,15 @@ Figma（人來做設計判斷：調版面、修層級、定稿）   ◀── UI
 ## 🔄 與本課程其他單元的連動關係
 
 ```text
-[網站架構觀念] 版型、導覽、一致性原則
+[3. 定義使用者與需求] 線框圖決定「放什麼、放哪裡」
        ↓
-[建立自己的 DESIGN.md] 把視覺決策寫成 AI 看得懂的規格
+[6. 建立自己的 DESIGN.md] 把視覺決策寫成 AI 看得懂的規格
        ↓
-[Figma × MCP] 規格 → Figma 設計系統 → 人工定稿 → 網頁原型   ◀── 本單元
+[7. Figma × MCP] 規格 → Figma 設計系統 → 人工定稿 → 網頁原型   ◀── 本單元
        ↓
-[建立提案用的原型網頁] 與設計師、工程師溝通交付（Dev Mode）
+[8. 易用性測試] 用定稿原型找真人測試，再回頭修改設計稿
        ↓
-[部署 Landing Page] 用 React 實作定稿並部署到 GitHub Pages（../部署Landing_Page）
+[10. 部署 Landing Page] 用 React 實作定稿並部署到 GitHub Pages
 ```
 
 ---
