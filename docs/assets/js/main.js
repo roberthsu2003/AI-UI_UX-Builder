@@ -322,20 +322,35 @@ function themeToggle() {
 function trackSwitch() {
   const btns = [...document.querySelectorAll('.track-switch [data-track]')];
   if (!btns.length) return;
-  const apply = track => {
-    btns.forEach(b => b.setAttribute('aria-checked', String(b.dataset.track === track)));
+  const note = document.querySelector('.track-note');
+  const names = { pm: 'PM 理解版', dev: '動手實作版' };
+  const apply = (track, animate) => {
+    btns.forEach(b => {
+      const on = b.dataset.track === track;
+      b.setAttribute('aria-checked', String(on));
+      b.tabIndex = on ? 0 : -1;
+    });
     document.querySelectorAll('.unit-card[data-pm]').forEach(card => {
       const d = card.querySelector('.depth');
-      if (d) d.textContent = card.dataset[track] || '';
+      if (!d) return;
+      d.textContent = card.dataset[track] || '';
+      if (animate) { d.classList.remove('flash'); void d.offsetWidth; d.classList.add('flash'); }
     });
+    if (note) note.innerHTML = `目前顯示：<b>${names[track]}</b>，卡片右上角是這個單元要做到的深度`;
+    try { localStorage.setItem('track', track); } catch {}
   };
   let saved = 'pm';
   try { saved = localStorage.getItem('track') || 'pm'; } catch {}
-  apply(saved === 'dev' ? 'dev' : 'pm');
-  btns.forEach(b => b.addEventListener('click', () => {
-    apply(b.dataset.track);
-    try { localStorage.setItem('track', b.dataset.track); } catch {}
-  }));
+  apply(saved === 'dev' ? 'dev' : 'pm', false);
+  btns.forEach((b, i) => {
+    b.addEventListener('click', () => apply(b.dataset.track, true));
+    b.addEventListener('keydown', e => {
+      if (!['ArrowLeft', 'ArrowRight', 'ArrowUp', 'ArrowDown'].includes(e.key)) return;
+      e.preventDefault();
+      const next = btns[(i + (e.key === 'ArrowLeft' || e.key === 'ArrowUp' ? -1 : 1) + btns.length) % btns.length];
+      next.focus(); apply(next.dataset.track, true);
+    });
+  });
 }
 
 themeToggle();
