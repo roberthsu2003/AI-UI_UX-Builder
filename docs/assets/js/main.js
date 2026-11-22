@@ -318,6 +318,27 @@ function themeToggle() {
   });
 }
 
+/* ---------- 首頁：學習路線切換（記住偏好） ---------- */
+function trackSwitch() {
+  const btns = [...document.querySelectorAll('.track-switch [data-track]')];
+  if (!btns.length) return;
+  const apply = track => {
+    btns.forEach(b => b.setAttribute('aria-checked', String(b.dataset.track === track)));
+    document.querySelectorAll('.unit-card[data-pm]').forEach(card => {
+      const d = card.querySelector('.depth');
+      if (d) d.textContent = card.dataset[track] || '';
+    });
+  };
+  let saved = 'pm';
+  try { saved = localStorage.getItem('track') || 'pm'; } catch {}
+  apply(saved === 'dev' ? 'dev' : 'pm');
+  btns.forEach(b => b.addEventListener('click', () => {
+    apply(b.dataset.track);
+    try { localStorage.setItem('track', b.dataset.track); } catch {}
+  }));
+}
+
 themeToggle();
+trackSwitch();
 heroCanvas();
 renderFrameworks();

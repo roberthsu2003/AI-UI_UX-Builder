@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>AI 賦能的 UI/UX</title>
-<meta name="description" content="AI 賦能的 UI/UX 課程：網站評估、網站架構觀念、DESIGN.md、原型網頁、Claude Skill 與前端動態框架圖鑑。">
+<meta name="description" content="AI 賦能的 UI/UX 課程：從評估既有網站、定義使用者、AI 原型與 DESIGN.md、Figma × MCP、易用性測試到部署上線。">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;600;700;900&family=Space+Grotesk:wght@600;700&family=JetBrains+Mono&display=swap" rel="stylesheet">
@@ -15,9 +15,9 @@
   <div class="container">
     <a class="brand" href="./" aria-current="page"><span class="brand-mark" aria-hidden="true"></span>AI 賦能的 UI/UX</a>
     <nav class="nav" aria-label="主要導覽">
-      <a href="#units" class="hide-sm">課程單元</a>
-      <a href="seamless.html">無縫介面</a>
-      <a href="frameworks.html">框架圖鑑</a>
+      <a href="#roadmap">學習地圖</a>
+      <a href="#labs">互動圖鑑</a>
+      <a href="#capstone" class="hide-sm">期末專案</a>
       <a href="https://github.com/roberthsu2003/UI_UX_Prototype" target="_blank" rel="noopener" class="hide-sm">GitHub ↗</a>
       <button class="icon-btn" id="theme-toggle" type="button">🌙</button>
     </nav>
@@ -25,26 +25,164 @@
 </header>
 
 <main>
+  <!-- ========== Hero ========== -->
   <section class="hero">
     <canvas id="hero-canvas" aria-hidden="true"></canvas>
     <div class="container">
       <div class="hero-inner">
-        <span class="eyebrow">這個背景就是一段 Canvas 2D 動畫</span>
-        <h1>用 AI 做網頁原型，<br>也要懂得「動態」的語言</h1>
-        <p class="lead">從評估既有網站、理解網站架構、撰寫 DESIGN.md，到讓 AI 生成可互動的提案原型。新單元帶你認識 Canvas、3D、動畫與資料視覺化框架——知道名字，才能叫 AI 做出來。</p>
+        <span class="eyebrow">10 個單元 ・ 從診斷到上線</span>
+        <h1>用 AI 改版網站，<br>從看懂使用者開始</h1>
+        <p class="lead">AI 能在幾秒內生成十個首頁，但哪一個才對？這門課帶你走完一次完整的改版：診斷舊網站、定義使用者、用 AI 做出原型與設計規範、找真人測試，最後部署成一個任何人都能打開的網址。</p>
         <div class="hero-actions">
-          <a class="btn btn-primary btn-hero" href="frameworks.html">探索前端動態框架 →</a>
-          <a class="btn btn-hero" href="#units">查看課程單元</a>
+          <a class="btn btn-primary btn-hero" href="https://github.com/roberthsu2003/UI_UX_Prototype/tree/main/課前準備" target="_blank" rel="noopener">從課前準備開始 ↗</a>
+          <a class="btn btn-hero" href="#roadmap">查看學習地圖</a>
         </div>
       </div>
     </div>
   </section>
 
-  <section class="section">
+  <!-- ========== 四階段總覽 ========== -->
+  <section class="section section-tight">
+    <div class="container">
+      <ol class="stage-strip" aria-label="課程四階段">
+        <li><a href="#stage-1" class="stage-pill s1"><span class="stage-no">01</span><strong>診斷</strong><span>現在的網站哪裡有問題？</span></a></li>
+        <li><a href="#stage-2" class="stage-pill s2"><span class="stage-no">02</span><strong>定義</strong><span>為誰改版、要解決什麼？</span></a></li>
+        <li><a href="#stage-3" class="stage-pill s3"><span class="stage-no">03</span><strong>設計</strong><span>新網站應該長什麼樣子？</span></a></li>
+        <li><a href="#stage-4" class="stage-pill s4"><span class="stage-no">04</span><strong>驗證與上線</strong><span>真的比較好用嗎？</span></a></li>
+      </ol>
+    </div>
+  </section>
+
+  <!-- ========== 學習地圖 ========== -->
+  <section class="section" id="roadmap">
+    <div class="container">
+      <div class="section-head section-head-row">
+        <div>
+          <h2>學習地圖</h2>
+          <p>每個單元都會產出一份成果，接力累積成期末專案。點擊卡片開啟 GitHub 上的講義。</p>
+        </div>
+        <div class="track-switch" role="radiogroup" aria-label="學習路線">
+          <button type="button" role="radio" data-track="pm" aria-checked="true">🅿️ PM 理解版</button>
+          <button type="button" role="radio" data-track="dev" aria-checked="false">🛠️ 動手實作版</button>
+        </div>
+      </div>
+
+      <!-- 階段 1 -->
+      <div class="stage s1" id="stage-1">
+        <div class="stage-head"><span class="stage-no">STAGE 01</span><h3>診斷：現在的網站哪裡有問題？</h3></div>
+        <div class="grid">
+          <a class="unit-card" href="https://github.com/roberthsu2003/UI_UX_Prototype/tree/main/如何評估現有的網站" target="_blank" rel="noopener" data-pm="全部實作" data-dev="全部實作">
+            <span class="num">UNIT 01</span><h3>如何評估現有的網站</h3>
+            <p>用多模態 AI 與 Gemini in Chrome 檢查 UI/UX、無障礙、SEO 與資訊安全。</p>
+            <span class="outputs"><span class="chip">評估報告</span><span class="chip tool">Clarity</span></span>
+            <span class="card-foot"><span class="depth"></span><span class="go">閱讀 ↗</span></span>
+          </a>
+          <a class="unit-card" href="https://github.com/roberthsu2003/UI_UX_Prototype/tree/main/網站架構觀念" target="_blank" rel="noopener" data-pm="全部閱讀" data-dev="全部閱讀">
+            <span class="num">UNIT 02</span><h3>網站架構觀念</h3>
+            <p>立體構造、佈局模式、導覽列、一致性、無縫式介面與設計的講究之處。</p>
+            <span class="outputs"><span class="chip">版型與導覽分析</span></span>
+            <span class="card-foot"><span class="depth"></span><span class="go">閱讀 ↗</span></span>
+          </a>
+        </div>
+      </div>
+
+      <!-- 階段 2 -->
+      <div class="stage s2" id="stage-2">
+        <div class="stage-head"><span class="stage-no">STAGE 02</span><h3>定義：為誰改版、要解決什麼？</h3></div>
+        <div class="grid">
+          <a class="unit-card" href="https://github.com/roberthsu2003/UI_UX_Prototype/tree/main/定義使用者與需求" target="_blank" rel="noopener" data-pm="全部實作・核心技能" data-dev="全部實作">
+            <span class="num">UNIT 03</span><h3>定義使用者與需求</h3>
+            <p>Persona、使用者旅程、任務流程、線框圖與 MoSCoW 需求排序。</p>
+            <span class="outputs"><span class="chip">persona.md</span><span class="chip">user-flow.md</span><span class="chip">wireframe.html</span><span class="chip tool">Relume</span></span>
+            <span class="card-foot"><span class="depth"></span><span class="go">閱讀 ↗</span></span>
+          </a>
+        </div>
+      </div>
+
+      <!-- 階段 3 -->
+      <div class="stage s3" id="stage-3">
+        <div class="stage-head"><span class="stage-no">STAGE 03</span><h3>設計：新網站應該長什麼樣子？</h3></div>
+        <div class="grid">
+          <a class="unit-card" href="https://github.com/roberthsu2003/UI_UX_Prototype/tree/main/建立提案用的原型網頁" target="_blank" rel="noopener" data-pm="全部實作" data-dev="全部實作">
+            <span class="num">UNIT 04</span><h3>建立提案用的原型網頁</h3>
+            <p>用 Google Stitch 與 Claude Design 探索視覺氛圍、調整結構、建立新頁面。</p>
+            <span class="outputs"><span class="chip">2～3 套視覺方向</span></span>
+            <span class="card-foot"><span class="depth"></span><span class="go">閱讀 ↗</span></span>
+          </a>
+          <a class="unit-card" href="https://github.com/roberthsu2003/UI_UX_Prototype/tree/main/Claude網頁設計Skill實戰指南" target="_blank" rel="noopener" data-pm="看結論與比較表" data-dev="安裝並實測">
+            <span class="num">UNIT 05</span><h3>Claude 網頁設計 Skill 實戰</h3>
+            <p>8 款熱門 Skill 實測、安裝排雷與觸發技巧。</p>
+            <span class="outputs"><span class="chip">有／無 Skill 對照（選做）</span></span>
+            <span class="card-foot"><span class="depth"></span><span class="go">閱讀 ↗</span></span>
+          </a>
+          <a class="unit-card" href="https://github.com/roberthsu2003/UI_UX_Prototype/tree/main/建立自己的DESIGN_md" target="_blank" rel="noopener" data-pm="會看、會審、會改" data-dev="自己寫一份">
+            <span class="num">UNIT 06</span><h3>建立自己的 DESIGN.md</h3>
+            <p>把視覺決策固化成 AI 看得懂的設計規範，讓多頁原型風格一致。</p>
+            <span class="outputs"><span class="chip">DESIGN.md</span><span class="chip">style-guide.html</span></span>
+            <span class="card-foot"><span class="depth"></span><span class="go">閱讀 ↗</span></span>
+          </a>
+          <a class="unit-card" href="https://github.com/roberthsu2003/UI_UX_Prototype/tree/main/Figma與MCP整合" target="_blank" rel="noopener" data-pm="基本功＋看懂工作流" data-dev="全部實作">
+            <span class="num">UNIT 07</span><h3>Figma × MCP</h3>
+            <p>DESIGN.md → Figma 設計系統 → 人工定稿 → AI 讀稿生成網頁原型。</p>
+            <span class="outputs"><span class="chip">Figma 定稿</span><span class="chip">index.html</span></span>
+            <span class="card-foot"><span class="depth"></span><span class="go">閱讀 ↗</span></span>
+          </a>
+        </div>
+      </div>
+
+      <!-- 階段 4 -->
+      <div class="stage s4" id="stage-4">
+        <div class="stage-head"><span class="stage-no">STAGE 04</span><h3>驗證與上線：真的比較好用嗎？</h3></div>
+        <div class="grid">
+          <a class="unit-card" href="https://github.com/roberthsu2003/UI_UX_Prototype/tree/main/易用性測試" target="_blank" rel="noopener" data-pm="全部實作・核心技能" data-dev="全部實作">
+            <span class="num">UNIT 08</span><h3>易用性測試</h3>
+            <p>任務腳本、放聲思考法、成功率與嚴重度分級，讓真人告訴你哪裡不好用。</p>
+            <span class="outputs"><span class="chip">test-script.md</span><span class="chip">usability-report.md</span><span class="chip tool">Maze</span></span>
+            <span class="card-foot"><span class="depth"></span><span class="go">閱讀 ↗</span></span>
+          </a>
+          <a class="unit-card" href="https://github.com/roberthsu2003/UI_UX_Prototype/tree/main/前端動態框架圖鑑" target="_blank" rel="noopener" data-pm="認識框架、玩 demo" data-dev="選一個框架套用">
+            <span class="num">UNIT 09</span><h3>前端動態框架圖鑑</h3>
+            <p>Canvas 2D、3D、動畫與資料視覺化框架——叫得出名字，AI 才做得出來。</p>
+            <span class="outputs"><span class="chip">動態效果（選做）</span></span>
+            <span class="card-foot"><span class="depth"></span><span class="go">閱讀 ↗</span></span>
+          </a>
+          <a class="unit-card" href="https://github.com/roberthsu2003/UI_UX_Prototype/tree/main/部署Landing_Page" target="_blank" rel="noopener" data-pm="看懂 push 即發布" data-dev="全部實作">
+            <span class="num">UNIT 10</span><h3>部署 Landing Page</h3>
+            <p>React + Vite 本機開發，GitHub Actions 自動部署到 GitHub Pages。</p>
+            <span class="outputs"><span class="chip">公開網址</span></span>
+            <span class="card-foot"><span class="depth"></span><span class="go">閱讀 ↗</span></span>
+          </a>
+        </div>
+      </div>
+
+      <a class="tool-banner" href="https://github.com/roberthsu2003/UI_UX_Prototype/tree/main/AI工具地圖" target="_blank" rel="noopener">
+        <span class="tool-icon" aria-hidden="true">🧭</span>
+        <span class="tool-text"><strong>AI 工具地圖</strong><span>每個階段該用哪個 AI？Claude、Stitch、Relume、Figma、Maze、Clarity……依四階段整理主線與延伸工具。</span></span>
+        <span class="go">查看地圖 ↗</span>
+      </a>
+    </div>
+  </section>
+
+  <!-- ========== 互動圖鑑 ========== -->
+  <section class="section section-soft" id="labs">
     <div class="container">
       <div class="section-head">
-        <h2>四大類動態框架</h2>
-        <p>每一類都有 3 個代表框架，附即時 demo 與可直接複製的 Prompt。</p>
+        <h2>互動圖鑑</h2>
+        <p>講義裡的觀念，在這裡可以直接拖曳、點擊、捲動，親手感受差異。</p>
+      </div>
+      <div class="lab-grid">
+        <a class="lab-card" href="seamless.html">
+          <span class="num">UNIT 02 ・ 9 個 demo</span>
+          <h3>無縫式介面圖鑑</h3>
+          <p>覆蓋式、嵌入式、滑動式、增量捲動／翻頁／平移、輪播與無縫式步驟。</p>
+          <span class="go">動手玩玩看 →</span>
+        </a>
+        <a class="lab-card" href="frameworks.html">
+          <span class="num">UNIT 09 ・ 12 個 demo</span>
+          <h3>前端動態框架圖鑑</h3>
+          <p>每個框架都附即時 demo 與可直接複製的 Prompt。</p>
+          <span class="go">開始探索 →</span>
+        </a>
       </div>
       <div class="cat-strip">
         <a class="cat-tile canvas" href="frameworks.html#canvas"><strong>Canvas 2D</strong><span>p5.js ・ PixiJS ・ Fabric.js</span></a>
@@ -55,69 +193,22 @@
     </div>
   </section>
 
-  <section class="section" id="units" style="padding-top:0">
+  <!-- ========== 期末專案 ========== -->
+  <section class="section" id="capstone">
     <div class="container">
-      <div class="section-head">
-        <h2>課程單元</h2>
-        <p>點擊卡片會開啟 GitHub 上的教學文件。</p>
-      </div>
-      <div class="grid">
-        <a class="unit-card" href="https://github.com/roberthsu2003/UI_UX_Prototype/tree/main/課前準備" target="_blank" rel="noopener">
-          <span class="badge-new">NEW</span>
-          <span class="num">START</span><h3>課前準備</h3>
-          <p>帳號、軟體清單，以及 PM 理解版／動手實作版兩條學習路線。</p><span class="go">閱讀 ↗</span>
-        </a>
-        <a class="unit-card" href="https://github.com/roberthsu2003/UI_UX_Prototype/tree/main/如何評估現有的網站" target="_blank" rel="noopener">
-          <span class="num">UNIT 01</span><h3>如何評估現有的網站</h3>
-          <p>用多模態 AI 與 Gemini in Chrome 檢查 UI/UX、無障礙、SEO 與資訊安全。</p><span class="go">閱讀 ↗</span>
-        </a>
-        <a class="unit-card" href="https://github.com/roberthsu2003/UI_UX_Prototype/tree/main/網站架構觀念" target="_blank" rel="noopener">
-          <span class="num">UNIT 02</span><h3>網站架構觀念</h3>
-          <p>立體構造、佈局模式、導覽列、一致性、無縫式介面與設計細節。</p><span class="go">閱讀 ↗</span>
-        </a>
-        <a class="unit-card featured" href="seamless.html">
-          <span class="num">UNIT 02 ・ 互動圖鑑</span><h3>無縫式介面圖鑑</h3>
-          <p>覆蓋式、嵌入式、滑動式、增量捲動 / 翻頁 / 平移、輪播與無縫式步驟，9 個可直接操作的 demo。</p><span class="go">動手玩玩看 →</span>
-        </a>
-        <a class="unit-card" href="https://github.com/roberthsu2003/UI_UX_Prototype/tree/main/定義使用者與需求" target="_blank" rel="noopener">
-          <span class="badge-new">NEW</span>
-          <span class="num">UNIT 03</span><h3>定義使用者與需求</h3>
-          <p>Persona、使用者旅程、任務流程、線框圖與 MoSCoW 需求排序。</p><span class="go">閱讀 ↗</span>
-        </a>
-        <a class="unit-card" href="https://github.com/roberthsu2003/UI_UX_Prototype/tree/main/建立提案用的原型網頁" target="_blank" rel="noopener">
-          <span class="num">UNIT 04</span><h3>建立提案用的原型網頁</h3>
-          <p>用 Google Stitch 與 Claude Design 探索視覺氛圍、調整結構、建立新頁面。</p><span class="go">閱讀 ↗</span>
-        </a>
-        <a class="unit-card" href="https://github.com/roberthsu2003/UI_UX_Prototype/tree/main/Claude網頁設計Skill實戰指南" target="_blank" rel="noopener">
-          <span class="num">UNIT 05</span><h3>Claude 網頁設計 Skill 實戰</h3>
-          <p>8 款熱門 Skill 實測、安裝排雷與觸發技巧。</p><span class="go">閱讀 ↗</span>
-        </a>
-        <a class="unit-card" href="https://github.com/roberthsu2003/UI_UX_Prototype/tree/main/建立自己的DESIGN_md" target="_blank" rel="noopener">
-          <span class="num">UNIT 06</span><h3>建立自己的 DESIGN.md</h3>
-          <p>把視覺決策固化成 AI 看得懂的設計規範，讓多頁原型風格一致。</p><span class="go">閱讀 ↗</span>
-        </a>
-        <a class="unit-card" href="https://github.com/roberthsu2003/UI_UX_Prototype/tree/main/Figma與MCP整合" target="_blank" rel="noopener">
-          <span class="num">UNIT 07</span><h3>Figma × MCP</h3>
-          <p>DESIGN.md → Figma 設計系統 → 人工定稿 → AI 讀稿生成網頁原型。</p><span class="go">閱讀 ↗</span>
-        </a>
-        <a class="unit-card" href="https://github.com/roberthsu2003/UI_UX_Prototype/tree/main/易用性測試" target="_blank" rel="noopener">
-          <span class="badge-new">NEW</span>
-          <span class="num">UNIT 08</span><h3>易用性測試</h3>
-          <p>任務腳本、放聲思考法、成功率與嚴重度分級，讓真人告訴你哪裡不好用。</p><span class="go">閱讀 ↗</span>
-        </a>
-        <a class="unit-card featured" href="frameworks.html">
-          <span class="num">UNIT 09</span><h3>前端動態框架圖鑑</h3>
-          <p>Canvas 2D、3D、動畫與資料視覺化框架，12 個即時 demo + Prompt 範本。</p><span class="go">開始探索 →</span>
-        </a>
-        <a class="unit-card" href="https://github.com/roberthsu2003/UI_UX_Prototype/tree/main/部署Landing_Page" target="_blank" rel="noopener">
-          <span class="num">UNIT 10</span><h3>部署 Landing Page</h3>
-          <p>React + Vite 本機開發，GitHub Actions 自動部署到 GitHub Pages。</p><span class="go">閱讀 ↗</span>
-        </a>
-        <a class="unit-card" href="https://github.com/roberthsu2003/UI_UX_Prototype/tree/main/期末專案" target="_blank" rel="noopener">
-          <span class="badge-new">NEW</span>
-          <span class="num">FINAL</span><h3>期末專案</h3>
-          <p>用同一個網站走完整門課：交付物清單、發表結構與評分標準。</p><span class="go">閱讀 ↗</span>
-        </a>
+      <div class="capstone">
+        <div>
+          <span class="eyebrow">期末專案</span>
+          <h2>用一個網站，走完整門課</h2>
+          <p>從第一個單元就選定同一個網站，讓每個單元的產出接力累積。評分重點不是畫面有多炫，而是每個設計決策都說得出根據。</p>
+        </div>
+        <ol class="chain" aria-label="期末專案產出鏈">
+          <li>評估報告</li><li>需求文件</li><li>原型</li><li>DESIGN.md</li><li>Figma 定稿</li><li>測試報告</li><li>上線網址</li>
+        </ol>
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="https://github.com/roberthsu2003/UI_UX_Prototype/tree/main/期末專案" target="_blank" rel="noopener">看交付物與評分標準 ↗</a>
+          <a class="btn" href="https://github.com/roberthsu2003/UI_UX_Prototype/tree/main/課前準備" target="_blank" rel="noopener">課前準備 ↗</a>
+        </div>
       </div>
     </div>
   </section>

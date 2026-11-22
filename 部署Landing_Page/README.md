@@ -66,6 +66,17 @@ https://<你的帳號>.github.io/<專案名稱>/   ← 可以分享給任何人�
 
 ---
 
+## 📊 上線之後：用 Microsoft Clarity 觀察真實使用行為（選用）
+
+網站上線不是終點。把 **[Microsoft Clarity](https://clarity.microsoft.com/)** 的追蹤程式碼加進 `index.html` 的 `<head>`，push 之後 GitHub Actions 會自動重新部署。請同學或朋友實際操作幾次，就能在 Clarity 看到點擊熱點圖、捲動深度與錄影，並用 Copilot 的 AI 摘要快速整理行為模式。
+
+這等於回到第 1 單元：**用真實數據評估自己做的網站**，完成「評估 → 設計 → 上線 → 再評估」的循環。詳細說明請見 [如何評估現有的網站：用 Microsoft Clarity 看見真實使用者的行為](../如何評估現有的網站/README.md#-補充用-microsoft-clarity-看見真實使用者的行為)。
+
+> [!WARNING]
+> 加入追蹤程式碼前，請在頁面上告知訪客會收集匿名行為數據。
+
+---
+
 ## 🔄 與本課程其他單元的連動關係
 
 ```text

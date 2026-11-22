@@ -40,6 +40,9 @@
 | **Claude 帳號** | Claude.ai、Claude Design、Skill、Claude Code | 免費版可上課；Claude Design 與 Claude Code 需付費方案 | 1、3～10 |
 | **Figma 帳號** | 設計稿、MCP 連線 | 免費版可練基本功；MCP 寫入功能建議申請教育方案或付費方案 | 7 |
 | **GitHub 帳號** | 存放程式碼、GitHub Pages 部署 | 免費 | 10 |
+| **Relume 帳號**（選用） | 網站地圖與線框圖 | 有免費方案，限制較多 | 3 |
+| **Maze 帳號**（選用） | 遠端易用性測試 | 有免費方案，每月測試數有限 | 8 |
+| **Microsoft Clarity**（選用） | 網站行為分析與熱點圖 | 免費 | 1、10 |
 
 > [!WARNING]
 > **Figma 教育方案只開放給在學學生與教師**，而且驗證可能要好幾天，請在上 Figma 單元前一週完成。**非學生的學員** 請參考 [Figma × MCP 第一章](../Figma與MCP整合/01_帳號方案與MCP連線設定.md) 的方案比較；如果沒有可用的方案，可以只做第二章的手動基本功，第三章改用「`DESIGN.md` → 直接生成 HTML」的路線（[DESIGN.md 單元實作 2-E](../建立自己的DESIGN_md/02_如何從零建立自己的DESIGN_md.md)），一樣能接上後面的單元。
@@ -90,6 +93,7 @@ my-design-lab/
 - [ ] （實作版）我已申請 Figma 教育方案或確認可用的方案
 - [ ] （實作版）我已建立 GitHub 帳號
 - [ ] （實作版）`node -v`、`git --version` 都能顯示版本號
+- [ ] 我已經看過 [AI 工具地圖](../AI工具地圖/README.md)，知道每個階段會用到哪些工具
 - [ ] 我已經想好期末專案要改版的網站（可以參考 [推薦評估練習網站名單](../如何評估現有的網站/README.md)）
 
 ---
