@@ -23,11 +23,12 @@
 | 3 | [定義使用者與需求](../定義使用者與需求/README.md) | ✅ 全部實作（PM 的核心技能） | ✅ 全部實作 |
 | 4 | [建立提案用的原型網頁](../建立提案用的原型網頁/README.md) | ✅ 全部實作 | ✅ 全部實作 |
 | 5 | [Claude Skill 實戰指南](../Claude網頁設計Skill實戰指南/README.md) | 👀 看結論與比較表 | ✅ 安裝並實測 |
-| 6 | [建立自己的 DESIGN.md](../建立自己的DESIGN_md/README.md) | ✅ 會看、會審、會改 | ✅ 自己寫一份 |
-| 7 | [Figma × MCP](../Figma與MCP整合/README.md) | 👀 第二章基本功＋看懂工作流 | ✅ 全部實作 |
-| 8 | [易用性測試](../易用性測試/README.md) | ✅ 全部實作（PM 的核心技能） | ✅ 全部實作 |
-| 9 | [前端動態框架圖鑑](../前端動態框架圖鑑/README.md) | 👀 認識框架名稱、玩 demo | ✅ 選一個框架套用到原型 |
-| 10 | [部署 Landing Page](../部署Landing_Page/README.md) | 👀 看懂「push 就是發布」的流程 | ✅ 全部實作 |
+| 6 | [讓 AI 做出不像 AI 的設計](../讓AI做出不像AI的設計/README.md) | ✅ 第一、二章實作（會要方向、會點破壞習慣） | ✅ 全部實作，第三章選做 |
+| 7 | [建立自己的 DESIGN.md](../建立自己的DESIGN_md/README.md) | ✅ 會看、會審、會改 | ✅ 自己寫一份 |
+| 8 | [Figma × MCP](../Figma與MCP整合/README.md) | 👀 第二章基本功＋看懂工作流 | ✅ 全部實作 |
+| 9 | [易用性測試](../易用性測試/README.md) | ✅ 全部實作（PM 的核心技能） | ✅ 全部實作 |
+| 10 | [前端動態框架圖鑑](../前端動態框架圖鑑/README.md) | 👀 認識框架名稱、玩 demo | ✅ 選一個框架套用到原型 |
+| 11 | [部署 Landing Page](../部署Landing_Page/README.md) | 👀 看懂「push 就是發布」的流程 | ✅ 全部實作 |
 | ★ | [期末專案](../期末專案/README.md) | 交付評估報告＋需求文件＋原型＋測試報告 | 交付完整網站＋公開網址 |
 
 ---
@@ -37,12 +38,12 @@
 | 帳號 | 用途 | 費用 | 哪些單元需要 |
 | :--- | :--- | :--- | :--- |
 | **Google 帳號** | Gemini、Google Stitch | 免費 | 1、4 |
-| **Claude 帳號** | Claude.ai、Claude Design、Skill、Claude Code | 免費版可上課；Claude Design 與 Claude Code 需付費方案 | 1、3～10 |
-| **Figma 帳號** | 設計稿、MCP 連線 | 免費版可練基本功；MCP 寫入功能建議申請教育方案或付費方案 | 7 |
-| **GitHub 帳號** | 存放程式碼、GitHub Pages 部署 | 免費 | 10 |
+| **Claude 帳號** | Claude.ai、Claude Design、Skill、Claude Code | 免費版可上課；Claude Design 與 Claude Code 需付費方案 | 1、3～11 |
+| **Figma 帳號** | 設計稿、MCP 連線 | 免費版可練基本功；MCP 寫入功能建議申請教育方案或付費方案 | 8 |
+| **GitHub 帳號** | 存放程式碼、GitHub Pages 部署 | 免費 | 11 |
 | **Relume 帳號**（選用） | 網站地圖與線框圖 | 有免費方案，限制較多 | 3 |
-| **Maze 帳號**（選用） | 遠端易用性測試 | 有免費方案，每月測試數有限 | 8 |
-| **Microsoft Clarity**（選用） | 網站行為分析與熱點圖 | 免費 | 1、10 |
+| **Maze 帳號**（選用） | 遠端易用性測試 | 有免費方案，每月測試數有限 | 9 |
+| **Microsoft Clarity**（選用） | 網站行為分析與熱點圖 | 免費 | 1、11 |
 
 > [!WARNING]
 > **Figma 教育方案只開放給在學學生與教師**，而且驗證可能要好幾天，請在上 Figma 單元前一週完成。**非學生的學員** 請參考 [Figma × MCP 第一章](../Figma與MCP整合/01_帳號方案與MCP連線設定.md) 的方案比較；如果沒有可用的方案，可以只做第二章的手動基本功，第三章改用「`DESIGN.md` → 直接生成 HTML」的路線（[DESIGN.md 單元實作 2-E](../建立自己的DESIGN_md/02_如何從零建立自己的DESIGN_md.md)），一樣能接上後面的單元。
@@ -77,11 +78,12 @@ my-design-lab/
 ├── 01-evaluation/        ← 單元 1：評估報告
 ├── 03-requirements/      ← 單元 3：persona.md、journey.md、user-flow.md、wireframe.html
 ├── 04-prototype/         ← 單元 4：原型截圖與連結
-├── DESIGN.md             ← 單元 6：設計規範（之後每個單元都會用到）
-├── style-guide.html      ← 單元 6：樣式總覽頁
-├── index.html            ← 單元 6／7：首頁原型
-├── 08-usability-test/    ← 單元 8：測試腳本與報告
-└── my-landing/           ← 單元 10：React 專案
+├── 06-anti-ai-look/      ← 單元 6：探索方向、ai-habits.md
+├── DESIGN.md             ← 單元 7：設計規範（之後每個單元都會用到）
+├── style-guide.html      ← 單元 7：樣式總覽頁
+├── index.html            ← 單元 7／8：首頁原型
+├── 09-usability-test/    ← 單元 9：測試腳本與報告
+└── my-landing/           ← 單元 11：React 專案
 ```
 
 ---

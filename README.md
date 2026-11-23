@@ -39,32 +39,38 @@
 > * **兩輪實測對決與推薦**：收錄 WebGL 液態咖啡／一鏡到底（免費版推薦 `UI UX Pro Max`）與開放式活動頁（付費版推薦 `Claude Design Pro`）的評比結果與完整 Prompt。
 > * **最佳實踐**：解析為什麼 Skill 不是裝越多越好（額度消耗與省略機制），以及如何透過 `/` 斜線指令確保正確觸發。
 
-## 6. [建立自己的 `DESIGN.md`：打造 AI 看得懂的設計規範 >>](./建立自己的DESIGN_md)
+## 6. [讓 AI 做出不像 AI 的設計：Anthropic 設計師的實戰工作流 >>](./讓AI做出不像AI的設計)
+> AI 生成的畫面為什麼總是米白背景、襯線字體、橘色按鈕？本單元整理 Anthropic 設計師 Nate Parrott 的實戰做法，核心只有一句話：**你給 AI 什麼，就會拿回什麼**。內容包含：
+> * **先發散再收斂**：讓 AI 開工前先問問題、一次要 10 個以上方向再一輪一輪收斂，難的設計先要線框圖，大型產出先探索風格。
+> * **給足脈絡、點破壞習慣**：讓 AI 讀程式碼重建現有畫面再發想，並直接告訴模型它的失敗模式，整理出可放進 `DESIGN.md` 的「AI 壞習慣清單」。
+> * **延伸應用**：（選做）把 CSV 做成即時儀表板、做動畫要照顧人眼的節奏，以及把經驗做成 Skill 再用是非題做臨時 eval。
+
+## 7. [建立自己的 `DESIGN.md`：打造 AI 看得懂的設計規範 >>](./建立自己的DESIGN_md)
 > 當 AI 缺少明確的視覺規範時，極易產出風格斷裂或千篇一律的公版網頁。本單元引導學生學會撰寫與維護專屬的 **`DESIGN.md`** 設計系統文件，內容包含：
 > * **雙層標準結構**：解析 `DESIGN.md` 的 YAML Front Matter（精確 Token 數值）與九大標準規範章節（主題氛圍、色彩語意、字體階層、元件狀態、Do's and Don'ts 等）。
 > * **三條實戰建構路線**：提供從既有網站截圖「逆向萃取」、改寫開源範本（`awesome-design-md` / Google Stitch），以及從零訪談建構的完整 Prompt。
 > * **開箱即用範本**：內附繁體中文注釋的標準 `DESIGN_template.md` 與自我驗收檢核清單，讓 AI 生成的多頁原型維持一致品牌質感。
 
-## 7. [Figma × MCP：讓 AI 讀懂、也能動手畫你的設計稿 >>](./Figma與MCP整合)
+## 8. [Figma × MCP：讓 AI 讀懂、也能動手畫你的設計稿 >>](./Figma與MCP整合)
 > UI/UX 的主戰場仍是 Figma。本單元透過 **Figma MCP Server** 把 Figma 接上 Claude Code / Cursor / VS Code，以「設計為主、AI 為輔」的方式串接 `DESIGN.md` 與網頁原型，內容包含：
 > * **免費方案與連線設定**：學生申請 Figma 教育方案的步驟與常見翻車點、各方案 MCP 額度比較、遠端 MCP 連線與 `whoami` 驗證。
 > * **AI 看得懂的 Figma 基本功**：Frame、Auto Layout、圖層命名、Variables、Components & Variants、RWD，並以「亂畫 vs 規範」對照實驗證明設計品質決定 AI 產出品質。
 > * **完整實戰工作坊**：`DESIGN.md` → Figma Variables 與元件 → AI 首頁初稿 → **人工調整定稿** → 讀稿生成 `index.html` → 反向同步規範。
 
-## 8. [易用性測試：讓真實使用者告訴你哪裡不好用 >>](./易用性測試)
+## 9. [易用性測試：讓真實使用者告訴你哪裡不好用 >>](./易用性測試)
 > 設計者永遠看不出「第一次來的人」會卡在哪裡。本單元教你用最低成本驗證原型，內容包含：
 > * **測試準備與執行**：撰寫不洩漏答案的任務腳本、找 5 位符合 Persona 的受測者、以放聲思考法觀察並記錄。
 > * **指標與分析**：任務成功率、任務時間、單題容易度（SEQ），並用尼爾森嚴重度分級排出修改優先順序。
 > * **AI 模擬與反覆修正**：讓 AI 扮演 Persona 預演測試腳本，再把真人測試結果寫回 `DESIGN.md` 與 Figma 稿。
 > * **Maze 遠端測試**：（選用）匯入 Figma 原型做無主持測試，自動統計成功率與點擊路徑，驗證修改後是否改善。
 
-## 9. [前端動態框架圖鑑：叫得出名字，AI 才做得出來 >>](./前端動態框架圖鑑)
+## 10. [前端動態框架圖鑑：叫得出名字，AI 才做得出來 >>](./前端動態框架圖鑑)
 > 網頁上的粒子、3D、流動背景與捲動動畫，背後幾乎都有專門的 JavaScript 框架。本單元用設計師聽得懂的語言整理四大類框架，每個框架都附 **[線上即時 demo](https://roberthsu2003.github.io/UI_UX_Prototype/frameworks.html)** 與可直接複製的 Prompt 範本，內容包含：
 > * **Canvas 2D 與 3D / WebGL**：p5.js 生成藝術、PixiJS 大量粒子、Fabric.js 可編輯畫布，以及 Three.js 產品展示、Babylon.js 互動場景、Shader 液態背景。
 > * **動畫與動態影片感**：GSAP 時間軸、Anime.js 交錯動畫、Lottie 播放 AE 動畫，並延伸認識 Rive 互動動畫與 Remotion 程式化影片。
 > * **資料視覺化與捲動互動**：D3.js 網站架構圖、Chart.js 儀表板，以及 GSAP ScrollTrigger + Lenis 的捲動敘事手法。
 
-## 10. [部署 Landing Page：從本機執行到 GitHub Pages 上線 >>](./部署Landing_Page)
+## 11. [部署 Landing Page：從本機執行到 GitHub Pages 上線 >>](./部署Landing_Page)
 > 課程的最後一哩路：把 `DESIGN.md` 與 Figma 定稿變成任何人都能打開的真實網址。本單元以 **React + Vite** 建立活動頁面，全程 Vibe Coding，內容包含：
 > * **本機開發**：建立 React 專案、看懂專案結構、`dev` / `build` / `preview` 三個指令，以及 Figma 元件與 Variants 如何對應到 React 元件與 props。
 > * **設計轉程式**：`DESIGN.md` → CSS 變數、Figma MCP 讀稿拆成元件、資料與畫面分離（用陣列產生卡片）。

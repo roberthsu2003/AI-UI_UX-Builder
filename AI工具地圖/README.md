@@ -69,8 +69,9 @@ AI 工具越來越多，但 **工具不是越多越好**。本頁把課程用到
 | **Google Stitch** | ⭐ 主線 | 從舊網站或描述探索多套視覺氛圍，串接畫面流程，可匯出 `DESIGN.md` | [單元 4 主題一](../建立提案用的原型網頁/01_無設計稿的氛圍與視覺探索.md) |
 | **Claude Design** | ⭐ 主線 | 對話式生成與微調頁面區塊、文案 | [單元 4 主題二](../建立提案用的原型網頁/02_修改單頁網頁的結構與內容.md) |
 | **Claude Skill**（如 UI UX Pro Max） | ⭐ 主線 | 替 Claude 掛載設計工作手冊，提升生成品質 | [單元 5](../Claude網頁設計Skill實戰指南/README.md) |
-| **`DESIGN.md` ＋ 任一 AI** | ⭐ 主線 | 用一份設計規範讓多頁生成風格一致 | [單元 6](../建立自己的DESIGN_md/README.md) |
-| **Figma × MCP**（Claude Code／Cursor） | ⭐ 主線 | AI 讀寫 Figma：建立 Variables、元件，讀稿生成網頁 | [單元 7](../Figma與MCP整合/README.md) |
+| **Claude（多方向探索＋壞習慣清單）** | ⭐ 主線 | 一次要 10 個方向再收斂、讀程式碼重建畫面，並點破 AI 的固定偏好 | [單元 6](../讓AI做出不像AI的設計/README.md) |
+| **`DESIGN.md` ＋ 任一 AI** | ⭐ 主線 | 用一份設計規範讓多頁生成風格一致 | [單元 7](../建立自己的DESIGN_md/README.md) |
+| **Figma × MCP**（Claude Code／Cursor） | ⭐ 主線 | AI 讀寫 Figma：建立 Variables、元件，讀稿生成網頁 | [單元 8](../Figma與MCP整合/README.md) |
 | **Figma Make** | ➕ 延伸 | Figma 內建的 Prompt 生成可互動原型，和 MCP 路線互相對照 | — |
 | **v0／Lovable／Bolt** | ➕ 延伸 | 對話生成可上線的網頁應用並一鍵部署，適合不寫程式的快速驗證 | — |
 | **Gemini 圖片生成／Midjourney／Adobe Firefly** | ➕ 延伸 | 產生主視覺、情境圖與插圖，取代原型中的灰色佔位圖 | — |
@@ -85,10 +86,10 @@ AI 工具越來越多，但 **工具不是越多越好**。本頁把課程用到
 
 | 工具 | 類型 | 能做什麼 | 課程位置 |
 | :--- | :---: | :--- | :--- |
-| **Claude（扮演 Persona）** | ⭐ 主線 | 在找真人之前預演測試腳本，抓出明顯問題 | [單元 8 第 6 節](../易用性測試/README.md) |
-| **Maze** | ⭐ 主線 | 匯入 Figma 原型做遠端無主持測試，自動統計成功率與點擊路徑 | [單元 8 第 7 節](../易用性測試/README.md) |
-| **Claude Code** | ⭐ 主線 | 建立 React 專案、撰寫 GitHub Actions 部署流程 | [單元 10](../部署Landing_Page/README.md) |
-| **Microsoft Clarity** | ⭐ 主線 | 裝在上線的頁面上，用真實數據進行下一輪評估 | [單元 10 上線之後](../部署Landing_Page/README.md) |
+| **Claude（扮演 Persona）** | ⭐ 主線 | 在找真人之前預演測試腳本，抓出明顯問題 | [單元 9 第 6 節](../易用性測試/README.md) |
+| **Maze** | ⭐ 主線 | 匯入 Figma 原型做遠端無主持測試，自動統計成功率與點擊路徑 | [單元 9 第 7 節](../易用性測試/README.md) |
+| **Claude Code** | ⭐ 主線 | 建立 React 專案、撰寫 GitHub Actions 部署流程 | [單元 11](../部署Landing_Page/README.md) |
+| **Microsoft Clarity** | ⭐ 主線 | 裝在上線的頁面上，用真實數據進行下一輪評估 | [單元 11 上線之後](../部署Landing_Page/README.md) |
 | **Dovetail** | ➕ 延伸 | 研究資料庫，AI 自動標註並分群訪談與測試紀錄，適合企業團隊 | — |
 
 > [!IMPORTANT]

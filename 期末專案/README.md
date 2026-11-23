@@ -35,11 +35,12 @@
 | 3 | [定義使用者與需求](../定義使用者與需求/README.md) | `persona.md`、`journey.md`、`user-flow.md`、`wireframe.html`、`requirements.md` | ✅ | ✅ |
 | 4 | [建立提案用的原型網頁](../建立提案用的原型網頁/README.md) | 2～3 套視覺方向的原型截圖，並選定一套 | ✅ | ✅ |
 | 5 | [Claude Skill 實戰指南](../Claude網頁設計Skill實戰指南/README.md) | （選做）有／無 Skill 的生成結果對照 | — | 選做 |
-| 6 | [建立自己的 DESIGN.md](../建立自己的DESIGN_md/README.md) | `DESIGN.md`、`style-guide.html` | 審閱並修改 AI 產出的版本 | ✅ 自己撰寫 |
-| 7 | [Figma × MCP](../Figma與MCP整合/README.md) | Figma 定稿連結、`index.html` | — | ✅ |
-| 8 | [易用性測試](../易用性測試/README.md) | `test-script.md`、`usability-report.md`、修改紀錄 | ✅ | ✅ |
-| 9 | [前端動態框架圖鑑](../前端動態框架圖鑑/README.md) | （選做）為原型加上一個有意義的動態效果 | — | 選做 |
-| 10 | [部署 Landing Page](../部署Landing_Page/README.md) | 公開網址、GitHub Repo 連結 | — | ✅ |
+| 6 | [讓 AI 做出不像 AI 的設計](../讓AI做出不像AI的設計/README.md) | 兩輪探索方向（`directions-round1/2.html`）、選定方向說明、`ai-habits.md` | ✅ | ✅ |
+| 7 | [建立自己的 DESIGN.md](../建立自己的DESIGN_md/README.md) | `DESIGN.md`、`style-guide.html` | 審閱並修改 AI 產出的版本 | ✅ 自己撰寫 |
+| 8 | [Figma × MCP](../Figma與MCP整合/README.md) | Figma 定稿連結、`index.html` | — | ✅ |
+| 9 | [易用性測試](../易用性測試/README.md) | `test-script.md`、`usability-report.md`、修改紀錄 | ✅ | ✅ |
+| 10 | [前端動態框架圖鑑](../前端動態框架圖鑑/README.md) | （選做）為原型加上一個有意義的動態效果 | — | 選做 |
+| 11 | [部署 Landing Page](../部署Landing_Page/README.md) | 公開網址、GitHub Repo 連結 | — | ✅ |
 
 ---
 
@@ -49,9 +50,9 @@
 
 1. **舊網站的問題**（單元 1、2）：用評估報告與截圖說明最嚴重的三個痛點。
 2. **我們為誰改版**（單元 3）：介紹主要 Persona 與情緒最低的旅程階段。
-3. **新的設計**（單元 4～7）：展示任務流程、設計規範與最終原型，說明每個設計決策對應哪個痛點。
-4. **測試證明它更好用**（單元 8）：報告受測者在哪裡卡住、改了什麼、第二輪的結果。
-5. **成果展示**（單元 10）：現場打開公開網址或原型，走一次核心任務。
+3. **新的設計**（單元 4～8）：展示任務流程、設計規範與最終原型，說明每個設計決策對應哪個痛點。
+4. **測試證明它更好用**（單元 9）：報告受測者在哪裡卡住、改了什麼、第二輪的結果。
+5. **成果展示**（單元 11）：現場打開公開網址或原型，走一次核心任務。
 6. **反思**：AI 在哪些地方幫了大忙？哪些地方 AI 做錯、必須靠人判斷？
 
 > [!IMPORTANT]

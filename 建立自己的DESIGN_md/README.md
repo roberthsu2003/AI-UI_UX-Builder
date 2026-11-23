@@ -2,7 +2,7 @@
 
 > 📅 **最後更新：2026-11**　｜　本單元涉及的工具介面、方案與額度變動快，若畫面與講義不符，請以官方文件為準。
 
-在前面章節中，我們學過如何在 [網站架構觀念](../網站架構觀念/README.md) 中維持全站 [一致性](../網站架構觀念/一致性/README.md) 與 [標準化元件](../網站架構觀念/設計的講究之處/README.md)，也看過在 [Claude Skill 實測](../Claude網頁設計Skill實戰指南/README.md) 中，若 AI 沒有明確的視覺規範，很容易產出「前後色調跳痛、風格斷裂」或千篇一律的公版頁面。
+在前面章節中，我們學過如何在 [網站架構觀念](../網站架構觀念/README.md) 中維持全站 [一致性](../網站架構觀念/一致性/README.md) 與 [標準化元件](../網站架構觀念/設計的講究之處/README.md)，也看過在 [Claude Skill 實測](../Claude網頁設計Skill實戰指南/README.md) 中，若 AI 沒有明確的視覺規範，很容易產出「前後色調跳痛、風格斷裂」或千篇一律的公版頁面。[讓 AI 做出不像 AI 的設計](../讓AI做出不像AI的設計/README.md) 單元則說明了原因：AI 不知道自己有固定偏好，而**個人與品牌的脈絡，才是能帶到下一代模型的長期資產**。
 
 **`DESIGN.md`**（由 **Google Stitch** 率先推廣並開源，並透過 [VoltAgent/awesome-design-md](https://github.com/VoltAgent/awesome-design-md) 等社群專案普及）正是為了解決這個問題而生的標準格式——它用一份人類與 AI 都讀得懂的純文字 Markdown 文件，作為專案視覺設計的**單一事實來源（Single Source of Truth）**。
 
@@ -70,11 +70,13 @@
        ↓
 [4. 原型網頁] + [5. Skill] 用 Stitch、Claude Design、UI UX Pro Max 探索視覺方向
        ↓
-[6. 建立自己的 DESIGN.md] 把選定的視覺決策固化成 AI 看得懂的規格書  ◀── 本單元
+[6. 讓 AI 做出不像 AI 的設計] 收斂出選定方向，整理「AI 壞習慣清單」
        ↓
-[7. Figma × MCP] 把 DESIGN.md 建成 Figma 設計系統，人工定稿後再轉成網頁
+[7. 建立自己的 DESIGN.md] 把選定的視覺決策固化成 AI 看得懂的規格書  ◀── 本單元
        ↓
-[8. 易用性測試] 依測試結果回頭修改 DESIGN.md（Changelog）
+[8. Figma × MCP] 把 DESIGN.md 建成 Figma 設計系統，人工定稿後再轉成網頁
+       ↓
+[9. 易用性測試] 依測試結果回頭修改 DESIGN.md（Changelog）
 ```
 
 ---
