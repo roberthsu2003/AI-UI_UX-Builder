@@ -143,7 +143,7 @@ App.jsx
 ```
 
 > [!NOTE]
-> 沒有 Figma 稿的同學，可以把 Figma 連結那段改成「**請依照 @DESIGN.md 與 [AI 設計畫布與 MCP 整合](../AI設計畫布與MCP整合/README.md)（pen.dev / Stitch / Claude Design）或 [DESIGN.md 實作 2-E](../建立自己的DESIGN_md/02_如何從零建立自己的DESIGN_md.md) 產出的 @index.html**」，讓 AI 把靜態 HTML 拆成 React 元件。
+> 沒有 Figma 稿的同學，可以把 Figma 連結那段改成「**請依照 @DESIGN.md 與 [AI 設計畫布與 MCP 整合](../AI設計畫布與MCP整合/README.md)（pen.dev / Stitch / Claude Design）或 [DESIGN.md 實作 3-E](../建立自己的DESIGN_md/03_如何從零建立自己的DESIGN_md.md) 產出的 @index.html**」，讓 AI 把靜態 HTML 拆成 React 元件。
 
 ### Step 2：用眼睛檢查（請開著 `npm run dev`）
 

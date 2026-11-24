@@ -82,7 +82,7 @@ Nate 的解釋很直白：每次你請 Claude 做東西，它都在一個**全�
 ## 🔄 與本課程其他單元的連動關係
 
 ```text
-[3. 創意發想] 優秀設計案例與 Moodboard → 給 AI 的第一批視覺脈絡
+[建立自己的 DESIGN.md 與創意發想] 優秀設計案例與多風格發想 → 給 AI 的第一批視覺脈絡
        ↓
 [4. 原型網頁] + [5. Skill] 用 Stitch、Claude Design、Skill 產出原型
        ↓
