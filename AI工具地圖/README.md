@@ -66,13 +66,13 @@ AI 工具越來越多，但 **工具不是越多越好**。本頁把課程用到
 
 | 工具 | 類型 | 能做什麼 | 課程位置 |
 | :--- | :---: | :--- | :--- |
-| **Google Stitch** | ⭐ 主線 | 從舊網站或描述探索多套視覺氛圍，串接畫面流程，可匯出 `DESIGN.md` | [單元 4 主題一](../建立提案用的原型網頁/01_無設計稿的氛圍與視覺探索.md) |
-| **Claude Design** | ⭐ 主線 | 對話式生成與微調頁面區塊、文案 | [單元 4 主題二](../建立提案用的原型網頁/02_修改單頁網頁的結構與內容.md) |
+| **Google Stitch** | ⭐ 主線 | Live 串流畫布氛圍發散、語音控制、匯出 `DESIGN.md`，並可透過 `stitch-mcp` 批次生成變體 | [Stitch × MCP 專章](../AI設計畫布與MCP整合/03_Google_Stitch與MCP_AI原生無限畫布.md) |
+| **Claude Design** | ⭐ 主線 | 自動萃取規範、對話／局部圈選評論與滑桿即時微調視覺（Artifacts Design 免費可用） | [Claude Design 專章](../AI設計畫布與MCP整合/04_Claude_Design_對話式視覺畫布與微調.md) |
 | **Claude Skill**（如 UI UX Pro Max） | ⭐ 主線 | 替 Claude 掛載設計工作手冊，提升生成品質 | [單元 5](../Claude網頁設計Skill實戰指南/README.md) |
 | **Claude（多方向探索＋壞習慣清單）** | ⭐ 主線 | 一次要 10 個方向再收斂、讀程式碼重建畫面，並點破 AI 的固定偏好 | [單元 6](../讓AI做出不像AI的設計/README.md) |
 | **`DESIGN.md` ＋ 任一 AI** | ⭐ 主線 | 用一份設計規範讓多頁生成風格一致 | [單元 7](../建立自己的DESIGN_md/README.md) |
-| **Figma × MCP**（Claude.ai／ChatGPT／Antigravity） | ⭐ 主線 | AI 讀寫 Figma：建立 Variables、元件，讀稿生成網頁 | [AI 設計畫布與 MCP 整合](../AI設計畫布與MCP整合/README.md) |
-| **pen.dev（Pencil）** | ⭐ 主線 | Design-in-Code 無限向量畫布（`.pen` 格式隨 Git 版控），內建 MCP 雙向生成與轉碼 | [第四章：pen.dev 實戰](../AI設計畫布與MCP整合/04_pen.dev與Google_Stitch與Claude_Design實戰.md) |
+| **Figma × MCP**（Claude.ai／ChatGPT／Antigravity） | ⭐ 主線 | 用 `use_figma` 寫入 Variables／元件，並用 `get_design_context` 讀稿轉網頁 | [Figma × MCP 專章](../AI設計畫布與MCP整合/01_Figma與MCP_用AI控制Figma設計.md) |
+| **pen.dev（Pencil）× MCP** | ⭐ 主線 | Design-in-Code 無限向量畫布（`.pen` 隨 Git 版控），支援 `browser` 逆向與多 Agent 平行比稿 | [pen.dev × MCP 專章](../AI設計畫布與MCP整合/02_pen_dev與MCP_程式碼即設計的AI畫布.md) |
 | **Figma Make** | ➕ 延伸 | Figma 內建的 Prompt 生成可互動原型，和 MCP 路線互相對照 | — |
 | **v0／Lovable／Bolt** | ➕ 延伸 | 對話生成可上線的網頁應用並一鍵部署，適合不寫程式的快速驗證 | — |
 | **Gemini 圖片生成／Midjourney／Adobe Firefly** | ➕ 延伸 | 產生主視覺、情境圖與插圖，取代原型中的灰色佔位圖 | — |

@@ -13,11 +13,12 @@
 ## [🎒 課前準備：帳號、軟體與練習環境 >>](./課前準備)
 > 開課前請先完成帳號申請與軟體安裝。每個單元都會親手實作；Figma 教育方案需提早一週申請，非學生學員也有替代路線。
 
-## [AI 設計畫布與 MCP 整合 >>](./AI設計畫布與MCP整合)
-> 寫完 `DESIGN.md` 文字規範後，接下來進入視覺設計畫布與原型整合。本單元完整對照四大設計工具——**Figma**、**pen.dev（Pencil）**、**Google Stitch** 與 **Claude Design**，並透過 **MCP（Model Context Protocol）** 串接 AI 讀寫畫布與產出網頁，內容包含：
-> * **四大工具定位與選擇**：對比 Figma（團隊設計系統）、pen.dev（Design-in-Code `.pen` 畫布與本地 MCP）、Google Stitch（無限畫布氛圍探索）與 Claude Design（免費版對話微調）的最佳使用時機。
-> * **Figma 方案、連線與基本功**：免費申請 Figma 教育方案、連接 Claude.ai / ChatGPT / Antigravity、遠端連結驅動觀念，以及 Frame、Auto Layout、Variables、Components 等 AI 讀得懂的畫圖規範。
-> * **跨工具實戰工作坊**：`DESIGN.md` → 設計畫布定稿（Figma / pen.dev）→ AI 讀稿生成 `index.html` → 反向同步規範。
+## [AI 設計畫布與 MCP 整合：用 AI 全面控制設計 >>](./AI設計畫布與MCP整合)
+> 不用手動拉矩形與像素，全程用 AI 與 MCP 直接控制設計畫布。本單元依 **2026 最新規格** 為四大核心工具各設專章，帶你從 `DESIGN.md` 驅動視覺生成、局部修改與前端轉碼：
+> * **Figma × MCP**：免費申請教育方案取得 Full Seat，連接 Claude.ai / ChatGPT / Antigravity 透過 `create_new_file` 與 `use_figma` 讓 AI 寫入變數、元件、修改局部畫框並讀稿轉碼。
+> * **pen.dev（Pencil）× MCP**：體驗「Design-in-Code」`.pen` 向量畫布，用 `execute`、`browser`（網頁逆向轉向量）與 `spawn_agents` 多代理平行比稿。
+> * **Google Stitch × MCP**：掌握 Live Streaming 即時串流干預、語音控制、`Play` 原型串接，以及透過 `stitch-mcp` 批次生成變體並套用 `DESIGN.md`。
+> * **Claude Design**：活用 `claude.ai/design` 與免費版 Artifacts Design 模式，透過自動規範萃取、局部圈選評論與動態滑桿微調設計並交接開發。
 
 ## [如何評估現有的網站？ >>](./如何評估現有的網站)
 > 在進行網站改版與優化前，透過 AI 進行既有網站的健康檢查是至關重要的步驟。本單元引導你如何利用多模態 AI 與 **Gemini in Chrome** 內建工具對現有網站進行快速評估，內容包含：
