@@ -1,0 +1,63 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 340" width="800" height="340" font-family="'PingFang TC','Noto Sans TC','Microsoft JhengHei',sans-serif">
+  <defs>
+    <marker id="m" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0 0 L10 5 L0 10 z" fill="#9CA3AF"/>
+    </marker>
+  </defs>
+  <rect width="800" height="340" rx="16" fill="#FFFFFF" stroke="#E5E7EB"/>
+  <text x="40" y="42" font-size="18" font-weight="700" fill="#111827">網頁元件由小到大組起來</text>
+
+  <!-- level 1 -->
+  <rect x="30" y="66" width="170" height="210" rx="12" fill="#F3F4F6"/>
+  <text x="46" y="92" font-size="13" font-weight="700" fill="#2563EB">① 基本元件</text>
+  <rect x="46" y="108" width="84" height="30" rx="8" fill="#2563EB"/>
+  <text x="88" y="128" font-size="11" fill="#FFFFFF" text-anchor="middle">Button</text>
+  <rect x="46" y="148" width="138" height="30" rx="6" fill="#FFFFFF" stroke="#D1D5DB"/>
+  <text x="56" y="168" font-size="11" fill="#9CA3AF">Input</text>
+  <rect x="46" y="188" width="50" height="22" rx="11" fill="#DBEAFE"/>
+  <text x="71" y="203" font-size="10" fill="#1D4ED8" text-anchor="middle">Tag</text>
+  <circle cx="122" cy="199" r="14" fill="#E5E7EB"/>
+  <text x="46" y="262" font-size="11" fill="#6B7280">不能再拆的最小單位</text>
+
+  <!-- level 2 -->
+  <rect x="226" y="66" width="170" height="210" rx="12" fill="#F3F4F6"/>
+  <text x="242" y="92" font-size="13" font-weight="700" fill="#2563EB">② 組合元件</text>
+  <rect x="242" y="106" width="138" height="128" rx="10" fill="#FFFFFF" stroke="#D1D5DB"/>
+  <rect x="250" y="114" width="122" height="50" rx="6" fill="#E5E7EB"/>
+  <rect x="250" y="172" width="34" height="14" rx="7" fill="#DBEAFE"/>
+  <rect x="250" y="192" width="90" height="8" rx="2" fill="#9CA3AF"/>
+  <rect x="250" y="210" width="50" height="16" rx="4" fill="#2563EB"/>
+  <text x="242" y="252" font-size="11" fill="#374151">Card、Navbar 等</text>
+  <text x="242" y="268" font-size="11" fill="#6B7280">由基本元件組成</text>
+
+  <!-- level 3 -->
+  <rect x="422" y="66" width="170" height="210" rx="12" fill="#F3F4F6"/>
+  <text x="438" y="92" font-size="13" font-weight="700" fill="#2563EB">③ 區塊</text>
+  <rect x="438" y="106" width="138" height="128" rx="8" fill="#FFFFFF" stroke="#D1D5DB"/>
+  <rect x="470" y="114" width="74" height="10" rx="2" fill="#9CA3AF"/>
+  <g fill="#FFFFFF" stroke="#D1D5DB">
+    <rect x="446" y="134" width="38" height="90" rx="5"/>
+    <rect x="488" y="134" width="38" height="90" rx="5"/>
+    <rect x="530" y="134" width="38" height="90" rx="5"/>
+  </g>
+  <text x="438" y="252" font-size="11" fill="#374151">Hero、Pricing、Footer</text>
+  <text x="438" y="268" font-size="11" fill="#6B7280">頁面上的一整段</text>
+
+  <!-- level 4 -->
+  <rect x="618" y="66" width="152" height="210" rx="12" fill="#DBEAFE"/>
+  <text x="634" y="92" font-size="13" font-weight="700" fill="#1D4ED8">④ 頁面</text>
+  <rect x="634" y="106" width="120" height="128" rx="8" fill="#FFFFFF" stroke="#93C5FD"/>
+  <g fill="#E5E7EB">
+    <rect x="640" y="112" width="108" height="10" rx="2"/>
+    <rect x="640" y="128" width="108" height="34" rx="3"/>
+    <rect x="640" y="168" width="108" height="26" rx="3"/>
+    <rect x="640" y="200" width="108" height="26" rx="3"/>
+  </g>
+  <text x="634" y="252" font-size="11" fill="#1D4ED8">Desktop ＋ Phone</text>
+  <text x="634" y="268" font-size="11" fill="#6B7280">區塊由上往下疊</text>
+
+  <g stroke="#9CA3AF" stroke-width="2" marker-end="url(#m)">
+    <path d="M202 171 H222"/><path d="M398 171 H418"/><path d="M594 171 H614"/>
+  </g>
+  <text x="40" y="312" font-size="13" fill="#374151">本章就照 ① → ② → ③ → ④ 的順序，由小做到大，最後組成一個完整的活動頁。</text>
+</svg>

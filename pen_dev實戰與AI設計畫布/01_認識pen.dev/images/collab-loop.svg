@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 400" width="800" height="400" font-family="'PingFang TC','Noto Sans TC','Microsoft JhengHei',sans-serif">
+  <defs>
+    <marker id="arr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse">
+      <path d="M0 0 L10 5 L0 10 z" fill="#6B7280"/>
+    </marker>
+  </defs>
+  <rect width="800" height="400" rx="16" fill="#FFFFFF" stroke="#E5E7EB"/>
+  <text x="400" y="40" font-size="18" font-weight="700" fill="#111827" text-anchor="middle">本教材每一章都走這個循環</text>
+
+  <!-- boxes -->
+  <g>
+    <rect x="60" y="80" width="260" height="96" rx="14" fill="#DBEAFE"/>
+    <text x="80" y="112" font-size="13" font-weight="700" fill="#2563EB">① AI 做</text>
+    <text x="80" y="138" font-size="16" font-weight="700" fill="#111827">產生練習素材</text>
+    <text x="80" y="160" font-size="13" fill="#4B5563">一段 Prompt，畫布上出現結構</text>
+
+    <rect x="480" y="80" width="260" height="96" rx="14" fill="#FEF3C7"/>
+    <text x="500" y="112" font-size="13" font-weight="700" fill="#B45309">② 你做</text>
+    <text x="500" y="138" font-size="16" font-weight="700" fill="#111827">手動操作與修改</text>
+    <text x="500" y="160" font-size="13" fill="#4B5563">面板、快捷鍵、拖曳，親手改</text>
+
+    <rect x="480" y="260" width="260" height="96" rx="14" fill="#FEF3C7"/>
+    <text x="500" y="292" font-size="13" font-weight="700" fill="#B45309">③ 你做</text>
+    <text x="500" y="318" font-size="16" font-weight="700" fill="#111827">選取＋貼便利貼</text>
+    <text x="500" y="340" font-size="13" fill="#4B5563">指出「哪裡」要改、「改成什麼」</text>
+
+    <rect x="60" y="260" width="260" height="96" rx="14" fill="#DBEAFE"/>
+    <text x="80" y="292" font-size="13" font-weight="700" fill="#2563EB">④ AI 做</text>
+    <text x="80" y="318" font-size="16" font-weight="700" fill="#111827">精修或轉成程式</text>
+    <text x="80" y="340" font-size="13" fill="#4B5563">讀你的選取，只改那一塊</text>
+  </g>
+
+  <!-- arrows -->
+  <g stroke="#6B7280" stroke-width="2" fill="none" marker-end="url(#arr)">
+    <path d="M324 128 H474"/>
+    <path d="M610 180 V254"/>
+    <path d="M476 308 H326"/>
+    <path d="M190 256 C190 220 420 220 520 182"/>
+  </g>
+  <text x="400" y="118" font-size="12" fill="#6B7280" text-anchor="middle">換你接手</text>
+  <text x="400" y="298" font-size="12" fill="#6B7280" text-anchor="middle">交回 AI</text>
+  <text x="250" y="204" font-size="12" fill="#6B7280">再檢查一次，繼續修改</text>
+</svg>

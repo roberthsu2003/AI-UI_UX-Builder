@@ -1,75 +1,96 @@
-# pen.dev（Pencil）深度實戰：人機協作的 AI 向量設計畫布
+# pen.dev 實戰：AI 輔助的 RWD 網頁設計畫布
 
-> **最後更新**：2026 年 11 月  
-> **核心理念**：AI 負責高速生成架構與設計系統，學生透過 `pen.dev` 介面親自操作微調，再將選取的畫面交回 AI 精修與同步程式碼。
-
----
-
-## 為什麼選擇 pen.dev（Pencil）？
-
-在傳統設計工具中，設計稿被鎖在封閉的雲端圖層裡，AI 往往只能「看截圖猜程式」；而在 **pen.dev（Pencil）** 中，整個無限畫布的底層就是一份開放且結構化的 **`.pen` JSON Schema（v2.25）**，實現真正的 **Design-in-Code（設計即程式碼）**：
-
-1. **零付費門檻即可用 MCP**：無須 Figma 的 Full Seat 付費權限，安裝即可透過 Pencil MCP 讓 Antigravity、Claude 等 AI 代理直接讀寫畫布。
-2. **完整的雙向控制（AI + 手動 UI）**：
-   * **AI 控制**：透過 6 大 Pencil MCP 工具與 17 項 `execute` API，AI 可以一次建立 Light/Dark 雙主題變數、自動排列元件、用 `Generate` 生圖與轉向量、用 `browser` 逆向現成網站。
-   * **學生手動控制**：AI 產出的每一個元素都是真實可編輯的向量節點！學生能隨時在畫布上按快捷鍵調整 **Flex 自動排版**、切換 **Component Variants**、修改 **SVG 錨點**，甚至直接拉動 AI 寫好的 **Script / Shader 參數滑桿**，即時看到視覺變化。
-3. **無縫交棒機制（`get_app_state`）**：學生在畫布上用滑鼠框選哪個 Frame 或寫上 `note` 便利貼，AI 就能立即偵測選取狀態並接手修改，徹底告別「用文字描述半天 AI 卻改錯地方」的痛點。
+> **最後更新**：2026 年 11 月｜pen.dev 的介面與功能更新很快，若操作畫面與講義不符，請以 App 內的快捷鍵表（按 `?`）與[官方文件](https://docs.pencil.dev/)為準。
 
 ---
 
-## 人機協作三階段核心循環
+## pen.dev 是什麼？
 
-在本章節的每一個練習中，我們都遵循這套「**AI 輔助 ↔ 學生手動**」的循環流程：
+![左邊是畫布上的一張卡片，右邊是同一張卡片在 .pen 檔中的節點樹](./01_認識pen.dev/images/pen-tree.svg)
 
-```mermaid
-flowchart LR
-    A["1. AI 生成基礎結構<br/>(get_style / SetVariables / Insert)"] --> B["2. 學生在 pen.dev 手動操作<br/>(快捷鍵 / Flex / Variant / 滑桿)"]
-    B --> C["3. 框選局部並貼上 note 批註<br/>(Selection + 便利貼)"]
-    C --> D["4. AI 讀取選取狀態並精修<br/>(get_app_state + Get + Update)"]
-    D --> E["5. 視覺驗收與程式碼同步<br/>(TakeScreenshot / Export / browser)"]
-    E --> B
-```
+**pen.dev**（MCP 工具名稱為 `pencil`）是一套無限畫布的介面設計工具，用起來和 Figma 很像：左邊是圖層、中間是畫布、右邊是屬性面板。
+
+它最大的不同是：設計稿存成 `.pen` 檔，內容是一棵**結構清楚的節點樹**，排版規則就是 CSS 的 Flexbox。所以 AI 可以直接讀寫你的設計稿（不是看截圖猜），你手動改的東西 AI 也看得懂，而設計稿轉成 RWD 網頁時幾乎可以一對一對應。
+
+這套教材**不要求你從空白畫布開始畫**。每一章都由 AI 先產生練習素材，再由你**親手操作每一個功能**，把它改好。學完後，你既能指揮 AI，也能在 AI 做錯時自己修好。
 
 ---
 
-## pen.dev 全工具生態系總覽
+## 學完你能做到
 
-| 功能層級 | 學生手動 UI 操作 | AI 控制介面（MCP / `execute` API） | 對應章節 |
-| :--- | :--- | :--- | :--- |
-| **環境與狀態** | Top Bar、Left Layers、Right Properties、AI Sidebar (`Cmd/Ctrl + K`) | `get_app_state`、`read_skill`、`get_style`（26 種內建風格）、`save` | [01](./01_介面導覽與手動工具全圖鑑.md)、[02](./02_MCP六大工具與Execute十七項API實戰.md) |
-| **畫布節點類型** | `frame` (`A`/`F`)、`rectangle` (`R`)、`ellipse` (`O`)、`polygon`、`path` (`P`)、`line`、`text` (`T`)、`icon`、`note`、`group` (`Cmd+G`) | `Insert`、`Copy`、`Update`、`Replace`、`Move`、`Delete`、`FindEmptySpace` | [01](./01_介面導覽與手動工具全圖鑑.md)、[02](./02_MCP六大工具與Execute十七項API實戰.md) |
-| **設計系統與元件** | Flex Auto Layout (`Shift+A`)、Create Component (`Cmd+Opt+K`)、Component Set (`Shift+Cmd+K`)、Variables 面板 | `SetVariables`、`GetVariables`、`reusable`、`variants`、`ref` + `descendants`、`slot` | [01](./01_介面導覽與手動工具全圖鑑.md)、[02](./02_MCP六大工具與Execute十七項API實戰.md) |
-| **視覺填充與特效** | 純色、漸層、網格漸層、圖片裁切、Shadow、Blur、Background Blur | Fills（`color`/`gradient`/`image`/`mesh_gradient`/`shader`）與 Effects | [01](./01_介面導覽與手動工具全圖鑑.md)、[03](./03_Generate生圖轉向量與Script_Shader特效.md) |
-| **AI 生圖與轉向量** | 右側面板預覽圖片填滿、手動調整生成後的 SVG `path` 錨點與填色 | `Generate` 6 大模式（`ai` / `stock` / `svg` / `remove-background` / `replace-background` / `vectorize-image`） | [03](./03_Generate生圖轉向量與Script_Shader特效.md) |
-| **參數化程式藝術** | 在右側屬性面板拖曳 `@input` / `@range` 滑桿與選色器即時改圖 | `script` 節點（JS `@schema 2.11`）與 `shader`（WebGL 1.0 `.glsl` + `pencil:background` 折射） | [03](./03_Generate生圖轉向量與Script_Shader特效.md) |
-| **除錯、網頁逆向與交付** | 畫布上即時互動 `browser` 節點、匯出設定面板 | `Get`（`ctx.bounds` / `ctx.problems`）、`Print`、`TakeScreenshot`、`Export`、`browser`（`import-to-canvas` 等 6 動作）、`@pen.dev/cli` | [02](./02_MCP六大工具與Execute十七項API實戰.md)、[04](./04_Browser網頁逆向與人機協作完整工作坊.md) |
+- 用手動方式操作 pen.dev 的主要功能：圖層、形狀、文字、圖示、Flex 排版、元件與變體、變數與主題、填色與特效。
+- 建立一套**網頁元件庫**（Button、TextField、Navbar、CourseCard、PricingCard、Footer…），並組成 Desktop／Tablet／Phone 三種尺寸的活動頁。
+- 用「選取＋便利貼」精準地請 AI 修改指定區塊。
+- 把設計稿轉成真正的 RWD 網頁，並在畫布上和設計稿並排驗收。
+- （延伸）把設計稿轉成 PyQt6 桌面程式。
 
 ---
 
-## 本章學習路線圖（4 篇實戰指南）
+## 學習地圖
 
-### [01. 介面導覽與手動工具全圖鑑](./01_介面導覽與手動工具全圖鑑.md)
-* 完整認識 Top Bar、圖層樹、屬性面板與快捷鍵，掌握所有 **13 種畫布節點**（含 Flex 排版鐵則、`ellipse` 圓環進度條、`Material Symbols` 內建圖示、`ref` & `variants` 元件、`note` 便利貼）與 5 種 Fills / 4 種 Effects。
-* **動手 Lab 1**：用 Prompt 生成個人數位名片與數據小卡，再親手用快捷鍵微調 Flex 間距與圖示。
+![學習地圖：入門 01–03、核心 04–07、完成 08–09、延伸 10](./images/roadmap.svg)
 
-### [02. MCP 六大工具與 Execute 十七項 API 實戰](./02_MCP六大工具與Execute十七項API實戰.md)
-* 徹底理解為什麼不能直接用一般讀檔工具讀 `.pen`，並實作 **6 大 Pencil MCP 工具** 與 **`execute` 內建 17 項 API**（空間搜尋、Light/Dark 雙主題變數、元件插槽替換、`ctx.problems` 排版溢出自動抓錯、`TakeScreenshot` 與 `Export`）。
-* **動手 Lab 2**：建立雙主題 Design Tokens 與元件庫，並練習「學生滑鼠點選節點 → AI 透過 `get_app_state` 接手精修」。
+### 入門：會操作
 
-### [03. Generate 生圖轉向量與 Script / Shader 特效](./03_Generate生圖轉向量與Script_Shader特效.md)
-* 掌握 **`Generate` 6 大生圖與轉向量模式**（AI 生圖、Unsplash 圖庫、AI 生成可編輯 SVG、一鍵去背、AI 換背景、點陣圖轉向量）。
-* 解鎖 `pen.dev` 最強黑科技：**`script` 參數化幾何腳本** 與 **WebGL `shader` 液態毛玻璃／即時光影**，讓 AI 寫出底層程式、學生直接在右側面板拉動滑桿調整設計！
-* **動手 Lab 3**：製作電商商品去背換景卡片與互動式 Shader/Script 海報。
+| 章 | 你會學到 | 時間 |
+| :--- | :--- | :--- |
+| [01. 認識 pen.dev](./01_認識pen.dev/README.md) | pen.dev 是什麼、安裝、讓 AI 連上畫布 | 40 分 |
+| [02. 介面與畫布基本操作](./02_介面與畫布基本操作/README.md) | 四大區域、選取、縮放、整理圖層、必學快捷鍵 | 50 分 |
+| [03. 形狀、文字與圖示](./03_形狀文字與圖示/README.md) | 基本節點、文字換行、進度環、內建圖示庫 | 60 分 |
 
-### [04. Browser 網頁逆向與人機協作完整工作坊](./04_Browser網頁逆向與人機協作完整工作坊.md)
-* 實作 **`browser` 工具 6 大動作**（包含一鍵把任何真實網站變成可編輯向量的 `import-to-canvas`），以及在畫布旁即時並排預覽桌機（`1440px`）與手機（`390px`）`browser` 節點，並學會 `@pen.dev/cli` 終端機自動化指令。
-* **終極工作坊**：從逆向參考網站、載入 `DESIGN.md` 生成全頁、學生手動微調與批註，到 `Export` 輸出程式碼的 4 階段完整專案實戰。
+### 核心：會做 RWD 元件與版面
+
+| 章 | 你會學到 | 時間 |
+| :--- | :--- | :--- |
+| [04. Flex 自動排版：RWD 的核心](./04_Flex自動排版_RWD的核心/README.md) | 方向、間距、對齊、Fixed／Hug／Fill，三種寬度的版面 | 90 分 |
+| [05. 元件、實例與變體](./05_元件實例與變體/README.md) | 主元件、覆寫、variants、slot | 60 分 |
+| [06. 網頁元件庫實戰](./06_網頁元件庫實戰/README.md) | ★ 主專案：從 Button 做到整頁 LearnHub 活動頁 | 3～4 小時 |
+| [07. 變數與主題：深淺色與 RWD 斷點](./07_變數與主題_深淺色與RWD斷點/README.md) | 變數、深色模式、用 device 主題自動縮放 | 70 分 |
+
+### 完成：上線
+
+| 章 | 你會學到 | 時間 |
+| :--- | :--- | :--- |
+| [08. 填色、特效與 AI 生圖](./08_填色特效與AI生圖/README.md) | 漸層、照片、陰影、毛玻璃、Generate | 70 分 |
+| [09. 從設計稿到 RWD 網頁程式碼](./09_從設計稿到RWD網頁程式碼/README.md) | ★ 選取交棒、轉成 HTML／React、browser 節點並排驗收 | 3 小時 |
+
+### 延伸
+
+| 章 | 你會學到 | 時間 |
+| :--- | :--- | :--- |
+| [10. 設計稿轉 PyQt 桌面程式](./10_延伸_設計稿轉PyQt桌面程式/README.md) | Flex ↔ Qt Layout、變數產生 QSS | 60 分 |
 
 ---
 
-## 課前確認清單
+## 課前準備
 
-在開始實戰前，請確認你的環境已就緒：
-- [ ] 已下載並登入 **pen.dev（Pencil）** 桌面版或 IDE 外掛（VS Code / Cursor / Antigravity）。
-- [ ] 已在 AI 編輯器中啟用 **Pencil MCP Server**（可參考 [課前準備](../課前準備/README.md) 與 [AI 設計畫布與 MCP 整合](../AI設計畫布與MCP整合/README.md)）。
-- [ ] 在專案資料夾中準備好一份 `.pen` 練習檔案（例如 `practice.pen`）並於 pen.dev 中開啟。
+- [ ] 已安裝 **pen.dev** 桌面版（建議，才有內建 AI 與 browser 節點），或 VS Code／Cursor 擴充套件。
+- [ ] 已註冊並登入 pen.dev 帳號（第 08 章的 AI 生圖需要登入）。
+- [ ] 準備一個 AI 工具：pen.dev 內建 AI，或 Claude Code、Codex、Gemini CLI、Antigravity 等（設定方式見第 01 章）。
+- [ ] 建立一個課程資料夾，每章一個 `.pen` 檔（例如 `ch03.pen`）。
+- [ ] 帳號與軟體的整體準備，請參考課程的[課前準備](../課前準備/README.md)。
+
+---
+
+## 附錄：手動操作 ↔ AI 指令對照
+
+學會手動操作後，你會發現 AI 做的事和你做的是同一件事。下表可以幫你看懂 AI 回報的內容：
+
+| 你手動做的事 | AI 使用的工具／函式 | 章節 |
+| :--- | :--- | :--- |
+| 看自己選了什麼、開了哪個檔 | `get_app_state` | 09 |
+| 畫新元素、加子元素 | `execute` → `Insert` | 03 |
+| 在屬性面板改數值 | `execute` → `Update` | 03、04 |
+| `Cmd/Ctrl + D` 複製、拖出實例 | `execute` → `Copy`（元件會變成 `ref` 實例） | 05 |
+| 拖曳圖層換順序 | `execute` → `Move` | 02 |
+| 刪除 | `execute` → `Delete` | 02 |
+| 在實例裡換掉一個子元素 | `execute` → `Replace` | 05 |
+| 在變數面板建立／修改變數 | `execute` → `SetVariables` / `GetVariables` | 07 |
+| 放大檢查有沒有跑版 | `execute` → `Get`（`ctx.problems`）、`TakeScreenshot` | 09 |
+| 匯出圖片或 HTML | `execute` → `Export` | 08、09 |
+| 生圖、去背、轉向量 | `execute` → `Generate` | 08 |
+| 套用現成的視覺風格 | `get_style`（內建多種風格原型，例如 Soft Bento、Editorial Landscape Stack） | 06 |
+| 匯入真實網站、操作 browser 節點 | `browser`（`load-page`、`import-to-canvas`、`return-screenshot`…） | 09 |
+| `Cmd/Ctrl + S` 存檔 | `save` | 01 |
+
+> 小技巧：沒有指定品牌風格時，可以在 Prompt 裡加一句「先用 `get_style` 列出可用風格，推薦三種給我選」，讓 AI 先提案再動工。

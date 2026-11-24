@@ -1,0 +1,54 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 300" width="800" height="300" font-family="'PingFang TC','Noto Sans TC','Microsoft JhengHei',sans-serif">
+  <rect width="800" height="300" rx="16" fill="#FFFFFF" stroke="#E5E7EB"/>
+  <text x="40" y="42" font-size="18" font-weight="700" fill="#111827">畫布上的基本節點（括號內是工具快捷鍵）</text>
+
+  <g font-size="13" text-anchor="middle">
+    <!-- frame -->
+    <rect x="40" y="70" width="100" height="100" rx="12" fill="#FFFFFF" stroke="#2563EB" stroke-width="2"/>
+    <rect x="54" y="84" width="72" height="14" rx="3" fill="#DBEAFE"/>
+    <rect x="54" y="106" width="72" height="14" rx="3" fill="#DBEAFE"/>
+    <rect x="54" y="128" width="40" height="14" rx="3" fill="#DBEAFE"/>
+    <text x="90" y="196" font-weight="700" fill="#111827">frame（A / F）</text>
+    <text x="90" y="216" fill="#6B7280">容器、可排版</text>
+
+    <!-- rectangle -->
+    <rect x="170" y="80" width="90" height="80" rx="14" fill="#2563EB"/>
+    <text x="215" y="196" font-weight="700" fill="#111827">rectangle（R）</text>
+    <text x="215" y="216" fill="#6B7280">底板、色塊</text>
+
+    <!-- ellipse -->
+    <circle cx="335" cy="120" r="40" fill="none" stroke="#E5E7EB" stroke-width="14"/>
+    <path d="M335 80 A40 40 0 1 1 295 120" fill="none" stroke="#2563EB" stroke-width="14"/>
+    <text x="335" y="196" font-weight="700" fill="#111827">ellipse（O）</text>
+    <text x="335" y="216" fill="#6B7280">圓、圓環、圓餅</text>
+
+    <!-- polygon -->
+    <polygon points="455,78 491,99 491,141 455,162 419,141 419,99" fill="#F59E0B"/>
+    <text x="455" y="196" font-weight="700" fill="#111827">polygon</text>
+    <text x="455" y="216" fill="#6B7280">多邊形、徽章</text>
+
+    <!-- path -->
+    <path d="M530 140 C555 80 585 160 610 100 S650 120 665 90" fill="none" stroke="#111827" stroke-width="4" stroke-linecap="round"/>
+    <circle cx="530" cy="140" r="4" fill="#FFFFFF" stroke="#2563EB" stroke-width="2"/>
+    <circle cx="610" cy="100" r="4" fill="#FFFFFF" stroke="#2563EB" stroke-width="2"/>
+    <circle cx="665" cy="90" r="4" fill="#FFFFFF" stroke="#2563EB" stroke-width="2"/>
+    <text x="597" y="196" font-weight="700" fill="#111827">path（P 鋼筆）</text>
+    <text x="597" y="216" fill="#6B7280">曲線、分隔線</text>
+
+    <!-- text / icon / note -->
+    <text x="720" y="110" font-size="30" font-weight="700" fill="#111827">Aa</text>
+    <text x="720" y="196" font-weight="700" fill="#111827">text（T）</text>
+    <text x="720" y="216" fill="#6B7280">文字</text>
+  </g>
+
+  <g font-size="13">
+    <rect x="40" y="240" width="350" height="40" rx="10" fill="#F3F4F6"/>
+    <circle cx="66" cy="260" r="11" fill="none" stroke="#111827" stroke-width="2"/>
+    <path d="M60 260 l4 4 l8 -8" fill="none" stroke="#111827" stroke-width="2"/>
+    <text x="88" y="265" fill="#111827"><tspan font-weight="700">icon</tspan>　內建 6 套圖示庫，不用自己畫</text>
+
+    <rect x="410" y="240" width="350" height="40" rx="10" fill="#FEF3C7"/>
+    <rect x="426" y="250" width="22" height="20" rx="3" fill="#FCD34D"/>
+    <text x="460" y="265" fill="#111827"><tspan font-weight="700">note（N）</tspan>　便利貼，寫給自己或 AI 看</text>
+  </g>
+</svg>

@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 380" width="800" height="380" font-family="'PingFang TC','Noto Sans TC','Microsoft JhengHei',sans-serif">
+  <rect width="800" height="380" rx="16" fill="#FFFFFF" stroke="#E5E7EB"/>
+  <text x="40" y="42" font-size="18" font-weight="700" fill="#111827">同一組卡片，三種寬度怎麼排？（Flex 不會自動換行）</text>
+
+  <!-- desktop -->
+  <text x="40" y="80" font-size="14" font-weight="700" fill="#111827">Desktop 1440</text>
+  <rect x="40" y="92" width="330" height="120" rx="8" fill="#F3F4F6" stroke="#D1D5DB"/>
+  <g fill="#DBEAFE" stroke="#2563EB">
+    <rect x="54" y="106" width="92" height="92" rx="6"/>
+    <rect x="159" y="106" width="92" height="92" rx="6"/>
+    <rect x="264" y="106" width="92" height="92" rx="6"/>
+  </g>
+  <text x="40" y="232" font-size="12" fill="#374151">一個 horizontal 列</text>
+  <text x="40" y="250" font-size="12" fill="#374151">三張卡片都 fill_container</text>
+
+  <!-- tablet -->
+  <text x="410" y="80" font-size="14" font-weight="700" fill="#111827">Tablet 768</text>
+  <rect x="410" y="92" width="200" height="200" rx="8" fill="#F3F4F6" stroke="#D1D5DB"/>
+  <rect x="418" y="100" width="184" height="88" rx="4" fill="none" stroke="#F59E0B" stroke-dasharray="4 3"/>
+  <rect x="418" y="196" width="184" height="88" rx="4" fill="none" stroke="#F59E0B" stroke-dasharray="4 3"/>
+  <g fill="#DBEAFE" stroke="#2563EB">
+    <rect x="424" y="106" width="84" height="76" rx="6"/>
+    <rect x="512" y="106" width="84" height="76" rx="6"/>
+    <rect x="424" y="202" width="84" height="76" rx="6"/>
+  </g>
+  <text x="410" y="312" font-size="12" fill="#374151">外層 vertical，裡面拆成</text>
+  <text x="410" y="330" font-size="12" fill="#B45309">兩個 horizontal「列 frame」</text>
+
+  <!-- phone -->
+  <text x="650" y="80" font-size="14" font-weight="700" fill="#111827">Phone 390</text>
+  <rect x="650" y="92" width="110" height="250" rx="12" fill="#F3F4F6" stroke="#D1D5DB"/>
+  <g fill="#DBEAFE" stroke="#2563EB">
+    <rect x="662" y="106" width="86" height="70" rx="6"/>
+    <rect x="662" y="184" width="86" height="70" rx="6"/>
+    <rect x="662" y="262" width="86" height="70" rx="6"/>
+  </g>
+  <text x="650" y="362" font-size="12" fill="#374151">layout 改成 vertical</text>
+</svg>

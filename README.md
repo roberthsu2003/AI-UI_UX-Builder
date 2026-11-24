@@ -20,12 +20,12 @@
 > * **Google Stitch × MCP**：掌握 Live Streaming 即時串流干預、語音控制、`Play` 原型串接，以及透過 `stitch-mcp` 批次生成變體並套用 `DESIGN.md`。
 > * **Claude Design**：活用 `claude.ai/design` 與免費版 Artifacts Design 模式，透過自動規範萃取、局部圈選評論與動態滑桿微調設計並交接開發。
 
-## [pen.dev（Pencil）深度實戰：人機協作的 AI 向量設計畫布 >>](./pen_dev實戰與AI設計畫布)
-> 專為 AI 設計導向打造的 **pen.dev（Pencil）** 完整實戰章節，結合「**AI Prompt 自動生成 ↔ 學生手動 UI 調整 ↔ `get_app_state` 選取接力精修**」雙軌訓練，全面實作所有工具與 API：
-> * **介面導覽與手動工具全圖鑑**：掌握快捷鍵、13 種畫布節點（Flex 排版鐵則、`ellipse` 圓環進度條、`Material Symbols` 內建圖示、`variants` 變體與 `note` 便利貼）及 5 種 Fills / 4 種 Effects。
-> * **MCP 六大工具與 Execute 十七項 API**：徹底解析 `get_app_state`、`get_style`（26 種視覺原型）、`SetVariables` 雙主題設計系統、`Copy` + `descendants` 插槽覆寫，以及 `ctx.problems` 排版溢出自動抓錯與 `Export` 轉碼。
-> * **Generate 生圖轉向量與 Script / Shader 特效**：實作 `Generate` 六大 AI 能力（生圖、圖庫、可編輯 SVG、一鍵去背、換背景、點陣圖轉向量），並讓 AI 寫出帶 `@input` / `@range` 滑桿的參數化腳本與 WebGL 液態玻璃著色器給學生親手微調。
-> * **Browser 網頁逆向與人機協作工作坊**：透過 `import-to-canvas` 把真實網站轉回可編輯向量圖層、在畫布並排預覽桌機/手機 `browser` 節點與 `@pen.dev/cli`，完成四階段完整官網實戰。
+## [pen.dev 實戰：AI 輔助的 RWD 網頁設計畫布 >>](./pen_dev實戰與AI設計畫布)
+> 由淺至深的 10 章實作教材：每一章由 AI 先產生練習素材，學生再**親手操作 pen.dev 的每一個功能**，每個觀念都附圖解，範例以 RWD 網頁為主：
+> * **入門（01–03）**：認識 pen.dev 與 `.pen` 節點樹、介面與快捷鍵、形狀／文字／圖示。
+> * **核心（04–07）**：Flex 自動排版（Fixed／Hug／Fill 與三種寬度版面）、元件與變體，以及從 Button 做到整頁活動頁的**網頁元件庫實戰**；用變數與主題做深色模式與 RWD 斷點。
+> * **完成（08–09）**：填色、特效與 AI 生圖；用「選取＋便利貼」交棒給 AI，把設計稿轉成 RWD 網頁，並在畫布上用 `browser` 節點並排驗收。
+> * **延伸（10）**：把設計稿轉成 PyQt6 桌面程式。
 
 ## [建立自己的 `DESIGN.md` 與創意發想：參考優秀網站，打造多種設計風格 >>](./建立自己的DESIGN_md)
 > 當 AI 缺少明確的視覺規範時，極易產出風格斷裂或千篇一律的公版網頁。本單元將 **`DESIGN.md` 規範架構** 與 **設計靈感發想** 整合為完整工作流：

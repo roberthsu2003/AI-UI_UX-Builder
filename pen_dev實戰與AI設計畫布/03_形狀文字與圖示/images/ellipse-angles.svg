@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 360" width="800" height="360" font-family="'PingFang TC','Noto Sans TC','Microsoft JhengHei',sans-serif">
+  <defs>
+    <marker id="a" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0 0 L10 5 L0 10 z" fill="#F59E0B"/>
+    </marker>
+  </defs>
+  <rect width="800" height="360" rx="16" fill="#FFFFFF" stroke="#E5E7EB"/>
+
+  <!-- angle reference -->
+  <text x="40" y="42" font-size="16" font-weight="700" fill="#111827">① 角度從「右邊」起算，逆時針增加</text>
+  <circle cx="170" cy="190" r="90" fill="#F3F4F6" stroke="#D1D5DB"/>
+  <path d="M170 190 H260 M170 190 V100" stroke="#9CA3AF" stroke-dasharray="4 3"/>
+  <g font-size="13" fill="#111827" text-anchor="middle">
+    <text x="292" y="195">0°</text>
+    <text x="170" y="88">90°</text>
+    <text x="58" y="195">180°</text>
+    <text x="170" y="306">270°</text>
+  </g>
+  <path d="M245 140 A90 90 0 0 0 220 115" fill="none" stroke="#F59E0B" stroke-width="3" marker-end="url(#a)"/>
+  <text x="170" y="336" font-size="12" fill="#6B7280" text-anchor="middle">sweepAngle 正數＝逆時針，負數＝順時針</text>
+
+  <!-- progress ring -->
+  <text x="340" y="42" font-size="16" font-weight="700" fill="#111827">② 75% 進度環</text>
+  <circle cx="460" cy="190" r="68.8" fill="none" stroke="#E5E7EB" stroke-width="22.4"/>
+  <path d="M460 121.2 A68.8 68.8 0 1 1 391.2 190" fill="none" stroke="#2563EB" stroke-width="22.4"/>
+  <text x="460" y="198" font-size="24" font-weight="700" fill="#111827" text-anchor="middle">75%</text>
+  <g font-size="12" fill="#111827">
+    <text x="350" y="300">從 12 點鐘、順時針。兩圈都是 innerRadius 0.72</text>
+    <text x="350" y="318">進度：startAngle <tspan font-weight="700">90</tspan>、sweepAngle <tspan font-weight="700">-270</tspan></text>
+    <text x="350" y="336" fill="#6B7280">（-270 ＝ 順時針走 270°，即 75%）</text>
+  </g>
+
+  <!-- innerRadius -->
+  <text x="620" y="42" font-size="16" font-weight="700" fill="#111827">③ innerRadius</text>
+  <g font-size="12" fill="#111827" text-anchor="middle">
+    <circle cx="650" cy="110" r="30" fill="#2563EB"/>
+    <text x="730" y="114">0 實心</text>
+    <circle cx="650" cy="190" r="22.5" fill="none" stroke="#2563EB" stroke-width="15"/>
+    <text x="730" y="194">0.5</text>
+    <circle cx="650" cy="270" r="27" fill="none" stroke="#2563EB" stroke-width="6"/>
+    <text x="730" y="274">0.8 細環</text>
+  </g>
+</svg>

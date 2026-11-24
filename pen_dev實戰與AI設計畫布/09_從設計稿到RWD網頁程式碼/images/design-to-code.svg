@@ -1,0 +1,48 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 400" width="800" height="400" font-family="'PingFang TC','Noto Sans TC','Microsoft JhengHei',sans-serif">
+  <defs>
+    <marker id="m" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0 0 L10 5 L0 10 z" fill="#6B7280"/>
+    </marker>
+  </defs>
+  <rect width="800" height="400" rx="16" fill="#FFFFFF" stroke="#E5E7EB"/>
+  <text x="40" y="42" font-size="18" font-weight="700" fill="#111827">設計稿 → 程式碼 → 在畫布上並排驗收</text>
+
+  <!-- mapping column -->
+  <g font-size="12">
+    <rect x="40" y="64" width="300" height="210" rx="12" fill="#F3F4F6"/>
+    <text x="56" y="90" font-size="13" font-weight="700" fill="#111827">設計稿</text>
+    <text x="200" y="90" font-size="13" font-weight="700" fill="#111827">程式碼</text>
+    <g fill="#374151">
+      <text x="56" y="120">變數 $primary</text><text x="200" y="120" font-family="Menlo,monospace">--primary</text>
+      <text x="56" y="148">元件 CourseCard</text><text x="200" y="148" font-family="Menlo,monospace">&lt;CourseCard&gt;</text>
+      <text x="56" y="176">區塊 frame「Pricing」</text><text x="200" y="176" font-family="Menlo,monospace">section#pricing</text>
+      <text x="56" y="204">Flex 排版</text><text x="200" y="204" font-family="Menlo,monospace">flex / grid</text>
+      <text x="56" y="232">device 主題</text><text x="200" y="232" font-family="Menlo,monospace">@media</text>
+      <text x="56" y="260">icon（lucide）</text><text x="200" y="260" font-family="Menlo,monospace">lucide 套件</text>
+    </g>
+  </g>
+  <path d="M344 170 H384" stroke="#6B7280" stroke-width="2" marker-end="url(#m)"/>
+
+  <!-- canvas side by side -->
+  <rect x="390" y="64" width="370" height="300" rx="12" fill="#F9FAFB" stroke="#E5E7EB"/>
+  <text x="404" y="86" font-size="12" fill="#6B7280">pen.dev 畫布</text>
+  <!-- design frame -->
+  <rect x="404" y="98" width="130" height="210" rx="6" fill="#FFFFFF" stroke="#93C5FD"/>
+  <text x="404" y="326" font-size="11" fill="#2563EB">設計稿 frame</text>
+  <g fill="#E5E7EB"><rect x="412" y="106" width="114" height="10" rx="2"/><rect x="412" y="124" width="114" height="60" rx="3"/><rect x="412" y="192" width="34" height="50" rx="3"/><rect x="452" y="192" width="34" height="50" rx="3"/><rect x="492" y="192" width="34" height="50" rx="3"/><rect x="412" y="250" width="114" height="50" rx="3"/></g>
+  <!-- browser desktop -->
+  <rect x="548" y="98" width="130" height="210" rx="6" fill="#FFFFFF" stroke="#10B981"/>
+  <rect x="548" y="98" width="130" height="14" rx="6" fill="#D1FAE5"/>
+  <circle cx="556" cy="105" r="2.5" fill="#10B981"/><circle cx="564" cy="105" r="2.5" fill="#10B981"/>
+  <g fill="#E5E7EB"><rect x="556" y="118" width="114" height="10" rx="2"/><rect x="556" y="134" width="114" height="56" rx="3"/><rect x="556" y="196" width="34" height="48" rx="3"/><rect x="596" y="196" width="34" height="48" rx="3"/><rect x="636" y="196" width="34" height="48" rx="3"/><rect x="556" y="250" width="114" height="50" rx="3"/></g>
+  <text x="548" y="326" font-size="11" fill="#059669">browser 節點（桌機）</text>
+  <!-- browser phone -->
+  <rect x="692" y="98" width="56" height="210" rx="10" fill="#FFFFFF" stroke="#10B981"/>
+  <g fill="#E5E7EB"><rect x="698" y="108" width="44" height="8" rx="2"/><rect x="698" y="122" width="44" height="40" rx="3"/><rect x="698" y="168" width="44" height="30" rx="3"/><rect x="698" y="204" width="44" height="30" rx="3"/><rect x="698" y="240" width="44" height="30" rx="3"/></g>
+  <text x="692" y="326" font-size="11" fill="#059669">手機</text>
+  <text x="404" y="352" font-size="12" fill="#374151">dev server 一存檔就自動重新整理，設計稿與真實網頁並排比對</text>
+
+  <text x="40" y="306" font-size="12" fill="#6B7280">命名一致是關鍵：</text>
+  <text x="40" y="326" font-size="12" fill="#6B7280">設計稿叫什麼，程式碼就叫什麼，</text>
+  <text x="40" y="346" font-size="12" fill="#6B7280">AI 與工程師都能對得上。</text>
+</svg>

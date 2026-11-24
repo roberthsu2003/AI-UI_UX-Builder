@@ -1,0 +1,48 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 330" width="800" height="330" font-family="'PingFang TC','Noto Sans TC','Microsoft JhengHei',sans-serif">
+  <defs>
+    <linearGradient id="lin" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#2563EB"/><stop offset="1" stop-color="#22D3EE"/></linearGradient>
+    <radialGradient id="rad"><stop offset="0" stop-color="#FDE68A"/><stop offset="1" stop-color="#F97316"/></radialGradient>
+    <radialGradient id="m1" cx="0.2" cy="0.2" r="0.7"><stop offset="0" stop-color="#F9A8D4"/><stop offset="1" stop-color="#F9A8D4" stop-opacity="0"/></radialGradient>
+    <radialGradient id="m2" cx="0.85" cy="0.3" r="0.7"><stop offset="0" stop-color="#93C5FD"/><stop offset="1" stop-color="#93C5FD" stop-opacity="0"/></radialGradient>
+    <radialGradient id="m3" cx="0.5" cy="0.95" r="0.7"><stop offset="0" stop-color="#C4B5FD"/><stop offset="1" stop-color="#C4B5FD" stop-opacity="0"/></radialGradient>
+    <pattern id="photo" width="120" height="120" patternUnits="userSpaceOnUse" x="40" y="70">
+      <rect width="120" height="120" fill="#BAE6FD"/>
+      <circle cx="88" cy="32" r="14" fill="#FDE68A"/>
+      <path d="M0 120 L40 64 L70 96 L92 74 L120 104 V120 Z" fill="#16A34A"/>
+    </pattern>
+  </defs>
+  <rect width="800" height="330" rx="16" fill="#FFFFFF" stroke="#E5E7EB"/>
+  <text x="40" y="42" font-size="18" font-weight="700" fill="#111827">五種填色（fill）</text>
+
+  <rect x="40" y="70" width="120" height="120" rx="12" fill="#2563EB"/>
+  <rect x="190" y="70" width="120" height="120" rx="12" fill="url(#lin)"/>
+  <rect x="340" y="70" width="120" height="120" rx="12" fill="url(#photo)"/>
+  <g>
+    <rect x="490" y="70" width="120" height="120" rx="12" fill="#FEF3C7"/>
+    <rect x="490" y="70" width="120" height="120" rx="12" fill="url(#m1)"/>
+    <rect x="490" y="70" width="120" height="120" rx="12" fill="url(#m2)"/>
+    <rect x="490" y="70" width="120" height="120" rx="12" fill="url(#m3)"/>
+  </g>
+  <rect x="640" y="70" width="120" height="120" rx="12" fill="#111827"/>
+  <g fill="none" stroke="#22D3EE" stroke-width="2" opacity="0.8">
+    <path d="M650 150 C680 110 710 170 750 120"/>
+    <path d="M650 165 C680 125 710 185 750 135" stroke="#A78BFA"/>
+  </g>
+  <text x="700" y="100" font-size="11" fill="#9CA3AF" text-anchor="middle" font-family="Menlo,monospace">.glsl</text>
+
+  <g font-size="14" font-weight="700" fill="#111827" text-anchor="middle">
+    <text x="100" y="216">color</text><text x="250" y="216">gradient</text><text x="400" y="216">image</text>
+    <text x="550" y="216">mesh_gradient</text><text x="700" y="216">shader</text>
+  </g>
+  <g font-size="12" fill="#6B7280" text-anchor="middle">
+    <text x="100" y="236">純色、可綁變數</text>
+    <text x="250" y="236">linear / radial / angular</text>
+    <text x="400" y="236">cover / contain / stretch</text>
+    <text x="550" y="236">網格流光漸層</text>
+    <text x="700" y="236">程式產生的動態圖</text>
+  </g>
+
+  <rect x="40" y="258" width="720" height="52" rx="10" fill="#F3F4F6"/>
+  <text x="56" y="280" font-size="13" fill="#111827"><tspan font-weight="700">一個節點可以疊多層 fill：</tspan>例如「照片」上面再疊一層「黑色半透明漸層」，白字就看得清楚。</text>
+  <text x="56" y="299" font-size="12" fill="#6B7280">純色的透明度寫在色碼最後兩碼：#00000099 ＝ 60% 不透明的黑色。</text>
+</svg>

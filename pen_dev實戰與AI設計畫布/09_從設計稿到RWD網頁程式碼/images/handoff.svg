@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 320" width="800" height="320" font-family="'PingFang TC','Noto Sans TC','Microsoft JhengHei',sans-serif">
+  <defs>
+    <marker id="m" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0 0 L10 5 L0 10 z" fill="#6B7280"/>
+    </marker>
+  </defs>
+  <rect width="800" height="320" rx="16" fill="#FFFFFF" stroke="#E5E7EB"/>
+  <text x="40" y="42" font-size="18" font-weight="700" fill="#111827">精準交棒：選取＋便利貼，AI 只改你指定的地方</text>
+
+  <!-- canvas -->
+  <rect x="40" y="64" width="330" height="220" rx="12" fill="#F3F4F6"/>
+  <rect x="60" y="84" width="230" height="180" rx="8" fill="#FFFFFF" stroke="#D1D5DB"/>
+  <rect x="72" y="96" width="206" height="12" rx="2" fill="#E5E7EB"/>
+  <rect x="72" y="120" width="206" height="70" rx="4" fill="#FFFFFF" stroke="#2563EB" stroke-width="2"/>
+  <g fill="#2563EB"><rect x="69" y="117" width="6" height="6"/><rect x="275" y="117" width="6" height="6"/><rect x="69" y="187" width="6" height="6"/><rect x="275" y="187" width="6" height="6"/></g>
+  <rect x="82" y="132" width="80" height="10" rx="2" fill="#9CA3AF"/>
+  <rect x="82" y="150" width="120" height="8" rx="2" fill="#D1D5DB"/>
+  <rect x="198" y="130" width="70" height="50" rx="4" fill="#E5E7EB"/>
+  <rect x="72" y="202" width="206" height="50" rx="4" fill="#E5E7EB"/>
+  <text x="74" y="214" font-size="10" fill="#2563EB"></text>
+  <rect x="270" y="196" width="92" height="76" rx="4" fill="#FDE68A"/>
+  <text x="278" y="216" font-size="11" fill="#78350F">圖片太高，</text>
+  <text x="278" y="232" font-size="11" fill="#78350F">改成 400；</text>
+  <text x="278" y="248" font-size="11" fill="#78350F">按鈕改膠囊</text>
+  <text x="56" y="306" font-size="12" fill="#374151">① 你：選取 Hero，旁邊貼 note</text>
+
+  <!-- chat -->
+  <rect x="420" y="64" width="340" height="96" rx="12" fill="#EFF6FF"/>
+  <text x="438" y="92" font-size="12" fill="#6B7280">② 你對 AI 說</text>
+  <text x="438" y="118" font-size="14" fill="#111827">「依照我選取的區塊旁邊的便利貼修改，</text>
+  <text x="438" y="140" font-size="14" fill="#111827">　其他地方不要動。」</text>
+
+  <rect x="420" y="176" width="340" height="108" rx="12" fill="#F5F3FF"/>
+  <text x="438" y="204" font-size="12" fill="#6B7280">③ AI 做的事</text>
+  <g font-size="13" fill="#111827">
+    <text x="438" y="228"><tspan font-family="Menlo,monospace" fill="#7C3AED">get_app_state</tspan> → 知道你選了 Hero</text>
+    <text x="438" y="250">讀取 Hero 與旁邊的 note → 只修改 Hero</text>
+    <text x="438" y="272">截圖檢查 → 存檔</text>
+  </g>
+  <path d="M372 170 H414" stroke="#6B7280" stroke-width="2" marker-end="url(#m)"/>
+</svg>
