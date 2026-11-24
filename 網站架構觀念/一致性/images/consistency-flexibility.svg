@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 400" width="800" height="400" font-family="'PingFang TC','Noto Sans TC','Microsoft JhengHei',sans-serif">
+  <defs>
+    <marker id="m" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#6B7280"/></marker>
+  </defs>
+  <rect width="800" height="400" rx="16" fill="#FFFFFF" stroke="#E5E7EB"/>
+  <text x="40" y="42" font-size="18" font-weight="700" fill="#111827">一致性與靈活性：一邊變多，另一邊就變少</text>
+
+  <!-- axes -->
+  <path d="M90 340 V70" stroke="#6B7280" stroke-width="2" marker-end="url(#m)"/>
+  <path d="M90 340 H500" stroke="#6B7280" stroke-width="2" marker-end="url(#m)"/>
+  <text x="70" y="64" font-size="13" font-weight="700" fill="#374151" text-anchor="end">靈活性</text>
+  <text x="70" y="82" font-size="11" fill="#6B7280" text-anchor="end">（自由度）</text>
+  <text x="500" y="366" font-size="13" font-weight="700" fill="#374151" text-anchor="end">一致性（規則性）</text>
+
+  <!-- curve -->
+  <path d="M100 100 C220 110 400 200 460 330" fill="none" stroke="#2563EB" stroke-width="3"/>
+  <circle cx="100" cy="100" r="9" fill="#FFFFFF" stroke="#DC2626" stroke-width="3"/>
+  <circle cx="210" cy="118" r="9" fill="#FFFFFF" stroke="#D97706" stroke-width="3"/>
+  <circle cx="370" cy="200" r="9" fill="#FFFFFF" stroke="#059669" stroke-width="3"/>
+  <circle cx="460" cy="330" r="9" fill="#FFFFFF" stroke="#7C3AED" stroke-width="3"/>
+  <g font-size="12">
+    <text x="114" y="94" font-weight="700" fill="#DC2626">無規則地帶</text>
+    <text x="222" y="112" font-weight="700" fill="#D97706">允許大部分自由</text>
+    <text x="384" y="196" font-weight="700" fill="#059669">允許部分自由</text>
+    <text x="400" y="318" font-weight="700" fill="#7C3AED" text-anchor="end">一切依規則</text>
+  </g>
+
+  <!-- examples -->
+  <g font-size="12">
+    <rect x="540" y="70" width="220" height="56" rx="10" fill="#FEF2F2"/>
+    <text x="556" y="94" font-weight="700" fill="#B91C1C">無規則地帶</text>
+    <text x="556" y="114" fill="#374151">早期的個人網站：每頁長得都不一樣</text>
+    <rect x="540" y="136" width="220" height="56" rx="10" fill="#FFFBEB"/>
+    <text x="556" y="160" font-weight="700" fill="#B45309">允許大部分自由</text>
+    <text x="556" y="180" fill="#374151">Apple 官網：每個產品頁都不同</text>
+    <rect x="540" y="202" width="220" height="56" rx="10" fill="#ECFDF5"/>
+    <text x="556" y="226" font-weight="700" fill="#047857">允許部分自由（多數網站）</text>
+    <text x="556" y="246" fill="#374151">頁首頁尾、按鈕固定，內容自由</text>
+    <rect x="540" y="268" width="220" height="56" rx="10" fill="#F5F3FF"/>
+    <text x="556" y="292" font-weight="700" fill="#6D28D9">一切依規則</text>
+    <text x="556" y="312" fill="#374151">Wikipedia：每個條目格式都一樣</text>
+  </g>
+  <text x="40" y="390" font-size="12" fill="#6B7280">先決定網站要落在曲線的哪裡，再訂規則。多數網站：固定「框架」（頁首、導覽、按鈕），自由發揮「內容」。</text>
+</svg>

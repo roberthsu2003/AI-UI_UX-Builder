@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 360" width="800" height="360" font-family="'PingFang TC','Noto Sans TC','Microsoft JhengHei',sans-serif">
+  <rect width="800" height="360" rx="16" fill="#FFFFFF" stroke="#E5E7EB"/>
+  <text x="40" y="42" font-size="18" font-weight="700" fill="#111827">同樣 16 個商品，兩種分法：又窄又深 vs. 又淺又廣</text>
+
+  <!-- deep narrow -->
+  <text x="40" y="76" font-size="14" font-weight="700" fill="#2563EB">又窄又深（4 層，每層 2 個）</text>
+  <g stroke="#93C5FD" stroke-width="1.5">
+    <path d="M200 96 L120 136 M200 96 L280 136"/>
+    <path d="M120 136 L80 176 M120 136 L160 176 M280 136 L240 176 M280 136 L320 176"/>
+    <path d="M80 176 L64 216 M80 176 L96 216 M160 176 L144 216 M160 176 L176 216 M240 176 L224 216 M240 176 L256 216 M320 176 L304 216 M320 176 L336 216"/>
+  </g>
+  <g fill="#2563EB"><circle cx="200" cy="96" r="9"/></g>
+  <g fill="#60A5FA"><circle cx="120" cy="136" r="8"/><circle cx="280" cy="136" r="8"/></g>
+  <g fill="#93C5FD"><circle cx="80" cy="176" r="7"/><circle cx="160" cy="176" r="7"/><circle cx="240" cy="176" r="7"/><circle cx="320" cy="176" r="7"/></g>
+  <g fill="#DBEAFE" stroke="#93C5FD"><circle cx="64" cy="216" r="6"/><circle cx="96" cy="216" r="6"/><circle cx="144" cy="216" r="6"/><circle cx="176" cy="216" r="6"/><circle cx="224" cy="216" r="6"/><circle cx="256" cy="216" r="6"/><circle cx="304" cy="216" r="6"/><circle cx="336" cy="216" r="6"/></g>
+  <text x="200" y="244" font-size="11" fill="#6B7280" text-anchor="middle">（再往下一層各 2 個 = 16 個）</text>
+  <g font-size="12" fill="#374151">
+    <text x="40" y="276">✔ 每一層只要從 2 個裡面選，很快</text>
+    <text x="40" y="298">✘ 要點很多次才到；標籤變得很籠統</text>
+    <text x="40" y="320" fill="#6B7280">　例：「家電・生活・3C」這種大雜燴標籤</text>
+  </g>
+
+  <!-- shallow wide -->
+  <text x="430" y="76" font-size="14" font-weight="700" fill="#D97706">又淺又廣（1 層，16 個並排）</text>
+  <g stroke="#FCD34D" stroke-width="1.2">
+    <path d="M600 96 L446 176 M600 96 L466 176 M600 96 L486 176 M600 96 L506 176 M600 96 L526 176 M600 96 L546 176 M600 96 L566 176 M600 96 L586 176 M600 96 L614 176 M600 96 L634 176 M600 96 L654 176 M600 96 L674 176 M600 96 L694 176 M600 96 L714 176 M600 96 L734 176 M600 96 L754 176"/>
+  </g>
+  <circle cx="600" cy="96" r="9" fill="#D97706"/>
+  <g fill="#FEF3C7" stroke="#F59E0B">
+    <circle cx="446" cy="176" r="6"/><circle cx="466" cy="176" r="6"/><circle cx="486" cy="176" r="6"/><circle cx="506" cy="176" r="6"/><circle cx="526" cy="176" r="6"/><circle cx="546" cy="176" r="6"/><circle cx="566" cy="176" r="6"/><circle cx="586" cy="176" r="6"/>
+    <circle cx="614" cy="176" r="6"/><circle cx="634" cy="176" r="6"/><circle cx="654" cy="176" r="6"/><circle cx="674" cy="176" r="6"/><circle cx="694" cy="176" r="6"/><circle cx="714" cy="176" r="6"/><circle cx="734" cy="176" r="6"/><circle cx="754" cy="176" r="6"/>
+  </g>
+  <g font-size="12" fill="#374151">
+    <text x="430" y="276">✔ 點一次就到；標籤很具體</text>
+    <text x="430" y="298">✘ 一次要看 16 個，很難掌握全貌</text>
+    <text x="430" y="320" fill="#6B7280">　建議：每一層大約 5～8 個選項</text>
+  </g>
+</svg>

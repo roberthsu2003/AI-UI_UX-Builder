@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 340" width="800" height="340" font-family="'PingFang TC','Noto Sans TC','Microsoft JhengHei',sans-serif">
+  <defs>
+    <marker id="m" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0 0 L10 5 L0 10 z" fill="#DC2626"/>
+    </marker>
+  </defs>
+  <rect width="800" height="340" rx="16" fill="#FFFFFF" stroke="#E5E7EB"/>
+
+  <!-- book -->
+  <text x="40" y="44" font-size="16" font-weight="700" fill="#111827">書本：只能一頁一頁往前或往後</text>
+  <g font-size="12" fill="#374151" text-anchor="middle">
+    <g fill="#F3F4F6" stroke="#D1D5DB">
+      <rect x="40" y="70" width="52" height="70" rx="4"/><rect x="122" y="70" width="52" height="70" rx="4"/><rect x="204" y="70" width="52" height="70" rx="4"/><rect x="286" y="70" width="52" height="70" rx="4"/>
+    </g>
+    <text x="66" y="110">P.1</text><text x="148" y="110">P.2</text><text x="230" y="110">P.3</text><text x="312" y="110">P.4</text>
+  </g>
+  <g stroke="#DC2626" stroke-width="2" marker-end="url(#m)"><path d="M94 105 H118"/><path d="M176 105 H200"/><path d="M258 105 H282"/></g>
+  <text x="40" y="172" font-size="13" fill="#047857">✔ 任何人都知道怎麼讀</text>
+  <text x="40" y="194" font-size="13" fill="#6B7280">✘ 想找第 4 頁的內容，要先翻過前面</text>
+
+  <!-- web -->
+  <text x="420" y="44" font-size="16" font-weight="700" fill="#111827">網站：任何一頁都能連到任何一頁</text>
+  <g stroke="#9CA3AF" stroke-width="1.5">
+    <path d="M520 100 L620 80 M520 100 L470 170 M520 100 L600 160 M620 80 L700 120 M620 80 L600 160 M470 170 L560 230 M600 160 L560 230 M600 160 L700 210 M700 120 L700 210 M560 230 L700 210 M470 170 L600 160 M520 100 L700 210"/>
+  </g>
+  <g fill="#DBEAFE" stroke="#2563EB">
+    <circle cx="520" cy="100" r="20"/><circle cx="620" cy="80" r="18"/><circle cx="470" cy="170" r="18"/><circle cx="600" cy="160" r="22"/><circle cx="700" cy="120" r="18"/><circle cx="560" cy="230" r="18"/><circle cx="700" cy="210" r="18"/>
+  </g>
+  <g font-size="11" fill="#1D4ED8" text-anchor="middle">
+    <text x="520" y="104">首頁</text><text x="620" y="84">分類</text><text x="470" y="174">文章</text><text x="600" y="164">商品</text><text x="700" y="124">購物車</text><text x="560" y="234">評價</text><text x="700" y="214">結帳</text>
+  </g>
+  <text x="420" y="282" font-size="13" fill="#047857">✔ 想去哪裡都很快</text>
+  <text x="420" y="304" font-size="13" fill="#DC2626">✘ 自由度越高，越容易迷路</text>
+
+  <text x="40" y="282" font-size="13" fill="#111827" font-weight="700">所以網站設計的關鍵是：</text>
+  <text x="40" y="304" font-size="13" fill="#111827">建立一套使用者看得懂的「移動方式」</text>
+</svg>

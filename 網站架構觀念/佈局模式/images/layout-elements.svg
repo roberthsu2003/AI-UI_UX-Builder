@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 420" width="800" height="420" font-family="'PingFang TC','Noto Sans TC','Microsoft JhengHei',sans-serif">
+  <rect width="800" height="420" rx="16" fill="#FFFFFF" stroke="#E5E7EB"/>
+  <text x="40" y="42" font-size="18" font-weight="700" fill="#111827">一個網頁由這些區塊組成</text>
+
+  <g font-size="13" text-anchor="middle">
+    <rect x="40" y="62" width="460" height="34" rx="6" fill="#E5E7EB"/><text x="270" y="84" fill="#374151">頁首（Logo、搜尋、會員）</text>
+    <rect x="40" y="102" width="460" height="30" rx="6" fill="#DBEAFE"/><text x="270" y="122" fill="#1D4ED8">全域導覽列</text>
+    <rect x="40" y="138" width="460" height="24" rx="6" fill="#F3F4F6"/><text x="270" y="155" font-size="12" fill="#6B7280">麵包屑導覽　首頁 ＞ 分類 ＞ 本頁</text>
+    <rect x="34" y="170" width="472" height="180" rx="8" fill="none" stroke="#DC2626" stroke-width="2" stroke-dasharray="6 4"/>
+    <rect x="44" y="180" width="100" height="160" rx="6" fill="#DCFCE7"/><text x="94" y="264" fill="#047857">區域導覽列</text>
+    <rect x="152" y="180" width="236" height="160" rx="6" fill="#FFFFFF" stroke="#D1D5DB"/><text x="270" y="264" fill="#111827" font-weight="700">主要內容</text>
+    <rect x="396" y="180" width="100" height="160" rx="6" fill="#FEF3C7"/><text x="446" y="258" fill="#B45309">關聯性</text><text x="446" y="276" fill="#B45309">導覽列</text>
+    <rect x="40" y="358" width="460" height="34" rx="6" fill="#E5E7EB"/><text x="270" y="380" fill="#374151">頁尾（聯絡資訊、版權、網站地圖）</text>
+  </g>
+  <text x="506" y="186" font-size="12" fill="#DC2626">← 內容區塊</text>
+
+  <g font-size="12" fill="#374151">
+    <text x="540" y="96" font-weight="700" fill="#111827">區塊的用途</text>
+    <text x="540" y="122">頁首：我在哪個網站</text>
+    <text x="540" y="144">全域導覽：網站的大分類</text>
+    <text x="540" y="166">麵包屑：目前的位置與路徑</text>
+    <text x="540" y="210">區域導覽：這個分類底下有什麼</text>
+    <text x="540" y="232">主要內容：這一頁的重點</text>
+    <text x="540" y="254">關聯性導覽：相關、推薦的內容</text>
+    <text x="540" y="298">頁尾：每一頁都一樣的補充資訊</text>
+    <text x="540" y="340" fill="#6B7280">內容區塊怎麼切，就決定了</text>
+    <text x="540" y="360" fill="#6B7280">單欄、雙欄或三欄。</text>
+  </g>
+</svg>

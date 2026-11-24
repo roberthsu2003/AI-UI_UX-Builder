@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 330" width="800" height="330" font-family="'PingFang TC','Noto Sans TC','Microsoft JhengHei',sans-serif">
+  <rect width="800" height="330" rx="16" fill="#FFFFFF" stroke="#E5E7EB"/>
+  <text x="40" y="42" font-size="18" font-weight="700" fill="#111827">目前在「廚具」，區域導覽列要列出哪些？</text>
+
+  <!-- only children -->
+  <text x="40" y="78" font-size="14" font-weight="700" fill="#2563EB">「只顯示下層」型</text>
+  <rect x="40" y="90" width="320" height="150" rx="10" fill="#F9FAFB" stroke="#E5E7EB"/>
+  <text x="58" y="116" font-size="13" font-weight="700" fill="#111827">廚具</text>
+  <g font-size="12" fill="#1D4ED8"><text x="74" y="142">鍋具</text><text x="74" y="164">刀具</text><text x="74" y="186">餐具</text><text x="74" y="208">保鮮盒</text></g>
+  <g font-size="12" fill="#374151">
+    <text x="40" y="266">✔ 往下一層很直接</text>
+    <text x="40" y="288" fill="#6B7280">✘ 想去隔壁的「寢具」，要先回上一層</text>
+  </g>
+
+  <!-- siblings + children -->
+  <text x="420" y="78" font-size="14" font-weight="700" fill="#059669">「同層＋下層」型（樹狀）</text>
+  <rect x="420" y="90" width="340" height="150" rx="10" fill="#F9FAFB" stroke="#E5E7EB"/>
+  <g font-size="12">
+    <text x="438" y="116" fill="#047857">寢具</text>
+    <rect x="432" y="124" width="140" height="22" rx="4" fill="#D1FAE5"/>
+    <text x="438" y="140" font-weight="700" fill="#111827">廚具 ▾</text>
+    <text x="458" y="162" fill="#047857">鍋具</text><text x="458" y="180" fill="#047857">刀具</text><text x="458" y="198" fill="#047857">餐具</text>
+    <text x="438" y="222" fill="#047857">收納</text>
+  </g>
+  <g font-size="12" fill="#374151">
+    <text x="420" y="266">✔ 同一層之間可以直接切換，比較好逛</text>
+    <text x="420" y="288" fill="#6B7280">✘ 項目變多；下層要用縮排或展開來表示</text>
+  </g>
+  <text x="40" y="316" font-size="12" fill="#6B7280">水平型的區域導覽列一定是「同層」型，因為一行只能放同一層的項目。</text>
+</svg>

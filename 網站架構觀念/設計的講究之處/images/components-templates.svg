@@ -1,0 +1,49 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 340" width="800" height="340" font-family="'PingFang TC','Noto Sans TC','Microsoft JhengHei',sans-serif">
+  <defs>
+    <marker id="m" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#9CA3AF"/></marker>
+  </defs>
+  <rect width="800" height="340" rx="16" fill="#FFFFFF" stroke="#E5E7EB"/>
+  <text x="40" y="42" font-size="18" font-weight="700" fill="#111827">基本元素 → 元件 → 版型 → 頁面</text>
+
+  <g font-size="12">
+    <!-- tokens -->
+    <rect x="30" y="66" width="170" height="200" rx="12" fill="#F3F4F6"/>
+    <text x="46" y="92" font-size="13" font-weight="700" fill="#111827">① 基本元素</text>
+    <g><circle cx="56" cy="116" r="10" fill="#2563EB"/><circle cx="82" cy="116" r="10" fill="#0F172A"/><circle cx="108" cy="116" r="10" fill="#E5E7EB"/></g>
+    <text x="46" y="152" font-size="20" font-weight="700" fill="#111827">Aa</text><text x="80" y="150" fill="#6B7280">字型字級</text>
+    <rect x="46" y="166" width="24" height="24" rx="2" fill="none" stroke="#6B7280"/><rect x="78" y="166" width="24" height="24" rx="10" fill="none" stroke="#6B7280"/><text x="110" y="183" fill="#6B7280">圓角</text>
+    <text x="46" y="216" fill="#6B7280">間距 8 / 16 / 24</text>
+    <text x="46" y="250" font-size="11" fill="#6B7280">＝DESIGN.md 的 Token</text>
+
+    <!-- components -->
+    <rect x="222" y="66" width="170" height="200" rx="12" fill="#EFF6FF"/>
+    <text x="238" y="92" font-size="13" font-weight="700" fill="#1D4ED8">② 元件</text>
+    <rect x="238" y="104" width="70" height="24" rx="12" fill="#2563EB"/><text x="273" y="121" fill="#FFF" text-anchor="middle" font-size="11">按鈕</text>
+    <rect x="238" y="136" width="138" height="24" rx="6" fill="#FFFFFF" stroke="#93C5FD"/><text x="246" y="153" fill="#9CA3AF" font-size="11">輸入框</text>
+    <rect x="238" y="168" width="70" height="70" rx="6" fill="#FFFFFF" stroke="#93C5FD"/><text x="273" y="208" fill="#6B7280" text-anchor="middle" font-size="11">卡片</text>
+    <rect x="316" y="168" width="60" height="30" rx="4" fill="#0F172A"/><text x="346" y="187" fill="#FFF" text-anchor="middle" font-size="10">導覽列</text>
+    <text x="238" y="256" font-size="11" fill="#6B7280">每個元件都有固定的狀態</text>
+
+    <!-- templates -->
+    <rect x="414" y="66" width="170" height="200" rx="12" fill="#ECFDF5"/>
+    <text x="430" y="92" font-size="13" font-weight="700" fill="#047857">③ 版型</text>
+    <g fill="#FFFFFF" stroke="#6EE7B7">
+      <rect x="430" y="104" width="64" height="66" rx="4"/><rect x="502" y="104" width="64" height="66" rx="4"/>
+      <rect x="430" y="178" width="64" height="66" rx="4"/><rect x="502" y="178" width="64" height="66" rx="4"/>
+    </g>
+    <g font-size="10" fill="#047857" text-anchor="middle"><text x="462" y="141">首頁</text><text x="534" y="141">列表頁</text><text x="462" y="215">內容頁</text><text x="534" y="215">表單頁</text></g>
+    <text x="430" y="260" font-size="11" fill="#6B7280">少數幾種版型組合全站</text>
+
+    <!-- pages -->
+    <rect x="606" y="66" width="164" height="200" rx="12" fill="#FEF3C7"/>
+    <text x="622" y="92" font-size="13" font-weight="700" fill="#B45309">④ 頁面</text>
+    <g fill="#FFFFFF" stroke="#FCD34D">
+      <rect x="622" y="104" width="40" height="52" rx="3"/><rect x="668" y="104" width="40" height="52" rx="3"/><rect x="714" y="104" width="40" height="52" rx="3"/>
+      <rect x="622" y="162" width="40" height="52" rx="3"/><rect x="668" y="162" width="40" height="52" rx="3"/><rect x="714" y="162" width="40" height="52" rx="3"/>
+    </g>
+    <text x="622" y="240" font-size="11" fill="#6B7280">套入真實內容，</text>
+    <text x="622" y="256" font-size="11" fill="#6B7280">可以有幾百頁</text>
+  </g>
+  <g stroke="#9CA3AF" stroke-width="2" marker-end="url(#m)"><path d="M202 166 H218"/><path d="M394 166 H410"/><path d="M586 166 H602"/></g>
+  <text x="40" y="304" font-size="13" fill="#374151">改一個元件（例如按鈕圓角），所有用到它的頁面都會一起更新。這就是「改一處、全站同步」。</text>
+</svg>

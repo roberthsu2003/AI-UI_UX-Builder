@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 360" width="800" height="360" font-family="'PingFang TC','Noto Sans TC','Microsoft JhengHei',sans-serif">
+  <rect width="800" height="360" rx="16" fill="#FFFFFF" stroke="#E5E7EB"/>
+  <text x="40" y="42" font-size="18" font-weight="700" fill="#111827">使用者是「掃描」，不是「閱讀」</text>
+
+  <!-- wall of text -->
+  <text x="40" y="76" font-size="14" font-weight="700" fill="#DC2626">✘ 一整面文字：看了就想跳過</text>
+  <rect x="40" y="88" width="330" height="220" rx="8" fill="#FFFFFF" stroke="#D1D5DB"/>
+  <g fill="#D1D5DB">
+    <rect x="54" y="104" width="300" height="7" rx="2"/><rect x="54" y="118" width="296" height="7" rx="2"/><rect x="54" y="132" width="302" height="7" rx="2"/><rect x="54" y="146" width="290" height="7" rx="2"/>
+    <rect x="54" y="160" width="300" height="7" rx="2"/><rect x="54" y="174" width="298" height="7" rx="2"/><rect x="54" y="188" width="302" height="7" rx="2"/><rect x="54" y="202" width="284" height="7" rx="2"/>
+    <rect x="54" y="216" width="300" height="7" rx="2"/><rect x="54" y="230" width="296" height="7" rx="2"/><rect x="54" y="244" width="300" height="7" rx="2"/><rect x="54" y="258" width="240" height="7" rx="2"/>
+    <rect x="54" y="272" width="300" height="7" rx="2"/><rect x="54" y="286" width="200" height="7" rx="2"/>
+  </g>
+  <!-- F pattern overlay -->
+  <g fill="#F59E0B" fill-opacity="0.35">
+    <rect x="50" y="100" width="300" height="16" rx="4"/><rect x="50" y="154" width="180" height="16" rx="4"/><rect x="50" y="100" width="40" height="196" rx="4"/>
+  </g>
+  <text x="206" y="330" font-size="12" fill="#B45309" text-anchor="middle">橘色是視線停留的地方：呈 F 型，大部分內容被跳過</text>
+
+  <!-- scannable -->
+  <text x="430" y="76" font-size="14" font-weight="700" fill="#059669">✔ 結論先講、小標題、條列</text>
+  <rect x="430" y="88" width="330" height="220" rx="8" fill="#FFFFFF" stroke="#D1D5DB"/>
+  <text x="446" y="116" font-size="14" font-weight="700" fill="#111827">65 歲以上可以免費接種</text>
+  <g fill="#D1D5DB"><rect x="446" y="126" width="260" height="7" rx="2"/></g>
+  <text x="446" y="160" font-size="13" font-weight="700" fill="#111827">需要帶什麼？</text>
+  <g font-size="12" fill="#374151"><text x="446" y="182">・健保卡</text><text x="446" y="200">・預約簡訊</text></g>
+  <text x="446" y="232" font-size="13" font-weight="700" fill="#111827">在哪裡接種？</text>
+  <g fill="#D1D5DB"><rect x="446" y="242" width="240" height="7" rx="2"/></g>
+  <rect x="446" y="262" width="120" height="30" rx="15" fill="#2563EB"/><text x="506" y="282" font-size="12" fill="#FFF" text-anchor="middle">預約接種時段</text>
+  <text x="595" y="330" font-size="12" fill="#047857" text-anchor="middle">只看標題也知道重點；按鈕寫出具體動作</text>
+</svg>

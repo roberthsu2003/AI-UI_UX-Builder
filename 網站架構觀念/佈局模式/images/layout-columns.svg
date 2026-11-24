@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 340" width="800" height="340" font-family="'PingFang TC','Noto Sans TC','Microsoft JhengHei',sans-serif">
+  <rect width="800" height="340" rx="16" fill="#FFFFFF" stroke="#E5E7EB"/>
+  <text x="40" y="42" font-size="18" font-weight="700" fill="#111827">三種基本版型：內容區塊切成幾欄？</text>
+
+  <g font-size="12" text-anchor="middle">
+    <!-- 1 col -->
+    <rect x="40" y="62" width="220" height="200" rx="8" fill="#F9FAFB" stroke="#D1D5DB"/>
+    <rect x="50" y="72" width="200" height="20" rx="3" fill="#E5E7EB"/>
+    <rect x="50" y="100" width="200" height="152" rx="4" fill="#FFFFFF" stroke="#2563EB" stroke-width="2"/><text x="150" y="180" fill="#1D4ED8" font-weight="700">主要內容</text>
+    <text x="150" y="286" font-size="15" font-weight="700" fill="#111827">單欄式</text>
+    <text x="150" y="306" fill="#6B7280">自由度最高，手機最適合</text>
+
+    <!-- 2 col -->
+    <rect x="290" y="62" width="220" height="200" rx="8" fill="#F9FAFB" stroke="#D1D5DB"/>
+    <rect x="300" y="72" width="200" height="20" rx="3" fill="#E5E7EB"/>
+    <rect x="300" y="100" width="56" height="152" rx="4" fill="#DCFCE7"/><text x="328" y="172" fill="#047857" font-size="11">輔助</text><text x="328" y="188" fill="#047857" font-size="11">區塊</text>
+    <rect x="364" y="100" width="136" height="152" rx="4" fill="#FFFFFF" stroke="#2563EB" stroke-width="2"/><text x="432" y="180" fill="#1D4ED8" font-weight="700">主要內容</text>
+    <text x="400" y="286" font-size="15" font-weight="700" fill="#111827">雙欄式</text>
+    <text x="400" y="306" fill="#6B7280">多一個放導覽或資訊的輔助區塊</text>
+
+    <!-- 3 col -->
+    <rect x="540" y="62" width="220" height="200" rx="8" fill="#F9FAFB" stroke="#D1D5DB"/>
+    <rect x="550" y="72" width="200" height="20" rx="3" fill="#E5E7EB"/>
+    <rect x="550" y="100" width="44" height="152" rx="4" fill="#DCFCE7"/><text x="572" y="180" fill="#047857" font-size="11">輔助</text>
+    <rect x="600" y="100" width="100" height="152" rx="4" fill="#FFFFFF" stroke="#2563EB" stroke-width="2"/><text x="650" y="180" fill="#1D4ED8" font-weight="700">主要內容</text>
+    <rect x="706" y="100" width="44" height="152" rx="4" fill="#FEF3C7"/><text x="728" y="180" fill="#B45309" font-size="11">輔助</text>
+    <text x="650" y="286" font-size="15" font-weight="700" fill="#111827">三欄式</text>
+    <text x="650" y="306" fill="#6B7280">最便利，但需要寬螢幕</text>
+  </g>
+</svg>

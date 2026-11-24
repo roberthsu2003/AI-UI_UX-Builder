@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 380" width="800" height="380" font-family="'PingFang TC','Noto Sans TC','Microsoft JhengHei',sans-serif">
+  <rect width="800" height="380" rx="16" fill="#FFFFFF" stroke="#E5E7EB"/>
+  <text x="40" y="42" font-size="18" font-weight="700" fill="#111827">看起來就知道怎麼用（示能性），做了就有回應（回饋）</text>
+
+  <text x="40" y="78" font-size="13" font-weight="700" fill="#DC2626">✘ 看不出能怎麼用</text>
+  <text x="300" y="78" font-size="13" font-weight="700" fill="#059669">✔ 一看就知道</text>
+  <g font-size="13">
+    <text x="40" y="112" fill="#111827">立即報名</text>
+    <rect x="300" y="94" width="110" height="34" rx="8" fill="#2563EB"/><text x="355" y="116" fill="#FFFFFF" text-anchor="middle">立即報名</text>
+    <text x="540" y="116" font-size="12" fill="#6B7280">按鈕：有底色、夠大</text>
+
+    <text x="40" y="160" fill="#111827">詳見活動辦法說明</text>
+    <text x="300" y="160" fill="#2563EB" text-decoration="underline">詳見活動辦法說明</text>
+    <path d="M300 163 H410" stroke="#2563EB"/>
+    <text x="540" y="160" font-size="12" fill="#6B7280">連結：不同顏色＋底線</text>
+
+    <path d="M40 206 H200" stroke="#E5E7EB"/><text x="40" y="200" fill="#D1D5DB" font-size="12">姓名</text>
+    <text x="300" y="194" font-size="11" fill="#374151">姓名</text>
+    <rect x="300" y="198" width="160" height="30" rx="6" fill="#FFFFFF" stroke="#9CA3AF"/>
+    <text x="540" y="216" font-size="12" fill="#6B7280">輸入框：有完整外框</text>
+  </g>
+
+  <path d="M40 250 H760" stroke="#E5E7EB"/>
+  <text x="40" y="278" font-size="13" font-weight="700" fill="#111827">按鈕的回饋：每一個狀態都要讓使用者看得出來</text>
+  <g font-size="12" text-anchor="middle">
+    <rect x="40" y="292" width="120" height="34" rx="8" fill="#2563EB"/><text x="100" y="314" fill="#FFF">送出</text>
+    <rect x="180" y="292" width="120" height="34" rx="8" fill="#1D4ED8"/><text x="240" y="314" fill="#FFF">送出</text>
+    <rect x="320" y="292" width="120" height="34" rx="8" fill="#1E40AF" transform="translate(0,2)"/><text x="380" y="316" fill="#FFF">送出</text>
+    <rect x="460" y="292" width="120" height="34" rx="8" fill="#93C5FD"/><text x="520" y="314" fill="#FFF">送出中…</text>
+    <rect x="600" y="292" width="140" height="34" rx="8" fill="#059669"/><text x="670" y="314" fill="#FFF">✓ 已送出</text>
+    <g fill="#6B7280"><text x="100" y="350">預設</text><text x="240" y="350">滑過（hover）</text><text x="380" y="350">按下（active）</text><text x="520" y="350">處理中（loading）</text><text x="670" y="350">完成</text></g>
+  </g>
+</svg>

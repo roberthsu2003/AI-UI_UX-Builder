@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 380" width="800" height="380" font-family="'PingFang TC','Noto Sans TC','Microsoft JhengHei',sans-serif">
+  <rect width="800" height="380" rx="16" fill="#FFFFFF" stroke="#E5E7EB"/>
+  <text x="40" y="42" font-size="18" font-weight="700" fill="#111827">一個頁面要回答使用者的四個問題</text>
+
+  <!-- page mock -->
+  <rect x="40" y="62" width="400" height="296" rx="10" fill="#F9FAFB" stroke="#D1D5DB"/>
+  <rect x="40" y="62" width="400" height="40" rx="10" fill="#FFFFFF" stroke="#D1D5DB"/>
+  <text x="56" y="87" font-size="13" font-weight="700" fill="#111827">家電小舖</text>
+  <g font-size="11" fill="#6B7280"><text x="200" y="87">首頁</text><text x="240" y="87" fill="#2563EB" font-weight="700">吸塵器</text><text x="290" y="87">冷氣</text><text x="330" y="87">洗衣機</text></g>
+  <path d="M240 93 H280" stroke="#2563EB" stroke-width="2"/>
+  <text x="56" y="126" font-size="11" fill="#6B7280">首頁 ＞ 家電 ＞ <tspan fill="#111827">吸塵器</tspan></text>
+  <text x="56" y="158" font-size="20" font-weight="800" fill="#111827">吸塵器</text>
+  <text x="56" y="180" font-size="11" fill="#6B7280">共 24 款，依熱門程度排序</text>
+  <g fill="#FFFFFF" stroke="#D1D5DB"><rect x="56" y="194" width="110" height="100" rx="6"/><rect x="176" y="194" width="110" height="100" rx="6"/><rect x="296" y="194" width="110" height="100" rx="6"/></g>
+  <rect x="56" y="310" width="110" height="30" rx="6" fill="#FFFFFF" stroke="#D1D5DB"/><text x="111" y="330" font-size="11" fill="#374151" text-anchor="middle">← 上一頁</text>
+  <rect x="296" y="310" width="110" height="30" rx="6" fill="#2563EB"/><text x="351" y="330" font-size="11" fill="#FFFFFF" text-anchor="middle">比較選取的商品</text>
+
+  <!-- badges -->
+  <g font-size="12" font-weight="700" fill="#FFFFFF" text-anchor="middle">
+    <circle cx="300" cy="74" r="11" fill="#2563EB"/><text x="300" y="78">1</text>
+    <circle cx="150" cy="154" r="11" fill="#059669"/><text x="150" y="158">2</text>
+    <circle cx="200" cy="122" r="11" fill="#D97706"/><text x="200" y="126">3</text>
+    <circle cx="424" cy="306" r="11" fill="#7C3AED"/><text x="424" y="310">4</text>
+  </g>
+
+  <!-- legend -->
+  <g font-size="13">
+    <circle cx="482" cy="86" r="11" fill="#2563EB"/><text x="482" y="90" font-size="12" font-weight="700" fill="#FFFFFF" text-anchor="middle">1</text>
+    <text x="502" y="84" font-weight="700" fill="#111827">我在哪裡？</text>
+    <text x="502" y="104" font-size="12" fill="#6B7280">導覽列上目前的項目被標示出來</text>
+
+    <circle cx="482" cy="146" r="11" fill="#059669"/><text x="482" y="150" font-size="12" font-weight="700" fill="#FFFFFF" text-anchor="middle">2</text>
+    <text x="502" y="144" font-weight="700" fill="#111827">這一頁是什麼內容？</text>
+    <text x="502" y="164" font-size="12" fill="#6B7280">清楚的頁面標題與說明</text>
+
+    <circle cx="482" cy="206" r="11" fill="#D97706"/><text x="482" y="210" font-size="12" font-weight="700" fill="#FFFFFF" text-anchor="middle">3</text>
+    <text x="502" y="204" font-weight="700" fill="#111827">我從哪裡來？</text>
+    <text x="502" y="224" font-size="12" fill="#6B7280">麵包屑、返回按鈕、轉場動畫</text>
+
+    <circle cx="482" cy="266" r="11" fill="#7C3AED"/><text x="482" y="270" font-size="12" font-weight="700" fill="#FFFFFF" text-anchor="middle">4</text>
+    <text x="502" y="264" font-weight="700" fill="#111827">接下來可以去哪裡？</text>
+    <text x="502" y="284" font-size="12" fill="#6B7280">商品卡片、主要按鈕、導覽列</text>
+  </g>
+  <text x="470" y="336" font-size="12" fill="#6B7280">四個問題都答得出來，使用者就不會迷路。</text>
+</svg>

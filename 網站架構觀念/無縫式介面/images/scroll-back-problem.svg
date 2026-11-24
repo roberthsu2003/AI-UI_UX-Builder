@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 330" width="800" height="330" font-family="'PingFang TC','Noto Sans TC','Microsoft JhengHei',sans-serif">
+  <defs>
+    <marker id="m" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#6B7280"/></marker>
+  </defs>
+  <rect width="800" height="330" rx="16" fill="#FFFFFF" stroke="#E5E7EB"/>
+  <text x="40" y="42" font-size="18" font-weight="700" fill="#111827">無限捲動的陷阱：按「上一頁」就回到最上面</text>
+
+  <g font-size="12" text-anchor="middle">
+    <!-- step 1 -->
+    <rect x="40" y="62" width="110" height="190" rx="12" fill="#FFFFFF" stroke="#D1D5DB"/>
+    <g fill="#E5E7EB"><rect x="50" y="72" width="90" height="30" rx="3"/><rect x="50" y="108" width="90" height="30" rx="3"/><rect x="50" y="144" width="90" height="30" rx="3"/></g>
+    <rect x="50" y="180" width="90" height="30" rx="3" fill="#FDE68A" stroke="#D97706" stroke-width="2"/><text x="95" y="199" fill="#92400E">第 48 則</text>
+    <text x="95" y="274" fill="#374151">① 捲了很久</text><text x="95" y="292" fill="#374151">點開第 48 則</text>
+    <path d="M156 160 H196" stroke="#6B7280" stroke-width="2" marker-end="url(#m)"/>
+
+    <!-- step 2 -->
+    <rect x="202" y="62" width="110" height="190" rx="12" fill="#FFFFFF" stroke="#D1D5DB"/>
+    <rect x="212" y="72" width="90" height="60" rx="3" fill="#FDE68A"/>
+    <g fill="#E5E7EB"><rect x="212" y="140" width="90" height="8" rx="2"/><rect x="212" y="154" width="70" height="8" rx="2"/></g>
+    <text x="257" y="274" fill="#374151">② 看完內容</text><text x="257" y="292" fill="#374151">按「上一頁」</text>
+    <path d="M318 160 H358" stroke="#6B7280" stroke-width="2" marker-end="url(#m)"/>
+
+    <!-- step 3 -->
+    <rect x="364" y="62" width="110" height="190" rx="12" fill="#FEF2F2" stroke="#FCA5A5"/>
+    <g fill="#E5E7EB"><rect x="374" y="72" width="90" height="30" rx="3"/><rect x="374" y="108" width="90" height="30" rx="3"/><rect x="374" y="144" width="90" height="30" rx="3"/></g>
+    <text x="419" y="200" fill="#B91C1C" font-weight="700">又從第 1 則</text><text x="419" y="218" fill="#B91C1C" font-weight="700">開始了！</text>
+    <text x="419" y="274" fill="#B91C1C">③ 要重新捲回去</text>
+  </g>
+
+  <!-- solutions -->
+  <rect x="510" y="62" width="250" height="230" rx="12" fill="#ECFDF5"/>
+  <text x="526" y="90" font-size="14" font-weight="700" fill="#047857">解決方法</text>
+  <g font-size="12" fill="#374151">
+    <text x="526" y="118">・用<tspan font-weight="700">覆蓋式介面</tspan>打開內容，</text>
+    <text x="526" y="138">　關閉後還在原來的位置</text>
+    <text x="526" y="166">・改用<tspan font-weight="700">增量翻頁</tspan>，</text>
+    <text x="526" y="186">　每一頁更新網址（?page=3）</text>
+    <text x="526" y="214">・記住捲動位置，</text>
+    <text x="526" y="234">　返回時自動捲回去</text>
+    <text x="526" y="270" fill="#6B7280">頁尾資訊放在無限捲動的頁面，</text>
+    <text x="526" y="288" fill="#6B7280">使用者永遠碰不到。</text>
+  </g>
+</svg>

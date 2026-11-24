@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 340" width="800" height="340" font-family="'PingFang TC','Noto Sans TC','Microsoft JhengHei',sans-serif">
+  <defs>
+    <marker id="m" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#6B7280"/></marker>
+  </defs>
+  <rect width="800" height="340" rx="16" fill="#FFFFFF" stroke="#E5E7EB"/>
+  <text x="40" y="42" font-size="18" font-weight="700" fill="#111827">跨畫面的雙欄式：平常藏起來，需要時再滑出來</text>
+
+  <!-- desktop -->
+  <text x="40" y="76" font-size="13" font-weight="700" fill="#111827">電腦：兩欄同時顯示</text>
+  <rect x="40" y="88" width="250" height="180" rx="8" fill="#F9FAFB" stroke="#D1D5DB"/>
+  <rect x="48" y="96" width="234" height="16" rx="3" fill="#E5E7EB"/>
+  <rect x="48" y="120" width="70" height="140" rx="4" fill="#DCFCE7"/>
+  <g fill="#86EFAC"><rect x="56" y="130" width="54" height="8" rx="2"/><rect x="56" y="146" width="54" height="8" rx="2"/><rect x="56" y="162" width="54" height="8" rx="2"/><rect x="56" y="178" width="54" height="8" rx="2"/></g>
+  <rect x="126" y="120" width="156" height="140" rx="4" fill="#FFFFFF" stroke="#D1D5DB"/>
+  <text x="204" y="194" font-size="12" fill="#6B7280" text-anchor="middle">主要內容</text>
+
+  <!-- phone closed -->
+  <text x="340" y="76" font-size="13" font-weight="700" fill="#111827">手機：選單收起來</text>
+  <rect x="340" y="88" width="120" height="220" rx="16" fill="#F9FAFB" stroke="#D1D5DB"/>
+  <rect x="350" y="100" width="100" height="18" rx="3" fill="#E5E7EB"/>
+  <g stroke="#111827" stroke-width="2"><path d="M356 105 h12 M356 109 h12 M356 113 h12"/></g>
+  <rect x="350" y="126" width="100" height="170" rx="4" fill="#FFFFFF" stroke="#D1D5DB"/>
+  <text x="400" y="216" font-size="12" fill="#6B7280" text-anchor="middle">主要內容</text>
+  <circle cx="362" cy="109" r="14" fill="none" stroke="#2563EB" stroke-width="2"/>
+
+  <path d="M470 196 H520" stroke="#6B7280" stroke-width="2" marker-end="url(#m)"/>
+  <text x="495" y="186" font-size="11" fill="#6B7280" text-anchor="middle">點選單</text>
+
+  <!-- phone open -->
+  <text x="530" y="76" font-size="13" font-weight="700" fill="#111827">手機：選單滑出</text>
+  <rect x="530" y="88" width="120" height="220" rx="16" fill="#F9FAFB" stroke="#D1D5DB"/>
+  <rect x="540" y="126" width="100" height="170" rx="4" fill="#9CA3AF"/>
+  <rect x="530" y="88" width="84" height="220" rx="16" fill="#DCFCE7"/>
+  <g fill="#86EFAC"><rect x="542" y="112" width="60" height="10" rx="2"/><rect x="542" y="132" width="60" height="10" rx="2"/><rect x="542" y="152" width="60" height="10" rx="2"/><rect x="542" y="172" width="60" height="10" rx="2"/><rect x="542" y="192" width="60" height="10" rx="2"/></g>
+  <text x="600" y="104" font-size="12" fill="#047857">✕</text>
+
+  <g font-size="12" fill="#374151">
+    <text x="676" y="150">✔ 省空間</text>
+    <text x="676" y="172">✔ 需要才出現</text>
+    <text x="676" y="204" fill="#6B7280">✘ 要多點一下</text>
+    <text x="676" y="226" fill="#6B7280">✘ 藏起來的</text>
+    <text x="676" y="244" fill="#6B7280">　容易被忽略</text>
+  </g>
+</svg>

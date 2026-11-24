@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 380" width="800" height="380" font-family="'PingFang TC','Noto Sans TC','Microsoft JhengHei',sans-serif">
+  <rect width="800" height="380" rx="16" fill="#FFFFFF" stroke="#E5E7EB"/>
+  <text x="40" y="42" font-size="18" font-weight="700" fill="#111827">導覽列放在哪裡？每個區塊有固定的角色</text>
+
+  <g font-size="12">
+    <rect x="40" y="62" width="440" height="30" rx="5" fill="#E5E7EB"/>
+    <text x="52" y="82" font-weight="700" fill="#111827">頁首</text><text x="110" y="82" fill="#6B7280">Logo　　搜尋　　會員</text>
+    <rect x="40" y="98" width="440" height="28" rx="5" fill="#2563EB"/>
+    <text x="52" y="117" font-weight="700" fill="#FFFFFF">全域導覽列</text><text x="150" y="117" fill="#DBEAFE">家電　　生活　　3C　　服飾　　美妝</text>
+    <rect x="40" y="132" width="440" height="22" rx="5" fill="#F3F4F6"/>
+    <text x="52" y="148" fill="#6B7280"><tspan font-weight="700" fill="#111827">麵包屑</tspan>　首頁 ＞ 家電 ＞ 吸塵器</text>
+    <rect x="40" y="160" width="96" height="160" rx="5" fill="#059669"/>
+    <text x="52" y="182" font-weight="700" fill="#FFFFFF">區域導覽列</text>
+    <g fill="#D1FAE5"><text x="52" y="206">吸塵器</text><text x="52" y="226">冷氣</text><text x="52" y="246">洗衣機</text><text x="52" y="266">除濕機</text></g>
+    <rect x="144" y="160" width="232" height="160" rx="5" fill="#FFFFFF" stroke="#D1D5DB"/>
+    <text x="260" y="244" font-size="14" font-weight="700" fill="#111827" text-anchor="middle">主要內容</text>
+    <rect x="384" y="160" width="96" height="160" rx="5" fill="#D97706"/>
+    <text x="396" y="182" font-weight="700" fill="#FFFFFF">關聯性導覽</text>
+    <g fill="#FEF3C7"><text x="396" y="206">看過的人</text><text x="396" y="224">也看了…</text><text x="396" y="250">常見問題</text></g>
+    <rect x="40" y="326" width="440" height="30" rx="5" fill="#374151"/>
+    <text x="52" y="346" font-weight="700" fill="#FFFFFF">頁尾</text><text x="110" y="346" fill="#D1D5DB">網站地圖　隱私權　聯絡我們</text>
+  </g>
+
+  <g font-size="12" fill="#374151">
+    <text x="512" y="84"><tspan fill="#2563EB" font-weight="700">全域：</tspan>網站最大的分類，每頁都一樣</text>
+    <text x="512" y="116"><tspan font-weight="700" fill="#111827">麵包屑：</tspan>從首頁到這裡的路</text>
+    <text x="512" y="190"><tspan fill="#059669" font-weight="700">區域：</tspan>這個分類底下有什麼</text>
+    <text x="512" y="222"><tspan fill="#D97706" font-weight="700">關聯性：</tspan>看完之後可以去哪</text>
+    <text x="512" y="254" fill="#6B7280">（和目前位置無關）</text>
+    <text x="512" y="346"><tspan font-weight="700" fill="#111827">頁尾：</tspan>讀到最後不用捲回最上面</text>
+  </g>
+</svg>

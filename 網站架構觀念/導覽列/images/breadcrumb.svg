@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 320" width="800" height="320" font-family="'PingFang TC','Noto Sans TC','Microsoft JhengHei',sans-serif">
+  <rect width="800" height="320" rx="16" fill="#FFFFFF" stroke="#E5E7EB"/>
+  <text x="40" y="42" font-size="18" font-weight="700" fill="#111827">麵包屑：把「從首頁到這一頁的路」寫成一行字</text>
+
+  <!-- tree -->
+  <g stroke="#D1D5DB" stroke-width="1.5">
+    <path d="M200 84 L110 134 M200 84 L200 134 M200 84 L290 134"/>
+    <path d="M200 154 L150 204 M200 154 L250 204"/>
+    <path d="M150 224 L110 274 M150 224 L190 274"/>
+  </g>
+  <g stroke="#DC2626" stroke-width="3" fill="none"><path d="M200 84 L200 134 M200 154 L150 204 M150 224 L190 274"/></g>
+  <g font-size="12" text-anchor="middle">
+    <rect x="160" y="64" width="80" height="24" rx="5" fill="#FEE2E2" stroke="#DC2626"/><text x="200" y="81" fill="#B91C1C">首頁</text>
+    <rect x="70" y="134" width="80" height="22" rx="5" fill="#F3F4F6" stroke="#D1D5DB"/><text x="110" y="150" fill="#6B7280">生活</text>
+    <rect x="160" y="134" width="80" height="22" rx="5" fill="#FEE2E2" stroke="#DC2626"/><text x="200" y="150" fill="#B91C1C">家電</text>
+    <rect x="250" y="134" width="80" height="22" rx="5" fill="#F3F4F6" stroke="#D1D5DB"/><text x="290" y="150" fill="#6B7280">3C</text>
+    <rect x="110" y="204" width="80" height="22" rx="5" fill="#FEE2E2" stroke="#DC2626"/><text x="150" y="220" fill="#B91C1C">吸塵器</text>
+    <rect x="210" y="204" width="80" height="22" rx="5" fill="#F3F4F6" stroke="#D1D5DB"/><text x="250" y="220" fill="#6B7280">冷氣</text>
+    <rect x="70" y="274" width="80" height="22" rx="5" fill="#F3F4F6" stroke="#D1D5DB"/><text x="110" y="290" fill="#6B7280">商品 A</text>
+    <rect x="150" y="274" width="80" height="22" rx="5" fill="#DC2626"/><text x="190" y="290" fill="#FFFFFF" font-weight="700">商品 B</text>
+  </g>
+
+  <!-- breadcrumb -->
+  <text x="400" y="96" font-size="13" font-weight="700" fill="#111827">在頁面上顯示成：</text>
+  <rect x="400" y="110" width="360" height="40" rx="8" fill="#F9FAFB" stroke="#E5E7EB"/>
+  <text x="414" y="135" font-size="14" fill="#2563EB">首頁 <tspan fill="#9CA3AF">＞</tspan> 家電 <tspan fill="#9CA3AF">＞</tspan> 吸塵器 <tspan fill="#9CA3AF">＞</tspan> <tspan fill="#111827">商品 B</tspan></text>
+  <g font-size="12" fill="#374151">
+    <text x="400" y="182">・前面每一層都是連結，可以一鍵回到上層</text>
+    <text x="400" y="204">・最後一層是目前頁面，不是連結</text>
+    <text x="400" y="226">・從搜尋引擎直接進到深層頁面時特別有用</text>
+    <text x="400" y="248">・手機畫面窄，常常只顯示「‹ 吸塵器」回上一層</text>
+  </g>
+</svg>

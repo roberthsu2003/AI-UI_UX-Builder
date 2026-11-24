@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 330" width="800" height="330" font-family="'PingFang TC','Noto Sans TC','Microsoft JhengHei',sans-serif">
+  <rect width="800" height="330" rx="16" fill="#FFFFFF" stroke="#E5E7EB"/>
+  <text x="40" y="42" font-size="18" font-weight="700" fill="#111827">為什麼會「迷路」？兩個原因，兩種解法</text>
+
+  <!-- reason 1 -->
+  <rect x="40" y="62" width="350" height="240" rx="14" fill="#EFF6FF"/>
+  <text x="58" y="92" font-size="15" font-weight="700" fill="#1D4ED8">① 不知道自己在哪裡</text>
+  <text x="58" y="116" font-size="12" fill="#6B7280">像開車時不知道該往哪個方向開</text>
+  <circle cx="110" cy="176" r="34" fill="#FFFFFF" stroke="#93C5FD" stroke-width="2"/>
+  <path d="M110 150 L118 176 L110 202 L102 176 Z" fill="#DC2626"/>
+  <text x="110" y="148" font-size="10" fill="#1D4ED8" text-anchor="middle">N</text>
+  <g font-size="12" fill="#111827">
+    <text x="166" y="154" font-weight="700">解法：標示相對位置</text>
+    <text x="166" y="176">・導覽列標出目前位置</text>
+    <text x="166" y="196">・麵包屑</text>
+    <text x="166" y="216">・換頁的變化量、轉場動畫</text>
+  </g>
+  <text x="58" y="276" font-size="12" fill="#374151">症狀：「這是哪裡？剛剛那頁怎麼回去？」</text>
+
+  <!-- reason 2 -->
+  <rect x="410" y="62" width="350" height="240" rx="14" fill="#FEF3C7"/>
+  <text x="428" y="92" font-size="15" font-weight="700" fill="#B45309">② 不知道怎麼操作</text>
+  <text x="428" y="116" font-size="12" fill="#6B7280">像坐上車卻不知道車子怎麼開</text>
+  <g>
+    <rect x="440" y="148" width="60" height="22" rx="11" fill="#2563EB"/>
+    <rect x="440" y="178" width="60" height="22" rx="4" fill="#FFFFFF" stroke="#2563EB"/>
+    <text x="470" y="216" font-size="10" fill="#6B7280" text-anchor="middle">哪個能按？</text>
+  </g>
+  <g font-size="12" fill="#111827">
+    <text x="536" y="154" font-weight="700">解法：操作方式一致</text>
+    <text x="536" y="176">・同樣的按鈕長得一樣</text>
+    <text x="536" y="196">・同樣的動作有同樣的結果</text>
+    <text x="536" y="216">・元件的位置與用法固定</text>
+  </g>
+  <text x="428" y="276" font-size="12" fill="#374151">症狀：「這個能點嗎？點了會怎樣？」</text>
+</svg>

@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 300" width="800" height="300" font-family="'PingFang TC','Noto Sans TC','Microsoft JhengHei',sans-serif">
+  <rect width="800" height="300" rx="16" fill="#FFFFFF" stroke="#E5E7EB"/>
+  <text x="40" y="42" font-size="18" font-weight="700" fill="#111827">標籤要有「排他性」：一樣東西只會屬於一個標籤</text>
+
+  <!-- bad -->
+  <rect x="40" y="62" width="350" height="190" rx="12" fill="#FEF2F2"/>
+  <text x="58" y="90" font-size="14" font-weight="700" fill="#B91C1C">✘ 意義重疊</text>
+  <g font-size="13">
+    <rect x="58" y="104" width="94" height="32" rx="6" fill="#FFFFFF" stroke="#FCA5A5"/><text x="105" y="125" text-anchor="middle" fill="#111827">新品</text>
+    <rect x="160" y="104" width="94" height="32" rx="6" fill="#FFFFFF" stroke="#FCA5A5"/><text x="207" y="125" text-anchor="middle" fill="#111827">熱門商品</text>
+    <rect x="262" y="104" width="110" height="32" rx="6" fill="#FFFFFF" stroke="#FCA5A5"/><text x="317" y="125" text-anchor="middle" fill="#111827">生活・3C</text>
+  </g>
+  <text x="58" y="166" font-size="12" fill="#374151">「剛上市的熱門藍牙耳機」該點哪一個？</text>
+  <text x="58" y="186" font-size="12" fill="#374151">三個都說得通，使用者只好一個一個找。</text>
+  <text x="58" y="216" font-size="12" fill="#6B7280">「・」「&amp;」「/」串起來的標籤，常是排他性不夠的訊號</text>
+
+  <!-- good -->
+  <rect x="410" y="62" width="350" height="190" rx="12" fill="#ECFDF5"/>
+  <text x="428" y="90" font-size="14" font-weight="700" fill="#047857">✔ 各自獨立</text>
+  <g font-size="13">
+    <rect x="428" y="104" width="94" height="32" rx="6" fill="#FFFFFF" stroke="#6EE7B7"/><text x="475" y="125" text-anchor="middle" fill="#111827">耳機</text>
+    <rect x="530" y="104" width="94" height="32" rx="6" fill="#FFFFFF" stroke="#6EE7B7"/><text x="577" y="125" text-anchor="middle" fill="#111827">喇叭</text>
+    <rect x="632" y="104" width="110" height="32" rx="6" fill="#FFFFFF" stroke="#6EE7B7"/><text x="687" y="125" text-anchor="middle" fill="#111827">充電配件</text>
+  </g>
+  <text x="428" y="166" font-size="12" fill="#374151">藍牙耳機只可能在「耳機」。</text>
+  <text x="428" y="186" font-size="12" fill="#374151">「新品」「熱門」改成篩選條件或排序方式，</text>
+  <text x="428" y="206" font-size="12" fill="#374151">不要和商品類別混在同一層。</text>
+
+  <text x="40" y="280" font-size="13" fill="#111827"><tspan font-weight="700">檢查方法：</tspan>拿 10 樣東西問同學「你會到哪個標籤找？」，答案不一致的標籤就要改。</text>
+</svg>

@@ -1,0 +1,81 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 470" width="800" height="470" font-family="'PingFang TC','Noto Sans TC','Microsoft JhengHei',sans-serif">
+  <rect width="800" height="470" rx="16" fill="#FFFFFF" stroke="#E5E7EB"/>
+  <text x="40" y="42" font-size="18" font-weight="700" fill="#111827">8 種不換頁的介面（手機畫面示意）</text>
+
+  <g font-size="12" text-anchor="middle">
+    <!-- 1 overlay -->
+    <g transform="translate(40,62)">
+      <rect width="80" height="140" rx="10" fill="#F3F4F6" stroke="#D1D5DB"/>
+      <rect x="0" y="0" width="80" height="140" rx="10" fill="#111827" fill-opacity="0.35"/>
+      <rect x="10" y="40" width="60" height="60" rx="6" fill="#FFFFFF"/>
+      <rect x="18" y="80" width="44" height="12" rx="6" fill="#2563EB"/>
+      <text x="40" y="162" font-weight="700" fill="#111827">② 覆蓋式</text>
+      <text x="40" y="180" fill="#6B7280" font-size="11">彈出視窗</text>
+    </g>
+    <!-- 2 inlay -->
+    <g transform="translate(230,62)">
+      <rect width="80" height="140" rx="10" fill="#FFFFFF" stroke="#D1D5DB"/>
+      <rect x="8" y="12" width="64" height="16" rx="3" fill="#E5E7EB"/>
+      <rect x="8" y="32" width="64" height="16" rx="3" fill="#DBEAFE"/>
+      <rect x="8" y="50" width="64" height="34" rx="3" fill="#EFF6FF"/>
+      <rect x="8" y="88" width="64" height="16" rx="3" fill="#E5E7EB"/>
+      <rect x="8" y="108" width="64" height="16" rx="3" fill="#E5E7EB"/>
+      <text x="40" y="162" font-weight="700" fill="#111827">③ 嵌入式</text>
+      <text x="40" y="180" fill="#6B7280" font-size="11">手風琴展開</text>
+    </g>
+    <!-- 3 slide -->
+    <g transform="translate(420,62)">
+      <rect width="80" height="140" rx="10" fill="#9CA3AF"/>
+      <rect width="54" height="140" rx="10" fill="#DCFCE7"/>
+      <g fill="#86EFAC"><rect x="8" y="16" width="36" height="8" rx="2"/><rect x="8" y="32" width="36" height="8" rx="2"/><rect x="8" y="48" width="36" height="8" rx="2"/></g>
+      <text x="40" y="162" font-weight="700" fill="#111827">④ 滑動式</text>
+      <text x="40" y="180" fill="#6B7280" font-size="11">側邊選單滑出</text>
+    </g>
+    <!-- 4 incremental scroll -->
+    <g transform="translate(610,62)">
+      <rect width="80" height="140" rx="10" fill="#FFFFFF" stroke="#D1D5DB"/>
+      <g fill="#E5E7EB"><rect x="8" y="10" width="64" height="26" rx="3"/><rect x="8" y="42" width="64" height="26" rx="3"/><rect x="8" y="74" width="64" height="26" rx="3"/></g>
+      <rect x="8" y="106" width="64" height="26" rx="3" fill="#FEF3C7" stroke="#F59E0B" stroke-dasharray="3 2"/>
+      <text x="40" y="124" fill="#B45309" font-size="10">載入更多…</text>
+      <text x="40" y="162" font-weight="700" fill="#111827">⑤ 增量捲動</text>
+      <text x="40" y="180" fill="#6B7280" font-size="11">無限往下捲</text>
+    </g>
+
+    <!-- 5 paging -->
+    <g transform="translate(40,250)">
+      <rect width="80" height="140" rx="10" fill="#FFFFFF" stroke="#D1D5DB"/>
+      <g fill="#E5E7EB"><rect x="8" y="10" width="64" height="24" rx="3"/><rect x="8" y="40" width="64" height="24" rx="3"/><rect x="8" y="70" width="64" height="24" rx="3"/></g>
+      <g font-size="10"><rect x="10" y="106" width="16" height="16" rx="3" fill="#E5E7EB"/><text x="18" y="118" fill="#374151">1</text><rect x="32" y="106" width="16" height="16" rx="3" fill="#2563EB"/><text x="40" y="118" fill="#FFFFFF">2</text><rect x="54" y="106" width="16" height="16" rx="3" fill="#E5E7EB"/><text x="62" y="118" fill="#374151">3</text></g>
+      <text x="40" y="162" font-weight="700" fill="#111827">⑥ 增量翻頁</text>
+      <text x="40" y="180" fill="#6B7280" font-size="11">翻頁不換整頁</text>
+    </g>
+    <!-- 6 panning -->
+    <g transform="translate(230,250)">
+      <rect width="80" height="140" rx="10" fill="#DCFCE7" stroke="#D1D5DB"/>
+      <path d="M0 50 C30 40 50 90 80 70 M20 0 C30 60 40 100 30 140" stroke="#FFFFFF" stroke-width="5" fill="none"/>
+      <path d="M40 58 C40 46 54 46 54 58 C54 66 47 72 47 78 C47 72 40 66 40 58 Z" fill="#DC2626"/>
+      <g stroke="#374151" stroke-width="1.5"><path d="M60 110 h14 M67 103 v14"/></g>
+      <text x="40" y="162" font-weight="700" fill="#111827">⑦ 增量平移</text>
+      <text x="40" y="180" fill="#6B7280" font-size="11">地圖上下左右拖</text>
+    </g>
+    <!-- 7 carousel -->
+    <g transform="translate(420,250)">
+      <rect width="80" height="140" rx="10" fill="#FFFFFF" stroke="#D1D5DB"/>
+      <rect x="8" y="30" width="56" height="60" rx="5" fill="#BFDBFE"/>
+      <rect x="68" y="30" width="12" height="60" rx="3" fill="#E5E7EB"/>
+      <g fill="#D1D5DB"><circle cx="30" cy="104" r="3" fill="#2563EB"/><circle cx="40" cy="104" r="3"/><circle cx="50" cy="104" r="3"/></g>
+      <text x="40" y="162" font-weight="700" fill="#111827">⑧ 輪播式</text>
+      <text x="40" y="180" fill="#6B7280" font-size="11">左右滑、露出下一張</text>
+    </g>
+    <!-- 8 steps -->
+    <g transform="translate(610,250)">
+      <rect width="80" height="140" rx="10" fill="#FFFFFF" stroke="#D1D5DB"/>
+      <g><circle cx="20" cy="20" r="7" fill="#059669"/><circle cx="40" cy="20" r="7" fill="#2563EB"/><circle cx="60" cy="20" r="7" fill="#E5E7EB"/><path d="M27 20 h6 M47 20 h6" stroke="#9CA3AF"/></g>
+      <g fill="#FFFFFF" stroke="#D1D5DB"><rect x="8" y="40" width="64" height="16" rx="3"/><rect x="8" y="62" width="64" height="16" rx="3"/></g>
+      <rect x="8" y="106" width="64" height="18" rx="9" fill="#2563EB"/>
+      <text x="40" y="162" font-weight="700" fill="#111827">⑨ 無縫式步驟</text>
+      <text x="40" y="180" fill="#6B7280" font-size="11">一頁完成多步驟</text>
+    </g>
+  </g>
+  <text x="40" y="456" font-size="12" fill="#6B7280">編號對應本章各節。每一種都可以在本章開頭的互動圖鑑實際操作。</text>
+</svg>
