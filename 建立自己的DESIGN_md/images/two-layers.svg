@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 400" width="800" height="400" font-family="'PingFang TC','Noto Sans TC','Microsoft JhengHei',sans-serif">
+  <rect width="800" height="400" rx="16" fill="#FFFFFF" stroke="#E5E7EB"/>
+  <text x="40" y="42" font-size="18" font-weight="700" fill="#111827">DESIGN.md 的兩層：上面是「數值」，下面是「理由」</text>
+
+  <rect x="40" y="62" width="380" height="316" rx="12" fill="#111827"/>
+  <g font-family="Menlo,monospace" font-size="12">
+    <text x="58" y="88" fill="#9CA3AF">---</text>
+    <text x="58" y="108" fill="#93C5FD">name: <tspan fill="#E5E7EB">木日 Kibi</tspan></text>
+    <text x="58" y="128" fill="#93C5FD">colors:</text>
+    <text x="74" y="146" fill="#E5E7EB">primary: <tspan fill="#86EFAC">"#8B5E3C"</tspan></text>
+    <text x="74" y="164" fill="#E5E7EB">surface: <tspan fill="#86EFAC">"#FAF8F5"</tspan></text>
+    <text x="58" y="184" fill="#93C5FD">typography:</text>
+    <text x="74" y="202" fill="#E5E7EB">headline: { fontSize: 36px }</text>
+    <text x="58" y="222" fill="#93C5FD">rounded: <tspan fill="#E5E7EB">{ md: 8px }</tspan></text>
+    <text x="58" y="242" fill="#93C5FD">components:</text>
+    <text x="74" y="260" fill="#E5E7EB">button-primary: …</text>
+    <text x="58" y="280" fill="#9CA3AF">---</text>
+    <text x="58" y="306" fill="#F9A8D4">## Overview</text>
+    <text x="58" y="326" fill="#D1D5DB">溫暖的台南老宅生活感…</text>
+    <text x="58" y="350" fill="#F9A8D4">## Do's and Don'ts</text>
+    <text x="58" y="370" fill="#D1D5DB">不要用高飽和的科技藍…</text>
+  </g>
+  <path d="M430 76 h8 v204 h-8" fill="none" stroke="#2563EB" stroke-width="2"/>
+  <path d="M430 294 h8 v80 h-8" fill="none" stroke="#DB2777" stroke-width="2"/>
+
+  <g font-size="13">
+    <text x="456" y="96" font-weight="700" fill="#1D4ED8">① 設計 Token（給 AI 照抄）</text>
+    <text x="456" y="120" fill="#374151">精確的數字：色碼、字級、圓角、間距</text>
+    <text x="456" y="146" fill="#6B7280" font-size="12">AI 不會「自由發揮」挑錯顏色</text>
+    <rect x="456" y="162" width="300" height="94" rx="10" fill="#EFF6FF"/>
+    <text x="472" y="186" fill="#111827" font-size="12" font-weight="700">形容詞 → 數值</text>
+    <text x="472" y="208" fill="#374151" font-size="12">「溫暖的咖啡色」→ #8B5E3C</text>
+    <text x="472" y="228" fill="#374151" font-size="12">「圓圓的按鈕」→ rounded: 999px</text>
+    <text x="472" y="248" fill="#374151" font-size="12">「留白多一點」→ section: 96px</text>
+
+    <text x="456" y="306" font-weight="700" fill="#BE185D">② 設計理由（給 AI 判斷）</text>
+    <text x="456" y="330" fill="#374151">遇到 Token 沒寫到的情況，</text>
+    <text x="456" y="350" fill="#374151">AI 會依照這些說明與禁忌做決定</text>
+  </g>
+</svg>

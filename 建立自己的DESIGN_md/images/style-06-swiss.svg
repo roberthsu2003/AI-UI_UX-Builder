@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 300" width="480" height="300" font-family="'PingFang TC','Noto Sans TC','Microsoft JhengHei',sans-serif"><defs><clipPath id="c"><rect width="480" height="300" rx="14"/></clipPath></defs><g clip-path="url(#c)"><rect width="480" height="300" fill="#FFFFFF"/>
+<g stroke="#E5E5E5"><path d="M120 0 V300 M240 0 V300 M360 0 V300"/></g>
+<text x="20" y="34" font-size="12" font-weight="700" fill="#111111">Lumen</text>
+<g font-size="10" fill="#111111"><text x="240" y="34">01 作品</text><text x="300" y="34">02 關於</text><text x="360" y="34">03 聯絡</text></g>
+<path d="M20 46 H460" stroke="#111111" stroke-width="2"/>
+<text x="16" y="128" font-size="58" font-weight="900" fill="#111111" letter-spacing="-2">好好過</text>
+<text x="16" y="186" font-size="58" font-weight="900" fill="#111111" letter-spacing="-2">日子。</text>
+<rect x="360" y="60" width="100" height="126" fill="#E5322D"/>
+<text x="372" y="172" font-size="40" font-weight="900" fill="#FFFFFF">12</text>
+<path d="M20 206 H460" stroke="#111111" stroke-width="2"/>
+<g font-size="10" fill="#111111">
+<text x="20" y="226" font-weight="700">01</text><text x="20" y="244">生活</text><text x="20" y="260" fill="#6B6B6B">對齊格線</text>
+<text x="120" y="226" font-weight="700">02</text><text x="120" y="244">器物</text><text x="120" y="260" fill="#6B6B6B">靠左排列</text>
+<text x="240" y="226" font-weight="700">03</text><text x="240" y="244">空間</text><text x="240" y="260" fill="#6B6B6B">大字級</text>
+<text x="360" y="226" font-weight="700" fill="#E5322D">→</text><text x="360" y="244">開始探索</text>
+</g></g><rect x="0.5" y="0.5" width="479" height="299" rx="14" fill="none" stroke="#E5E7EB"/></svg>

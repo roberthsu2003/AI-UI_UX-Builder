@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 300" width="480" height="300" font-family="'PingFang TC','Noto Sans TC','Microsoft JhengHei',sans-serif"><defs><clipPath id="c"><rect width="480" height="300" rx="14"/></clipPath></defs><g clip-path="url(#c)"><rect width="480" height="300" fill="#F7F9F7"/>
+<rect width="480" height="52" fill="#1B5E3A"/>
+<circle cx="38" cy="26" r="12" fill="#FFFFFF"/><text x="38" y="31" font-size="12" font-weight="800" fill="#1B5E3A" text-anchor="middle">L</text>
+<text x="58" y="32" font-size="15" font-weight="800" fill="#FFFFFF">Lumen 市民服務網</text>
+<rect x="376" y="14" width="84" height="26" rx="4" fill="#FFFFFF"/><text x="418" y="32" font-size="12" font-weight="700" fill="#1B5E3A" text-anchor="middle">搜尋</text>
+<text x="28" y="94" font-size="24" font-weight="800" fill="#111827">好好過日子，從這裡開始</text>
+<text x="28" y="118" font-size="14" fill="#374151">三個步驟，線上完成申請。</text>
+<rect x="28" y="132" width="150" height="40" rx="6" fill="#1B5E3A"/><text x="103" y="157" font-size="15" font-weight="700" fill="#FFFFFF" text-anchor="middle">立即申請 →</text>
+<text x="196" y="157" font-size="13" fill="#1B5E3A" text-decoration="underline">查看申請資格</text>
+<g>
+<rect x="28" y="192" width="132" height="88" rx="6" fill="#FFFFFF" stroke="#1F2937" stroke-width="2"/>
+<rect x="174" y="192" width="132" height="88" rx="6" fill="#FFFFFF" stroke="#1F2937" stroke-width="2"/>
+<rect x="320" y="192" width="132" height="88" rx="6" fill="#FFFFFF" stroke="#1F2937" stroke-width="2"/>
+<g font-size="13" font-weight="800" fill="#FFFFFF"><circle cx="50" cy="216" r="12" fill="#1B5E3A"/><text x="50" y="221" text-anchor="middle">1</text><circle cx="196" cy="216" r="12" fill="#1B5E3A"/><text x="196" y="221" text-anchor="middle">2</text><circle cx="342" cy="216" r="12" fill="#1B5E3A"/><text x="342" y="221" text-anchor="middle">3</text></g>
+<g font-size="14" font-weight="700" fill="#111827"><text x="40" y="254">填寫資料</text><text x="186" y="254">上傳文件</text><text x="332" y="254">等待審核</text></g>
+<g font-size="11" fill="#374151"><text x="40" y="272">✓ 約 5 項欄位</text><text x="186" y="272">✓ 身分證明</text><text x="332" y="272">✓ 簡訊通知</text></g>
+</g></g><rect x="0.5" y="0.5" width="479" height="299" rx="14" fill="none" stroke="#E5E7EB"/></svg>

@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 340" width="800" height="340" font-family="'PingFang TC','Noto Sans TC','Microsoft JhengHei',sans-serif">
+  <defs>
+    <marker id="m" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0 0 L10 5 L0 10 z" fill="#6B7280"/>
+    </marker>
+  </defs>
+  <rect width="800" height="340" rx="16" fill="#FFFFFF" stroke="#E5E7EB"/>
+  <text x="40" y="42" font-size="18" font-weight="700" fill="#111827">建立 → 看 → 用 → 抓錯 → 改規範：DESIGN.md 越用越準</text>
+
+  <g font-size="12">
+    <rect x="40" y="70" width="160" height="96" rx="14" fill="#EFF6FF"/>
+    <text x="56" y="96" font-size="14" font-weight="700" fill="#1D4ED8">① 建立</text>
+    <text x="56" y="118" fill="#374151">三條路線選一條：</text>
+    <text x="56" y="136" fill="#374151">萃取、改寫、訪談</text>
+    <text x="56" y="154" fill="#6B7280" font-size="11">產出 DESIGN.md</text>
+
+    <rect x="320" y="70" width="160" height="96" rx="14" fill="#FEF3C7"/>
+    <text x="336" y="96" font-size="14" font-weight="700" fill="#B45309">② 用眼睛看</text>
+    <text x="336" y="118" fill="#374151">產生樣式總覽頁</text>
+    <text x="336" y="136" fill="#374151">色票、字級、按鈕</text>
+    <text x="336" y="154" fill="#6B7280" font-size="11">style-guide.html</text>
+
+    <rect x="600" y="70" width="160" height="96" rx="14" fill="#DCFCE7"/>
+    <text x="616" y="96" font-size="14" font-weight="700" fill="#047857">③ 實際使用</text>
+    <text x="616" y="118" fill="#374151">開新對話做兩個頁面</text>
+    <text x="616" y="136" fill="#374151">看風格是否一致</text>
+    <text x="616" y="154" fill="#6B7280" font-size="11">index.html、faq.html</text>
+
+    <rect x="460" y="214" width="160" height="96" rx="14" fill="#FEF2F2"/>
+    <text x="476" y="240" font-size="14" font-weight="700" fill="#B91C1C">④ 抓錯</text>
+    <text x="476" y="262" fill="#374151">請 AI 列出沒照規範</text>
+    <text x="476" y="280" fill="#374151">的地方</text>
+
+    <rect x="180" y="214" width="160" height="96" rx="14" fill="#F5F3FF"/>
+    <text x="196" y="240" font-size="14" font-weight="700" fill="#6D28D9">⑤ 改規範</text>
+    <text x="196" y="262" fill="#374151">補上漏掉的規則，</text>
+    <text x="196" y="280" fill="#374151">寫進 Changelog</text>
+  </g>
+  <g stroke="#6B7280" stroke-width="2" fill="none" marker-end="url(#m)">
+    <path d="M204 118 H314"/>
+    <path d="M484 118 H594"/>
+    <path d="M680 170 C680 230 660 262 626 262"/>
+    <path d="M456 262 H346"/>
+    <path d="M176 262 C110 262 110 200 120 172"/>
+  </g>
+  <text x="40" y="328" font-size="12" fill="#6B7280">重點：發現跑版時，不要只叫 AI 修頁面，要回頭補規範，否則下一頁還會再犯。</text>
+</svg>

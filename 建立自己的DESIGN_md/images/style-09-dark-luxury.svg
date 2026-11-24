@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 300" width="480" height="300" font-family="'PingFang TC','Noto Sans TC','Microsoft JhengHei',sans-serif"><defs><clipPath id="c"><rect width="480" height="300" rx="14"/></clipPath></defs><g clip-path="url(#c)"><rect width="480" height="300" fill="#0D0C0A"/>
+<text x="240" y="40" font-size="14" font-family="'Noto Serif TC','Songti TC','PMingLiU',serif" fill="#C9A962" text-anchor="middle" letter-spacing="6">L U M E N</text>
+<path d="M200 52 H280" stroke="#C9A962" stroke-width="0.8"/>
+<g font-size="9" fill="#8C8577" letter-spacing="2"><text x="28" y="38">MENU</text><text x="420" y="38">預約</text></g>
+<text x="240" y="118" font-size="32" font-family="'Noto Serif TC','Songti TC','PMingLiU',serif" fill="#F5F1E8" text-anchor="middle">好好過日子</text>
+<text x="240" y="142" font-size="10" fill="#8C8577" text-anchor="middle" letter-spacing="3">THE ART OF LIVING WELL</text>
+<rect x="188" y="160" width="104" height="30" fill="none" stroke="#C9A962"/>
+<text x="240" y="179" font-size="10" fill="#C9A962" text-anchor="middle" letter-spacing="2">開始探索</text>
+<path d="M28 214 H452" stroke="#2E2A24"/>
+<g font-family="'Noto Serif TC','Songti TC','PMingLiU',serif" font-size="12" fill="#F5F1E8" text-anchor="middle"><text x="96" y="246">私人訂製</text><text x="240" y="246">頂級材質</text><text x="384" y="246">專屬服務</text></g>
+<g font-size="9" fill="#8C8577" text-anchor="middle"><text x="96" y="266">深色、金色細線</text><text x="240" y="266">襯線字、置中</text><text x="384" y="266">大量留白</text></g>
+<path d="M168 230 V276 M312 230 V276" stroke="#2E2A24"/></g><rect x="0.5" y="0.5" width="479" height="299" rx="14" fill="none" stroke="#2E2A24"/></svg>

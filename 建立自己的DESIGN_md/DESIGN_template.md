@@ -1,165 +1,180 @@
 ---
-# ==========================================
-# YAML Front Matter：設計系統精確數值層 (Tokens)
-# 請將下方範例數值替換為你專案的實際設定
-# ==========================================
-project: "範例專案名稱（例如：木日 Kibi 老宅咖啡）"
-version: "1.0"
-colors:
-  canvas: "#FAF8F5"          # 主背景畫布色
-  surface: "#FFFFFF"         # 卡片／內容區塊背景色
-  surface_alt: "#F2ECE4"     # 次要區塊交替底色（維持同色系過渡）
-  ink: "#1E1B18"             # 主要內文與標題色（避免純黑 #000000）
-  muted: "#6B655E"           # 輔助說明文字與時間標籤色
-  primary: "#8B5E3C"         # 品牌主色 / 主要行動按鈕 (CTA)
-  primary_hover: "#734C2F"   # 主按鈕懸停狀態
-  accent: "#C87D55"          # 強調標籤或重點提示色
-  hairline: "#E5DFD7"        # 1px 細框線與分隔線
-  danger: "#B9382C"          # 錯誤／警示狀態色
-typography:
-  display: "'Noto Serif TC', Georgia, serif"
-  sans: "'Noto Sans TC', 'Inter', -apple-system, sans-serif"
-  mono: "'JetBrains Mono', monospace"
-radius:
-  sm: "4px"
-  md: "8px"
-  lg: "16px"
-  pill: "9999px"
-spacing:
-  xs: "4px"
-  sm: "8px"
-  md: "16px"
-  lg: "24px"
-  xl: "48px"
-  section: "80px"
-layout:
-  max_width: "1200px"
+# ============================================================
+# DESIGN.md 範本（依照 Google 官方開放規格）
+# 使用方式：複製這個檔案，改名為 DESIGN.md，把所有範例值換成你的專案。
+# 井字號（#）後面是說明文字，填完可以刪掉。
+# ============================================================
+version: alpha
+name: 我的專案名稱              # 例如：木日 Kibi
+description: 一句話說明這個網站與它的感覺
+
+colors:                          # 色碼建議用 #RRGGBB
+  primary: "#8B5E3C"             # 品牌主色：主要按鈕、連結
+  primary-hover: "#734C2F"       # 主要按鈕滑鼠移上
+  on-primary: "#FFFFFF"          # 放在主色上的文字
+  accent: "#A8601E"              # 強調色：優惠標籤等，少量使用
+  surface: "#FAF8F5"             # 頁面底色
+  surface-alt: "#F2ECE4"         # 交替區塊的底色
+  surface-card: "#FFFFFF"        # 卡片底色
+  text: "#1E1B18"                # 主要文字（不要用純黑）
+  text-muted: "#6B655E"          # 次要文字：日期、說明
+  border: "#E5DFD7"              # 細框線、分隔線
+  danger: "#B3261E"              # 錯誤訊息
+
+typography:                      # 中文字型一定要寫（Noto Sans TC／Noto Serif TC）
+  display:                       # 最大的標題
+    fontFamily: Noto Serif TC
+    fontSize: 56px
+    fontWeight: 700
+    lineHeight: 1.15
+  headline:                      # 區塊標題
+    fontFamily: Noto Serif TC
+    fontSize: 36px
+    fontWeight: 700
+    lineHeight: 1.25
+  title:                         # 卡片標題
+    fontFamily: Noto Sans TC
+    fontSize: 20px
+    fontWeight: 700
+    lineHeight: 1.4
+  body:                          # 內文
+    fontFamily: Noto Sans TC
+    fontSize: 17px
+    fontWeight: 400
+    lineHeight: 1.7
+  label:                         # 按鈕、標籤
+    fontFamily: Noto Sans TC
+    fontSize: 14px
+    fontWeight: 500
+    lineHeight: 1.4
+
+rounded:                         # 圓角
+  sm: 4px
+  md: 8px
+  lg: 16px
+  full: 999px
+
+spacing:                         # 間距
+  xs: 4px
+  sm: 8px
+  md: 16px
+  lg: 24px
+  xl: 48px
+  section: 96px                  # 區塊之間的上下間距
+
+components:                      # 元件；用 "{群組.名稱}" 引用上面的 Token
+  button-primary:
+    backgroundColor: "{colors.primary}"
+    textColor: "{colors.on-primary}"
+    typography: "{typography.label}"
+    rounded: "{rounded.md}"
+    padding: 14px
+    height: 48px
+  button-primary-hover:
+    backgroundColor: "{colors.primary-hover}"
+    textColor: "{colors.on-primary}"
+  tag-accent:
+    backgroundColor: "{colors.accent}"
+    textColor: "{colors.on-primary}"
+    rounded: "{rounded.full}"
+  card:
+    backgroundColor: "{colors.surface-card}"
+    textColor: "{colors.text}"
+    rounded: "{rounded.lg}"
+    padding: 24px
+  card-meta:
+    backgroundColor: "{colors.surface-card}"
+    textColor: "{colors.text-muted}"
+    typography: "{typography.label}"
+  section-alt:
+    backgroundColor: "{colors.surface-alt}"
+    textColor: "{colors.text}"
+  input:
+    backgroundColor: "{colors.surface-card}"
+    textColor: "{colors.text}"
+    rounded: "{rounded.sm}"
+    height: 48px
+  input-error:
+    backgroundColor: "{colors.surface-card}"
+    textColor: "{colors.danger}"
+  divider:
+    backgroundColor: "{colors.border}"
+    height: 1px
+  page:
+    backgroundColor: "{colors.surface}"
+    textColor: "{colors.text}"
+    typography: "{typography.body}"
 ---
 
-# Visual Design System: [請填寫你的專案名稱]
+# 我的專案名稱 設計規範
 
-> **使用說明**：將本檔案複製至專案根目錄並命名為 `DESIGN.md`。所有 `[ ]` 中括號內容皆可依你的專案需求修改。
+<!-- 下面的章節順序是官方規定的，不需要全部都寫，但寫了就要照這個順序。 -->
 
----
+## Overview
 
-## 1. Visual Theme & Atmosphere（視覺主題與氛圍）
+<!-- 品牌個性、目標對象、希望訪客有什麼感覺。用具體的畫面描述，不要只寫形容詞。 -->
 
-* **核心氣質**：[請用 2–3 句具體畫面描述風格，例如：溫暖克制的台南老宅生活感，結合現代編輯雜誌（Editorial）的留白節奏。]
-* **目標受眾**：[例如：22–40 歲重視空間質感與生活步調的都會消費者。]
-* **資訊密度**：[例如：中等偏寬鬆（Spacious），每個區塊只聚焦一個核心訊息，透過留白創造視覺呼吸感。]
+- **風格**：（例如：編輯雜誌風，像翻開一本台南生活雜誌）
+- **目標對象**：（例如：22–40 歲喜歡老宅與手沖咖啡的人）
+- **最重要的行動**：（例如：點「立即訂位」完成預約）
 
----
+## Colors
 
-## 2. Color Palette & Roles（色彩系統與語意角色）
+<!-- 每個顏色什麼時候用、什麼時候不能用。 -->
 
-全站色彩必須嚴格使用以下語意角色，**禁止任意新增未定義的色彩**或在不同區塊間突然跳換完全不相干的冷暖底色：
+- **primary**：只用在主要按鈕與連結。
+- **accent**：限時優惠標籤，一個畫面最多一處。
+- **surface／surface-alt**：區塊交替只能用這兩個顏色。
 
-| 語意角色 (Role) | Token 名稱 | Hex 色碼 | 使用時機與規範 |
-| :--- | :--- | :--- | :--- |
-| **主背景畫布** | `canvas` | `#FAF8F5` | 整個網頁的最底層背景 |
-| **卡片與浮層底色** | `surface` | `#FFFFFF` | 產品卡片、表單容器、Modal 彈窗底色 |
-| **交替區塊底色** | `surface_alt` | `#F2ECE4` | 需區隔上下段落時的淡暖色背景（避免使用突兀的純灰白） |
-| **主要文字** | `ink` | `#1E1B18` | H1–H3 標題與主要內文 |
-| **次要文字** | `muted` | `#6B655E` | 副標題、日期、地址說明、表單 Placeholder |
-| **品牌主色 / CTA** | `primary` | `#8B5E3C` | 最重要的行動按鈕（如：立即預約、送出表單）與主要連結 |
-| **細邊框與分隔線** | `hairline` | `#E5DFD7` | 卡片外框、表格邊線、區塊分隔線（`1px solid`） |
+## Typography
 
----
+<!-- 字型怎麼搭配；手機版字級怎麼調整。 -->
 
-## 3. Typography Rules（字體與排版層級）
+- 標題用襯線字，內文與按鈕用無襯線字。
+- 手機版：display 改為 32px、headline 改為 26px，內文維持 17px。
 
-* **字體搭配**：
-  * **標題（Display）**：`Noto Serif TC`（傳達品牌故事與人文溫度）。
-  * **內文與介面（Sans）**：`Noto Sans TC` + `Inter`（確保表格、按鈕與手機版閱讀清晰）。
-  * **數據與程式碼（Mono）**：`JetBrains Mono`（用於營業時間、價格數字、編號）。
+## Layout
 
-| 層級 | 電腦版字級 / 行高 | 手機版字級 / 行高 | 字重 | 用途說明 |
-| :--- | :--- | :--- | :--- | :--- |
-| **H1 (Hero)** | `48px` / `1.2` | `32px` / `1.25` | `700` | 首屏主視覺標題（每頁限一個） |
-| **H2 (Section)** | `32px` / `1.3` | `24px` / `1.35` | `600` | 各大段落標題 |
-| **H3 (Card)** | `20px` / `1.4` | `18px` / `1.4` | `600` | 卡片或子區塊標題 |
-| **Body（內文）** | `16px` / `1.7` | `16px` / `1.65` | `400` | 一般段落閱讀文字（行高至少 1.6） |
-| **Caption / Tag** | `13px` / `1.4` | `12px` / `1.4` | `500` | 分類標籤、圖片註解、輔助說明 |
+<!-- 內容最大寬度、欄數、間距、手機版怎麼排。 -->
 
----
+- 桌機內容最大寬度 1200px；手機左右留白 20px。
+- 卡片：桌機 3 欄、平板 2 欄、手機 1 欄。
 
-## 4. Component Stylings（核心元件樣式）
+## Elevation & Depth
 
-### 按鈕（Buttons）
-* **Primary Button（主要按鈕）**：背景 `#8B5E3C`、文字 `#FFFFFF`、內距 `12px 24px`、圓角 `8px`、字重 `600`。Hover 時背景加深為 `#734C2F`，不可出現突兀的螢光發光效果。
-* **Secondary Button（次要按鈕）**：透明背景、`1px solid #8B5E3C` 邊框、文字 `#8B5E3C`、圓角 `8px`。
-* **Disabled 狀態**：透明度降至 `0.45`，游標顯示 `not-allowed`。
+<!-- 要不要用陰影？用多重？ -->
 
-### 卡片（Cards）
-* 背景 `#FFFFFF`，邊框 `1px solid #E5DFD7`，圓角 `16px`，內部留白 `24px`。
-* 若卡片內含圖片，圖片圓角與外框協調（`12px`），並設定 `object-fit: cover` 防止變形。
+- 不使用陰影，以 1px 的 border 區分層次。
 
-### 導覽列（Navigation）
-* 全站固定於頂部（Sticky Header），背景使用半透明畫布色搭配輕微毛玻璃（`backdrop-filter: blur(8px)`）與底部 `1px solid #E5DFD7` 分隔線。
-* 導覽項目順序與位置在全站所有頁面保持完全一致。
+## Shapes
 
----
+- 按鈕使用 md 圓角，卡片使用 lg 圓角，標籤使用膠囊形（full）。
 
-## 5. Layout Principles（版面佈局原則）
+## Motion & Micro-interaction
 
-* **最大容器寬度**：`1200px`，左右保留至少 `24px`（手機版 `16px`）安全邊距。
-* **段落節奏**：主要區塊（Section）上下內距為 `80px`（手機版縮減為 `48px`），保持明確的視覺呼吸感。
-* **格線應用**：
-  * 內容簡介與故事區塊：雙欄不對稱或單欄置中（單欄文字最大寬度不超過 `680px` 以維持最佳閱讀行長）。
-  * 招牌品項／功能特色：桌機版 3 欄格狀排列（`gap: 24px`），平板 2 欄，手機 1 欄。
+- 按鈕 hover 變色時間 150ms；不使用大幅度或一直重複的動畫。
 
----
+## Voice & Content Strategy
 
-## 6. Depth & Elevation（層次深度與陰影策略）
+- 語氣像老朋友推薦，不使用「立即搶購」、「限時秒殺」這類推銷用語。
 
-本系統採用**「扁平細框線為主、微弱陰影為輔」**的層次原則：
-* **Level 0（底層畫布）**：`#FAF8F5`，無陰影。
-* **Level 1（靜態卡片）**：使用 `1px solid #E5DFD7` 細框線區隔，原則上不加厚重陰影。
-* **Level 2（卡片 Hover / 下拉選單）**：`0 8px 24px rgba(30, 27, 24, 0.08)`。
-* **Level 3（Modal 覆蓋式彈窗）**：`0 20px 48px rgba(30, 27, 24, 0.16)`，搭配 `rgba(30, 27, 24, 0.45)` 半透明背景遮罩。
+## Components
 
----
+- **主要按鈕** → `button-primary`、`button-primary-hover`
+- **卡片** → `card`、`card-meta`
+- **表單** → `input`、`input-error`
 
-## 7. Do's and Don'ts（設計護欄）
+## Do's and Don'ts
 
-### ✅ Do's（務必遵守）
-1. **維持一致的暖色調過渡**：段落切換僅能使用 `canvas`、`surface` 與 `surface_alt`，保持整頁氛圍連貫。
-2. **中文字寬與換行檢查**：卡片標題與按鈕文字應預留足夠寬度，避免出現單字折行或文字被裁切。
-3. **無障礙對比度**：內文與按鈕文字對比度需符合 WCAG AA 標準（至少 `4.5:1`）。
+<!-- 至少寫 3 條「不能做的事」，這是 AI 最需要的資訊。 -->
 
-### ❌ Don'ts（絕對禁止）
-1. **禁止使用非本規範定義的突兀配色**：例如不可在暖咖啡色系網頁中突然出現預設亮藍色（`#0000FF` / `#3B82F6`）按鈕或紫色 AI 漸層背景。
-2. **禁止使用純黑 `#000000`**：所有深色文字與遮罩一律以 `#1E1B18` 為基準。
-3. **禁止過度裝飾性動畫**：轉場與 Hover 動效應控制在 `200ms–300ms` 內（`ease-out`），不可加入影響閱讀的閃爍或過度彈跳動畫。
+- Do：每個畫面只放一顆主要按鈕。
+- Don't：不要使用紫色或藍紫漸層、霓虹色、發光效果。
+- Don't：不要用 emoji 當圖示；不要把每個區塊都包成卡片。
+- Don't：文字不要用純黑 #000000。
 
----
+## Changelog
 
-## 8. Responsive Behavior（回應式斷點與規則）
+<!-- 每次修改規範都記一筆：版本、改了什麼、為什麼。 -->
 
-* **斷點定義**：
-  * Mobile：`< 768px`
-  * Tablet：`768px – 1023px`
-  * Desktop：`>= 1024px`
-* **手機版調整規則**：
-  * 所有多欄（2 欄 / 3 欄）版面自動收合為單欄垂直堆疊。
-  * 頂部導覽列收合為漢堡選單（Drawer / Overlay），且保留清晰的關閉按鈕。
-  * 所有可點擊按鈕與連結高度至少 `44px`，確保拇指好點擊。
-
----
-
-## 9. Agent Prompt Guide（給 AI 代理的執行備忘）
-
-在依據本 `DESIGN.md` 生成或修改任何網頁程式碼時，請遵循以下指令：
-1. 請先讀取頂部 YAML Front Matter，將所有色碼、字體、圓角與間距定義為 CSS Custom Properties（`:root` 變數），不可在 HTML 中寫死不一致的數值。
-2. 請務必引入 Google Fonts 的 `Noto Serif TC` 與 `Noto Sans TC`，確保繁體中文顯示質感。
-3. 產出前請自我檢查：是否出現未定義的顏色？文字在手機版 `375px` 寬度下是否會溢出或被裁切？導覽與頁尾是否完整？
-
----
-
-## Changelog（修改紀錄）
-
-> 每次因為「AI 生成結果跑版」而修改本規範時，請在這裡記錄原因（參考第二章實作 2-F）。
-
-* **v1.0**：初版建立。
-* [**v1.1**：範例——補上文字連結顏色規則（原因：FAQ 頁出現瀏覽器預設藍色連結）。]
-
+- v1.0：建立第一版。

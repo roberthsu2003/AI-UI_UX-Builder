@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 300" width="480" height="300" font-family="'PingFang TC','Noto Sans TC','Microsoft JhengHei',sans-serif"><defs><clipPath id="c"><rect width="480" height="300" rx="14"/></clipPath></defs><g clip-path="url(#c)"><rect width="480" height="300" fill="#FAF6EF"/>
+<text x="28" y="34" font-size="15" font-family="'Noto Serif TC','Songti TC','PMingLiU',serif" font-weight="700" fill="#2A211B">Lumen.</text>
+<g font-size="10" fill="#6E5F53"><text x="300" y="33">讀物</text><text x="340" y="33">選物</text><text x="380" y="33">訂閱</text></g>
+<path d="M28 46 H452" stroke="#2A211B" stroke-width="1"/>
+<text x="28" y="72" font-size="9" fill="#8B5E3C" letter-spacing="2">ISSUE 12 · 秋日特輯</text>
+<text x="28" y="112" font-size="30" font-family="'Noto Serif TC','Songti TC','PMingLiU',serif" font-weight="700" fill="#2A211B">好好過日子</text>
+<text x="28" y="136" font-size="11" fill="#6E5F53">在慢下來的時光裡，</text>
+<text x="28" y="152" font-size="11" fill="#6E5F53">重新認識生活的質地。</text>
+<rect x="28" y="168" width="84" height="28" fill="none" stroke="#8B5E3C"/>
+<text x="70" y="186" font-size="11" fill="#8B5E3C" text-anchor="middle">開始閱讀</text>
+<rect x="252" y="62" width="200" height="140" fill="#C9A27E"/>
+<circle cx="390" cy="104" r="22" fill="#E8D5BF"/>
+<path d="M252 202 L310 140 L350 176 L392 128 L452 202 Z" fill="#8B5E3C"/>
+<path d="M28 220 H452" stroke="#D8CBBB"/>
+<g font-family="'Noto Serif TC','Songti TC','PMingLiU',serif" font-size="12" font-weight="700" fill="#2A211B"><text x="28" y="246">一杯咖啡的時間</text><text x="176" y="246">老屋裡的木頭</text><text x="320" y="246">秋天的器皿</text></g>
+<g font-size="10" fill="#8A7B6E"><text x="28" y="266">文／林小日</text><text x="176" y="266">文／陳木木</text><text x="320" y="266">文／王秋</text></g></g><rect x="0.5" y="0.5" width="479" height="299" rx="14" fill="none" stroke="#E5E7EB"/></svg>

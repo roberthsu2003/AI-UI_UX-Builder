@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 300" width="480" height="300" font-family="'PingFang TC','Noto Sans TC','Microsoft JhengHei',sans-serif"><defs><clipPath id="c"><rect width="480" height="300" rx="14"/></clipPath><filter id="bl" x="-50%" y="-50%" width="200%" height="200%"><feGaussianBlur stdDeviation="28"/></filter>
+<linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#1E1B4B"/><stop offset="1" stop-color="#0F172A"/></linearGradient></defs><g clip-path="url(#c)"><rect width="480" height="300" fill="#0F172A"/>
+<rect width="480" height="300" fill="url(#bg)"/>
+<g filter="url(#bl)"><circle cx="90" cy="80" r="70" fill="#EC4899"/><circle cx="380" cy="70" r="80" fill="#6366F1"/><circle cx="260" cy="250" r="80" fill="#22D3EE"/></g>
+<rect x="20" y="16" width="440" height="36" rx="18" fill="#FFFFFF" fill-opacity="0.12" stroke="#FFFFFF" stroke-opacity="0.35"/>
+<text x="40" y="39" font-size="13" font-weight="700" fill="#FFFFFF">Lumen</text>
+<g font-size="10" fill="#E0E7FF"><text x="300" y="38">作品</text><text x="340" y="38">關於</text><text x="380" y="38">聯絡</text></g>
+<text x="240" y="106" font-size="28" font-weight="800" fill="#FFFFFF" text-anchor="middle">好好過日子</text>
+<text x="240" y="128" font-size="11" fill="#C7D2FE" text-anchor="middle">像毛玻璃一樣，透出後面的顏色</text>
+<rect x="196" y="142" width="88" height="28" rx="14" fill="#FFFFFF" fill-opacity="0.9"/><text x="240" y="160" font-size="11" font-weight="700" fill="#312E81" text-anchor="middle">開始探索</text>
+<g>
+<rect x="28" y="194" width="132" height="84" rx="16" fill="#FFFFFF" fill-opacity="0.14" stroke="#FFFFFF" stroke-opacity="0.4"/>
+<rect x="174" y="194" width="132" height="84" rx="16" fill="#FFFFFF" fill-opacity="0.14" stroke="#FFFFFF" stroke-opacity="0.4"/>
+<rect x="320" y="194" width="132" height="84" rx="16" fill="#FFFFFF" fill-opacity="0.14" stroke="#FFFFFF" stroke-opacity="0.4"/>
+<g font-size="12" font-weight="700" fill="#FFFFFF"><text x="44" y="230">生活</text><text x="190" y="230">器物</text><text x="336" y="230">空間</text></g>
+<g font-size="9" fill="#E0E7FF"><text x="44" y="252">半透明卡片</text><text x="190" y="252">白色細邊框</text><text x="336" y="252">背景模糊</text></g>
+</g></g><rect x="0.5" y="0.5" width="479" height="299" rx="14" fill="none" stroke="#1E1B4B"/></svg>

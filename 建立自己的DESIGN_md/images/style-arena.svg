@@ -1,0 +1,54 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 340" width="800" height="340" font-family="'PingFang TC','Noto Sans TC','Microsoft JhengHei',sans-serif">
+  <defs>
+    <marker id="m" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0 0 L10 5 L0 10 z" fill="#6B7280"/>
+    </marker>
+  </defs>
+  <rect width="800" height="340" rx="16" fill="#FFFFFF" stroke="#E5E7EB"/>
+  <text x="40" y="42" font-size="18" font-weight="700" fill="#111827">風格競技場：同一個內容，三份 DESIGN.md，並排比較</text>
+
+  <!-- refs -->
+  <text x="40" y="78" font-size="13" font-weight="700" fill="#6B7280">① 收集參考</text>
+  <g>
+    <rect x="40" y="90" width="100" height="62" rx="6" fill="#FAF6EF" stroke="#D8CBBB"/>
+    <rect x="48" y="98" width="40" height="8" rx="2" fill="#8B5E3C"/><rect x="96" y="98" width="36" height="46" rx="2" fill="#C9A27E"/>
+    <rect x="40" y="160" width="100" height="62" rx="6" fill="#0F172A"/>
+    <rect x="48" y="170" width="60" height="8" rx="2" fill="#38BDF8"/><rect x="48" y="186" width="84" height="28" rx="4" fill="#1E293B"/>
+    <rect x="40" y="230" width="100" height="62" rx="6" fill="#FAF7F2" stroke="#DDE8DF"/>
+    <circle cx="112" cy="252" r="16" fill="#B9CFC0"/><rect x="48" y="270" width="40" height="12" rx="6" fill="#5B7B6D"/>
+  </g>
+  <path d="M146 190 H186" stroke="#6B7280" stroke-width="2" marker-end="url(#m)"/>
+
+  <!-- three md files -->
+  <text x="192" y="78" font-size="13" font-weight="700" fill="#6B7280">② AI 寫三份規範</text>
+  <g font-family="Menlo,monospace" font-size="11">
+    <rect x="192" y="96" width="150" height="40" rx="6" fill="#111827"/><text x="204" y="121" fill="#FDE68A">DESIGN-styleA.md</text>
+    <rect x="192" y="170" width="150" height="40" rx="6" fill="#111827"/><text x="204" y="195" fill="#93C5FD">DESIGN-styleB.md</text>
+    <rect x="192" y="244" width="150" height="40" rx="6" fill="#111827"/><text x="204" y="269" fill="#86EFAC">DESIGN-styleC.md</text>
+  </g>
+  <path d="M348 190 H388" stroke="#6B7280" stroke-width="2" marker-end="url(#m)"/>
+
+  <!-- arena page -->
+  <text x="394" y="78" font-size="13" font-weight="700" fill="#6B7280">③ 同一個畫面套三種風格</text>
+  <rect x="394" y="90" width="366" height="202" rx="10" fill="#F3F4F6"/>
+  <g font-size="10" text-anchor="middle">
+    <rect x="404" y="100" width="110" height="182" rx="6" fill="#FAF6EF" stroke="#D8CBBB"/>
+    <text x="459" y="140" font-size="16" font-weight="700" fill="#2A211B" font-family="'Noto Serif TC','Songti TC',serif">好好過日子</text>
+    <rect x="424" y="156" width="70" height="20" fill="none" stroke="#8B5E3C"/><text x="459" y="170" fill="#8B5E3C">開始探索</text>
+    <rect x="412" y="196" width="94" height="70" rx="2" fill="#C9A27E"/>
+    <text x="459" y="276" fill="#8B5E3C" font-weight="700">A</text>
+
+    <rect x="522" y="100" width="110" height="182" rx="6" fill="#0F172A"/>
+    <text x="577" y="140" font-size="16" font-weight="800" fill="#FFFFFF">好好過日子</text>
+    <rect x="542" y="156" width="70" height="20" rx="5" fill="#38BDF8"/><text x="577" y="170" fill="#0F172A">開始探索</text>
+    <rect x="530" y="196" width="45" height="70" rx="6" fill="#1E293B"/><rect x="579" y="196" width="45" height="70" rx="6" fill="#1E293B"/>
+    <text x="577" y="276" fill="#38BDF8" font-weight="700">B</text>
+
+    <rect x="640" y="100" width="110" height="182" rx="6" fill="#FAF7F2" stroke="#DDE8DF"/>
+    <text x="695" y="140" font-size="16" font-weight="700" fill="#2F3B35">好好過日子</text>
+    <rect x="660" y="156" width="70" height="20" rx="10" fill="#5B7B6D"/><text x="695" y="170" fill="#FFFFFF">開始探索</text>
+    <rect x="648" y="196" width="94" height="70" rx="20" fill="#FFFFFF"/>
+    <text x="695" y="276" fill="#5B7B6D" font-weight="700">C</text>
+  </g>
+  <text x="40" y="320" font-size="13" fill="#374151">④ 把畫面給同學或目標使用者看 5 秒：「哪一個最像這個品牌？」選中的那一份改名為 DESIGN.md。</text>
+</svg>

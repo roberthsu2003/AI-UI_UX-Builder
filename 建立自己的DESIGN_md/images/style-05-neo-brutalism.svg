@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 300" width="480" height="300" font-family="'PingFang TC','Noto Sans TC','Microsoft JhengHei',sans-serif"><defs><clipPath id="c"><rect width="480" height="300" rx="14"/></clipPath></defs><g clip-path="url(#c)"><rect width="480" height="300" fill="#FDE047"/>
+<rect x="20" y="16" width="440" height="34" fill="#FFFFFF" stroke="#000000" stroke-width="3"/>
+<text x="32" y="39" font-size="15" font-weight="900" fill="#000000">LUMEN!</text>
+<g font-size="11" font-weight="700" fill="#000000"><text x="290" y="38">作品</text><text x="330" y="38">關於</text></g>
+<rect x="376" y="22" width="76" height="22" fill="#FF6B9D" stroke="#000000" stroke-width="2"/><text x="414" y="38" font-size="10" font-weight="800" fill="#000000" text-anchor="middle">聯絡我們</text>
+<text x="24" y="104" font-size="38" font-weight="900" fill="#000000">好好過日子</text>
+<text x="24" y="128" font-size="12" font-weight="700" fill="#000000">大膽、直接、有點吵，但很好記。</text>
+<rect x="30" y="148" width="110" height="34" fill="#000000"/>
+<rect x="24" y="142" width="110" height="34" fill="#4ADE80" stroke="#000000" stroke-width="3"/>
+<text x="79" y="164" font-size="12" font-weight="900" fill="#000000" text-anchor="middle">開始探索 →</text>
+<g>
+<rect x="30" y="206" width="130" height="76" fill="#000000"/><rect x="24" y="200" width="130" height="76" fill="#60A5FA" stroke="#000000" stroke-width="3"/>
+<rect x="180" y="206" width="130" height="76" fill="#000000"/><rect x="174" y="200" width="130" height="76" fill="#FFFFFF" stroke="#000000" stroke-width="3"/>
+<rect x="330" y="206" width="130" height="76" fill="#000000"/><rect x="324" y="200" width="130" height="76" fill="#FF6B9D" stroke="#000000" stroke-width="3"/>
+<g font-size="13" font-weight="900" fill="#000000"><text x="36" y="232">生活</text><text x="186" y="232">器物</text><text x="336" y="232">空間</text></g>
+<g font-size="10" font-weight="700" fill="#000000"><text x="36" y="256">粗黑框＋硬陰影</text><text x="186" y="256">不用模糊陰影</text><text x="336" y="256">高飽和撞色</text></g>
+</g>
+<rect x="400" y="66" width="60" height="60" fill="#FFFFFF" stroke="#000000" stroke-width="3" transform="rotate(8 430 96)"/>
+<text x="430" y="102" font-size="16" font-weight="900" fill="#000000" text-anchor="middle" transform="rotate(8 430 96)">NEW</text></g><rect x="0.5" y="0.5" width="479" height="299" rx="14" fill="none" stroke="#000000"/></svg>
