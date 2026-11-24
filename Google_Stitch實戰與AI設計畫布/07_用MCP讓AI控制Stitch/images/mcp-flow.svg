@@ -1,0 +1,52 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 380" width="800" height="380" font-family="'PingFang TC','Noto Sans TC','Microsoft JhengHei',sans-serif">
+  <defs>
+    <marker id="m" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0 0 L10 5 L0 10 z" fill="#6B7280"/>
+    </marker>
+  </defs>
+  <rect width="800" height="380" rx="16" fill="#FFFFFF" stroke="#E5E7EB"/>
+  <text x="40" y="42" font-size="18" font-weight="700" fill="#111827">MCP：讓寫程式的 AI 直接操作 Stitch</text>
+
+  <!-- left: AI tool -->
+  <rect x="40" y="70" width="190" height="200" rx="14" fill="#111827"/>
+  <text x="135" y="102" font-size="14" font-weight="700" fill="#FFFFFF" text-anchor="middle">你的 AI 工具</text>
+  <g font-size="11" fill="#D1D5DB" text-anchor="middle">
+    <text x="135" y="128">Claude Code</text><text x="135" y="146">Gemini CLI</text><text x="135" y="164">Cursor</text><text x="135" y="182">Antigravity</text>
+  </g>
+  <rect x="58" y="204" width="154" height="48" rx="8" fill="#1F2937"/>
+  <text x="70" y="224" font-size="11" fill="#93C5FD">你：「建立專案，</text>
+  <text x="70" y="242" font-size="11" fill="#93C5FD">　　做五頁的網站」</text>
+
+  <!-- middle -->
+  <g stroke="#6B7280" stroke-width="2" fill="none" marker-end="url(#m)">
+    <path d="M234 150 H318"/>
+    <path d="M318 192 H234"/>
+  </g>
+  <text x="276" y="140" font-size="11" fill="#6B7280" text-anchor="middle">呼叫工具</text>
+  <text x="276" y="212" font-size="11" fill="#6B7280" text-anchor="middle">回傳畫面</text>
+  <rect x="322" y="110" width="140" height="120" rx="14" fill="#2563EB"/>
+  <text x="392" y="158" font-size="15" font-weight="700" fill="#FFFFFF" text-anchor="middle">Stitch</text>
+  <text x="392" y="180" font-size="15" font-weight="700" fill="#FFFFFF" text-anchor="middle">MCP Server</text>
+  <text x="392" y="204" font-size="10" fill="#BFDBFE" text-anchor="middle">需要 API Key</text>
+  <path d="M466 170 H500" stroke="#6B7280" stroke-width="2" fill="none" marker-end="url(#m)"/>
+
+  <!-- right: tools -->
+  <rect x="504" y="66" width="256" height="210" rx="14" fill="#F3F4F6"/>
+  <text x="520" y="90" font-size="13" font-weight="700" fill="#111827">常用工具</text>
+  <g font-size="11" font-family="Menlo,monospace" fill="#1D4ED8">
+    <text x="520" y="114">create_project</text>
+    <text x="520" y="132">list_projects / get_project</text>
+    <text x="520" y="150">list_screens / get_screen</text>
+    <text x="520" y="174" fill="#047857">generate_screen_from_text</text>
+    <text x="520" y="192" fill="#047857">edit_screens</text>
+    <text x="520" y="210" fill="#047857">generate_variants</text>
+  </g>
+  <g font-size="11" fill="#6B7280">
+    <text x="520" y="236">藍：管理專案與讀取畫面</text>
+    <text x="520" y="254">綠：產生與修改畫面</text>
+  </g>
+
+  <text x="40" y="310" font-size="13" fill="#374151"><tspan font-weight="700">什麼時候用 MCP？</tspan>要大量、重複產生畫面，或想讓 AI 一路從設計做到程式碼時。</text>
+  <text x="40" y="334" font-size="13" fill="#374151">還在發想、需要用眼睛挑選的階段，直接在 Stitch 網頁上操作比較快。</text>
+  <text x="40" y="358" font-size="12" fill="#6B7280">工具名稱以官方 MCP 設定頁與 AI 工具實際列出的為準。</text>
+</svg>

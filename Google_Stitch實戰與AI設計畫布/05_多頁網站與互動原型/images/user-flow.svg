@@ -1,0 +1,57 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 330" width="800" height="330" font-family="'PingFang TC','Noto Sans TC','Microsoft JhengHei',sans-serif">
+  <defs>
+    <marker id="m" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0 0 L10 5 L0 10 z" fill="#2563EB"/>
+    </marker>
+  </defs>
+  <rect width="800" height="330" rx="16" fill="#FFFFFF" stroke="#E5E7EB"/>
+  <text x="40" y="42" font-size="18" font-weight="700" fill="#111827">先畫使用者流程，再決定要做哪些畫面</text>
+
+  <g font-size="12" text-anchor="middle">
+    <g>
+      <rect x="40" y="70" width="112" height="150" rx="10" fill="#FFFFFF" stroke="#D1D5DB"/>
+      <rect x="48" y="78" width="96" height="10" rx="2" fill="#E5E7EB"/>
+      <rect x="48" y="94" width="96" height="46" rx="4" fill="#BBF7D0"/>
+      <rect x="66" y="126" width="60" height="10" rx="5" fill="#2F6B4F"/>
+      <g fill="#E5E7EB"><rect x="48" y="148" width="29" height="40" rx="3"/><rect x="81" y="148" width="29" height="40" rx="3"/><rect x="114" y="148" width="29" height="40" rx="3"/></g>
+      <text x="96" y="240" font-weight="700" fill="#111827">① 首頁</text>
+    </g>
+    <g>
+      <rect x="194" y="70" width="112" height="150" rx="10" fill="#FFFFFF" stroke="#D1D5DB"/>
+      <rect x="202" y="78" width="96" height="10" rx="2" fill="#E5E7EB"/>
+      <rect x="202" y="94" width="96" height="12" rx="3" fill="#F3F4F6"/>
+      <g fill="#E5E7EB"><rect x="202" y="112" width="29" height="36" rx="3"/><rect x="235" y="112" width="29" height="36" rx="3"/><rect x="268" y="112" width="29" height="36" rx="3"/><rect x="202" y="154" width="29" height="36" rx="3"/><rect x="235" y="154" width="29" height="36" rx="3"/><rect x="268" y="154" width="29" height="36" rx="3"/></g>
+      <text x="250" y="240" font-weight="700" fill="#111827">② 路線列表</text>
+    </g>
+    <g>
+      <rect x="348" y="70" width="112" height="150" rx="10" fill="#FFFFFF" stroke="#D1D5DB"/>
+      <rect x="356" y="78" width="96" height="50" rx="4" fill="#BBF7D0"/>
+      <g fill="#E5E7EB"><rect x="356" y="134" width="70" height="8" rx="2"/><rect x="356" y="148" width="96" height="6" rx="2"/><rect x="356" y="160" width="96" height="6" rx="2"/><rect x="356" y="172" width="80" height="6" rx="2"/></g>
+      <rect x="356" y="190" width="96" height="16" rx="8" fill="#2F6B4F"/>
+      <text x="404" y="240" font-weight="700" fill="#111827">③ 路線介紹</text>
+    </g>
+    <g>
+      <rect x="502" y="70" width="112" height="150" rx="10" fill="#FFFFFF" stroke="#D1D5DB"/>
+      <rect x="510" y="78" width="96" height="30" rx="4" fill="#F3F4F6"/>
+      <g fill="#FFFFFF" stroke="#D1D5DB"><rect x="510" y="116" width="96" height="16" rx="3"/><rect x="510" y="138" width="96" height="16" rx="3"/><rect x="510" y="160" width="96" height="16" rx="3"/></g>
+      <rect x="510" y="190" width="96" height="16" rx="8" fill="#2F6B4F"/>
+      <text x="558" y="240" font-weight="700" fill="#111827">④ 預約表單</text>
+    </g>
+    <g>
+      <rect x="656" y="70" width="104" height="150" rx="10" fill="#FFFFFF" stroke="#D1D5DB"/>
+      <circle cx="708" cy="122" r="22" fill="#DCFCE7"/>
+      <path d="M697 122 l8 8 l14 -16" fill="none" stroke="#2F6B4F" stroke-width="3"/>
+      <g fill="#E5E7EB"><rect x="670" y="156" width="76" height="8" rx="2"/><rect x="678" y="170" width="60" height="6" rx="2"/></g>
+      <text x="708" y="240" font-weight="700" fill="#111827">⑤ 預約完成</text>
+    </g>
+  </g>
+  <g stroke="#2563EB" stroke-width="2" fill="none" marker-end="url(#m)">
+    <path d="M154 140 H190"/><path d="M308 140 H344"/><path d="M462 140 H498"/><path d="M616 140 H652"/>
+  </g>
+  <g font-size="11" fill="#2563EB" text-anchor="middle">
+    <text x="172" y="130">看全部</text><text x="326" y="130">點卡片</text><text x="480" y="130">預約</text><text x="634" y="130">送出</text>
+  </g>
+  <path d="M96 254 C96 290 404 290 404 254" fill="none" stroke="#93C5FD" stroke-width="2" stroke-dasharray="5 4" marker-end="url(#m)"/>
+  <text x="250" y="300" font-size="11" fill="#6B7280" text-anchor="middle">捷徑：首頁的熱門路線卡片直接到路線介紹</text>
+  <text x="560" y="300" font-size="12" fill="#374151">每一頁都要有桌機版與手機版</text>
+</svg>

@@ -1,0 +1,55 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 340" width="800" height="340" font-family="'PingFang TC','Noto Sans TC','Microsoft JhengHei',sans-serif">
+  <defs>
+    <marker id="m" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0 0 L10 5 L0 10 z" fill="#6B7280"/>
+    </marker>
+  </defs>
+  <rect width="800" height="340" rx="16" fill="#FFFFFF" stroke="#E5E7EB"/>
+  <text x="40" y="42" font-size="18" font-weight="700" fill="#111827">DESIGN.md 是設計規範的「共通語言」</text>
+
+  <!-- sources -->
+  <g font-size="13">
+    <text x="40" y="78" font-weight="700" fill="#6B7280">怎麼產生</text>
+    <rect x="40" y="90" width="190" height="52" rx="10" fill="#EFF6FF"/>
+    <text x="56" y="112" font-weight="700" fill="#111827">從網址萃取</text>
+    <text x="56" y="130" font-size="12" fill="#6B7280">分析一個喜歡的網站</text>
+    <rect x="40" y="152" width="190" height="52" rx="10" fill="#EFF6FF"/>
+    <text x="56" y="174" font-weight="700" fill="#111827">從 Stitch 畫面整理</text>
+    <text x="56" y="192" font-size="12" fill="#6B7280">已經滿意的設計</text>
+    <rect x="40" y="214" width="190" height="52" rx="10" fill="#EFF6FF"/>
+    <text x="56" y="236" font-weight="700" fill="#111827">自己寫或請 AI 寫</text>
+    <text x="56" y="254" font-size="12" fill="#6B7280">依照官方規格</text>
+  </g>
+
+  <g stroke="#6B7280" stroke-width="2" fill="none" marker-end="url(#m)">
+    <path d="M232 116 C270 116 280 170 312 174"/>
+    <path d="M232 178 H312"/>
+    <path d="M232 240 C270 240 280 186 312 182"/>
+  </g>
+
+  <!-- center -->
+  <rect x="318" y="134" width="150" height="90" rx="12" fill="#111827"/>
+  <text x="393" y="172" font-size="17" font-weight="700" fill="#FFFFFF" text-anchor="middle" font-family="Menlo,monospace">DESIGN.md</text>
+  <text x="393" y="196" font-size="11" fill="#9CA3AF" text-anchor="middle">一份檔案，到處使用</text>
+
+  <g stroke="#6B7280" stroke-width="2" fill="none" marker-end="url(#m)">
+    <path d="M470 160 C510 150 520 112 556 110"/>
+    <path d="M470 172 H556"/>
+    <path d="M470 186 C510 196 520 234 556 236"/>
+    <path d="M470 204 C500 240 520 296 556 298"/>
+  </g>
+
+  <!-- targets -->
+  <g font-size="13">
+    <text x="560" y="78" font-weight="700" fill="#6B7280">拿去哪裡用</text>
+    <rect x="560" y="88" width="200" height="44" rx="10" fill="#DCFCE7"/>
+    <text x="576" y="115" fill="#111827">其他 Stitch 專案（匯入）</text>
+    <rect x="560" y="150" width="200" height="44" rx="10" fill="#DCFCE7"/>
+    <text x="576" y="177" fill="#111827">pen.dev、Claude 等 AI</text>
+    <rect x="560" y="214" width="200" height="44" rx="10" fill="#DCFCE7"/>
+    <text x="576" y="241" fill="#111827">寫程式的 AI（Coding Agent）</text>
+    <rect x="560" y="276" width="200" height="44" rx="10" fill="#FEF3C7"/>
+    <text x="576" y="296" fill="#111827" font-family="Menlo,monospace" font-size="11">@google/design.md CLI</text>
+    <text x="576" y="312" fill="#6B7280" font-size="11">檢查、比較、轉成 Tailwind</text>
+  </g>
+</svg>

@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 360" width="800" height="360" font-family="'PingFang TC','Noto Sans TC','Microsoft JhengHei',sans-serif">
+  <rect width="800" height="360" rx="16" fill="#FFFFFF" stroke="#E5E7EB"/>
+  <text x="40" y="42" font-size="18" font-weight="700" fill="#111827">好的 Stitch Prompt 有五個部分</text>
+
+  <rect x="40" y="62" width="720" height="186" rx="12" fill="#F9FAFB" stroke="#E5E7EB"/>
+  <g font-size="14">
+    <rect x="56" y="78" width="6" height="26" rx="3" fill="#2563EB"/>
+    <text x="74" y="97" fill="#111827">為「山城小旅行」設計一個 <tspan font-weight="700">桌機版首頁</tspan>，</text>
+    <rect x="56" y="112" width="6" height="26" rx="3" fill="#F59E0B"/>
+    <text x="74" y="131" fill="#111827">對象是 30–45 歲、想在週末帶家人<tspan font-weight="700">放鬆的上班族</tspan>，</text>
+    <rect x="56" y="146" width="6" height="26" rx="3" fill="#10B981"/>
+    <text x="74" y="165" fill="#111827">要有：Hero、三條熱門路線、評價、預約按鈕、頁尾，</text>
+    <rect x="56" y="180" width="6" height="26" rx="3" fill="#8B5CF6"/>
+    <text x="74" y="199" fill="#111827">風格<tspan font-weight="700">溫暖、自然、留白多</tspan>，以森林綠為主色，</text>
+    <rect x="56" y="214" width="6" height="26" rx="3" fill="#EF4444"/>
+    <text x="74" y="233" fill="#111827">不要紫色漸層、不要 emoji 圖示。</text>
+  </g>
+
+  <g font-size="12">
+    <rect x="40" y="266" width="132" height="70" rx="10" fill="#EFF6FF"/>
+    <text x="52" y="290" font-weight="700" fill="#1D4ED8">① 做什麼</text>
+    <text x="52" y="310" fill="#374151">產品、頁面、</text>
+    <text x="52" y="326" fill="#374151">裝置</text>
+
+    <rect x="187" y="266" width="132" height="70" rx="10" fill="#FEF3C7"/>
+    <text x="199" y="290" font-weight="700" fill="#B45309">② 給誰用</text>
+    <text x="199" y="310" fill="#374151">對象、情境、</text>
+    <text x="199" y="326" fill="#374151">感受</text>
+
+    <rect x="334" y="266" width="132" height="70" rx="10" fill="#DCFCE7"/>
+    <text x="346" y="290" font-weight="700" fill="#047857">③ 放哪些內容</text>
+    <text x="346" y="310" fill="#374151">區塊由上到下</text>
+    <text x="346" y="326" fill="#374151">列出來</text>
+
+    <rect x="481" y="266" width="132" height="70" rx="10" fill="#F5F3FF"/>
+    <text x="493" y="290" font-weight="700" fill="#6D28D9">④ 風格</text>
+    <text x="493" y="310" fill="#374151">形容詞＋主色</text>
+    <text x="493" y="326" fill="#374151">或參考網站</text>
+
+    <rect x="628" y="266" width="132" height="70" rx="10" fill="#FEF2F2"/>
+    <text x="640" y="290" font-weight="700" fill="#B91C1C">⑤ 不要什麼</text>
+    <text x="640" y="310" fill="#374151">排除常見的</text>
+    <text x="640" y="326" fill="#374151">AI 公版味</text>
+  </g>
+</svg>

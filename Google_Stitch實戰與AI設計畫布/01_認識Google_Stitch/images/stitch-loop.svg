@@ -1,0 +1,55 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 300" width="800" height="300" font-family="'PingFang TC','Noto Sans TC','Microsoft JhengHei',sans-serif">
+  <defs>
+    <marker id="m" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0 0 L10 5 L0 10 z" fill="#9CA3AF"/>
+    </marker>
+  </defs>
+  <rect width="800" height="300" rx="16" fill="#FFFFFF" stroke="#E5E7EB"/>
+  <text x="40" y="42" font-size="18" font-weight="700" fill="#111827">Stitch 的工作流程（也是本單元的章節順序）</text>
+
+  <g font-size="12" text-anchor="middle">
+    <rect x="30" y="80" width="110" height="110" rx="14" fill="#EFF6FF"/>
+    <text x="85" y="112" font-size="22">💬</text>
+    <text x="85" y="142" font-weight="700" fill="#111827">描述需求</text>
+    <text x="85" y="162" fill="#6B7280">文字、圖片</text>
+    <text x="85" y="178" fill="#6B7280">草圖、語音</text>
+
+    <rect x="160" y="80" width="110" height="110" rx="14" fill="#EFF6FF"/>
+    <text x="215" y="112" font-size="22">✨</text>
+    <text x="215" y="142" font-weight="700" fill="#111827">產生畫面</text>
+    <text x="215" y="162" fill="#6B7280">即時串流</text>
+    <text x="215" y="178" fill="#6B7280">到畫布上</text>
+
+    <rect x="290" y="80" width="110" height="110" rx="14" fill="#FEF3C7"/>
+    <text x="345" y="112" font-size="22">✏️</text>
+    <text x="345" y="142" font-weight="700" fill="#111827">修改與變體</text>
+    <text x="345" y="162" fill="#6B7280">圈選、編輯</text>
+    <text x="345" y="178" fill="#6B7280">多個版本比較</text>
+
+    <rect x="420" y="80" width="110" height="110" rx="14" fill="#FEF3C7"/>
+    <text x="475" y="112" font-size="22">🎨</text>
+    <text x="475" y="142" font-weight="700" fill="#111827">統一風格</text>
+    <text x="475" y="162" fill="#6B7280">主題</text>
+    <text x="475" y="178" fill="#6B7280">DESIGN.md</text>
+
+    <rect x="550" y="80" width="110" height="110" rx="14" fill="#DCFCE7"/>
+    <text x="605" y="112" font-size="22">▶️</text>
+    <text x="605" y="142" font-weight="700" fill="#111827">串成原型</text>
+    <text x="605" y="162" fill="#6B7280">多頁連結</text>
+    <text x="605" y="178" fill="#6B7280">Play 試玩</text>
+
+    <rect x="680" y="80" width="90" height="110" rx="14" fill="#DCFCE7"/>
+    <text x="725" y="112" font-size="22">🚀</text>
+    <text x="725" y="142" font-weight="700" fill="#111827">匯出</text>
+    <text x="725" y="162" fill="#6B7280">程式碼</text>
+    <text x="725" y="178" fill="#6B7280">發布上線</text>
+  </g>
+  <g stroke="#9CA3AF" stroke-width="2" marker-end="url(#m)">
+    <path d="M141 135 H156"/><path d="M271 135 H286"/><path d="M401 135 H416"/><path d="M531 135 H546"/><path d="M661 135 H676"/>
+  </g>
+  <g font-size="11" fill="#6B7280" text-anchor="middle">
+    <text x="85" y="214">第 02 章</text><text x="215" y="214">第 02 章</text><text x="345" y="214">第 03 章</text>
+    <text x="475" y="214">第 04 章</text><text x="605" y="214">第 05 章</text><text x="725" y="214">第 06、07 章</text>
+  </g>
+  <text x="40" y="264" font-size="13" fill="#374151">修改、統一風格這兩步會來回很多次。不要第一版就接受，Stitch 的強項就是「多看幾個版本再決定」。</text>
+</svg>

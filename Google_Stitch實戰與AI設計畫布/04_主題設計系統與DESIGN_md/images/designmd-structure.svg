@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 420" width="800" height="420" font-family="'PingFang TC','Noto Sans TC','Microsoft JhengHei',sans-serif">
+  <rect width="800" height="420" rx="16" fill="#FFFFFF" stroke="#E5E7EB"/>
+  <text x="40" y="42" font-size="18" font-weight="700" fill="#111827">DESIGN.md 的結構：上半部給機器讀，下半部給人讀</text>
+
+  <!-- file -->
+  <rect x="40" y="62" width="380" height="336" rx="12" fill="#111827"/>
+  <g font-family="Menlo,monospace" font-size="12">
+    <text x="58" y="88" fill="#9CA3AF">---</text>
+    <text x="58" y="108" fill="#93C5FD">name: <tspan fill="#E5E7EB">山城小旅行</tspan></text>
+    <text x="58" y="128" fill="#93C5FD">colors:</text>
+    <text x="74" y="146" fill="#E5E7EB">primary: <tspan fill="#86EFAC">"#2F6B4F"</tspan></text>
+    <text x="58" y="166" fill="#93C5FD">typography:</text>
+    <text x="74" y="184" fill="#E5E7EB">headline: { fontSize: 36px … }</text>
+    <text x="58" y="204" fill="#93C5FD">rounded: <tspan fill="#E5E7EB">{ md: 14px }</tspan></text>
+    <text x="58" y="222" fill="#93C5FD">components:</text>
+    <text x="74" y="240" fill="#E5E7EB">button-primary:</text>
+    <text x="90" y="258" fill="#E5E7EB">backgroundColor: <tspan fill="#FDE68A">"{colors.primary}"</tspan></text>
+    <text x="58" y="278" fill="#9CA3AF">---</text>
+    <text x="58" y="304" fill="#F9A8D4">## Overview</text>
+    <text x="58" y="324" fill="#D1D5DB">給想在週末放鬆的上班族…</text>
+    <text x="58" y="348" fill="#F9A8D4">## Colors</text>
+    <text x="58" y="368" fill="#D1D5DB">森林綠只用在主要按鈕…</text>
+    <text x="58" y="388" fill="#9CA3AF">…</text>
+  </g>
+  <!-- braces -->
+  <path d="M430 76 h8 v200 h-8" fill="none" stroke="#2563EB" stroke-width="2"/>
+  <path d="M430 292 h8 v100 h-8" fill="none" stroke="#DB2777" stroke-width="2"/>
+
+  <!-- explanations -->
+  <g font-size="13">
+    <text x="454" y="96" font-weight="700" fill="#1D4ED8">設計 Token（YAML）</text>
+    <text x="454" y="118" fill="#374151">精確的數值：顏色、字型、</text>
+    <text x="454" y="136" fill="#374151">圓角、間距、動態、元件</text>
+    <text x="454" y="162" fill="#6B7280" font-size="12">{colors.primary} 是「引用」，</text>
+    <text x="454" y="180" fill="#6B7280" font-size="12">改一個地方，引用它的都會跟著變</text>
+    <text x="454" y="206" fill="#6B7280" font-size="12">AI 與程式可以直接讀取、</text>
+    <text x="454" y="224" fill="#6B7280" font-size="12">檢查對比、轉成 Tailwind 或 CSS</text>
+
+    <text x="454" y="312" font-weight="700" fill="#BE185D">設計理由（Markdown）</text>
+    <text x="454" y="334" fill="#374151">為什麼這樣設計、什麼時候用、</text>
+    <text x="454" y="352" fill="#374151">什麼不要做</text>
+    <text x="454" y="376" fill="#6B7280" font-size="12">章節順序固定：Overview → Colors →</text>
+    <text x="454" y="394" fill="#6B7280" font-size="12">Typography → … → Do's and Don'ts</text>
+  </g>
+</svg>

@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 360" width="800" height="360" font-family="'PingFang TC','Noto Sans TC','Microsoft JhengHei',sans-serif">
+  <defs>
+    <marker id="m" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0 0 L10 5 L0 10 z" fill="#6B7280"/>
+    </marker>
+  </defs>
+  <rect width="800" height="360" rx="16" fill="#FFFFFF" stroke="#E5E7EB"/>
+  <text x="40" y="42" font-size="18" font-weight="700" fill="#111827">Stitch 負責「發散」，pen.dev 負責「收斂」</text>
+
+  <!-- stitch side -->
+  <rect x="40" y="66" width="330" height="220" rx="14" fill="#EFF6FF"/>
+  <text x="60" y="96" font-size="16" font-weight="700" fill="#1D4ED8">Google Stitch</text>
+  <text x="60" y="118" font-size="12" fill="#374151">說出想法 → 一次看到好幾個方向</text>
+  <g>
+    <rect x="60" y="134" width="90" height="120" rx="8" fill="#FFFFFF" stroke="#93C5FD"/>
+    <rect x="160" y="134" width="90" height="120" rx="8" fill="#FFFFFF" stroke="#93C5FD"/>
+    <rect x="260" y="134" width="90" height="120" rx="8" fill="#FFFFFF" stroke="#93C5FD"/>
+    <rect x="68" y="142" width="74" height="40" rx="4" fill="#BFDBFE"/>
+    <rect x="168" y="142" width="74" height="40" rx="4" fill="#FDE68A"/>
+    <rect x="268" y="142" width="74" height="40" rx="4" fill="#BBF7D0"/>
+    <g fill="#E5E7EB"><rect x="68" y="190" width="60" height="8" rx="2"/><rect x="168" y="190" width="60" height="8" rx="2"/><rect x="268" y="190" width="60" height="8" rx="2"/></g>
+    <g fill="#E5E7EB"><rect x="68" y="206" width="74" height="40" rx="3"/><rect x="168" y="206" width="34" height="40" rx="3"/><rect x="208" y="206" width="34" height="40" rx="3"/><rect x="268" y="206" width="74" height="18" rx="3"/><rect x="268" y="228" width="74" height="18" rx="3"/></g>
+  </g>
+  <text x="60" y="276" font-size="12" fill="#1D4ED8">✔ 快速探索風格與版型　✔ 多頁原型</text>
+
+  <path d="M376 176 H424" stroke="#6B7280" stroke-width="2" marker-end="url(#m)"/>
+  <text x="400" y="166" font-size="11" fill="#6B7280" text-anchor="middle">挑一版</text>
+
+  <!-- pen side -->
+  <rect x="430" y="66" width="330" height="220" rx="14" fill="#F5F3FF"/>
+  <text x="450" y="96" font-size="16" font-weight="700" fill="#6D28D9">pen.dev</text>
+  <text x="450" y="118" font-size="12" fill="#374151">把選中的方向做精、做成元件與 RWD</text>
+  <rect x="450" y="134" width="150" height="120" rx="8" fill="#FFFFFF" stroke="#C4B5FD"/>
+  <rect x="458" y="142" width="134" height="40" rx="4" fill="#BFDBFE"/>
+  <g fill="#E5E7EB"><rect x="458" y="190" width="80" height="8" rx="2"/><rect x="458" y="206" width="64" height="40" rx="3"/><rect x="528" y="206" width="64" height="40" rx="3"/></g>
+  <g font-size="11" fill="#6D28D9">
+    <text x="616" y="150">◆ Button</text>
+    <text x="616" y="172">◆ Navbar</text>
+    <text x="616" y="194">◆ Card</text>
+    <text x="616" y="216">$primary</text>
+    <text x="616" y="238">desktop / phone</text>
+  </g>
+  <text x="450" y="276" font-size="12" fill="#6D28D9">✔ 精確到像素　✔ 元件、變數、Flex</text>
+
+  <text x="40" y="320" font-size="13" fill="#374151"><tspan font-weight="700">簡單記：</tspan>還不知道要做成什麼樣子 → 先用 Stitch；已經知道了、要做到完美 → 用 pen.dev。</text>
+  <text x="40" y="342" font-size="12" fill="#6B7280">兩者都能把設計交給程式碼，也都能用 DESIGN.md 共用同一套設計規範。</text>
+</svg>

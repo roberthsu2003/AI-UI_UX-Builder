@@ -1,0 +1,54 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 330" width="800" height="330" font-family="'PingFang TC','Noto Sans TC','Microsoft JhengHei',sans-serif">
+  <rect width="800" height="330" rx="16" fill="#FFFFFF" stroke="#E5E7EB"/>
+  <text x="40" y="42" font-size="18" font-weight="700" fill="#111827">五種輸入方式，可以混在一起用</text>
+
+  <g font-size="12">
+    <!-- text -->
+    <rect x="40" y="66" width="132" height="170" rx="12" fill="#EFF6FF"/>
+    <rect x="54" y="82" width="104" height="60" rx="6" fill="#FFFFFF" stroke="#93C5FD"/>
+    <rect x="62" y="92" width="80" height="6" rx="2" fill="#93C5FD"/><rect x="62" y="104" width="88" height="6" rx="2" fill="#93C5FD"/><rect x="62" y="116" width="60" height="6" rx="2" fill="#93C5FD"/>
+    <text x="54" y="166" font-size="14" font-weight="700" fill="#111827">文字</text>
+    <text x="54" y="186" fill="#374151">最基本，</text>
+    <text x="54" y="202" fill="#374151">描述需求與風格</text>
+
+    <!-- image -->
+    <rect x="187" y="66" width="132" height="170" rx="12" fill="#EFF6FF"/>
+    <rect x="201" y="82" width="104" height="60" rx="6" fill="#FFFFFF" stroke="#93C5FD"/>
+    <rect x="207" y="88" width="92" height="10" rx="2" fill="#E5E7EB"/><rect x="207" y="102" width="44" height="34" rx="2" fill="#E5E7EB"/><rect x="255" y="102" width="44" height="34" rx="2" fill="#E5E7EB"/>
+    <text x="201" y="166" font-size="14" font-weight="700" fill="#111827">截圖／圖片</text>
+    <text x="201" y="186" fill="#374151">舊網站截圖、</text>
+    <text x="201" y="202" fill="#374151">喜歡的參考畫面</text>
+
+    <!-- sketch -->
+    <rect x="334" y="66" width="132" height="170" rx="12" fill="#EFF6FF"/>
+    <rect x="348" y="82" width="104" height="60" rx="6" fill="#FFFBEB" stroke="#93C5FD"/>
+    <g fill="none" stroke="#374151" stroke-width="1.5" stroke-linecap="round">
+      <path d="M356 92 L444 93"/><path d="M357 102 L400 136 M400 102 L357 136"/><path d="M357 102 H400 V136 H357 Z"/>
+      <path d="M410 106 H442 M410 116 H436 M410 126 H440"/>
+    </g>
+    <text x="348" y="166" font-size="14" font-weight="700" fill="#111827">手繪草圖</text>
+    <text x="348" y="186" fill="#374151">紙上線框圖</text>
+    <text x="348" y="202" fill="#374151">拍照上傳</text>
+
+    <!-- voice -->
+    <rect x="481" y="66" width="132" height="170" rx="12" fill="#EFF6FF"/>
+    <circle cx="547" cy="112" r="28" fill="#FFFFFF" stroke="#93C5FD"/>
+    <rect x="540" y="96" width="14" height="22" rx="7" fill="#2563EB"/>
+    <path d="M534 112 a13 13 0 0 0 26 0 M547 125 V132" fill="none" stroke="#2563EB" stroke-width="2"/>
+    <text x="495" y="166" font-size="14" font-weight="700" fill="#111827">語音</text>
+    <text x="495" y="186" fill="#374151">邊看畫面邊說，</text>
+    <text x="495" y="202" fill="#374151">請 AI 給評論</text>
+
+    <!-- code -->
+    <rect x="628" y="66" width="132" height="170" rx="12" fill="#EFF6FF"/>
+    <rect x="642" y="82" width="104" height="60" rx="6" fill="#111827"/>
+    <text x="650" y="102" font-family="Menlo,monospace" font-size="10" fill="#93C5FD">&lt;header&gt;</text>
+    <text x="658" y="118" font-family="Menlo,monospace" font-size="10" fill="#E5E7EB">&lt;nav&gt;…</text>
+    <text x="650" y="134" font-family="Menlo,monospace" font-size="10" fill="#93C5FD">DESIGN.md</text>
+    <text x="642" y="166" font-size="14" font-weight="700" fill="#111827">程式碼／設計檔</text>
+    <text x="642" y="186" fill="#374151">現有網站的程式、</text>
+    <text x="642" y="202" fill="#374151">設計規範檔</text>
+  </g>
+  <text x="40" y="270" font-size="13" fill="#374151"><tspan font-weight="700">最常用的組合：</tspan>上傳一張舊網站截圖＋一段文字「保留內容，改成更現代、適合手機閱讀的版面」。</text>
+  <text x="40" y="294" font-size="12" fill="#6B7280">開始前先選好裝置類型（手機、平板、桌機），同一個專案裡的畫面裝置要一致，風格才不會亂。</text>
+</svg>

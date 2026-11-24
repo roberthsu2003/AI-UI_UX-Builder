@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 280" width="800" height="280" font-family="'PingFang TC','Noto Sans TC','Microsoft JhengHei',sans-serif">
+  <rect width="800" height="280" rx="16" fill="#FFFFFF" stroke="#E5E7EB"/>
+  <text x="40" y="42" font-size="18" font-weight="700" fill="#111827">學習地圖：用一個專案，走完 Stitch 的所有功能</text>
+
+  <path d="M90 140 H710" stroke="#E5E7EB" stroke-width="6" stroke-linecap="round"/>
+
+  <g font-size="13" font-weight="700">
+    <rect x="40" y="62" width="200" height="28" rx="14" fill="#F3F4F6"/><text x="140" y="81" text-anchor="middle" fill="#374151">入門：產生畫面</text>
+    <rect x="256" y="62" width="300" height="28" rx="14" fill="#DBEAFE"/><text x="406" y="81" text-anchor="middle" fill="#1D4ED8">核心：修改、統一、串成原型</text>
+    <rect x="572" y="62" width="188" height="28" rx="14" fill="#DCFCE7"/><text x="666" y="81" text-anchor="middle" fill="#15803D">完成：上線與自動化</text>
+  </g>
+
+  <g fill="#9CA3AF"><circle cx="90" cy="140" r="18"/><circle cx="190" cy="140" r="18"/></g>
+  <g fill="#2563EB"><circle cx="300" cy="140" r="18"/><circle cx="406" cy="140" r="18"/><circle cx="512" cy="140" r="22"/></g>
+  <g fill="#16A34A"><circle cx="616" cy="140" r="22"/><circle cx="710" cy="140" r="18"/></g>
+  <g font-size="12" font-weight="700" fill="#FFFFFF" text-anchor="middle">
+    <text x="90" y="145">01</text><text x="190" y="145">02</text><text x="300" y="145">03</text><text x="406" y="145">04</text>
+    <text x="512" y="145">05</text><text x="616" y="145">06</text><text x="710" y="145">07</text>
+  </g>
+  <g font-size="12" fill="#111827" text-anchor="middle">
+    <text x="90" y="186">認識</text><text x="190" y="186">Prompt 與輸入</text><text x="300" y="186">修改與變體</text>
+    <text x="406" y="186">主題 DESIGN.md</text><text x="512" y="190" font-weight="700">多頁原型</text>
+    <text x="616" y="190" font-weight="700">匯出發布</text><text x="710" y="186">MCP</text>
+  </g>
+  <g font-size="11" fill="#6B7280" text-anchor="middle">
+    <text x="512" y="208">★ 找人試用</text><text x="616" y="208">★ 網站上線</text>
+  </g>
+  <text x="40" y="252" font-size="12" fill="#6B7280">貫穿專案「山城小旅行」：預約新竹、苗栗山城一日遊的 RWD 網站（桌機＋手機，五個頁面）。</text>
+</svg>

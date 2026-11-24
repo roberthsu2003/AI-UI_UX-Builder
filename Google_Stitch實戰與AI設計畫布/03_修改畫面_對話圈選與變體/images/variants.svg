@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 380" width="800" height="380" font-family="'PingFang TC','Noto Sans TC','Microsoft JhengHei',sans-serif">
+  <rect width="800" height="380" rx="16" fill="#FFFFFF" stroke="#E5E7EB"/>
+  <text x="40" y="42" font-size="18" font-weight="700" fill="#111827">變體：同一個畫面，一次看好幾個版本</text>
+
+  <!-- original -->
+  <text x="40" y="76" font-size="13" font-weight="700" fill="#111827">原始畫面</text>
+  <rect x="40" y="86" width="110" height="140" rx="8" fill="#FFFFFF" stroke="#111827" stroke-width="2"/>
+  <rect x="48" y="94" width="94" height="44" rx="4" fill="#BBF7D0"/>
+  <g fill="#E5E7EB"><rect x="48" y="146" width="60" height="8" rx="2"/><rect x="48" y="162" width="28" height="56" rx="3"/><rect x="81" y="162" width="28" height="56" rx="3"/><rect x="114" y="162" width="28" height="56" rx="3"/></g>
+
+  <!-- range -->
+  <text x="190" y="76" font-size="13" font-weight="700" fill="#111827">創意幅度：要改多大？</text>
+  <g font-size="12" text-anchor="middle">
+    <rect x="190" y="86" width="110" height="140" rx="8" fill="#FFFFFF" stroke="#93C5FD"/>
+    <rect x="198" y="94" width="94" height="44" rx="4" fill="#86EFAC"/>
+    <g fill="#E5E7EB"><rect x="198" y="146" width="60" height="8" rx="2"/><rect x="198" y="162" width="28" height="56" rx="3"/><rect x="231" y="162" width="28" height="56" rx="3"/><rect x="264" y="162" width="28" height="56" rx="3"/></g>
+    <text x="245" y="248" font-weight="700" fill="#1D4ED8">Refine 微調</text>
+    <text x="245" y="266" fill="#6B7280">細節更精緻</text>
+
+    <rect x="320" y="86" width="110" height="140" rx="8" fill="#FFFFFF" stroke="#93C5FD"/>
+    <rect x="328" y="94" width="44" height="88" rx="4" fill="#BBF7D0"/>
+    <g fill="#E5E7EB"><rect x="378" y="98" width="44" height="8" rx="2"/><rect x="378" y="112" width="44" height="30" rx="3"/><rect x="378" y="148" width="44" height="30" rx="3"/><rect x="328" y="190" width="94" height="28" rx="3"/></g>
+    <text x="375" y="248" font-weight="700" fill="#1D4ED8">Explore 探索</text>
+    <text x="375" y="266" fill="#6B7280">換版型、保留風格</text>
+
+    <rect x="450" y="86" width="110" height="140" rx="8" fill="#1F2937" stroke="#93C5FD"/>
+    <circle cx="505" cy="128" r="30" fill="#FDE68A"/>
+    <g fill="#4B5563"><rect x="466" y="170" width="78" height="10" rx="2"/><rect x="476" y="188" width="58" height="8" rx="2"/><rect x="480" y="204" width="50" height="14" rx="7" fill="#FDE68A"/></g>
+    <text x="505" y="248" font-weight="700" fill="#1D4ED8">Reimagine 重新想像</text>
+    <text x="505" y="266" fill="#6B7280">大膽、完全不同</text>
+  </g>
+
+  <!-- aspects -->
+  <rect x="590" y="66" width="170" height="210" rx="12" fill="#F3F4F6"/>
+  <text x="606" y="92" font-size="13" font-weight="700" fill="#111827">只變化某些面向</text>
+  <g font-size="12" fill="#374151">
+    <text x="606" y="120">☐ 版面配置 Layout</text>
+    <text x="606" y="146">☑ 配色 Color scheme</text>
+    <text x="606" y="172">☐ 圖片 Images</text>
+    <text x="606" y="198">☐ 字型 Text font</text>
+    <text x="606" y="224">☐ 文字內容 Text content</text>
+  </g>
+  <text x="606" y="258" font-size="11" fill="#6B7280">例：只想換配色，就只勾配色</text>
+
+  <text x="40" y="310" font-size="13" fill="#374151"><tspan font-weight="700">數量：</tspan>一次可產生 1～5 個變體。發想時用 Explore 要 3 個以上；接近定稿時用 Refine 微調細節。</text>
+  <text x="40" y="334" font-size="12" fill="#6B7280">選項名稱可能因版本不同而略有差異，但「數量、幅度、面向」這三個概念是一樣的。</text>
+</svg>

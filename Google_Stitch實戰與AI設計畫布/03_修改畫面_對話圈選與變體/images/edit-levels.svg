@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 340" width="800" height="340" font-family="'PingFang TC','Noto Sans TC','Microsoft JhengHei',sans-serif">
+  <defs><linearGradient id="g"><stop offset="0" stop-color="#BFDBFE"/><stop offset="1" stop-color="#2563EB"/></linearGradient></defs>
+  <rect width="800" height="340" rx="16" fill="#FFFFFF" stroke="#E5E7EB"/>
+  <text x="40" y="42" font-size="18" font-weight="700" fill="#111827">三種修改方式：範圍越小，改得越準</text>
+
+  <!-- 1 whole screen -->
+  <rect x="40" y="66" width="230" height="200" rx="12" fill="#F3F4F6"/>
+  <rect x="60" y="82" width="190" height="120" rx="8" fill="#FFFFFF" stroke="#2563EB" stroke-width="3"/>
+  <g fill="#E5E7EB"><rect x="70" y="92" width="170" height="10" rx="2"/><rect x="70" y="110" width="170" height="40" rx="3"/><rect x="70" y="158" width="52" height="34" rx="3"/><rect x="129" y="158" width="52" height="34" rx="3"/><rect x="188" y="158" width="52" height="34" rx="3"/></g>
+  <text x="56" y="228" font-size="14" font-weight="700" fill="#111827">① 對整個畫面下指令</text>
+  <text x="56" y="248" font-size="12" fill="#6B7280">「整體改成深色系」</text>
+
+  <!-- 2 annotate region -->
+  <rect x="285" y="66" width="230" height="200" rx="12" fill="#F3F4F6"/>
+  <rect x="305" y="82" width="190" height="120" rx="8" fill="#FFFFFF" stroke="#D1D5DB"/>
+  <g fill="#E5E7EB"><rect x="315" y="92" width="170" height="10" rx="2"/><rect x="315" y="110" width="170" height="40" rx="3"/><rect x="315" y="158" width="52" height="34" rx="3"/><rect x="374" y="158" width="52" height="34" rx="3"/><rect x="433" y="158" width="52" height="34" rx="3"/></g>
+  <rect x="310" y="153" width="180" height="44" rx="4" fill="#2563EB" fill-opacity="0.08" stroke="#2563EB" stroke-width="2" stroke-dasharray="5 3"/>
+  <rect x="392" y="120" width="112" height="26" rx="6" fill="#111827"/>
+  <text x="400" y="137" font-size="11" fill="#FFFFFF">卡片改成兩欄</text>
+  <text x="301" y="228" font-size="14" font-weight="700" fill="#111827">② 圈選一個區域</text>
+  <text x="301" y="248" font-size="12" fill="#6B7280">框住區域，寫下要改什麼</text>
+
+  <!-- 3 single element -->
+  <rect x="530" y="66" width="230" height="200" rx="12" fill="#F3F4F6"/>
+  <rect x="550" y="82" width="190" height="120" rx="8" fill="#FFFFFF" stroke="#D1D5DB"/>
+  <g fill="#E5E7EB"><rect x="560" y="92" width="170" height="10" rx="2"/><rect x="560" y="110" width="170" height="40" rx="3"/><rect x="619" y="158" width="52" height="34" rx="3"/><rect x="678" y="158" width="52" height="34" rx="3"/></g>
+  <rect x="560" y="158" width="52" height="34" rx="3" fill="#DBEAFE" stroke="#2563EB" stroke-width="2"/>
+  <g fill="#2563EB"><rect x="557" y="155" width="6" height="6"/><rect x="609" y="155" width="6" height="6"/><rect x="557" y="189" width="6" height="6"/><rect x="609" y="189" width="6" height="6"/></g>
+  <text x="546" y="228" font-size="14" font-weight="700" fill="#111827">③ 選取單一元件</text>
+  <text x="546" y="248" font-size="12" fill="#6B7280">只改這一張卡片的文字或圖</text>
+
+  <path d="M60 290 H740" stroke="#E5E7EB" stroke-width="6" stroke-linecap="round"/>
+  <rect x="60" y="287" width="680" height="6" rx="3" fill="url(#g)"/>
+  <text x="60" y="318" font-size="12" fill="#6B7280">改動範圍大、可能動到不想改的地方</text>
+  <text x="740" y="318" font-size="12" fill="#1D4ED8" text-anchor="end">範圍小、精準、其他地方不會變</text>
+</svg>

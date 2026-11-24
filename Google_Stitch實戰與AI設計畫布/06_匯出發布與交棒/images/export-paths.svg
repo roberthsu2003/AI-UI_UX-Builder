@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 360" width="800" height="360" font-family="'PingFang TC','Noto Sans TC','Microsoft JhengHei',sans-serif">
+  <defs>
+    <marker id="m" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0 0 L10 5 L0 10 z" fill="#6B7280"/>
+    </marker>
+  </defs>
+  <rect width="800" height="360" rx="16" fill="#FFFFFF" stroke="#E5E7EB"/>
+  <text x="40" y="42" font-size="18" font-weight="700" fill="#111827">設計完成後，依「目的」選擇出口</text>
+
+  <rect x="40" y="130" width="150" height="110" rx="14" fill="#111827"/>
+  <text x="115" y="176" font-size="16" font-weight="700" fill="#FFFFFF" text-anchor="middle">Stitch 專案</text>
+  <text x="115" y="200" font-size="11" fill="#9CA3AF" text-anchor="middle">畫面＋原型</text>
+  <text x="115" y="216" font-size="11" fill="#9CA3AF" text-anchor="middle">＋DESIGN.md</text>
+
+  <g stroke="#6B7280" stroke-width="2" fill="none" marker-end="url(#m)">
+    <path d="M192 150 C240 150 240 88 286 88"/>
+    <path d="M192 172 C240 172 250 158 286 158"/>
+    <path d="M192 198 C240 198 250 228 286 228"/>
+    <path d="M192 220 C240 220 240 298 286 298"/>
+  </g>
+
+  <g font-size="13">
+    <rect x="290" y="62" width="470" height="52" rx="10" fill="#EFF6FF"/>
+    <text x="306" y="84" font-weight="700" fill="#1D4ED8">給別人看、做測試</text>
+    <text x="306" y="103" fill="#374151">Google AI Studio 分享連結：對方不需要 Stitch 帳號就能點</text>
+
+    <rect x="290" y="132" width="470" height="52" rx="10" fill="#DCFCE7"/>
+    <text x="306" y="154" font-weight="700" fill="#047857">直接上線</text>
+    <text x="306" y="173" fill="#374151">用 Netlify 發布到網路，得到一個公開網址</text>
+
+    <rect x="290" y="202" width="470" height="52" rx="10" fill="#FEF3C7"/>
+    <text x="306" y="224" font-weight="700" fill="#B45309">做成真正的產品</text>
+    <text x="306" y="243" fill="#374151">下載程式碼，或送到 Google Antigravity 接上後端功能</text>
+
+    <rect x="290" y="272" width="470" height="52" rx="10" fill="#F5F3FF"/>
+    <text x="306" y="294" font-weight="700" fill="#6D28D9">繼續精修設計</text>
+    <text x="306" y="313" fill="#374151">交給 pen.dev（或 Figma）做元件、變數與像素級調整</text>
+  </g>
+</svg>
