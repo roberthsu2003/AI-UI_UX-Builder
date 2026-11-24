@@ -37,7 +37,7 @@
 
 | 帳號 | 用途 | 費用 | 哪些單元需要 |
 | :--- | :--- | :--- | :--- |
-| **Google 帳號** | Gemini、Google Stitch | 免費 | 1、4 |
+| **Google 帳號** | Gemini、Google Stitch、Antigravity | 免費 | 1、4、11 |
 | **Claude 帳號** | Claude.ai、Claude Artifacts（含 Design 模式）、Skill、Claude Code | 免費版即可使用 Artifacts 內的 Design 模式進行網頁設計與預覽；Claude Code 需付費方案 | 1、3～11 |
 | **Figma 帳號** | 設計稿、MCP 連線 | 免費版可練基本功；MCP 寫入功能建議申請教育方案或付費方案 | 8 |
 | **GitHub 帳號** | 存放程式碼、GitHub Pages 部署 | 免費 | 11 |
@@ -60,7 +60,8 @@
 | **Google Chrome** | 長截圖、DevTools、Claude in Chrome / Gemini in Chrome | — |
 | **Node.js（LTS 版）** | 執行 Claude Code 與 React 專案 | 終端機輸入 `node -v` 有顯示版本號 |
 | **Git** | 版本控制、推送到 GitHub | 終端機輸入 `git --version` 有顯示版本號 |
-| **Claude Code** | AI 寫程式、連接 Figma MCP | 終端機輸入 `claude` 能啟動 |
+| **Claude Code / Antigravity** | AI 寫程式、執行網站建置與部署、連接 Figma MCP | 終端機輸入 `claude` 能啟動，或已安裝並開啟 Antigravity |
+| **Antigravity**（選用 / 推薦） | 具備完整 Agent 代理能力的 AI 開發環境（Google 帳號一般人版） | 應用程式可正常開啟並登入 Google 帳號 |
 | **VS Code**（選用） | 檢視與編輯檔案 | — |
 | **Figma Desktop**（選用） | 部分 MCP 功能需要桌面版 | — |
 
