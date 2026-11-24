@@ -38,7 +38,7 @@
 | 帳號 | 用途 | 費用 | 哪些單元需要 |
 | :--- | :--- | :--- | :--- |
 | **Google 帳號** | Gemini、Google Stitch | 免費 | 1、4 |
-| **Claude 帳號** | Claude.ai、Claude Design、Skill、Claude Code | 免費版可上課；Claude Design 與 Claude Code 需付費方案 | 1、3～11 |
+| **Claude 帳號** | Claude.ai、Claude Artifacts（含 Design 模式）、Skill、Claude Code | 免費版即可使用 Artifacts 內的 Design 模式進行網頁設計與預覽；Claude Code 需付費方案 | 1、3～11 |
 | **Figma 帳號** | 設計稿、MCP 連線 | 免費版可練基本功；MCP 寫入功能建議申請教育方案或付費方案 | 8 |
 | **GitHub 帳號** | 存放程式碼、GitHub Pages 部署 | 免費 | 11 |
 | **Relume 帳號**（選用） | 網站地圖與線框圖 | 有免費方案，限制較多 | 3 |
