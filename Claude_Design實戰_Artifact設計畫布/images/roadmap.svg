@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 270" width="800" height="270" font-family="'PingFang TC','Noto Sans TC','Microsoft JhengHei',sans-serif">
+  <rect width="800" height="270" rx="16" fill="#FFFFFF" stroke="#E5E7EB"/>
+  <text x="40" y="42" font-size="18" font-weight="700" fill="#111827">學習地圖：從一句話到一個真正的 RWD 活動頁</text>
+
+  <path d="M100 136 H700" stroke="#E5E7EB" stroke-width="6" stroke-linecap="round"/>
+  <g font-size="13" font-weight="700">
+    <rect x="40" y="60" width="210" height="28" rx="14" fill="#F3F4F6"/><text x="145" y="79" text-anchor="middle" fill="#374151">入門：開始設計</text>
+    <rect x="266" y="60" width="300" height="28" rx="14" fill="#FFEDD5"/><text x="416" y="79" text-anchor="middle" fill="#C2410C">核心：修改、品牌、RWD</text>
+    <rect x="582" y="60" width="178" height="28" rx="14" fill="#DCFCE7"/><text x="671" y="79" text-anchor="middle" fill="#15803D">完成：交棒上線</text>
+  </g>
+  <g fill="#9CA3AF"><circle cx="100" cy="136" r="18"/><circle cx="200" cy="136" r="18"/></g>
+  <g fill="#D97757"><circle cx="316" cy="136" r="18"/><circle cx="416" cy="136" r="18"/><circle cx="516" cy="136" r="22"/></g>
+  <circle cx="680" cy="136" r="22" fill="#16A34A"/>
+  <g font-size="12" font-weight="700" fill="#FFFFFF" text-anchor="middle">
+    <text x="100" y="141">01</text><text x="200" y="141">02</text><text x="316" y="141">03</text><text x="416" y="141">04</text><text x="516" y="141">05</text><text x="680" y="141">06</text>
+  </g>
+  <g font-size="12" fill="#111827" text-anchor="middle">
+    <text x="100" y="182">認識</text><text x="200" y="182">寫好需求</text><text x="316" y="182">三種修改</text>
+    <text x="416" y="182">設計系統</text><text x="516" y="186" font-weight="700">Prompt 範例庫</text><text x="680" y="186" font-weight="700">分享匯出交棒</text>
+  </g>
+  <g font-size="11" fill="#6B7280" text-anchor="middle">
+    <text x="516" y="204">★ 隨時回來翻</text><text x="680" y="204">★ 做成真網站</text>
+  </g>
+  <text x="40" y="244" font-size="12" fill="#6B7280">貫穿專案「木日 Kibi 台南老宅咖啡一週年活動頁」：桌機＋手機，含訂位抽屜與預約成功狀態。</text>
+</svg>

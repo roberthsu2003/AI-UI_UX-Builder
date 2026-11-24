@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 360" width="800" height="360" font-family="'PingFang TC','Noto Sans TC','Microsoft JhengHei',sans-serif">
+  <rect width="800" height="360" rx="16" fill="#FFFFFF" stroke="#E5E7EB"/>
+  <text x="40" y="42" font-size="18" font-weight="700" fill="#111827">設計畫布的組成：畫板、圖層、屬性面板</text>
+
+  <!-- canvas -->
+  <rect x="40" y="62" width="480" height="270" rx="12" fill="#F3F4F6"/>
+  <text x="56" y="84" font-size="11" fill="#6B7280">畫布</text>
+  <!-- desktop artboard -->
+  <text x="60" y="104" font-size="11" fill="#C2410C">畫板：桌機</text>
+  <rect x="60" y="110" width="290" height="200" rx="6" fill="#FFFFFF" stroke="#D97757" stroke-width="2"/>
+  <rect x="70" y="120" width="270" height="12" rx="2" fill="#E5E7EB"/>
+  <rect x="70" y="140" width="270" height="70" rx="3" fill="#FDE7DC"/>
+  <rect x="84" y="156" width="120" height="14" rx="2" fill="#FFFFFF" stroke="#2563EB" stroke-width="2"/>
+  <rect x="84" y="178" width="70" height="20" rx="10" fill="#7C4A2D"/>
+  <g fill="#E5E7EB"><rect x="70" y="220" width="84" height="80" rx="3"/><rect x="163" y="220" width="84" height="80" rx="3"/><rect x="256" y="220" width="84" height="80" rx="3"/></g>
+  <!-- phone artboard -->
+  <text x="380" y="104" font-size="11" fill="#C2410C">畫板：手機</text>
+  <rect x="380" y="110" width="110" height="200" rx="10" fill="#FFFFFF" stroke="#D97757" stroke-width="2"/>
+  <rect x="388" y="120" width="94" height="10" rx="2" fill="#E5E7EB"/>
+  <rect x="388" y="136" width="94" height="60" rx="3" fill="#FDE7DC"/>
+  <g fill="#E5E7EB"><rect x="388" y="202" width="94" height="40" rx="3"/><rect x="388" y="248" width="94" height="40" rx="3"/></g>
+  <rect x="388" y="292" width="94" height="12" rx="6" fill="#7C4A2D"/>
+
+  <!-- properties panel -->
+  <rect x="540" y="62" width="220" height="200" rx="12" fill="#FFFFFF" stroke="#D1D5DB"/>
+  <text x="556" y="86" font-size="13" font-weight="700" fill="#111827">屬性面板（Properties）</text>
+  <g font-size="11" fill="#374151">
+    <text x="556" y="110">選取：主標題文字</text>
+    <rect x="556" y="118" width="88" height="22" rx="4" fill="#F3F4F6"/><text x="562" y="133">字級 48</text>
+    <rect x="652" y="118" width="92" height="22" rx="4" fill="#F3F4F6"/><text x="658" y="133">粗細 700</text>
+    <rect x="556" y="148" width="188" height="22" rx="4" fill="#F3F4F6"/><text x="562" y="163">顏色 #2B1D14</text>
+    <rect x="556" y="178" width="188" height="22" rx="4" fill="#F3F4F6"/><text x="562" y="193">對齊　⫷　⫶　⫸</text>
+  </g>
+  <text x="556" y="226" font-size="11" fill="#6B7280">開關：Cmd + \</text>
+  <text x="556" y="244" font-size="11" fill="#6B7280">或上方工具列的 Properties</text>
+
+  <!-- shortcuts -->
+  <rect x="540" y="272" width="220" height="60" rx="12" fill="#FFF7ED"/>
+  <g font-size="11" fill="#374151">
+    <text x="556" y="294">Cmd+D 複製　Delete 刪除</text>
+    <text x="556" y="314">Cmd+Z 復原　F6 切換區域</text>
+  </g>
+</svg>

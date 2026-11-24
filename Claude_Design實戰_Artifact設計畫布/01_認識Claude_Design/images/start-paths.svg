@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 360" width="800" height="360" font-family="'PingFang TC','Noto Sans TC','Microsoft JhengHei',sans-serif">
+  <defs>
+    <marker id="m" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0 0 L10 5 L0 10 z" fill="#6B7280"/>
+    </marker>
+  </defs>
+  <rect width="800" height="360" rx="16" fill="#FFFFFF" stroke="#E5E7EB"/>
+  <text x="40" y="42" font-size="18" font-weight="700" fill="#111827">三種方式開始一個設計，最後都打開同一張設計畫布</text>
+
+  <g font-size="13">
+    <rect x="40" y="70" width="300" height="72" rx="12" fill="#FFF7ED"/>
+    <text x="58" y="96" font-weight="700" fill="#C2410C">① 直接說</text>
+    <text x="58" y="120" fill="#374151">「幫我設計咖啡館週年活動頁」</text>
+
+    <rect x="40" y="156" width="300" height="72" rx="12" fill="#FFF7ED"/>
+    <text x="58" y="182" font-weight="700" fill="#C2410C">② 輸入框的 Output 選單</text>
+    <text x="58" y="206" fill="#374151">Output → <tspan font-weight="700">Design</tspan>，再描述需求</text>
+
+    <rect x="40" y="242" width="300" height="72" rx="12" fill="#FFF7ED"/>
+    <text x="58" y="268" font-weight="700" fill="#C2410C">③ 左側 Artifacts 分頁</text>
+    <text x="58" y="292" fill="#374151">選一個 Design 範本開始</text>
+  </g>
+
+  <g stroke="#6B7280" stroke-width="2" fill="none" marker-end="url(#m)">
+    <path d="M342 106 C380 106 380 180 414 184"/>
+    <path d="M342 192 H414"/>
+    <path d="M342 278 C380 278 380 204 414 200"/>
+  </g>
+
+  <!-- canvas -->
+  <rect x="420" y="70" width="340" height="244" rx="12" fill="#F9FAFB" stroke="#D1D5DB"/>
+  <rect x="420" y="70" width="110" height="244" rx="12" fill="#FFFFFF" stroke="#D1D5DB"/>
+  <text x="436" y="94" font-size="11" fill="#6B7280">對話</text>
+  <rect x="434" y="104" width="82" height="34" rx="8" fill="#F3F4F6"/>
+  <rect x="434" y="146" width="82" height="22" rx="8" fill="#FFEDD5"/>
+  <rect x="434" y="276" width="82" height="24" rx="8" fill="#FFFFFF" stroke="#D1D5DB"/>
+  <text x="546" y="94" font-size="11" fill="#6B7280">設計畫布</text>
+  <rect x="546" y="104" width="130" height="190" rx="6" fill="#FFFFFF" stroke="#D97757" stroke-width="2"/>
+  <rect x="554" y="112" width="114" height="10" rx="2" fill="#E5E7EB"/>
+  <rect x="554" y="128" width="114" height="54" rx="3" fill="#FDE7DC"/>
+  <g fill="#E5E7EB"><rect x="554" y="190" width="35" height="40" rx="3"/><rect x="593" y="190" width="35" height="40" rx="3"/><rect x="632" y="190" width="35" height="40" rx="3"/><rect x="554" y="238" width="114" height="48" rx="3"/></g>
+  <rect x="690" y="104" width="56" height="120" rx="8" fill="#FFFFFF" stroke="#D1D5DB"/>
+  <g fill="#E5E7EB"><rect x="696" y="112" width="44" height="8" rx="2"/><rect x="696" y="126" width="44" height="30" rx="3"/><rect x="696" y="162" width="44" height="22" rx="3"/><rect x="696" y="190" width="44" height="22" rx="3"/></g>
+  <text x="546" y="308" font-size="11" fill="#6B7280">桌機與手機畫板可以並排</text>
+
+  <text x="40" y="342" font-size="12" fill="#6B7280">需要先在設定中開啟「建立與編輯檔案」功能（Settings → Capabilities）。</text>
+</svg>

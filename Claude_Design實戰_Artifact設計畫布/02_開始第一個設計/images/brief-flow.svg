@@ -1,0 +1,49 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 340" width="800" height="340" font-family="'PingFang TC','Noto Sans TC','Microsoft JhengHei',sans-serif">
+  <defs>
+    <marker id="m" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0 0 L10 5 L0 10 z" fill="#9CA3AF"/>
+    </marker>
+  </defs>
+  <rect width="800" height="340" rx="16" fill="#FFFFFF" stroke="#E5E7EB"/>
+  <text x="40" y="42" font-size="18" font-weight="700" fill="#111827">好的開始：給資料 → 讓 Claude 先問 → 要多個方向 → 再收斂</text>
+
+  <g font-size="12">
+    <rect x="30" y="70" width="170" height="180" rx="14" fill="#FFF7ED"/>
+    <text x="48" y="98" font-size="14" font-weight="700" fill="#C2410C">① 給足資料</text>
+    <text x="48" y="124" fill="#374151">・PRD 或需求說明</text>
+    <text x="48" y="146" fill="#374151">・真實文案</text>
+    <text x="48" y="168" fill="#374151">・參考截圖、Logo</text>
+    <text x="48" y="190" fill="#374151">・要支援的裝置</text>
+    <text x="48" y="226" fill="#6B7280" font-size="11">附件、貼上文字都可以</text>
+
+    <rect x="220" y="70" width="170" height="180" rx="14" fill="#FFF7ED"/>
+    <text x="238" y="98" font-size="14" font-weight="700" fill="#C2410C">② 讓 Claude 先問</text>
+    <rect x="238" y="114" width="136" height="30" rx="8" fill="#FFFFFF" stroke="#F4B393"/>
+    <text x="246" y="134" fill="#374151">主要對象是誰？</text>
+    <rect x="238" y="152" width="136" height="30" rx="8" fill="#FFFFFF" stroke="#F4B393"/>
+    <text x="246" y="172" fill="#374151">最重要的行動是？</text>
+    <text x="238" y="226" fill="#6B7280" font-size="11">補上你沒想到的需求</text>
+
+    <rect x="410" y="70" width="170" height="180" rx="14" fill="#EFF6FF"/>
+    <text x="428" y="98" font-size="14" font-weight="700" fill="#1D4ED8">③ 要 2～3 個方向</text>
+    <g fill="#FFFFFF" stroke="#93C5FD">
+      <rect x="428" y="114" width="40" height="80" rx="4"/><rect x="474" y="114" width="40" height="80" rx="4"/><rect x="520" y="114" width="40" height="80" rx="4"/>
+    </g>
+    <rect x="432" y="120" width="32" height="20" rx="2" fill="#FDE7DC"/>
+    <rect x="478" y="120" width="14" height="66" rx="2" fill="#DBEAFE"/>
+    <rect x="524" y="120" width="32" height="34" rx="2" fill="#DCFCE7"/>
+    <text x="428" y="226" fill="#6B7280" font-size="11">不同版面，一起比較</text>
+
+    <rect x="600" y="70" width="170" height="180" rx="14" fill="#DCFCE7"/>
+    <text x="618" y="98" font-size="14" font-weight="700" fill="#047857">④ 選一個再精修</text>
+    <rect x="640" y="114" width="90" height="80" rx="6" fill="#FFFFFF" stroke="#10B981" stroke-width="2"/>
+    <rect x="648" y="122" width="74" height="26" rx="3" fill="#FDE7DC"/>
+    <g fill="#E5E7EB"><rect x="648" y="154" width="74" height="8" rx="2"/><rect x="648" y="168" width="34" height="18" rx="2"/><rect x="688" y="168" width="34" height="18" rx="2"/></g>
+    <text x="618" y="226" fill="#6B7280" font-size="11">第 03 章的三種修改</text>
+  </g>
+  <g stroke="#9CA3AF" stroke-width="2" marker-end="url(#m)">
+    <path d="M201 160 H216"/><path d="M391 160 H406"/><path d="M581 160 H596"/>
+  </g>
+  <text x="40" y="290" font-size="13" fill="#374151">Claude 會依你給的資料決定版面。<tspan font-weight="700">資料越完整，越不會出現「AI 公版味」</tspan>（米白底、襯線標題、橘色按鈕）。</text>
+  <text x="40" y="314" font-size="12" fill="#6B7280">沒有版本紀錄功能：想換方向前，先說「把目前的版本存起來，再試一個完全不同的做法」。</text>
+</svg>

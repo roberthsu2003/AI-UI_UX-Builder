@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 380" width="800" height="380" font-family="'PingFang TC','Noto Sans TC','Microsoft JhengHei',sans-serif">
+  <rect width="800" height="380" rx="16" fill="#FFFFFF" stroke="#E5E7EB"/>
+  <text x="40" y="42" font-size="18" font-weight="700" fill="#111827">同一頁，三個畫板：說清楚「每個寬度要怎麼變」</text>
+
+  <!-- desktop -->
+  <text x="40" y="76" font-size="13" font-weight="700" fill="#111827">桌機 1440</text>
+  <rect x="40" y="86" width="330" height="220" rx="8" fill="#FFFFFF" stroke="#D1D5DB"/>
+  <rect x="48" y="94" width="40" height="8" rx="2" fill="#7C4A2D"/>
+  <g fill="#D1D5DB"><rect x="170" y="95" width="24" height="6" rx="2"/><rect x="200" y="95" width="24" height="6" rx="2"/><rect x="230" y="95" width="24" height="6" rx="2"/></g>
+  <rect x="318" y="92" width="44" height="12" rx="6" fill="#7C4A2D"/>
+  <rect x="48" y="112" width="150" height="80" rx="3" fill="#F5EDE5"/>
+  <rect x="206" y="112" width="156" height="80" rx="3" fill="#FDE7DC"/>
+  <g fill="#E5E7EB"><rect x="48" y="200" width="100" height="96" rx="3"/><rect x="155" y="200" width="100" height="96" rx="3"/><rect x="262" y="200" width="100" height="96" rx="3"/></g>
+
+  <!-- tablet -->
+  <text x="400" y="76" font-size="13" font-weight="700" fill="#111827">平板 768</text>
+  <rect x="400" y="86" width="190" height="220" rx="8" fill="#FFFFFF" stroke="#D1D5DB"/>
+  <rect x="408" y="94" width="40" height="8" rx="2" fill="#7C4A2D"/>
+  <g stroke="#111827" stroke-width="1.5"><path d="M566 94 h14 M566 98 h14 M566 102 h14"/></g>
+  <rect x="408" y="112" width="174" height="70" rx="3" fill="#FDE7DC"/>
+  <g fill="#E5E7EB"><rect x="408" y="190" width="84" height="54" rx="3"/><rect x="498" y="190" width="84" height="54" rx="3"/><rect x="408" y="250" width="84" height="48" rx="3"/></g>
+
+  <!-- phone -->
+  <text x="620" y="76" font-size="13" font-weight="700" fill="#111827">手機 390</text>
+  <rect x="620" y="86" width="110" height="220" rx="12" fill="#FFFFFF" stroke="#D1D5DB"/>
+  <rect x="628" y="96" width="36" height="8" rx="2" fill="#7C4A2D"/>
+  <g stroke="#111827" stroke-width="1.5"><path d="M708 96 h14 M708 100 h14 M708 104 h14"/></g>
+  <rect x="628" y="112" width="94" height="60" rx="3" fill="#FDE7DC"/>
+  <g fill="#E5E7EB"><rect x="628" y="180" width="70" height="60" rx="3"/><rect x="702" y="180" width="28" height="60" rx="3"/></g>
+  <text x="664" y="256" font-size="9" fill="#6B7280" text-anchor="middle">← 左右滑 →</text>
+  <rect x="626" y="280" width="98" height="20" rx="10" fill="#7C4A2D"/>
+  <text x="675" y="294" font-size="9" fill="#FFFFFF" text-anchor="middle">立即訂位（固定）</text>
+
+  <g font-size="12" fill="#374151">
+    <text x="40" y="332">・導覽列：完整連結 → 漢堡選單　・主視覺：左右分欄 → 上下堆疊　・卡片：3 欄 → 2 欄 → 左右滑動</text>
+    <text x="40" y="356">・主要按鈕：跟著內容 → 固定在底部　・可點的地方至少 44px　・三個版本的文案完全相同</text>
+  </g>
+</svg>

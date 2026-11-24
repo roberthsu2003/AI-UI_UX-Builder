@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 360" width="800" height="360" font-family="'PingFang TC','Noto Sans TC','Microsoft JhengHei',sans-serif">
+  <rect width="800" height="360" rx="16" fill="#FFFFFF" stroke="#E5E7EB"/>
+  <text x="40" y="42" font-size="18" font-weight="700" fill="#111827">三種修改方式，依「改動大小」選擇</text>
+
+  <!-- chat -->
+  <rect x="40" y="66" width="230" height="230" rx="14" fill="#F3F4F6"/>
+  <text x="56" y="94" font-size="15" font-weight="700" fill="#111827">① 對話</text>
+  <rect x="56" y="108" width="198" height="104" rx="8" fill="#FFFFFF" stroke="#D1D5DB"/>
+  <rect x="68" y="120" width="140" height="28" rx="8" fill="#FFEDD5"/>
+  <text x="76" y="139" font-size="11" fill="#9A3412">整體改成深色、極簡</text>
+  <rect x="104" y="156" width="138" height="44" rx="8" fill="#F3F4F6"/>
+  <text x="112" y="175" font-size="11" fill="#374151">好的，已調整配色</text>
+  <text x="112" y="191" font-size="11" fill="#374151">與留白…</text>
+  <text x="56" y="236" font-size="12" font-weight="700" fill="#C2410C">適合：結構、整體風格</text>
+  <text x="56" y="256" font-size="12" fill="#6B7280">換版面、加區塊、改配色、</text>
+  <text x="56" y="274" font-size="12" fill="#6B7280">改語氣</text>
+
+  <!-- comments -->
+  <rect x="285" y="66" width="230" height="230" rx="14" fill="#F3F4F6"/>
+  <text x="301" y="94" font-size="15" font-weight="700" fill="#111827">② 評論</text>
+  <rect x="301" y="108" width="198" height="104" rx="8" fill="#FFFFFF" stroke="#D1D5DB"/>
+  <g fill="#E5E7EB"><rect x="311" y="118" width="178" height="10" rx="2"/><rect x="311" y="136" width="54" height="66" rx="3"/><rect x="373" y="136" width="54" height="66" rx="3"/><rect x="435" y="136" width="54" height="66" rx="3"/></g>
+  <rect x="373" y="136" width="54" height="66" rx="3" fill="none" stroke="#D97757" stroke-width="2"/>
+  <circle cx="427" cy="136" r="10" fill="#D97757"/>
+  <text x="427" y="140" font-size="11" fill="#FFFFFF" text-anchor="middle">1</text>
+  <rect x="404" y="150" width="92" height="40" rx="6" fill="#111827"/>
+  <text x="410" y="166" font-size="10" fill="#FFFFFF">價格放大加粗，</text>
+  <text x="410" y="181" font-size="10" fill="#FFFFFF">移到右下角</text>
+  <text x="301" y="236" font-size="12" font-weight="700" fill="#C2410C">適合：某一個元件</text>
+  <text x="301" y="256" font-size="12" fill="#6B7280">點在畫布上留言，</text>
+  <text x="301" y="274" font-size="12" fill="#6B7280">Claude 只改那個地方</text>
+
+  <!-- direct -->
+  <rect x="530" y="66" width="230" height="230" rx="14" fill="#F3F4F6"/>
+  <text x="546" y="94" font-size="15" font-weight="700" fill="#111827">③ 直接編輯</text>
+  <rect x="546" y="108" width="198" height="104" rx="8" fill="#FFFFFF" stroke="#D1D5DB"/>
+  <rect x="560" y="124" width="100" height="16" rx="2" fill="#FFFFFF" stroke="#2563EB" stroke-width="1.5"/>
+  <text x="564" y="137" font-size="11" fill="#111827">老宅裡的日常微光|</text>
+  <rect x="580" y="156" width="70" height="40" rx="4" fill="#FDE7DC" stroke="#2563EB" stroke-width="1.5" stroke-dasharray="4 2"/>
+  <g fill="#2563EB"><rect x="577" y="153" width="6" height="6"/><rect x="647" y="153" width="6" height="6"/><rect x="577" y="193" width="6" height="6"/><rect x="647" y="193" width="6" height="6"/></g>
+  <path d="M690 176 h24 M706 168 l8 8 l-8 8" fill="none" stroke="#2563EB" stroke-width="2"/>
+  <text x="546" y="236" font-size="12" font-weight="700" fill="#C2410C">適合：快速的小調整</text>
+  <text x="546" y="256" font-size="12" fill="#6B7280">改字、拖曳、縮放、對齊，</text>
+  <text x="546" y="274" font-size="12" fill="#6B7280">不用等 Claude</text>
+
+  <text x="40" y="330" font-size="13" fill="#374151"><tspan font-weight="700">原則：</tspan>大改用對話、改一個元件用評論、自己動手更快的就直接編輯。</text>
+</svg>

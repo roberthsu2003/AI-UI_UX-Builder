@@ -1,0 +1,51 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 380" width="800" height="380" font-family="'PingFang TC','Noto Sans TC','Microsoft JhengHei',sans-serif">
+  <rect width="800" height="380" rx="16" fill="#FFFFFF" stroke="#E5E7EB"/>
+  <text x="40" y="42" font-size="18" font-weight="700" fill="#111827">設計完成後：右上角的 Share 與 Export</text>
+
+  <!-- share -->
+  <rect x="40" y="62" width="230" height="290" rx="14" fill="#FFF7ED"/>
+  <text x="58" y="90" font-size="15" font-weight="700" fill="#C2410C">Share 分享</text>
+  <g font-size="12" fill="#374151">
+    <text x="58" y="116" font-weight="700">誰可以打開</text>
+    <text x="58" y="138">・只有自己（預設私人）</text>
+    <text x="58" y="158">・指定的人（用 Email 邀請）</text>
+    <text x="58" y="178">・組織內所有人（Team）</text>
+    <text x="58" y="198">・任何拿到連結的人</text>
+    <text x="58" y="230" font-weight="700">可以做什麼</text>
+    <text x="58" y="252">・Can view 只能看</text>
+    <text x="58" y="272">・Commenter 可以留評論</text>
+    <text x="58" y="292">・Can edit 可以編輯</text>
+  </g>
+  <text x="58" y="330" font-size="11" fill="#6B7280">適合：請客戶、同學看稿和留言</text>
+
+  <!-- export -->
+  <rect x="285" y="62" width="230" height="290" rx="14" fill="#EFF6FF"/>
+  <text x="303" y="90" font-size="15" font-weight="700" fill="#1D4ED8">Export 下載檔案</text>
+  <g font-size="12" fill="#374151">
+    <text x="303" y="118">・Download as .zip</text>
+    <text x="303" y="140">・Export as PDF</text>
+    <text x="303" y="162">・Export as PPTX</text>
+    <text x="303" y="184">・Export to Google Slides</text>
+    <text x="303" y="206">・Export as standalone HTML</text>
+    <text x="303" y="240" font-weight="700">送到其他工具</text>
+    <text x="303" y="262">Canva、Gamma、Miro、</text>
+    <text x="303" y="282">Netlify、Vercel、v0、Lovable、</text>
+    <text x="303" y="302">Replit、Wix、HubSpot…</text>
+  </g>
+  <text x="303" y="330" font-size="11" fill="#6B7280">適合：交作業、放簡報、直接上線</text>
+
+  <!-- handoff -->
+  <rect x="530" y="62" width="230" height="290" rx="14" fill="#DCFCE7"/>
+  <text x="548" y="90" font-size="15" font-weight="700" fill="#047857">Handoff to Claude Code</text>
+  <g font-size="12" fill="#374151">
+    <text x="548" y="118">・Send to local coding agent</text>
+    <text x="548" y="138" fill="#6B7280" font-size="11">送到你電腦上的 Claude Code</text>
+    <text x="548" y="166">・Send to Claude Code Web</text>
+    <text x="548" y="186" fill="#6B7280" font-size="11">送到網頁版 Claude Code</text>
+  </g>
+  <rect x="548" y="208" width="196" height="76" rx="8" fill="#111827"/>
+  <text x="560" y="230" font-size="11" fill="#9CA3AF">Claude Code 會依設計稿</text>
+  <text x="560" y="250" font-size="11" fill="#E5E7EB">寫成真正的 RWD 網頁</text>
+  <text x="560" y="270" font-size="11" fill="#86EFAC" font-family="Menlo,monospace">/design</text>
+  <text x="548" y="330" font-size="11" fill="#6B7280">適合：做成可以上線的產品</text>
+</svg>
