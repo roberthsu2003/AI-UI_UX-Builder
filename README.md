@@ -63,11 +63,11 @@
 > * **三條實戰建構路線**：提供從既有網站截圖「逆向萃取」、改寫開源範本（`awesome-design-md` / Google Stitch），以及從零訪談建構的完整 Prompt。
 > * **開箱即用範本**：內附繁體中文注釋的標準 `DESIGN_template.md` 與自我驗收檢核清單，讓 AI 生成的多頁原型維持一致品牌質感。
 
-## [Figma × MCP：讓 AI 讀懂、也能動手畫你的設計稿 >>](./Figma與MCP整合)
-> UI/UX 的主戰場仍是 Figma。本單元透過 **Figma MCP Server** 把 Figma 接上 Claude.ai / ChatGPT / Antigravity，以「設計為主、AI 為輔」的方式串接 `DESIGN.md` 與網頁原型，內容包含：
-> * **免費方案與連線設定**：學生申請 Figma 教育方案的步驟與常見翻車點、各方案 MCP 額度比較、遠端 MCP 連線與 `whoami` 驗證。
-> * **AI 看得懂的 Figma 基本功**：Frame、Auto Layout、圖層命名、Variables、Components & Variants、RWD，並以「亂畫 vs 規範」對照實驗證明設計品質決定 AI 產出品質。
-> * **完整實戰工作坊**：`DESIGN.md` → Figma Variables 與元件 → AI 首頁初稿 → **人工調整定稿** → 讀稿生成 `index.html` → 反向同步規範。
+## [AI 設計畫布與 MCP 整合：Figma、pen.dev、Google Stitch 與 Claude Design >>](./AI設計畫布與MCP整合)
+> 寫完 `DESIGN.md` 文字規範後，接下來進入視覺設計畫布與原型整合。本單元完整對照四大設計工具——**Figma**、**pen.dev（Pencil）**、**Google Stitch** 與 **Claude Design**，並透過 **MCP（Model Context Protocol）** 串接 AI 讀寫畫布與產出網頁，內容包含：
+> * **四大工具定位與選擇**：對比 Figma（團隊設計系統）、pen.dev（Design-in-Code `.pen` 畫布與本地 MCP）、Google Stitch（無限畫布氛圍探索）與 Claude Design（免費版對話微調）的最佳使用時機。
+> * **Figma 方案、連線與基本功**：免費申請 Figma 教育方案、連接 Claude.ai / ChatGPT / Antigravity、遠端連結驅動觀念，以及 Frame、Auto Layout、Variables、Components 等 AI 讀得懂的畫圖規範。
+> * **跨工具實戰工作坊**：`DESIGN.md` → 設計畫布定稿（Figma / pen.dev）→ AI 讀稿生成 `index.html` → 反向同步規範。
 
 ## [易用性測試：讓真實使用者告訴你哪裡不好用 >>](./易用性測試)
 > 設計者永遠看不出「第一次來的人」會卡在哪裡。本單元教你用最低成本驗證原型，內容包含：

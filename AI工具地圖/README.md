@@ -71,7 +71,8 @@ AI 工具越來越多，但 **工具不是越多越好**。本頁把課程用到
 | **Claude Skill**（如 UI UX Pro Max） | ⭐ 主線 | 替 Claude 掛載設計工作手冊，提升生成品質 | [單元 5](../Claude網頁設計Skill實戰指南/README.md) |
 | **Claude（多方向探索＋壞習慣清單）** | ⭐ 主線 | 一次要 10 個方向再收斂、讀程式碼重建畫面，並點破 AI 的固定偏好 | [單元 6](../讓AI做出不像AI的設計/README.md) |
 | **`DESIGN.md` ＋ 任一 AI** | ⭐ 主線 | 用一份設計規範讓多頁生成風格一致 | [單元 7](../建立自己的DESIGN_md/README.md) |
-| **Figma × MCP**（Claude Code／Cursor） | ⭐ 主線 | AI 讀寫 Figma：建立 Variables、元件，讀稿生成網頁 | [單元 8](../Figma與MCP整合/README.md) |
+| **Figma × MCP**（Claude.ai／ChatGPT／Antigravity） | ⭐ 主線 | AI 讀寫 Figma：建立 Variables、元件，讀稿生成網頁 | [AI 設計畫布與 MCP 整合](../AI設計畫布與MCP整合/README.md) |
+| **pen.dev（Pencil）** | ⭐ 主線 | Design-in-Code 無限向量畫布（`.pen` 格式隨 Git 版控），內建 MCP 雙向生成與轉碼 | [第四章：pen.dev 實戰](../AI設計畫布與MCP整合/04_pen.dev與Google_Stitch與Claude_Design實戰.md) |
 | **Figma Make** | ➕ 延伸 | Figma 內建的 Prompt 生成可互動原型，和 MCP 路線互相對照 | — |
 | **v0／Lovable／Bolt** | ➕ 延伸 | 對話生成可上線的網頁應用並一鍵部署，適合不寫程式的快速驗證 | — |
 | **Gemini 圖片生成／Midjourney／Adobe Firefly** | ➕ 延伸 | 產生主視覺、情境圖與插圖，取代原型中的灰色佔位圖 | — |

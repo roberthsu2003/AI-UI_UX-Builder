@@ -1,6 +1,6 @@
 # 第三章：實戰 — DESIGN.md → Figma → 網頁原型 🔁
 
-[⬅️ 上一章：AI 看得懂的 Figma 基本功](./02_AI看得懂的Figma基本功.md) ｜ [🏠 返回單元主頁](./README.md)
+[⬅️ 上一章：AI 看得懂的 Figma 基本功](./02_AI看得懂的Figma基本功.md) ｜ [🏠 返回單元主頁](./README.md) ｜ [➡️ 下一章：pen.dev、Google Stitch 與 Claude Design 實戰](./04_pen.dev與Google_Stitch與Claude_Design實戰.md)
 
 這一章把前面學的全部串起來。你會沿用 [建立自己的 `DESIGN.md`](../建立自己的DESIGN_md/README.md) 單元做好的 `my-design-lab/` 資料夾，走完一次完整流程：
 
@@ -189,4 +189,4 @@ AI 初稿：Hero 標題 + 副標 + 兩顆一樣大的按鈕並排
 
 ---
 
-[⬅️ 上一章：AI 看得懂的 Figma 基本功](./02_AI看得懂的Figma基本功.md) ｜ [🏠 返回單元主頁](./README.md)
+[⬅️ 上一章：AI 看得懂的 Figma 基本功](./02_AI看得懂的Figma基本功.md) ｜ [🏠 返回單元主頁](./README.md) ｜ [➡️ 下一章：pen.dev、Google Stitch 與 Claude Design 實戰](./04_pen.dev與Google_Stitch與Claude_Design實戰.md)

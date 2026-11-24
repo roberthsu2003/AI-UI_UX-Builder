@@ -171,7 +171,7 @@
 一個按鈕不是只有一種樣子，至少要定義：**預設、滑過（hover）、按下（active）、聚焦（focus）、停用（disabled）**，表單欄位還要加上 **錯誤** 狀態。少定義一種，AI 和工程師就會各自發揮。
 
 > [!NOTE]
-> 本節是後續兩個單元的觀念基礎：[建立自己的 DESIGN.md](../../建立自己的DESIGN_md/README.md) 用文字定義元件規格，[Figma × MCP](../../Figma與MCP整合/README.md) 把它們建成 Figma Components 與 Variants。
+> 本節是後續兩個單元的觀念基礎：[建立自己的 DESIGN.md](../../建立自己的DESIGN_md/README.md) 用文字定義元件規格，[AI 設計畫布與 MCP 整合](../../AI設計畫布與MCP整合/README.md) 把它們建成設計畫布 Components 與 Variants。
 
 **🤖 AI 檢查提示詞**
 ```text

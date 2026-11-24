@@ -126,7 +126,7 @@ App.jsx
 
 ### Step 1：讓 AI 讀 Figma 定稿並拆元件
 
-對 [Figma × MCP 第三章](../Figma與MCP整合/03_實戰_DESIGN_md到Figma到網頁.md) 完成的 `Home` Frame 按右鍵 → **Copy link to selection**：
+對 [AI 設計畫布與 MCP 整合 第三章](../AI設計畫布與MCP整合/03_實戰_DESIGN_md到Figma到網頁.md) 完成的 `Home` Frame 按右鍵 → **Copy link to selection**：
 
 ```text
 請用 Figma MCP 讀取我的首頁定稿：
@@ -143,7 +143,7 @@ App.jsx
 ```
 
 > [!NOTE]
-> 沒有 Figma 稿的同學，可以把 Figma 連結那段改成「**請依照 @DESIGN.md 與 [Figma × MCP](../Figma與MCP整合/03_實戰_DESIGN_md到Figma到網頁.md) 或 [DESIGN.md 實作 2-E](../建立自己的DESIGN_md/02_如何從零建立自己的DESIGN_md.md) 產出的 @index.html**」，讓 AI 把靜態 HTML 拆成 React 元件。
+> 沒有 Figma 稿的同學，可以把 Figma 連結那段改成「**請依照 @DESIGN.md 與 [AI 設計畫布與 MCP 整合](../AI設計畫布與MCP整合/03_實戰_DESIGN_md到Figma到網頁.md) 或 [DESIGN.md 實作 2-E](../建立自己的DESIGN_md/02_如何從零建立自己的DESIGN_md.md) 產出的 @index.html**」，讓 AI 把靜態 HTML 拆成 React 元件。
 
 ### Step 2：用眼睛檢查（請開著 `npm run dev`）
 
