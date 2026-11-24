@@ -97,12 +97,16 @@ AI 工具越來越多，但 **工具不是越多越好**。本頁把課程用到
 
 ---
 
-## 🎒 依學習路線的建議組合
+## 🎒 AI Product Builder 的工具組合
 
-| 路線 | 建議至少用過的工具 |
+課程結束時，你應該每一項都實際用過：
+
+| 階段 | 工具 |
 | :--- | :--- |
-| **🅿️ PM 理解版** | Claude（評估、Persona、測試預演）→ Relume（網站地圖）→ Google Stitch／Claude Design（原型）→ Maze（測試）→ Clarity（上線數據） |
-| **🛠️ 動手實作版** | 以上全部，再加上 Claude Skill、`DESIGN.md`、Figma × MCP、Claude Code |
+| **診斷** | Claude、Gemini in Chrome（評估）、Microsoft Clarity（行為數據） |
+| **定義** | Claude（Persona、旅程、測試預演）、Relume（網站地圖） |
+| **設計** | Google Stitch／Claude Design（原型）、Claude Skill、`DESIGN.md`、Figma × MCP |
+| **驗證與上線** | Maze（測試）、Claude Code（建置與部署）、GitHub Pages |
 
 ---
 

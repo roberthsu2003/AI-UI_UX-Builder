@@ -253,7 +253,7 @@ AI 幾乎一定會在某些地方「自由發揮」。這時**不要只叫 AI �
 1. **在 Claude / ChatGPT 網頁版使用**：開新對話時直接上傳 `DESIGN.md`，並在 Prompt 開頭寫：「**請嚴格遵循附件 `DESIGN.md` 的色彩、字體、元件與 Do's/Don'ts 規範，幫我設計以下頁面⋯⋯**」。
 2. **在 Claude Code / Cursor / Antigravity 中使用**：將 `DESIGN.md` 放在專案根目錄，下指令時直接以 `@DESIGN.md` 引用，讓 AI 在建立首頁、內頁、活動頁時自動對齊同一套系統。
 3. **搭配網頁設計 Skill 一起用**：在 [Claude Skill 實戰指南](../Claude網頁設計Skill實戰指南/README.md) 中，推薦使用 **`UI UX Pro Max`** 或 **`Claude Design Pro`**；當「強大的設計能力（Skill）」遇上「精準的品牌邊界（`DESIGN.md`）」，產出品質最穩定。
-4. **作為團隊溝通規格書**：PM 可以直接把 `DESIGN.md` 裡的色碼表、字級表與元件規則交給設計師導入 Figma Variables，大幅減少來回對色的溝通成本。
+4. **作為團隊溝通規格書**：需要和設計師協作時，可以直接把 `DESIGN.md` 裡的色碼表、字級表與元件規則交給設計師導入 Figma Variables，大幅減少來回對色的溝通成本。
 
 ---
 

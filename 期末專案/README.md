@@ -28,19 +28,19 @@
 
 每完成一個單元，就把產出放進期末專案資料夾（建議結構見 [課前準備](../課前準備/README.md)）。
 
-| # | 單元 | 交付物 | 🅿️ PM 理解版 | 🛠️ 動手實作版 |
-| :---: | :--- | :--- | :---: | :---: |
-| 1 | [如何評估現有的網站](../如何評估現有的網站/README.md) | 舊網站評估報告（含截圖與前三大痛點） | ✅ | ✅ |
-| 2 | [網站架構觀念](../網站架構觀念/README.md) | 舊網站的版型、導覽列、一致性分析（可併入評估報告） | ✅ | ✅ |
-| 3 | [定義使用者與需求](../定義使用者與需求/README.md) | `persona.md`、`journey.md`、`user-flow.md`、`wireframe.html`、`requirements.md` | ✅ | ✅ |
-| 4 | [建立提案用的原型網頁](../建立提案用的原型網頁/README.md) | 2～3 套視覺方向的原型截圖，並選定一套 | ✅ | ✅ |
-| 5 | [Claude Skill 實戰指南](../Claude網頁設計Skill實戰指南/README.md) | （選做）有／無 Skill 的生成結果對照 | — | 選做 |
-| 6 | [讓 AI 做出不像 AI 的設計](../讓AI做出不像AI的設計/README.md) | 兩輪探索方向（`directions-round1/2.html`）、選定方向說明、`ai-habits.md` | ✅ | ✅ |
-| 7 | [建立自己的 DESIGN.md](../建立自己的DESIGN_md/README.md) | `DESIGN.md`、`style-guide.html` | 審閱並修改 AI 產出的版本 | ✅ 自己撰寫 |
-| 8 | [Figma × MCP](../Figma與MCP整合/README.md) | Figma 定稿連結、`index.html` | — | ✅ |
-| 9 | [易用性測試](../易用性測試/README.md) | `test-script.md`、`usability-report.md`、修改紀錄 | ✅ | ✅ |
-| 10 | [前端動態框架圖鑑](../前端動態框架圖鑑/README.md) | （選做）為原型加上一個有意義的動態效果 | — | 選做 |
-| 11 | [部署 Landing Page](../部署Landing_Page/README.md) | 公開網址、GitHub Repo 連結 | — | ✅ |
+| # | 單元 | 交付物 | 必交 |
+| :---: | :--- | :--- | :---: |
+| 1 | [如何評估現有的網站](../如何評估現有的網站/README.md) | 舊網站評估報告（含截圖與前三大痛點） | ✅ |
+| 2 | [網站架構觀念](../網站架構觀念/README.md) | 舊網站的版型、導覽列、一致性分析（可併入評估報告） | ✅ |
+| 3 | [定義使用者與需求](../定義使用者與需求/README.md) | `persona.md`、`journey.md`、`user-flow.md`、`wireframe.html`、`requirements.md` | ✅ |
+| 4 | [建立提案用的原型網頁](../建立提案用的原型網頁/README.md) | 2～3 套視覺方向的原型截圖，並選定一套 | ✅ |
+| 5 | [Claude Skill 實戰指南](../Claude網頁設計Skill實戰指南/README.md) | （選做）有／無 Skill 的生成結果對照 | 選做 |
+| 6 | [讓 AI 做出不像 AI 的設計](../讓AI做出不像AI的設計/README.md) | 兩輪探索方向（`directions-round1/2.html`）、選定方向說明、`ai-habits.md` | ✅ |
+| 7 | [建立自己的 DESIGN.md](../建立自己的DESIGN_md/README.md) | `DESIGN.md`、`style-guide.html` | ✅ |
+| 8 | [Figma × MCP](../Figma與MCP整合/README.md) | Figma 定稿連結、`index.html` | ✅ |
+| 9 | [易用性測試](../易用性測試/README.md) | `test-script.md`、`usability-report.md`、修改紀錄 | ✅ |
+| 10 | [前端動態框架圖鑑](../前端動態框架圖鑑/README.md) | （選做）為原型加上一個有意義的動態效果 | 選做 |
+| 11 | [部署 Landing Page](../部署Landing_Page/README.md) | 公開網址、GitHub Repo 連結 | ✅ |
 
 ---
 
@@ -71,7 +71,7 @@
 | **成果與發表** | 20% | 故事清楚、每個設計決策都說得出理由，核心任務能順利示範 | 只展示畫面，說不出為什麼這樣設計 |
 
 > [!NOTE]
-> 🅿️ PM 理解版與 🛠️ 動手實作版使用同一份評分標準。PM 理解版的「成果」可以是高保真原型（Stitch、Claude Design 或 Figma 的分享連結），不要求公開網址。
+> 期末成果必須是 **任何人都能打開的公開網址**（單元 11 的 GitHub Pages）。這正是 AI Product Builder 和「只做提案」的差別：不只說得出好設計，還要把它做出來、交到使用者手上。
 
 ---
 
