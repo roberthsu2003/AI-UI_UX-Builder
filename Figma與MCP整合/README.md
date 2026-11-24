@@ -4,7 +4,7 @@
 
 在 [建立自己的 `DESIGN.md`](../建立自己的DESIGN_md/README.md) 單元中，我們用**文字**定義了設計規範；但 UI/UX 工作真正的主戰場仍然是 **Figma**——版面要用眼睛調、元件要用手擺、細節要靠設計判斷。
 
-本單元介紹如何透過 **MCP（Model Context Protocol）** 把 Figma 接上 AI（Claude Code / Cursor / VS Code），讓工作流變成：
+本單元介紹如何透過 **MCP（Model Context Protocol）** 把 Figma 接上 AI（Claude.ai / ChatGPT / Antigravity），讓工作流變成：
 
 ```text
 DESIGN.md（文字規範）
@@ -39,7 +39,7 @@ Figma（人來做設計判斷：調版面、修層級、定稿）   ◀── UI
 ## 📖 本單元學習目錄
 
 ### 1. [第一章 🔑：帳號方案申請與 MCP 連線設定](./01_帳號方案與MCP連線設定.md)
-* **學什麼**：學生如何**免費**取得教育方案、各方案 MCP 額度差異、在 Claude Code / Cursor / VS Code 連接 Figma MCP。
+* **學什麼**：學生如何**免費**取得教育方案、各方案 MCP 額度差異、在 Claude.ai / ChatGPT / Antigravity 連接 Figma MCP。
 * **實作**：申請教育方案、完成 MCP 連線並用 `whoami` 驗證帳號方案。
 
 ### 2. [第二章 🧱：AI 看得懂的 Figma 基本功](./02_AI看得懂的Figma基本功.md)

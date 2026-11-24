@@ -18,12 +18,7 @@
 > * 已有上一單元的 `DESIGN.md`（若沒有，可先用 [DESIGN_template.md](../建立自己的DESIGN_md/DESIGN_template.md)）。
 > * `use_figma` 寫入功能目前為 **Beta**，AI 的產出品質不穩定是正常的，**每一步都要用眼睛檢查**。
 
-開始前，在終端機進入資料夾並啟動 AI 工具：
-
-```bash
-cd my-design-lab
-claude        # 或用 Cursor / VS Code 開啟資料夾
-```
+開始前，請開啟你已連上 Figma MCP 的 AI 工具（**Claude.ai / ChatGPT** 並開啟新對話，或在 **Antigravity** 開啟 `my-design-lab` 資料夾並附上 `@DESIGN.md`）：
 
 在 Figma 建立一個新的 Design 檔（或請 AI 用 `create_new_file` 建立），命名為 `學號_姓名_設計系統`，複製檔案網址備用。
 
@@ -171,7 +166,7 @@ AI 初稿：Hero 標題 + 副標 + 兩顆一樣大的按鈕並排
 
 | 狀況 | 可能原因 | 解法 |
 | :--- | :--- | :--- |
-| AI 說它找不到 Figma 工具 | MCP 未連線或授權過期 | Claude Code 輸入 `/mcp` 重新 Authenticate |
+| AI 說它找不到 Figma 工具 | MCP 未連線或授權過期 | 重新進入 Claude.ai / ChatGPT 的 Connectors 或 Antigravity MCP 設定完成授權並啟用 |
 | AI 說沒有寫入權限 | 方案是 Starter，或座位不是 Full | 用 `whoami` 檢查；確認檔案放在 Education Team 內 |
 | 出現 Rate limit 錯誤 | 每分鐘或每日讀取次數用完 | 等一分鐘再試；改用 Copy link to selection 只讀單一 Frame |
 | 中文字變成方框或預設字體 | 字體沒有指定或拼錯 | 在 Prompt 中明確指定 `Noto Sans TC` / `Noto Serif TC`（Figma 內建 Google Fonts） |

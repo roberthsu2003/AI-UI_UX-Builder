@@ -64,7 +64,7 @@
 > * **開箱即用範本**：內附繁體中文注釋的標準 `DESIGN_template.md` 與自我驗收檢核清單，讓 AI 生成的多頁原型維持一致品牌質感。
 
 ## [Figma × MCP：讓 AI 讀懂、也能動手畫你的設計稿 >>](./Figma與MCP整合)
-> UI/UX 的主戰場仍是 Figma。本單元透過 **Figma MCP Server** 把 Figma 接上 Claude Code / Cursor / VS Code，以「設計為主、AI 為輔」的方式串接 `DESIGN.md` 與網頁原型，內容包含：
+> UI/UX 的主戰場仍是 Figma。本單元透過 **Figma MCP Server** 把 Figma 接上 Claude.ai / ChatGPT / Antigravity，以「設計為主、AI 為輔」的方式串接 `DESIGN.md` 與網頁原型，內容包含：
 > * **免費方案與連線設定**：學生申請 Figma 教育方案的步驟與常見翻車點、各方案 MCP 額度比較、遠端 MCP 連線與 `whoami` 驗證。
 > * **AI 看得懂的 Figma 基本功**：Frame、Auto Layout、圖層命名、Variables、Components & Variants、RWD，並以「亂畫 vs 規範」對照實驗證明設計品質決定 AI 產出品質。
 > * **完整實戰工作坊**：`DESIGN.md` → Figma Variables 與元件 → AI 首頁初稿 → **人工調整定稿** → 讀稿生成 `index.html` → 反向同步規範。

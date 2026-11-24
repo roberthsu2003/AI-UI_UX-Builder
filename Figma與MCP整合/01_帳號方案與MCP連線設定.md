@@ -53,23 +53,33 @@ Figma MCP 有兩種：
 
 > 「AI 寫入畫布」功能**只有遠端版**支援，所以本課程統一用遠端版。
 
-### 方式一：Claude Code（推薦）
+### 方式一：Claude.ai（網頁版／桌面版）
 
-在終端機輸入以下**其中一種**：
+1. 登入 [Claude.ai](https://claude.ai/)，點擊左下角個人頭像 → **Settings（設定）** → **Connectors（連接器）**。
+2. 在列表中直接找到官方 **Figma** 點擊 **Connect**；若沒看到，點選 **Add custom connector**：
+   * **Name**：`Figma`
+   * **Remote MCP server URL**：`https://mcp.figma.com/mcp`
+3. 瀏覽器會跳出 Figma OAuth 授權視窗，登入你的 Figma 帳號並點擊 **Allow access（允許存取）**。
+4. 回到對話框，確認輸入框下方工具／連接器選單中已開啟 **Figma**。
 
-```bash
-# 推薦：安裝 Figma 官方外掛（含 MCP 連線 + 官方 Skill，AI 操作 Figma 會更穩定）
-claude plugin install figma@claude-plugins-official
+### 方式二：ChatGPT（網頁版／桌面版）
 
-# 或：只手動加入 MCP 連線
-claude mcp add --transport http figma https://mcp.figma.com/mcp
-```
+1. **完整 MCP 連線（支援讀寫設計稿與 Variables）**：
+   * 登入 [ChatGPT](https://chatgpt.com/)，進入左下角個人頭像 → **Settings（設定）** → **Apps & Connectors（或 Connectors）**，於進階設定中開啟 **Developer mode（開發者模式）**。
+   * 點擊 **Create / Add custom MCP server**：
+     * **Name**：`Figma`
+     * **MCP Server URL**：`https://mcp.figma.com/mcp`
+   * 完成 Figma OAuth 登入與權限授權後，在對話中勾選啟用該連接器即可呼叫 Figma MCP 工具。
+2. **內建 Figma App（快速產出 FigJam 流程圖與簡報）**：
+   * 若只需要文字轉流程圖或簡報，也可直接在 ChatGPT 的 Connected Apps 中連結官方 **Figma** 應用。
 
-接著啟動 Claude Code，輸入 `/mcp` → 選擇 `figma` → **Authenticate**，瀏覽器會跳出 Figma 授權畫面，按下允許即可。
+### 方式三：Antigravity（推薦用於做網站與專案開發）
 
-### 方式二：Cursor
-
-在 Agent 對話框輸入 `/add-plugin figma`；或到 **Cursor Settings → MCP → Add new global MCP server**，貼上：
+1. **方法 A：從外掛市集一鍵啟用（推薦）**
+   * 在 Antigravity 開啟 **Plugins / Marketplace（外掛市集）**，搜尋 **Figma**（`antigravity-plugins-partners/plugin/figma`）並安裝啟用。
+   * 依照畫面指示登入你的 Figma 帳號並完成 OAuth 授權即可。
+2. **方法 B：手動設定 `mcp_config.json`**
+   * 點擊 Antigravity 右上角 **`... (Additional Options)` → `MCP Servers`**，或直接編輯全域設定檔 `~/.gemini/config/mcp_config.json`，加入遠端 Figma MCP：
 
 ```json
 {
@@ -81,11 +91,7 @@ claude mcp add --transport http figma https://mcp.figma.com/mcp
 }
 ```
 
-### 方式三：VS Code（需啟用 GitHub Copilot）
-
-1. `Cmd/Ctrl + Shift + P` → 執行 `MCP: Add Server` → 選擇 `HTTP`。
-2. URL 填 `https://mcp.figma.com/mcp`，Server ID 填 `figma`。
-3. 開啟 Chat，切換為 **Agent** 模式。
+   * 首次呼叫 Figma 工具時，瀏覽器會跳出授權畫面，按下允許即可。
 
 ### ✅ 驗證連線：問 AI「我是誰？」
 
@@ -105,10 +111,47 @@ claude mcp add --transport http figma https://mcp.figma.com/mcp
 
 - [ ] 看到 **Education** 且座位為 **Full** → 第三章所有實作都能做。
 - [ ] 只看到 **Starter** → 回到實作 1-1 檢查 Team 是否已升級。
-- [ ] AI 說找不到 figma 工具 → 回頭確認 `/mcp` 有完成 Authenticate。
+- [ ] AI 說找不到 figma 工具 → 回頭確認 Claude.ai / ChatGPT 的 Connectors 或 Antigravity 的 Figma 外掛／MCP 已完成授權並開啟。
 
 > [!TIP]
 > `whoami` **不扣額度**，可以放心多試幾次。
+
+---
+
+## 🔗 關鍵觀念：就算連線成功，也一定要去 Figma 複製連結才可以使用！
+
+很多學員第一次用 `whoami` 看到連線成功後，就直接問 AI：「幫我看一下我剛才畫的首頁設計稿」——結果 AI 會回答**「找不到你的檔案，請提供 Figma 連結」**。
+
+### 為什麼只說「看我的 Figma」沒有用？
+根據 Figma 官方文件，我們使用的遠端 MCP Server（`https://mcp.figma.com/mcp`）採用的是 **Link-based（網址驅動）** 機制，與舊版／本機桌面版（`127.0.0.1:3845` 自動抓取當前選取物件）不同：
+* 遠端 MCP Server 運作在雲端，**不會自動監看你目前打開哪個 Figma 視窗**，也**無法直接搜尋列出你帳號裡的所有檔案**。
+* AI 必須從你貼上的 **Figma 網址** 中，解析出 **`fileKey`（檔案代碼）** 與 **`node-id`（畫框／元件節點編號）**，才能向 Figma 伺服器讀取該畫面的圖層結構、Auto Layout 與 Variables（或寫入該檔案）。
+
+### 在 Figma 取得連結的兩種標準做法
+
+#### 情境 A：請 AI 讀取特定畫框、區塊或元件（最常用）
+1. 在 Figma 畫布上**點選你要給 AI 看的那個 Frame 或 Component**。
+2. 按右鍵選擇 **`Copy link to selection`**（快捷鍵：Mac `Cmd + L` ／ Windows `Ctrl + L`；也可直接複製瀏覽器網址列中帶有 `?node-id=xx-xx` 的網址）。
+3. 把這段網址連同你的需求一起貼給 Claude.ai / ChatGPT / Antigravity。
+
+#### 情境 B：請 AI 讀取整份檔案或寫入新內容（如建立 Variables、新增畫框）
+1. 在 Figma 打開一個空白或既有的 Design 檔案。
+2. 點擊右上角 **`Share` → `Copy link`**（或直接複製瀏覽器網址列的 `https://www.figma.com/design/<fileKey>/...` 網址）。
+3. 把整份檔案網址貼入 Prompt，告訴 AI 要寫入這個檔案。
+
+### 網址結構一看就懂 & 常見對話對照
+
+```text
+https://www.figma.com/design/AbCdEf12345/My-Design-System?node-id=12-34
+                             └────┬────┘                          └──┬──┘
+                               fileKey                            node-id
+                             （哪一份檔案）                    （哪一個畫框/元件）
+```
+
+* ❌ **錯誤問法（AI 無法讀取）**：
+  `幫我把剛剛在 Figma 畫的「首頁 Hero」轉成 HTML。`
+* ✅ **正確問法（附上 `Copy link to selection` 網址）**：
+  `請讀取這個 Figma Frame，依照其中的間距、字體與顏色變數幫我轉成 HTML：https://www.figma.com/design/AbCdEf12345/My-Design-System?node-id=12-34`
 
 ---
 
