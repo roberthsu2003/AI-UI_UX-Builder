@@ -30,29 +30,29 @@ AI 做出來的網頁常常「每一頁長得不一樣」，或是千篇一律�
 
 ```yaml
 ---
-name: 木日 Kibi
-colors:
-  primary: "#8B5E3C"     # 品牌主色：主要按鈕、連結
-  surface: "#FAF8F5"     # 頁面底色
-  text: "#1E1B18"        # 主要文字（不用純黑）
-typography:
-  headline:
-    fontFamily: Noto Serif TC
-    fontSize: 36px
-    fontWeight: 700
-  body:
-    fontFamily: Noto Sans TC
-    fontSize: 17px
-    lineHeight: 1.7
-rounded:
-  md: 8px
-spacing:
-  section: 96px
-components:
-  button-primary:
-    backgroundColor: "{colors.primary}"
-    textColor: "#FFFFFF"
-    rounded: "{rounded.md}"
+name: 木日 Kibi                    # 設計系統／品牌名稱
+colors:                            # 色彩設定
+  primary: "#8B5E3C"               # 品牌主色：主要按鈕、連結
+  surface: "#FAF8F5"               # 頁面底色
+  text: "#1E1B18"                  # 主要文字（不用純黑）
+typography:                        # 字體與排版設定
+  headline:                        # 標題文字樣式
+    fontFamily: Noto Serif TC      # 標題字型（思源宋體／襯線字）
+    fontSize: 36px                 # 標題字級大小
+    fontWeight: 700                # 標題字重（粗體）
+  body:                            # 內文文字樣式
+    fontFamily: Noto Sans TC       # 內文字型（思源黑體／無襯線字）
+    fontSize: 17px                 # 內文字級大小
+    lineHeight: 1.7                # 內文行高（1.7 倍）
+rounded:                           # 圓角設定
+  md: 8px                          # 中等圓角尺寸
+spacing:                           # 間距設定
+  section: 96px                    # 大區塊之間的上下間距
+components:                        # 元件樣式設定
+  button-primary:                  # 主要按鈕元件
+    backgroundColor: "{colors.primary}" # 按鈕底色（引用品牌主色）
+    textColor: "#FFFFFF"           # 按鈕文字顏色（純白）
+    rounded: "{rounded.md}"        # 按鈕圓角（引用中等圓角）
 ---
 ```
 
