@@ -1,23 +1,16 @@
 # 06. 現成 DESIGN.md 社群資源庫
 
-> 不想從零開始摸索配色與排版，只想直接看圖挑一個喜歡的樣式來套用？現在網路上已經有許多熱心社群，把世界知名網站的設計系統整理成現成的 `DESIGN.md` 與視覺預覽。這一章帶你認識最實用的幾個資源庫，並教你怎麼在三分鐘內改造成自己網站可用的版本。
+> 不想從零開始摸索配色與排版，只想直接看圖挑一個喜歡的樣式來套用？現在網路上已經有許多熱心社群，把世界知名網站的設計系統整理成現成的 `DESIGN.md` 與視覺預覽。這一章帶你認識最好逛的免費資源庫 **DesignMD Gallery**，並教你怎麼在三分鐘內改造成自己網站可用的版本。
 
 ---
 
 ## 可以去哪裡挑現成的 DESIGN.md？
 
-下面這些網站與 GitHub 開源倉庫都**完全免費、免註冊、沒有付費牆**，可以直接瀏覽並複製 `DESIGN.md`：
+推薦直接使用 **[DesignMD Gallery（designmd.app）](https://designmd.app/)**：
 
-| 資源名稱 | 特色與裡面有什麼 | 最適合誰 |
-| :--- | :--- | :--- |
-| **[DesignMD Gallery（designmd.app）](https://designmd.app/)** | 完全免費的開放目錄，收錄 750+ 份 `DESIGN.md`；可依風格、產業與色系標籤篩選，點開就能看色票、字型並直接複製 | **想直接依風格與顏色免費逛樣式的人** |
-| **[bergside/awesome-design-skills（skills 資料夾）](https://github.com/bergside/awesome-design-skills/tree/main/skills)** | GitHub MIT 開源風格庫（含 `bento`、`brutalism`、`cafe`、`clean`、`claymorphism` 等 60+ 種風格），而且已是標準 YAML 雙層格式；**直接進這裡的資料夾複製 `<風格名>/DESIGN.md` 完全免費**（[看預覽圖請點 `registry-examples/`](https://github.com/bergside/awesome-design-skills/tree/main/registry-examples)） | **想直接按風格分類免費拿標準格式的人** |
-| **[VoltAgent/awesome-design-md（design-md 資料夾）](https://github.com/VoltAgent/awesome-design-md/tree/main/design-md)** | GitHub 熱門 MIT 開源倉庫，收錄 Linear、Claude、Notion、Stripe、Apple 等 80+ 個知名品牌規範；**直接進這裡的資料夾複製 `DESIGN.md` 完全免費** | 想參考知名品牌設計質感的人 |
-| **[md-design.io](https://www.md-design.io/)** | 免費線上渲染器＋範例庫；不用註冊、檔案不需上傳伺服器，把任何 `DESIGN.md` 貼進去就能在瀏覽器即時預覽成視覺指南 | 想在套用前先預覽文字規範長什麼樣子的人 |
-| **[google-labs-code/design.md](https://github.com/google-labs-code/design.md)** | Google 官方開源規格與標準範例（Apache-2.0），格式最嚴謹，也附帶免費命令列檢查工具 | 想確認標準格式、或準備匯入 Google Stitch 使用的人 |
-
-> [!TIP]
-> **避開付費網站的小技巧**：不少 GitHub 倉庫首頁的 README 圖片或按鈕會導向作者自己的商業網站（例如 `getdesign.md`、`typeui.sh` 都有付費方案）。**只要不點外連網站，直接點進上面給你的 GitHub 資料夾（`skills/`、`design-md/`），裡面的 `DESIGN.md` 原始檔全部都是 100% 免費開源的。**
+- **完全免費、免註冊、沒有付費牆**：打開網站就能直接逛，不需要登入或綁定帳號。
+- **收錄超過 750 份 `DESIGN.md`**：涵蓋各種產業、知名網站與設計風格。
+- **依風格、產業與色系篩選**：可以直接用標籤找方向，點開樣式就能看色票、字型設定並一鍵複製 `DESIGN.md` 內容。
 
 ---
 
@@ -43,7 +36,7 @@
 
 ### 步驟 1：看預覽，存下一個你最喜歡的 `DESIGN.md`
 
-在上面的免費目錄或 GitHub 風格庫挑到喜歡的樣式後，直接複製裡面的 `DESIGN.md` 內容，存成專案資料夾裡的 `source-DESIGN.md`。
+在 DesignMD Gallery 挑到喜歡的樣式後，直接複製裡面的 `DESIGN.md` 內容，存成專案資料夾裡的 `source-DESIGN.md`。
 
 ### 步驟 2：請 AI 幫你「在地化成繁體中文＋換上品牌色」
 
@@ -78,7 +71,7 @@
 ## 套用現成範本的小提醒
 
 - **借骨架，不要照抄品牌色**：像 Stripe 的紫藍、Spotify 的亮綠辨識度太高，換掉主色與名稱，才不會做出「山寨官網」。
-- **社群範本格式不太一樣沒關係**：`awesome-design-md` 裡的檔案大多偏向純文字描述，Google 官方則有上方 YAML Token。AI 都看得懂；如果你要把檔案匯入 Google Stitch，只要像步驟 2 一樣請 AI 補上 YAML 區塊即可。
+- **社群範本格式不太一樣沒關係**：線上資源庫複製下來的檔案大多偏向純文字描述，而標準格式則有上方 YAML Token。AI 都看得懂；如果你要把檔案匯入 Google Stitch，只要像步驟 2 一樣請 AI 補上 YAML 區塊即可。
 - **還是覺得某個細節怪怪的？**：拿著改好的 `DESIGN.md`，回到〈[04. 建立與驗證自己的 DESIGN.md](./04_建立與驗證自己的DESIGN_md.md)〉做一次 `style-guide.html` 檢查對比與字型，就能微調到最順眼。
 
 ---
