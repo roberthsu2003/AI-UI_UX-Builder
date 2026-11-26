@@ -11,21 +11,6 @@
 
 ---
 
-## 先看一眼：10 種常用風格
-
-![風格地圖：橫軸理性到感性，縱軸安靜到熱鬧，10 種風格分布在四個象限](./images/style-map.svg)
-
-| | | |
-| :---: | :---: | :---: |
-| ![極簡風](./images/style-01-minimal.svg)<br>① 極簡風 | ![編輯雜誌風](./images/style-02-editorial.svg)<br>② 編輯雜誌風 | ![現代 SaaS 風](./images/style-03-saas.svg)<br>③ 現代 SaaS 風 |
-| ![便當盒格狀](./images/style-04-bento.svg)<br>④ 便當盒格狀 | ![新粗野主義](./images/style-05-neo-brutalism.svg)<br>⑤ 新粗野主義 | ![瑞士格線風](./images/style-06-swiss.svg)<br>⑥ 瑞士格線風 |
-| ![玻璃擬態](./images/style-07-glassmorphism.svg)<br>⑦ 玻璃擬態 | ![柔和療癒風](./images/style-08-soft-organic.svg)<br>⑧ 柔和療癒風 | ![暗黑奢華風](./images/style-09-dark-luxury.svg)<br>⑨ 暗黑奢華風 |
-| ![公共服務風](./images/style-10-accessible-civic.svg)<br>⑩ 公共服務風 | | |
-
-每種風格的特徵、適合的用途，以及可以直接貼給 AI 的關鍵字，都在第 02 章。
-
----
-
 ## 學習地圖
 
 - [01. 認識 DESIGN.md](./01_認識DESIGN_md.md)：DESIGN.md 是什麼、上下兩層各寫什麼，並做一次有規範與沒規範的對照實驗。
