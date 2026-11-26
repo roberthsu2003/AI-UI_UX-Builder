@@ -11,10 +11,13 @@
 | 資源名稱 | 特色與裡面有什麼 | 最適合誰 |
 | :--- | :--- | :--- |
 | **[DesignMD Gallery（designmd.app）](https://designmd.app/)** | 完全免費的開放目錄，收錄 750+ 份 `DESIGN.md`；可依風格、產業與色系標籤篩選，點開就能看色票、字型並直接複製 | **想直接依風格與顏色免費逛樣式的人** |
-| **[bergside/awesome-design-skills](https://github.com/bergside/awesome-design-skills)** | GitHub 免費開源風格庫（含 `bento`、`brutalism`、`cafe`、`clean`、`claymorphism` 等 30+ 種風格）；README 上就能直接看網頁預覽圖，點進 `skills/<風格名>/DESIGN.md` 即可複製 | **想直接「看預覽圖挑風格」的人** |
-| **[VoltAgent/awesome-design-md（design-md 資料夾）](https://github.com/VoltAgent/awesome-design-md/tree/main/design-md)** | GitHub 熱門 MIT 開源倉庫，收錄 Linear、Claude、Notion、Stripe、Apple 等 80+ 個知名品牌規範；**直接進這裡的資料夾複製 `DESIGN.md` 完全免費**（倉庫首頁部分品牌連結會導向外部付費站，直接看 GitHub 資料夾即可） | 想參考知名品牌設計質感的人 |
+| **[bergside/awesome-design-skills（skills 資料夾）](https://github.com/bergside/awesome-design-skills/tree/main/skills)** | GitHub MIT 開源風格庫（含 `bento`、`brutalism`、`cafe`、`clean`、`claymorphism` 等 60+ 種風格），而且已是標準 YAML 雙層格式；**直接進這裡的資料夾複製 `<風格名>/DESIGN.md` 完全免費**（[看預覽圖請點 `registry-examples/`](https://github.com/bergside/awesome-design-skills/tree/main/registry-examples)） | **想直接按風格分類免費拿標準格式的人** |
+| **[VoltAgent/awesome-design-md（design-md 資料夾）](https://github.com/VoltAgent/awesome-design-md/tree/main/design-md)** | GitHub 熱門 MIT 開源倉庫，收錄 Linear、Claude、Notion、Stripe、Apple 等 80+ 個知名品牌規範；**直接進這裡的資料夾複製 `DESIGN.md` 完全免費** | 想參考知名品牌設計質感的人 |
 | **[md-design.io](https://www.md-design.io/)** | 免費線上渲染器＋範例庫；不用註冊、檔案不需上傳伺服器，把任何 `DESIGN.md` 貼進去就能在瀏覽器即時預覽成視覺指南 | 想在套用前先預覽文字規範長什麼樣子的人 |
 | **[google-labs-code/design.md](https://github.com/google-labs-code/design.md)** | Google 官方開源規格與標準範例（Apache-2.0），格式最嚴謹，也附帶免費命令列檢查工具 | 想確認標準格式、或準備匯入 Google Stitch 使用的人 |
+
+> [!TIP]
+> **避開付費網站的小技巧**：不少 GitHub 倉庫首頁的 README 圖片或按鈕會導向作者自己的商業網站（例如 `getdesign.md`、`typeui.sh` 都有付費方案）。**只要不點外連網站，直接點進上面給你的 GitHub 資料夾（`skills/`、`design-md/`），裡面的 `DESIGN.md` 原始檔全部都是 100% 免費開源的。**
 
 ---
 
