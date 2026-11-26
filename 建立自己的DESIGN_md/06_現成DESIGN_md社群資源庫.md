@@ -6,15 +6,15 @@
 
 ## 可以去哪裡挑現成的 DESIGN.md？
 
-下面這些網站與開源倉庫都提供免費、可直接查看或下載的 `DESIGN.md`：
+下面這些網站與 GitHub 開源倉庫都**完全免費、免註冊、沒有付費牆**，可以直接瀏覽並複製 `DESIGN.md`：
 
 | 資源名稱 | 特色與裡面有什麼 | 最適合誰 |
 | :--- | :--- | :--- |
-| **[GetDesign.md](https://getdesign.md/)** | `awesome-design-md` 的視覺展示網站，收錄數十個知名品牌規範，直接看網頁的淺色／深色預覽、色票與字型，一鍵複製 | **想直接「看圖挑樣式」的人** |
-| **[VoltAgent/awesome-design-md](https://github.com/VoltAgent/awesome-design-md)** | GitHub 上最熱門的社群倉庫；每個品牌資料夾都附上 `DESIGN.md` 與 `preview.html` 預覽檔，也可執行 `npx getdesign add <品牌>` 下載 | 習慣在終端機或 GitHub 直接下載檔案的人 |
-| **[DesignMD Gallery](https://designmd.app/)** | 依風格、產業分類與色系標籤整理的公開目錄，能按「暗黑」、「極簡」、「柔和」等感覺逛樣式 | 沒鎖定特定品牌、想依氛圍或顏色找靈感的人 |
-| **[md-design.io](https://md-design.io/)** | 線上即時渲染器＋範例庫；除了瀏覽 Google 官方範例，也能把任何 `DESIGN.md` 貼進去，馬上預覽成視覺指南 | 想在套用前先預覽文字規範長什麼樣子的人 |
-| **[google-labs-code/design.md](https://github.com/google-labs-code/design.md)** | Google 官方開源規格與標準範例，格式最嚴謹，也附帶命令列檢查工具 | 想確認標準格式、或準備匯入 Google Stitch 使用的人 |
+| **[DesignMD Gallery（designmd.app）](https://designmd.app/)** | 完全免費的開放目錄，收錄 750+ 份 `DESIGN.md`；可依風格、產業與色系標籤篩選，點開就能看色票、字型並直接複製 | **想直接依風格與顏色免費逛樣式的人** |
+| **[bergside/awesome-design-skills](https://github.com/bergside/awesome-design-skills)** | GitHub 免費開源風格庫（含 `bento`、`brutalism`、`cafe`、`clean`、`claymorphism` 等 30+ 種風格）；README 上就能直接看網頁預覽圖，點進 `skills/<風格名>/DESIGN.md` 即可複製 | **想直接「看預覽圖挑風格」的人** |
+| **[VoltAgent/awesome-design-md（design-md 資料夾）](https://github.com/VoltAgent/awesome-design-md/tree/main/design-md)** | GitHub 熱門 MIT 開源倉庫，收錄 Linear、Claude、Notion、Stripe、Apple 等 80+ 個知名品牌規範；**直接進這裡的資料夾複製 `DESIGN.md` 完全免費**（倉庫首頁部分品牌連結會導向外部付費站，直接看 GitHub 資料夾即可） | 想參考知名品牌設計質感的人 |
+| **[md-design.io](https://www.md-design.io/)** | 免費線上渲染器＋範例庫；不用註冊、檔案不需上傳伺服器，把任何 `DESIGN.md` 貼進去就能在瀏覽器即時預覽成視覺指南 | 想在套用前先預覽文字規範長什麼樣子的人 |
+| **[google-labs-code/design.md](https://github.com/google-labs-code/design.md)** | Google 官方開源規格與標準範例（Apache-2.0），格式最嚴謹，也附帶免費命令列檢查工具 | 想確認標準格式、或準備匯入 Google Stitch 使用的人 |
 
 ---
 
@@ -40,7 +40,7 @@
 
 ### 步驟 1：看預覽，存下一個你最喜歡的 `DESIGN.md`
 
-在 GetDesign.md 或 DesignMD Gallery 挑到喜歡的樣式後，複製內容存成資料夾裡的 `source-DESIGN.md`（或直接用指令下載）。
+在上面的免費目錄或 GitHub 風格庫挑到喜歡的樣式後，直接複製裡面的 `DESIGN.md` 內容，存成專案資料夾裡的 `source-DESIGN.md`。
 
 ### 步驟 2：請 AI 幫你「在地化成繁體中文＋換上品牌色」
 
