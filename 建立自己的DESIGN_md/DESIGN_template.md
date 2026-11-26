@@ -21,7 +21,7 @@ colors:                          # 色碼建議用 #RRGGBB
   border: "#E5DFD7"              # 細框線、分隔線
   danger: "#B3261E"              # 錯誤訊息
 
-typography:                      # 中文字型一定要寫（Noto Sans TC／Noto Serif TC）
+typography:                      # 建議「英文字型在前、繁體中文字型在後」（詳見第 05 章字型指南）
   display:                       # 最大的標題
     fontFamily: Noto Serif TC
     fontSize: 56px
