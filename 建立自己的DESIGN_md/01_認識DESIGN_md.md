@@ -10,7 +10,7 @@ AI 做出來的網頁常常「每一頁長得不一樣」，或是千篇一律�
 
 **DESIGN.md** 就是一份寫給 AI 看的「設計規範書」。它是一個普通的文字檔，放在專案資料夾裡，寫清楚網站的顏色、字型、圓角、間距、按鈕長怎樣、什麼事不能做。AI 讀了它，每一頁都會遵守同一套規則。
 
-這個格式由 Google 在 Stitch 中推出，並在 2026 年 4 月公開成開放規格，現在 Claude、Stitch、pen.dev 等工具都能讀。
+這個格式由 Google 在 Stitch 中推出（[Stitch 官方說明](https://stitch.withgoogle.com/docs/design-md/overview/)），並在 2026 年 4 月公開成開放規格（[google-labs-code/design.md](https://github.com/google-labs-code/design.md)），現在 Claude、Stitch、pen.dev 等工具都能讀。
 
 | 檔案 | 寫給誰看 | 回答什麼問題 |
 | :--- | :--- | :--- |
@@ -56,7 +56,8 @@ components:                        # 元件樣式設定
 ---
 ```
 
-`"{colors.primary}"` 叫做**引用**：按鈕不寫死色碼，而是「使用 primary 這個顏色」。之後品牌色要改，只改一個地方。
+- **大分類固定、細項名稱可自訂**：官方規格規定了第一層分類名稱（`name`、`colors`、`typography`、`rounded`、`spacing`、`components`），但底下的細項名稱（例如 `primary`、`surface`、`button-primary`）可以依你的習慣命名。
+- **引用（`"{群組.名稱}"`）**：按鈕的 `"{colors.primary}"` 代表不寫死色碼，而是「使用 primary 這個顏色」。之後品牌色要改，只改一個地方。
 
 **下層：設計理由（Markdown 章節）**
 
