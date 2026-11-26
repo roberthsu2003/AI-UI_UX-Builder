@@ -1,4 +1,4 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 300" width="480" height="300" font-family="'PingFang TC','Noto Sans TC','Microsoft JhengHei',sans-serif"><defs><clipPath id="c"><rect width="480" height="300" rx="14"/></clipPath></defs><g clip-path="url(#c)"><rect width="480" height="300" fill="#FAF7F2"/>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 300" font-family="'PingFang TC','Noto Sans TC','Microsoft JhengHei',sans-serif"><defs><clipPath id="c"><rect width="480" height="300" rx="14"/></clipPath></defs><g clip-path="url(#c)"><rect width="480" height="300" fill="#FAF7F2"/>
 <path d="M340 -20 C430 0 500 60 480 140 C460 200 380 170 350 120 C320 70 300 20 340 -20 Z" fill="#DDE8DF"/>
 <path d="M-30 220 C20 190 90 220 100 260 C110 300 40 320 -30 300 Z" fill="#F1E4D8"/>
 <text x="32" y="38" font-size="14" font-weight="700" fill="#3D4F45">lumen</text>

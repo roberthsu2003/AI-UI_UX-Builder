@@ -1,4 +1,4 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 300" width="480" height="300" font-family="'PingFang TC','Noto Sans TC',sans-serif">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 300" font-family="'PingFang TC','Noto Sans TC',sans-serif">
   <defs>
     <clipPath id="c"><rect width="480" height="300" rx="14"/></clipPath>
     <linearGradient id="chrome" x1="0" y1="0" x2="1" y2="1">
