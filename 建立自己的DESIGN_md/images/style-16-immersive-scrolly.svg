@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 300" width="480" height="300" font-family="'PingFang TC','Noto Sans TC','Microsoft JhengHei',sans-serif">
+  <defs>
+    <clipPath id="c"><rect width="480" height="300" rx="14"/></clipPath>
+    <radialGradient id="glow1" cx="50%" cy="48%" r="55%">
+      <stop offset="0%" stop-color="#38BDF8" stop-opacity="0.45"/>
+      <stop offset="50%" stop-color="#6366F1" stop-opacity="0.22"/>
+      <stop offset="100%" stop-color="#05050A" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="txtGrad" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#FFFFFF"/>
+      <stop offset="100%" stop-color="#93C5FD"/>
+    </linearGradient>
+  </defs>
+  <g clip-path="url(#c)">
+    <rect width="480" height="300" fill="#05050A"/>
+    <rect width="480" height="300" fill="url(#glow1)"/>
+    <!-- floating pill nav -->
+    <rect x="130" y="16" width="220" height="28" rx="14" fill="#FFFFFF" fill-opacity="0.08" stroke="#FFFFFF" stroke-opacity="0.2"/>
+    <text x="154" y="34" font-size="10" font-weight="700" fill="#FFFFFF">LUMEN</text>
+    <text x="218" y="34" font-size="9" fill="#CBD5E1">章節</text>
+    <text x="260" y="34" font-size="9" fill="#CBD5E1">展場</text>
+    <text x="304" y="34" font-size="9" fill="#38BDF8">購票</text>
+    <!-- cinematic centered hero -->
+    <text x="240" y="88" font-size="9" fill="#38BDF8" text-anchor="middle" letter-spacing="4">CHAPTER 01 · IMMERSIVE STORY</text>
+    <text x="240" y="132" font-size="38" font-weight="800" fill="url(#txtGrad)" text-anchor="middle">好好過日子</text>
+    <text x="240" y="158" font-size="11" fill="#94A3B8" text-anchor="middle">全螢幕深色光暈・隨捲動浮現的電影級敘事體驗</text>
+    <!-- luminous CTA -->
+    <rect x="176" y="176" width="128" height="32" rx="16" fill="#FFFFFF"/>
+    <text x="240" y="196" font-size="11" font-weight="700" fill="#05050A" text-anchor="middle">進入故事章節 ↓</text>
+    <!-- scroll narrative progress -->
+    <path d="M90 242 H390" stroke="#1E293B" stroke-width="2"/>
+    <path d="M90 242 H240" stroke="#38BDF8" stroke-width="2"/>
+    <circle cx="90" cy="242" r="4" fill="#38BDF8"/>
+    <circle cx="240" cy="242" r="5" fill="#FFFFFF" stroke="#38BDF8" stroke-width="2"/>
+    <circle cx="390" cy="242" r="4" fill="#334155"/>
+    <g font-size="9" fill="#94A3B8" text-anchor="middle">
+      <text x="90" y="264">01 序幕光影</text>
+      <text x="240" y="264" fill="#FFFFFF">02 互動敘事</text>
+      <text x="390" y="264">03 展演體驗</text>
+    </g>
+  </g>
+  <rect x="0.5" y="0.5" width="479" height="299" rx="14" fill="none" stroke="#1E293B"/>
+</svg>

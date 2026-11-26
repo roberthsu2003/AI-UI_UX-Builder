@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 300" width="480" height="300" font-family="'Noto Serif TC','PingFang TC',serif">
+  <defs><clipPath id="c"><rect width="480" height="300" rx="14"/></clipPath></defs>
+  <g clip-path="url(#c)">
+    <rect width="480" height="300" fill="#F4EAD5"/>
+    <!-- vintage double border -->
+    <rect x="14" y="14" width="452" height="272" fill="none" stroke="#3E2723" stroke-width="2"/>
+    <rect x="19" y="19" width="442" height="262" fill="none" stroke="#3E2723" stroke-width="0.8"/>
+    <!-- header -->
+    <text x="34" y="42" font-size="13" font-weight="700" fill="#B8332A" letter-spacing="2">日新 LUMEN · 昭和四十三年</text>
+    <text x="446" y="42" font-size="10" fill="#5D4037" text-anchor="end">第參號　｜　印刷・選物</text>
+    <path d="M28 52 H452" stroke="#3E2723" stroke-width="1"/>
+    <!-- hero -->
+    <text x="240" y="96" font-size="32" font-weight="700" fill="#2A1B15" text-anchor="middle" letter-spacing="4">好好過日子</text>
+    <text x="240" y="120" font-size="11" fill="#5D4037" text-anchor="middle">鉛字、老紙張與手工印刷的溫暖觸感</text>
+    <!-- stamp seal -->
+    <rect x="386" y="70" width="46" height="46" fill="none" stroke="#B8332A" stroke-width="2"/>
+    <text x="409" y="90" font-size="12" font-weight="700" fill="#B8332A" text-anchor="middle">老舖</text>
+    <text x="409" y="106" font-size="12" font-weight="700" fill="#B8332A" text-anchor="middle">認證</text>
+    <!-- retro CTA -->
+    <rect x="180" y="136" width="120" height="30" rx="2" fill="#B8332A"/>
+    <rect x="183" y="139" width="114" height="24" rx="1" fill="none" stroke="#F4EAD5" stroke-width="1"/>
+    <text x="240" y="155" font-size="11" font-weight="700" fill="#F4EAD5" text-anchor="middle">預約活版體驗</text>
+    <!-- 3 vintage ticket cards -->
+    <g>
+      <rect x="30" y="186" width="130" height="82" fill="#EFE0C1" stroke="#3E2723" stroke-width="1" stroke-dasharray="4 2"/>
+      <rect x="175" y="186" width="130" height="82" fill="#EFE0C1" stroke="#3E2723" stroke-width="1" stroke-dasharray="4 2"/>
+      <rect x="320" y="186" width="130" height="82" fill="#EFE0C1" stroke="#3E2723" stroke-width="1" stroke-dasharray="4 2"/>
+      <text x="95" y="210" font-size="12" font-weight="700" fill="#B8332A" text-anchor="middle">壹 · 生活</text>
+      <text x="240" y="210" font-size="12" font-weight="700" fill="#B8332A" text-anchor="middle">貳 · 器物</text>
+      <text x="385" y="210" font-size="12" font-weight="700" fill="#B8332A" text-anchor="middle">參 · 空間</text>
+      <text x="95" y="234" font-size="10" fill="#3E2723" text-anchor="middle">泛黃紙張底色</text>
+      <text x="240" y="234" font-size="10" fill="#3E2723" text-anchor="middle">印章紅與墨黑</text>
+      <text x="385" y="234" font-size="10" fill="#3E2723" text-anchor="middle">票根虛線邊框</text>
+      <text x="95" y="254" font-size="9" fill="#795548" text-anchor="middle">NO. 1968-01</text>
+      <text x="240" y="254" font-size="9" fill="#795548" text-anchor="middle">NO. 1968-02</text>
+      <text x="385" y="254" font-size="9" fill="#795548" text-anchor="middle">NO. 1968-03</text>
+    </g>
+  </g>
+  <rect x="0.5" y="0.5" width="479" height="299" rx="14" fill="none" stroke="#D6C5A3"/>
+</svg>
