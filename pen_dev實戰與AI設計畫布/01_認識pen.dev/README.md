@@ -117,6 +117,16 @@ AI 完成後，**換你動手**：
 - [ ] 我已經安裝 pen.dev，並建立 `practice.pen`。
 - [ ] AI 能在我的畫布上畫出卡片，我也能手動改它的文字。
 
+## 延伸閱讀與影片教學
+
+- **官方操作指南**
+  - [安裝與環境設定（Installation）](https://docs.pen.dev/getting-started/installation)：桌面版、VS Code／Cursor 擴充套件的詳細安裝步驟。
+  - [連接 AI 工具（AI Integration）](https://docs.pen.dev/getting-started/ai-integration)：設定 Claude Code、Codex、Gemini CLI 等外部 AI 的 MCP 連線教學。
+  - [認識 .pen 檔案（.pen Files）](https://docs.pen.dev/core-concepts/pen-files)：了解 `.pen` 節點樹檔案的儲存方式與版本控制概念。
+- **YouTube 操作影片**
+  - [Pencil: 01 Vibe Design with Pencil and Claude Code](https://www.youtube.com/watch?v=DSow83bnO4g)：從零示範安裝、開啟畫布、用 Prompt 生出第一份設計稿的完整流程。
+  - [Pen.dev Review: Design with AI, Claude Code, Codex & Export to Figma](https://www.youtube.com/watch?v=7EAv7V7Xios)：快速導覽 pen.dev 畫布介面、AI 協作流程與跨工具整合。
+
 ---
 
 [下一章：02. 介面與畫布基本操作 →](../02_介面與畫布基本操作/README.md)

@@ -191,6 +191,16 @@ pen.dev 桌面版可以把**真正在跑的網頁**放進畫布，叫做 `browse
 - [ ] 我能在畫布上用 browser 節點並排驗收桌機與手機版。
 - [ ] 我的 LearnHub 活動頁在 320～1440 之間的任何寬度都不會壞掉。
 
+## 延伸閱讀與影片教學
+
+- **官方操作指南**
+  - [設計稿與程式碼雙向轉換（Design ↔ Code）](https://docs.pen.dev/design-and-code/design-to-code)：官方完整指南，涵蓋把設計稿轉成前端程式碼、雙向同步，以及把既有網頁匯入畫布。
+  - [匯入、匯出與畫布內建瀏覽器（Import, Export & Live Browser）](https://docs.pen.dev/core-concepts/import-and-export)：說明如何匯出圖片素材、擷取線上網頁，以及使用桌面版 Live Browser 節點並排驗收。
+  - [與 AI Agent 協作技巧（AI Agents and Skills）](https://docs.pen.dev/core-concepts/ai-agents)：了解如何透過選取範圍與環境上下文，讓 AI 精準修改指定區塊。
+- **YouTube 操作影片**
+  - [不用自己畫 UI 了？Claude Code 整合 Pencil 實測：一句話生成設計稿再轉 Tailwind CSS](https://www.youtube.com/watch?v=fT6kGrHtf9k)（繁體中文）：清楚示範從畫布設計稿直接轉換成 RWD 網頁程式碼的完整過程。
+  - [程序员的设计神器！Pencil 深度实测：从 UI 设计到 React 代码生成](https://www.youtube.com/watch?v=-aK3UV0FcZ0)（中文）：示範使用便利貼（Sticky Note）進行局部精修，並輸出成 React + Tailwind 專案。
+
 ---
 
 [延伸章節：10. 設計稿轉 PyQt 桌面程式 →](../10_延伸_設計稿轉PyQt桌面程式/README.md)

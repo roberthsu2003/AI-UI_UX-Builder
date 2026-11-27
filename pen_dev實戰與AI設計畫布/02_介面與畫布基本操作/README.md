@@ -127,6 +127,16 @@
 - [ ] 我知道 `Enter` / `Shift + Enter` 可以在父層、子層之間切換選取。
 - [ ] 我會在圖層面板改名和調整順序，也知道順序會影響 Flex 排版的畫面。
 
+## 延伸閱讀與影片教學
+
+- **官方操作指南**
+  - [認識介面與四大區域（pen.dev Interface）](https://docs.pen.dev/core-concepts/pencil-interface)：分頁、圖層面板、無限畫布、屬性面板與搜尋圖層的操作說明。
+  - [完整快捷鍵一覽表（Keyboard Shortcuts）](https://docs.pen.dev/core-concepts/keyboard-shortcuts)：Mac 與 Windows 的畫布縮放、選取、圖層整理快捷鍵對照表。
+  - [畫出第一個設計（Create Your First Design）](https://docs.pen.dev/getting-started/create-your-first-design)：練習在畫布上建立形狀、切換選取範圍與存檔。
+- **YouTube 操作影片**
+  - [Pencil.dev Walkthrough 2026: AI Design on Canvas, Land in Code](https://www.youtube.com/watch?v=Y0TWX46vWxA)：實際操作無限畫布的縮放、多畫面並排檢視與圖層管理。
+  - [How I Turned Claude Into a Design Tool with Pencil.dev](https://www.youtube.com/watch?v=DFcvz2kcR74)：示範 AI 生成畫面後，如何自己手動點選圖層與微調細節。
+
 ---
 
 [下一章：03. 形狀、文字與圖示 →](../03_形狀文字與圖示/README.md)

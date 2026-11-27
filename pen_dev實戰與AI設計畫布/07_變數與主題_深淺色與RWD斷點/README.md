@@ -142,6 +142,15 @@ primary、primary-hover、primary-soft 三個變數在 brand green 時改成綠�
 - [ ] 我能用 `device` 軸讓手機版字級與間距自動縮小。
 - [ ] 我能說出 pen.dev 變數與主題對應到 CSS 的寫法。
 
+## 延伸閱讀與影片教學
+
+- **官方操作指南**
+  - [變數與多主題設定（Variables and Themes）](https://docs.pen.dev/design-systems/variables)：詳解如何建立顏色與數值變數、設定深淺色（Theming）主題軸，以及與程式碼的 Design Tokens 同步。
+  - [設計稿與程式碼的變數對應（Variables & Design Tokens）](https://docs.pen.dev/design-and-code/design-to-code#variables--design-tokens)：說明畫布上的變數如何自動轉換成 CSS 變數與主題設定。
+- **YouTube 操作影片**
+  - [Pencil: 02 Figma to Pencil Variables using Claude Code](https://www.youtube.com/watch?v=G7kQucKyTcQ)：專門講解如何在 pen.dev 中建立、匯入與綁定語意化顏色變數（Variables）與主題。
+  - [不用自己畫 UI 了？Claude Code 整合 Pencil 實測](https://www.youtube.com/watch?v=fT6kGrHtf9k)（繁體中文）：示範如何運用設計代幣（Tokens）維持整頁配色與樣式的一致性。
+
 ---
 
 [下一章：08. 填色、特效與 AI 生圖 →](../08_填色特效與AI生圖/README.md)

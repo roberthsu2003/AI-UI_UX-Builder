@@ -175,6 +175,15 @@
 - [ ] 我能把一個桌機版區塊，自己改出平板版與手機版。
 - [ ] 我能把 pen.dev 的排版設定，對照說出 CSS 的寫法。
 
+## 延伸閱讀與影片教學
+
+- **官方操作指南**
+  - [Frame 與 Flex 自動排版（Frames & Flex Layout）](https://docs.pen.dev/core-concepts/pencil-interface#flex-layout)：官方說明如何在 Frame 上啟用 Flex 排版、設定方向、間距與對齊。
+  - [Layout 排版屬性規格（The .pen Format - Layout）](https://docs.pen.dev/for-developers/the-pen-format#layout)：詳解 `fill_container`、`fit_content`、`padding` 與 `justifyContent` 的對應規則。
+- **YouTube 操作影片**
+  - [2025 帶你掌握 Auto Layout｜最新 Figma UI3（Taony Design）](https://www.youtube.com/watch?v=0at62AAKntA)（繁體中文）：pen.dev 的 Flex 排版操作與 Figma Auto Layout 完全相同，這支中文影片清楚拆解 Fixed／Hug／Fill 與間距對齊的觀念。
+  - [Figma Auto Layout 自動佈局教學（設計師凱文 CreativeKev）](https://www.youtube.com/watch?v=FerRV0LtRAM)（繁體中文）：透過按鈕與卡片實例，幫助新手搞懂彈性盒（Flexbox）在設計工具裡的運作邏輯。
+
 ---
 
 [下一章：05. 元件、實例與變體 →](../05_元件實例與變體/README.md)

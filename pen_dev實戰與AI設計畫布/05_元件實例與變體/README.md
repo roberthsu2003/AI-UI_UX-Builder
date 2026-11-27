@@ -131,6 +131,15 @@
 - [ ] 我會用屬性面板切換變體，也知道為什麼各變體要統一子元素名稱。
 - [ ] 我能說出 slot 適合用在哪一種網頁元件。
 
+## 延伸閱讀與影片教學
+
+- **官方操作指南**
+  - [元件、實例與變體（Components and Instances）](https://docs.pen.dev/design-systems/components)：建立主元件、複製實例、設定 Variants 變體軸，以及覆寫（Overrides）與脫離（Detach）的操作說明。
+  - [插槽功能詳解（Slots）](https://docs.pen.dev/design-systems/slots)：學會把元件內的容器標記為 Slot，做出可自由替換內容的對話框與卡片外框。
+- **YouTube 操作影片**
+  - [How I Turned Claude Into a Design Tool with Pencil.dev](https://www.youtube.com/watch?v=DFcvz2kcR74)：示範如何在 pen.dev 畫布中建立可重複使用的 UI 元件並同步更新畫面。
+  - [Claude Code NEW Design Canvas With Built-In Figma That's FREE! (Pencil.dev)](https://www.youtube.com/watch?v=CBIUxXy3WmM)：展示如何搭配 Figma 與 pen.dev 建立元件化的設計流程。
+
 ---
 
 [下一章：06. 網頁元件庫實戰 →](../06_網頁元件庫實戰/README.md)

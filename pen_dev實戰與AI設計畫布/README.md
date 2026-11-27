@@ -64,4 +64,4 @@
 帳號與軟體的整體準備，請看[課前準備](../課前準備/README.md)。
 
 > [!TIP]
-> pen.dev 更新很快。畫面和講義不一樣時，在畫布上按 `?` 可以看到最新的快捷鍵，也可以查[官方文件](https://docs.pencil.dev/)。
+> pen.dev 更新很快。畫面和講義不一樣時，在畫布上按 `?` 可以看到最新的快捷鍵，也可以隨時查閱 [pen.dev 官方網站](https://www.pen.dev/)、[官方操作文件](https://docs.pen.dev/)，或先看 [YouTube：Pencil 01 Vibe Design 入門實戰影片](https://www.youtube.com/watch?v=DSow83bnO4g) 快速建立整體概念。

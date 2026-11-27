@@ -183,6 +183,15 @@
 - [ ] 我知道毛玻璃需要半透明填色＋`background_blur`。
 - [ ] 我能判斷一張圖該用 `icon`、形狀、`stock`、`ai` 還是 `svg` 來做。
 
+## 延伸閱讀與影片教學
+
+- **官方操作指南**
+  - [填色、框線、特效與圖片編輯（Fill, Stroke, Effects & Images）](https://docs.pen.dev/core-concepts/drawing-and-editing#fill-stroke-and-effects)：多層填色、漸層、陰影、毛玻璃、Shader 特效與圖片裁切去背的官方操作說明。
+  - [在畫布上執行程式碼與 Script 節點（Code on Canvas）](https://docs.pen.dev/core-concepts/code-on-canvas)：選讀進階內容，教你建立 `.js` script 節點並在屬性面板產生互動滑桿。
+- **YouTube 操作影片**
+  - [拒絕 AI 盲盒！Claude Code 串接 Pencil MCP，用「畫」的直接生成動畫代碼](https://www.youtube.com/watch?v=TWiIi_oIBUw)（繁體中文）：展示如何在畫布上搭配視覺特效、圖片素材與 AI 工具做出吸睛的畫面。
+  - [Pencil.dev Walkthrough 2026: AI Design on Canvas, Land in Code](https://www.youtube.com/watch?v=Y0TWX46vWxA)：示範在畫布上運用豐富視覺填色與 AI 輔助生成素材的實務操作。
+
 ---
 
 [下一章：09. 從設計稿到 RWD 網頁程式碼 →](../09_從設計稿到RWD網頁程式碼/README.md)

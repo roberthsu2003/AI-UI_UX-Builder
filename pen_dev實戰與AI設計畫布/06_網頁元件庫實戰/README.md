@@ -276,6 +276,15 @@ string：font-body "Noto Sans TC"
 - **切換 device 變體後內容跑掉**：兩個變體的子元素名稱不一致。統一命名後再切換。
 - **平板版卡片擠成一條**：Flex 不會換行，請拆成多個列 frame（第 04 章）。
 
+## 延伸閱讀與影片教學
+
+- **官方操作指南**
+  - [從零打造小型設計系統（Build a Small Design System）](https://docs.pen.dev/design-systems/build-a-design-system)：官方手把手教學，帶你從定義變數、建立基本元件到組合成完整畫面。
+  - [共用設計元件庫（Design Libraries）](https://docs.pen.dev/design-systems/design-libraries)：了解如何將做好的元件庫存成 `.lib.pen`，在不同檔案之間重複引用。
+- **YouTube 操作影片**
+  - [程序员的设计神器！Pencil 深度实测：从 UI 设计到 React 代码生成](https://www.youtube.com/watch?v=-aK3UV0FcZ0)（中文）：完整示範在畫布上建立多元件、多頁面的應用程式原型與微調流程。
+  - [Pencil: 01 Vibe Design with Pencil and Claude Code](https://www.youtube.com/watch?v=DSow83bnO4g)：觀察如何用元件庫的思維，在同一個畫布上規劃一致的頁面版型。
+
 ---
 
 [下一章：07. 變數與主題：深淺色與 RWD 斷點 →](../07_變數與主題_深淺色與RWD斷點/README.md)

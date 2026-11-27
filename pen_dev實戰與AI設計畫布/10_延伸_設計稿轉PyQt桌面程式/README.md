@@ -111,6 +111,15 @@ python login_dialog.py
 - [ ] 我知道圖層名稱會變成 `objectName`，並用 QSS 的 `#名稱` 設定樣式。
 - [ ] 我能用變數字典產生淺色、深色兩份 QSS。
 
+## 延伸閱讀與影片教學
+
+- **官方操作指南**
+  - [.pen 格式與版面樹結構（The .pen Format）](https://docs.pen.dev/for-developers/the-pen-format)：了解 AI 如何讀取 `.pen` 的 Layout 與 Variables 結構，並將其映射至其他 GUI 框架。
+  - [Qt 官方文件：Qt Style Sheets (QSS) 語法參考](https://doc.qt.io/qt-6/stylesheet-reference.html)：查詢 PyQt6 支援的所有 QSS 選擇器（如 `#objectName`）、偽狀態（`:hover`、`:checked`）與樣式屬性。
+- **YouTube 操作影片**
+  - [PyQt6 Layouts: QVBoxLayout, QHBoxLayout and QGridLayout](https://www.youtube.com/watch?v=trpI4ezSnlQ)：講解 PyQt6 的水平與垂直排版容器，可與 pen.dev 的 Flex `horizontal`／`vertical` 直接對照學習。
+  - [PyQt6 CSS Stylesheets (QSS)](https://www.youtube.com/watch?v=TAL_CUH2cyI)：示範如何在 PyQt6 中使用類似 CSS 的 QSS 語法美化按鈕、輸入框與視窗介面。
+
 ---
 
 🎉 **恭喜完成 pen.dev 全部課程！** 建議接著挑一個[產品需求實戰範例庫](../../產品需求實戰範例庫/README.md)的題目，從第 06 章的元件庫流程開始，獨立完成一個作品。

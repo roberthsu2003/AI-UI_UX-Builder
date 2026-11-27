@@ -154,6 +154,15 @@
 - [ ] 我能自己算出任一百分比進度環的 `startAngle` 與 `sweepAngle`。
 - [ ] 我會在屬性面板切換圖示庫與圖示名稱。
 
+## 延伸閱讀與影片教學
+
+- **官方操作指南**
+  - [繪圖與編輯節點（Drawing and Editing）](https://docs.pen.dev/core-concepts/drawing-and-editing)：幾何形狀、鋼筆路徑（Path）、文字換行模式、便利貼（Sticky notes）與內建圖示庫的完整操作。
+  - [.pen 節點格式與圖形屬性（The .pen Format）](https://docs.pen.dev/for-developers/the-pen-format)：深入了解 `frame`、`ellipse`、`text` 等節點在底層的屬性結構。
+- **YouTube 操作影片**
+  - [不用自己畫 UI 了？Claude Code 整合 Pencil 實測：一句話生成設計稿再轉 Tailwind CSS](https://www.youtube.com/watch?v=fT6kGrHtf9k)（繁體中文）：中文實測示範如何用 AI 在畫布上建立卡片、文字、圖示並手動調整屬性。
+  - [Vibe Code Your Designs: Pencil.dev + Claude Code Demo](https://www.youtube.com/watch?v=6SFPL8spQJ0)：示範在畫布上組合基礎形狀、文字與 UI 圖示的實務操作。
+
 ---
 
 [下一章：04. Flex 自動排版：RWD 的核心 →](../04_Flex自動排版_RWD的核心/README.md)
